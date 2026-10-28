@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Level } from "./learning-app";
 import LevelComparison from "./level-comparison";
+import PracticePanel from "./practice-panel";
 
 type VerbForm = { word?: string; sv?: string; en?: string };
 type VocabularyEntry = {
@@ -36,6 +37,7 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [selectionNotice, setSelectionNotice] = useState("");
+  const [mode, setMode] = useState<"learn" | "practice">("learn");
   const [speechStatus, setSpeechStatus] = useState("");
   const [voiceWarning, setVoiceWarning] = useState("");
   const [activeSpeech, setActiveSpeech] = useState<string | null>(null);
@@ -308,7 +310,27 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                     {voiceWarning && <p className="voice-warning">{voiceWarning}</p>}
                   </div>
                 </div>
-                <h4>Verb forms and examples</h4>
+                <div className="study-mode-tabs" role="group" aria-label="Study mode">
+                  <button
+                    type="button"
+                    className={mode === "learn" ? "active" : ""}
+                    aria-pressed={mode === "learn"}
+                    onClick={() => setMode("learn")}
+                  >Learning Mode</button>
+                  <button
+                    type="button"
+                    className={mode === "practice" ? "active" : ""}
+                    aria-pressed={mode === "practice"}
+                    onClick={() => setMode("practice")}
+                  >Practice Mode</button>
+                </div>
+                {mode === "learn" ? (
+                  <>
+                    <p className="study-mode-help">
+                      Study this verb's forms and Swedish examples, listen to its pronunciation,
+                      and compare the same meaning across four levels.
+                    </p>
+                    <h4>Verb forms and examples</h4>
                 <div className="verb-forms">
                   {forms.map(({ key, label }) => {
                     const form = chosen.forms[key];
@@ -358,6 +380,10 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                   currentLevel={level}
                   speak={speakSwedish}
                 />
+                  </>
+                ) : (
+                  <PracticePanel key={level + ":" + chosen.id} level={level} entry={chosen} pool={entries} />
+                )}
               </>
             ) : (
               <p className="empty-results">Select a verb to see its forms and examples.</p>
@@ -366,8 +392,9 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
         </div>
       )}
       <p className="vocabulary-explanation">
-        The mini lesson and translation question below still use a fixed example for each level.
-        Practice linked to your selected word is planned for a later increment.
+        The original mini lesson below still uses a fixed example for each level.
+        The new Learning and Practice Modes above follow the verb you selected.
+        Scores are not yet saved to an account.
       </p>
     </section>
   );
