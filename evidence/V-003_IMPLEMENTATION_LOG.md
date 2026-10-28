@@ -30,3 +30,7 @@ At this initial evidence capture, no V-003 CI result or user browser test has ye
 - [Vercel deployment](https://nordljud-r2-vibe-e2m9jyvay-aleksi9.vercel.app) at exact code commit `0d93de9`: Vercel production deployment state **READY**.
 - These checks verify source invariants and build success; they do **not** establish an end-to-end browser pass for cross-level selection, pronunciation or display. All student manual acceptance tests remain **NOT YET TESTED**.
 - `V-002-F01` browser-audio verification remains outstanding from the earlier increment.
+
+## Student's subsequent overall confirmation (2026-10-29, Europe/Helsinki)
+
+Exact wording: **"V-003 is confirmed and please execute 004."** Record this as student-reported acceptance of the overall V-003 increment and approval to proceed with the previously proposed V-004 prompt. It is **not evidence** that every manual test or Swedish voice output was individually exercised and passed. The earlier statement "user browser verification pending" above describes status at that earlier capture time; this section is the subsequent observation, not a retroactive edit to history.
