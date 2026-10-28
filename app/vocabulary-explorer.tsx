@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Level } from "./learning-app";
 import LevelComparison from "./level-comparison";
 import PracticePanel from "./practice-panel";
+import VerbPhoto, { hasVerbPhoto } from "./verb-photo";
 
 type VerbForm = { word?: string; sv?: string; en?: string };
 type VocabularyEntry = {
@@ -286,8 +287,9 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
           <div className="vocabulary-detail">
             {chosen ? (
               <>
-                <div className="detail-heading">
-                  <span className="eyebrow">SELECTED VERB · {level}</span>
+                <div className={"detail-heading" + (mode === "learn" && hasVerbPhoto(chosen.verb, chosen.meaning) ? " with-visual" : "")}>
+                  <div className="detail-heading-copy">
+                    <span className="eyebrow">SELECTED VERB · {level}</span>
                   <h3 lang="sv">{chosen.verb}</h3>
                   <p><strong>English meaning:</strong> {chosen.meaning}</p>
                   <div className="detail-audio-actions">
@@ -309,6 +311,14 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                     {speechStatus && <p>{speechStatus}</p>}
                     {voiceWarning && <p className="voice-warning">{voiceWarning}</p>}
                   </div>
+                  </div>
+                  {mode === "learn" && hasVerbPhoto(chosen.verb, chosen.meaning) && (
+                    <VerbPhoto
+                      key={chosen.verb + ":" + chosen.meaning}
+                      verb={chosen.verb}
+                      meaning={chosen.meaning}
+                    />
+                  )}
                 </div>
                 <div className="study-mode-tabs" role="group" aria-label="Study mode">
                   <button
