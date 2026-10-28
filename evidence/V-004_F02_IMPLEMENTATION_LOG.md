@@ -17,3 +17,12 @@ The source metadata (real photographers, original photo page URLs, image URLs an
 
 ## Pending execution evidence
 CI success/failure, actual deployment URL/commit and browser visual acceptance must be appended after observed results. Do not fabricate the outcome. If an image appears broken, capture the actual browser observation and fix as a separate documented corrective event.
+
+## Observed code, CI and Vercel outcomes (appended after running checks)
+
+- [Image manifest, UI component and tests commit `cb03139`](https://github.com/alikhalessi/nordljud-swcon2627-r2/commit/cb031394b2ef01588f48ad6e928cd2ad000795c7).
+- [Learning Mode integration `2c1cec6`](https://github.com/alikhalessi/nordljud-swcon2627-r2/commit/2c1cec60cce2d6ac5d474c6d006144b66c895d77).
+- [GitHub Actions `40779817145`](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40779817145) **SUCCESS**, exactly **18 of 18 automated tests PASS**, 0 failed; TypeScript typecheck PASS; Next.js production build PASS.
+- [Vercel deployment of the tested code SHA](https://nordljud-r2-vibe-hvt27dq7p-aleksi9.vercel.app): **READY**.
+- **Still unverified in a human browser:** Images visibly load next to chosen verb, author/source links look right, mobile layout, photographic meaning match as perceived by student. These cannot be marked PASS from CI.
+- No real photographic binaries have been uploaded or modified; all five CDN URLs are Unsplash-hosted, with the credited original image pages and photographer names. Photo licensing source: https://unsplash.com/license.
