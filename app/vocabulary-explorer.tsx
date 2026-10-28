@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Level } from "./learning-app";
+import LevelComparison from "./level-comparison";
 
 type VerbForm = { word?: string; sv?: string; en?: string };
 type VocabularyEntry = {
@@ -27,12 +28,14 @@ const forms = [
 
 export default function VocabularyExplorer({ level }: { level: Level }) {
   const cachedLevels = useRef<Partial<Record<Level, VocabularyEntry[]>>>({});
+  const selectedMeaning = useRef<{ verb: string; meaning: string } | null>(null);
   const [entries, setEntries] = useState<VocabularyEntry[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [selectionNotice, setSelectionNotice] = useState("");
   const [speechStatus, setSpeechStatus] = useState("");
   const [voiceWarning, setVoiceWarning] = useState("");
   const [activeSpeech, setActiveSpeech] = useState<string | null>(null);
@@ -129,15 +132,28 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
     }
   }, []);
 
+  function setSelectedEntry(rows: VocabularyEntry[]) {
+    const previous = selectedMeaning.current;
+    const index = previous
+      ? rows.findIndex((row) => row.verb === previous.verb && row.meaning === previous.meaning)
+      : -1;
+    const nextIndex = index >= 0 ? index : 0;
+    const next = rows[nextIndex];
+    if (next) selectedMeaning.current = { verb: next.verb, meaning: next.meaning };
+    setSelectedId(next?.id ?? null);
+    setPage(Math.floor(nextIndex / PAGE_SIZE));
+    setSelectionNotice(previous && index < 0
+      ? `The same meaning of ${previous.verb} is unavailable at this level; another verb was selected.`
+      : "");
+  }
+
   useEffect(() => {
-    // Changing a level starts a fresh browse; cross-level synchronization is V-003.
+    // Preserve Swedish lemma AND English sense; duplicated verb spellings are distinct entries.
     setQuery("");
-    setPage(0);
-    setSelectedId(null);
     const cached = cachedLevels.current[level];
     if (cached) {
       setEntries(cached);
-      setSelectedId(cached[0]?.id ?? null);
+      setSelectedEntry(cached);
       setLoading(false);
       setError("");
       return;
@@ -162,7 +178,7 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
         if (controller.signal.aborted) return;
         cachedLevels.current[level] = payload.entries;
         setEntries(payload.entries);
-        setSelectedId(payload.entries[0]?.id ?? null);
+        setSelectedEntry(payload.entries);
       } catch (cause) {
         if (controller.signal.aborted) return;
         setError(cause instanceof Error ? cause.message : "Could not load vocabulary.");
@@ -224,6 +240,7 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                 setPage(0);
               }}
             />
+            {selectionNotice && <p className="vocabulary-notice" role="status">{selectionNotice}</p>}
             <p className="vocabulary-results" role="status">
               {matching.length} {matching.length === 1 ? "entry" : "entries"} found
               {matching.length !== entries.length ? ` from ${entries.length}` : ""}
@@ -240,7 +257,11 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                       key={item.id}
                       className={`verb-list-item ${item.id === selectedId ? "chosen" : ""}`}
                       aria-pressed={item.id === selectedId}
-                      onClick={() => setSelectedId(item.id)}
+                      onClick={() => {
+                        selectedMeaning.current = { verb: item.verb, meaning: item.meaning };
+                        setSelectedId(item.id);
+                        setSelectionNotice("");
+                      }}
                     >
                       <span lang="sv" className="verb-list-word">{item.verb}</span>
                       <span className="verb-list-meaning">{item.meaning}</span>
@@ -331,6 +352,12 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                 <p className="detail-footnote">
                   These examples come from the project dataset; linguistic review is planned for a later stage.
                 </p>
+                <LevelComparison
+                  verb={chosen.verb}
+                  meaning={chosen.meaning}
+                  currentLevel={level}
+                  speak={speakSwedish}
+                />
               </>
             ) : (
               <p className="empty-results">Select a verb to see its forms and examples.</p>
