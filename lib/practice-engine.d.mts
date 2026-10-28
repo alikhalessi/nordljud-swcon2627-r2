@@ -17,3 +17,5 @@ export type PracticeQuestion = {
 };
 
 export function makePracticeQuestions(entry: PracticeEntry, pool: PracticeEntry[]): PracticeQuestion[];
+
+export function canRevealCorrectAnswer(selected: string | null, answer: string, revealed: boolean, solved: boolean): boolean;

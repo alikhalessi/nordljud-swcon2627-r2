@@ -178,3 +178,10 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
 .practice-finish { padding:21px; margin-top:21px; background:#f0f9f2; border-radius:12px; }
 .practice-finish h4 { font-size:19px; margin:10px 0; }
 .practice-finish p { font-size:13px; line-height:1.6; color:#577365; }
+
+/* V-004-F01 optional click-to-reveal answer after an incorrect choice */
+.practice-reveal { border:1px solid #c9a978; border-radius:9px; padding:10px 14px; font-size:13px; font-weight:750; background:#fff7e9; color:#79542b; }
+.practice-reveal:hover { background:#ffedd2; }
+.revealed-answer { padding:12px 0 2px; border-top:1px solid #e7cabc; margin-top:11px; }
+.revealed-answer strong { color:#244c3b; }
+.reveal-no-credit { font-size:12px; color:#866452; margin:9px 0 0; }

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Level } from "./learning-app";
-import { makePracticeQuestions, type PracticeEntry } from "../lib/practice-engine.mjs";
+import { canRevealCorrectAnswer, makePracticeQuestions, type PracticeEntry } from "../lib/practice-engine.mjs";
 
 export default function PracticePanel({
   entry, pool, level
@@ -16,13 +16,15 @@ export default function PracticePanel({
   const [selected, setSelected] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [solved, setSolved] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   const finished = step >= questions.length;
   const question = questions[step];
   const isCorrect = selected !== null && question && selected === question.answer;
+  const canReveal = question ? canRevealCorrectAnswer(selected, question.answer, revealed, solved) : false;
 
   function choose(value: string) {
-    if (!question || solved) return;
+    if (!question || solved || revealed) return;
     setSelected(value);
     if (value === question.answer) {
       setSolved(true);
@@ -34,6 +36,7 @@ export default function PracticePanel({
     setStep((current) => current + 1);
     setSelected(null);
     setSolved(false);
+    setRevealed(false);
   }
 
   function restart() {
@@ -41,6 +44,7 @@ export default function PracticePanel({
     setScore(0);
     setSelected(null);
     setSolved(false);
+    setRevealed(false);
   }
 
   return (
@@ -77,7 +81,7 @@ export default function PracticePanel({
               <button
                 type="button"
                 key={option}
-                disabled={solved}
+                disabled={solved || revealed}
                 aria-pressed={selected === option}
                 className={"practice-answer " + (selected === option
                   ? isCorrect ? "answer-correct" : "answer-wrong"
@@ -95,8 +99,17 @@ export default function PracticePanel({
               <strong>
                 {isCorrect
                   ? "Correct — nice work!"
-                  : "Not quite. Try another answer, or go to the next question."}
+                  : revealed
+                    ? "Here is the correct answer. You can continue to the next question."
+                    : "Not quite. Try again, reveal the correct answer, or continue."}
               </strong>
+              {revealed && !isCorrect && (
+                <div className="revealed-answer">
+                  <strong>Correct answer: {question.answer}</strong>
+                  <p className="practice-explanation">{question.explanation}</p>
+                  <p className="reveal-no-credit">Revealing the answer does not earn a point for this question.</p>
+                </div>
+              )}
               {isCorrect && (
                 <p className="practice-explanation">{question.explanation}</p>
               )}
@@ -104,9 +117,19 @@ export default function PracticePanel({
           )}
 
           <div className="practice-navigation">
-            {selected !== null && !solved && (
+            {selected !== null && !solved && !revealed && (
               <button type="button" className="practice-retry" onClick={() => setSelected(null)}>
                 Try again
+              </button>
+            )}
+            {canReveal && (
+              <button
+                type="button"
+                className="practice-reveal"
+                aria-expanded={revealed}
+                onClick={() => setRevealed(true)}
+              >
+                Show correct answer
               </button>
             )}
             {selected !== null && (

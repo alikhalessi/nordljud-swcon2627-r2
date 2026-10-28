@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { makePracticeQuestions } from "../lib/practice-engine.mjs";
+import { canRevealCorrectAnswer, makePracticeQuestions } from "../lib/practice-engine.mjs";
 
 const levels = ["A2", "B1", "B2", "C1"];
 function rowsFor(level) {
@@ -69,4 +69,12 @@ test("V-004: arbeta provides meaning, conjugation and sentence questions at each
     assert.deepEqual(makePracticeQuestions(entry, rows).map((q) => q.kind),
       ["meaning", "form", "cloze"]);
   }
+});
+
+test("V-004-F01: show-answer option is only offered on an incorrect answer, never automatically", () => {
+  assert.equal(canRevealCorrectAnswer(null, "work", false, false), false);
+  assert.equal(canRevealCorrectAnswer("work", "work", false, true), false);
+  assert.equal(canRevealCorrectAnswer("knit", "work", false, false), true);
+  assert.equal(canRevealCorrectAnswer("knit", "work", true, false), false);
+  assert.equal(canRevealCorrectAnswer("knit", "work", false, true), false);
 });
