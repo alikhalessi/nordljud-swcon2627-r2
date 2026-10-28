@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "description": "Four minimal representative teaching missions; each condition must use the same fixed Swedish-English sentence source in verb-library/<level>.json. These are content seeds rather than existing completed mission implementations.",
+  "learningLanguage": "sv-SE",
+  "interfaceLanguage": "en",
+  "commonPedagogy": {
+    "sequence": [
+      "mission-introduction",
+      "listen-and-read",
+      "comprehension-check",
+      "verb-form-exercise",
+      "feedback",
+      "progress-save"
+    ],
+    "audio": "browser-speech-synthesis-sv-SE",
+    "translation": "English",
+    "teacherReviewed": false
+  },
+  "missions": [
+    {
+      "id": "A2-WORK-01",
+      "level": "A2",
+      "title": "Talking about your work",
+      "learnerGoal": "Describe where you work and explain where someone worked before.",
+      "verb": "arbeta",
+      "formKeys": [
+        "Inf",
+        "Pres",
+        "Pret",
+        "Sup"
+      ],
+      "suggestedContext": "workplace"
+    },
+    {
+      "id": "B1-EXPLAIN-01",
+      "level": "B1",
+      "title": "Explaining a situation",
+      "learnerGoal": "Understand and explain situations, including a reason for being late.",
+      "verb": "förklara",
+      "formKeys": [
+        "Inf",
+        "Pres",
+        "Pret",
+        "Sup"
+      ],
+      "suggestedContext": "everyday communication"
+    },
+    {
+      "id": "B2-PROPOSAL-01",
+      "level": "B2",
+      "title": "Making a proposal",
+      "learnerGoal": "Understand professional suggestions and describe a proposed change.",
+      "verb": "föreslå",
+      "formKeys": [
+        "Inf",
+        "Pres",
+        "Pret",
+        "Sup"
+      ],
+      "suggestedContext": "professional communication"
+    },
+    {
+      "id": "C1-ANALYSE-01",
+      "level": "C1",
+      "title": "Examining possible influences",
+      "learnerGoal": "Discuss evidence, competing explanations and effects of decisions.",
+      "verb": "påverka",
+      "formKeys": [
+        "Inf",
+        "Pres",
+        "Pret",
+        "Sup"
+      ],
+      "suggestedContext": "advanced evidence-based discussion"
+    }
+  ],
+  "provenance": "Derived as standardized mission seeds from pre-existing recovered verb library; mission metadata formulated during October 2026 experiment preparation. Swedish examples are unchanged and referenced from the verb library.",
+  "status": "Prepared shared input; functional lesson code and generated exercise questions are not yet built.",
+  "acceptanceNote": "Each experimental implementation should provide at least one playable Swedish example, English assistance, a comprehension check, a verb-form exercise, feedback and persisted per-user progress for each of four levels."
+}
