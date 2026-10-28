@@ -30,3 +30,7 @@ Both translation fields are empty for those example entries; the app displays "N
 - Check five conjugation panels, example translations and explicit missing-data messages.
 - Verify the original mini lesson and translation quiz still operate.
 - Verify long list mobile layout and the two different senses of "sticka."
+
+## Subsequent verification
+
+[Corrected GREEN GitHub Actions run 40763022944](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40763022944): seven tests passed, TypeScript passed, Next.js production build passed. [Vercel deployment](https://vercel.com/aleksi9/nordljud-r2-vibe) of commit `3a15ed9` reported READY. Student browser acceptance still outstanding.
