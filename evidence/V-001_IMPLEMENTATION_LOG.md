@@ -24,3 +24,12 @@ The student's exact text was supplied on 28 October 2026 after an earlier assist
 3. Record the student's actual observation and next approved corrective prompt (V-002). Never invent user feedback.
 
 **Reproducibility note:** Direct npm package versions were pinned (including Next 15.5.28, chosen because of a security patch issued 14 October 2026), but no resolved npm lockfile was generated at initial source authoring. This is a known limitation to address in a later review, not concealed.
+
+## Real first GitHub Actions run — recorded failed gate
+
+- [V-001 CI run 40681873875](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40681873875) at commit `974ff5fe2617dfbf632b2f36569d8f4b4a016d17`.
+- Initial package install PASS; all **3/3 learning-data tests PASS**.
+- **TypeScript FAIL**, error `TS18048 app/learning-app.tsx(55,52): 'lesson' is possibly 'undefined'`; production build **SKIPPED**, not passed.
+- Root cause: event callback closure used a maybe-undefined `lesson` narrowed only in the render path. Corrective minimal change: capture `lesson.swedish` in a stable `currentSentence` constant after render-time validation, and use that in the callback.
+- The correction remains part of implementing the already approved V-001 prompt; there was no invented new student prompt. This failure is preserved in the original commit and run. A new check run after the fix is required before asserting build success.
+- No Vercel deployment, manual learner acceptance or live browser test was performed as of this entry.

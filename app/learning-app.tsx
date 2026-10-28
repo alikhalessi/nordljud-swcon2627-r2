@@ -37,6 +37,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
     return <main className="shell">A lesson could not be loaded.</main>;
   }
 
+  const currentSentence = lesson.swedish;
   const correct = selected === lesson.english;
 
   function changeLevel(next: Level) {
@@ -52,7 +53,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
       return;
     }
 
-    const utterance = new SpeechSynthesisUtterance(lesson.swedish);
+    const utterance = new SpeechSynthesisUtterance(currentSentence);
     utterance.lang = "sv-SE";
     utterance.rate = 0.88;
     utterance.onerror = () =>
