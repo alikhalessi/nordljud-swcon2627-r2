@@ -34,6 +34,7 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
   const [entries, setEntries] = useState<VocabularyEntry[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const [photosOnly, setPhotosOnly] = useState(false);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -194,14 +195,18 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
     return () => controller.abort();
   }, [level]);
 
+  const photoCount = useMemo(() =>
+    entries.filter(({ verb, meaning }) => hasVerbPhoto(verb, meaning)).length,
+    [entries]
+  );
   const matching = useMemo(() => {
     const term = query.trim().toLocaleLowerCase("sv");
-    if (!term) return entries;
     return entries.filter(({ verb, meaning }) =>
-      verb.toLocaleLowerCase("sv").includes(term) ||
-      meaning.toLocaleLowerCase("en").includes(term)
+      (!photosOnly || hasVerbPhoto(verb, meaning)) &&
+      (!term || verb.toLocaleLowerCase("sv").includes(term) ||
+        meaning.toLocaleLowerCase("en").includes(term))
     );
-  }, [entries, query]);
+  }, [entries, query, photosOnly]);
 
   const pageCount = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
   const pageEntries = matching.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
@@ -244,6 +249,17 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
               }}
             />
             {selectionNotice && <p className="vocabulary-notice" role="status">{selectionNotice}</p>}
+            <label className="vocabulary-photo-filter">
+              <input
+                type="checkbox"
+                checked={photosOnly}
+                onChange={(event) => {
+                  setPhotosOnly(event.target.checked);
+                  setPage(0);
+                }}
+              />
+              <span>Only verbs with photos <strong>({photoCount} available)</strong></span>
+            </label>
             <p className="vocabulary-results" role="status">
               {matching.length} {matching.length === 1 ? "entry" : "entries"} found
               {matching.length !== entries.length ? ` from ${entries.length}` : ""}
