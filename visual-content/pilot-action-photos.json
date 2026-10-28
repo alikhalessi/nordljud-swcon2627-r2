@@ -1,0 +1,72 @@
+{
+  "pilot": "V-004-F02",
+  "reviewStatus": "curated_pilot_pending_student_visual_acceptance",
+  "sourceLicensePolicy": "https://unsplash.com/license",
+  "entries": [
+    {
+      "verb": "springa",
+      "meaning": "run",
+      "imageUrl": "https://images.unsplash.com/photo-1631899477678-9d3c5aeded2d?auto=format&fit=crop&w=760&q=78",
+      "sourceUrl": "https://unsplash.com/photos/a-woman-running-down-a-path-in-a-park-kiH61UDVAVY",
+      "photographer": "Jeremy Stewart",
+      "photographerUrl": "https://unsplash.com/@jeremystewart",
+      "alt": "A woman running along a park path",
+      "description": "A person visibly running outdoors",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "checked": "source page identified by manual web research; browser loading not independently validated"
+    },
+    {
+      "verb": "äta",
+      "meaning": "eat",
+      "imageUrl": "https://images.unsplash.com/photo-1660777748008-68d206e4a632?auto=format&fit=crop&w=760&q=78",
+      "sourceUrl": "https://unsplash.com/photos/a-woman-eating-food-qMc-HFx5OTI",
+      "photographer": "Natali Hordiiuk",
+      "photographerUrl": "https://unsplash.com/@whynotnatali",
+      "alt": "A woman eating food from a fork",
+      "description": "A person visibly eating",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "checked": "source page identified by manual web research; browser loading not independently validated"
+    },
+    {
+      "verb": "skriva",
+      "meaning": "write",
+      "imageUrl": "https://images.unsplash.com/photo-1724985284026-dd2451e4857a?auto=format&fit=crop&w=760&q=78",
+      "sourceUrl": "https://unsplash.com/photos/a-person-writing-on-a-notebook-with-a-laptop-in-the-background-0KT9gxj_BdM",
+      "photographer": "Светлана Химочка",
+      "photographerUrl": "https://unsplash.com/@oraswet",
+      "alt": "A hand using a pen to write notes in a notebook",
+      "description": "A hand writing with a pen in a notebook",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "checked": "source page identified by manual web research; browser loading not independently validated"
+    },
+    {
+      "verb": "läsa",
+      "meaning": "read; to study",
+      "imageUrl": "https://images.unsplash.com/photo-1677184415826-74525a16986e?auto=format&fit=crop&w=760&q=78",
+      "sourceUrl": "https://unsplash.com/photos/a-woman-sitting-in-a-chair-reading-a-book-XGZ72Knysyg",
+      "photographer": "Paniz gm",
+      "photographerUrl": "https://unsplash.com/photos/a-woman-sitting-in-a-chair-reading-a-book-XGZ72Knysyg",
+      "alt": "A reader holding open pages of a book",
+      "description": "Someone reading an open book; illustrates the reading sense only",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "checked": "source page identified by manual web research; browser loading not independently validated"
+    },
+    {
+      "verb": "sticka",
+      "meaning": "knit",
+      "imageUrl": "https://images.unsplash.com/photo-1597736091379-b515f1adf6d2?auto=format&fit=crop&w=760&q=78",
+      "sourceUrl": "https://unsplash.com/photos/person-holding-red-and-yellow-stick-hLX_A9wjDWA",
+      "photographer": "Marina Ermakova",
+      "photographerUrl": "https://unsplash.com/@budetsvyazano",
+      "alt": "Hands knitting a fabric with needles and yarn",
+      "description": "Hands manipulating knitting needles and yarn; NOT the other sense of sticka",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "checked": "source page identified by manual web research; browser loading not independently validated"
+    }
+  ]
+}
