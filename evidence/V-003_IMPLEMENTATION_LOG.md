@@ -22,3 +22,11 @@ At this initial evidence capture, no V-003 CI result or user browser test has ye
 - Select `sticka / knit` versus `sticka / sting, prick; to leave (colloquial)`, switch levels, verify no meaning mix-up.
 - In comparison area, switch form tabs, confirm original Swedish and English examples for all four levels.
 - Check previous search, speech, and quiz; confirm the voice actually plays on the device.
+
+## Observed automated verification and deployment (added after implementation)
+
+- [Code integration commit `0d93de9`](https://github.com/alikhalessi/nordljud-swcon2627-r2/commit/0d93de9df497b45f612f35fb97a46d136ea8430f) follows the pre-existing approved prompt commit `6b203ca` and the comparison component commit `9819b3b`.
+- [GitHub Actions workflow run `40775728679`](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40775728679): **SUCCESS** — 10/10 tests PASS, 0 FAIL; TypeScript PASS; Next.js production build PASS.
+- [Vercel deployment](https://nordljud-r2-vibe-e2m9jyvay-aleksi9.vercel.app) at exact code commit `0d93de9`: Vercel production deployment state **READY**.
+- These checks verify source invariants and build success; they do **not** establish an end-to-end browser pass for cross-level selection, pronunciation or display. All student manual acceptance tests remain **NOT YET TESTED**.
+- `V-002-F01` browser-audio verification remains outstanding from the earlier increment.
