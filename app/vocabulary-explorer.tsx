@@ -33,6 +33,101 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [speechStatus, setSpeechStatus] = useState("");
+  const [voiceWarning, setVoiceWarning] = useState("");
+  const [activeSpeech, setActiveSpeech] = useState<string | null>(null);
+  const speechGeneration = useRef(0);
+
+  function stopSpeaking() {
+    speechGeneration.current += 1;
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+    setActiveSpeech(null);
+    setSpeechStatus("Audio stopped.");
+    setVoiceWarning("");
+  }
+
+  function speakSwedish(text: string, label: string) {
+    const phrase = text.trim();
+    if (!phrase) {
+      setSpeechStatus("No Swedish text is provided for this example.");
+      return;
+    }
+    if (typeof window === "undefined" ||
+        !("speechSynthesis" in window) ||
+        typeof SpeechSynthesisUtterance === "undefined") {
+      setSpeechStatus("Speech playback is not supported in this browser.");
+      setVoiceWarning("");
+      return;
+    }
+
+    const engine = window.speechSynthesis;
+    const run = ++speechGeneration.current;
+    engine.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(phrase);
+    utterance.lang = "sv-SE";
+    utterance.rate = 0.88;
+    const available = engine.getVoices();
+    const swedish = available.find((voice) => /^sv(?:-|$)/i.test(voice.lang));
+    if (swedish) utterance.voice = swedish;
+    setVoiceWarning(
+      !swedish && available.length > 0
+        ? "No Swedish voice is installed or available in this browser. It may use a different accent."
+        : !swedish
+          ? "The browser has not listed any voices yet. Check your device's Swedish speech settings if audio fails."
+          : ""
+    );
+
+    utterance.onstart = () => {
+      if (run === speechGeneration.current) {
+        setActiveSpeech(label);
+        setSpeechStatus(`Playing: ${label}`);
+      }
+    };
+    utterance.onend = () => {
+      if (run === speechGeneration.current) {
+        setActiveSpeech(null);
+        setSpeechStatus(`Finished: ${label}`);
+      }
+    };
+    utterance.onerror = (event) => {
+      if (run === speechGeneration.current && event.error !== "canceled" && event.error !== "interrupted") {
+        setActiveSpeech(null);
+        setSpeechStatus("Unable to play this Swedish audio. Check your browser's speech settings.");
+      }
+    };
+
+    setSpeechStatus(`Starting audio: ${label}`);
+    setActiveSpeech(label);
+    try {
+      engine.speak(utterance);
+    } catch {
+      if (run === speechGeneration.current) {
+        setActiveSpeech(null);
+        setSpeechStatus("The browser could not start audio playback.");
+      }
+    }
+  }
+
+  // Clean up browser speech when switching levels/verbs or leaving the page.
+  useEffect(() => {
+    speechGeneration.current += 1;
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+    setActiveSpeech(null);
+    setSpeechStatus("");
+    setVoiceWarning("");
+  }, [level, selectedId]);
+
+  useEffect(() => () => {
+    speechGeneration.current += 1;
+    if (typeof window !== "undefined" && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+  }, []);
 
   useEffect(() => {
     // Changing a level starts a fresh browse; cross-level synchronization is V-003.
@@ -172,6 +267,25 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                   <span className="eyebrow">SELECTED VERB · {level}</span>
                   <h3 lang="sv">{chosen.verb}</h3>
                   <p><strong>English meaning:</strong> {chosen.meaning}</p>
+                  <div className="detail-audio-actions">
+                    <button
+                      type="button"
+                      className="speech-control"
+                      onClick={() => speakSwedish(chosen.verb, `verb ${chosen.verb}`)}
+                      aria-label={`Listen to ${chosen.verb} in Swedish`}
+                    >
+                      <span aria-hidden="true">♫</span> Listen to verb
+                    </button>
+                    {activeSpeech && (
+                      <button type="button" className="speech-stop" onClick={stopSpeaking}>
+                        Stop audio
+                      </button>
+                    )}
+                  </div>
+                  <div className="vocabulary-audio-status" aria-live="polite" aria-atomic="true">
+                    {speechStatus && <p>{speechStatus}</p>}
+                    {voiceWarning && <p className="voice-warning">{voiceWarning}</p>}
+                  </div>
                 </div>
                 <h4>Verb forms and examples</h4>
                 <div className="verb-forms">
@@ -182,6 +296,28 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                         <div className="form-title">
                           <span>{label}</span>
                           <strong lang="sv">{form?.word || "Not provided"}</strong>
+                        </div>
+                        <div className="form-audio-actions">
+                          {form?.word?.trim() && (
+                            <button
+                              type="button"
+                              className="speech-control"
+                              onClick={() => speakSwedish(form.word!, `${label.toLowerCase()} form`)}
+                              aria-label={`Listen to ${label.toLowerCase()} form ${form.word} in Swedish`}
+                            >
+                              <span aria-hidden="true">♫</span> Form
+                            </button>
+                          )}
+                          {form?.sv?.trim() && (
+                            <button
+                              type="button"
+                              className="speech-control"
+                              onClick={() => speakSwedish(form.sv!, `${label.toLowerCase()} example`)}
+                              aria-label={`Listen to ${label.toLowerCase()} Swedish example`}
+                            >
+                              <span aria-hidden="true">♫</span> Example
+                            </button>
+                          )}
                         </div>
                         {form?.sv && (
                           <p className="form-swedish" lang="sv">{form.sv}</p>

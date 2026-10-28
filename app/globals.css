@@ -119,3 +119,13 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
   .vocabulary-detail { padding:14px; }
   .detail-heading { padding:16px; }
 }
+
+/* V-002-F01: speech controls on verb headword and each available form/example */
+.detail-audio-actions,.form-audio-actions { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.speech-control,.speech-stop { border:1px solid #bbd8cd; border-radius:8px; background:#fff; color:#215e50; padding:8px 10px; font-size:12px; font-weight:750; }
+.speech-control:hover { background:#e3f3e9; border-color:#4f9b7c; }
+.speech-stop { color:#784f42; border-color:#dbbdaf; }
+.speech-stop:hover { background:#fff0e8; }
+.vocabulary-audio-status { font-size:12px; color:#3c6759; line-height:1.4; }
+.vocabulary-audio-status p { margin:9px 0 0; }
+.vocabulary-audio-status .voice-warning { color:#795e35; }
