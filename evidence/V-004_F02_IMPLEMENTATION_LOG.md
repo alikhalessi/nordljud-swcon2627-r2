@@ -26,3 +26,7 @@ CI success/failure, actual deployment URL/commit and browser visual acceptance m
 - [Vercel deployment of the tested code SHA](https://nordljud-r2-vibe-hvt27dq7p-aleksi9.vercel.app): **READY**.
 - **Still unverified in a human browser:** Images visibly load next to chosen verb, author/source links look right, mobile layout, photographic meaning match as perceived by student. These cannot be marked PASS from CI.
 - No real photographic binaries have been uploaded or modified; all five CDN URLs are Unsplash-hosted, with the credited original image pages and photographer names. Photo licensing source: https://unsplash.com/license.
+
+## Later student follow-up / acceptance update
+
+On 2026-10-29 student responded: **"it is good and I would like to add as much as possible mpre photos"**. This counts as **general positive acceptance** of the initial visual direction and permission to continue image curation. It is NOT evidence of an exhaustive browser test of all five photos, mobile layout, attribution links, or installed TTS voices. The subsequent incremental expansion is [V-004-F03](V-004_F03_USER_FEEDBACK.md).
