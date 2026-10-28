@@ -26,8 +26,8 @@ The new test checks pure visibility policy: hidden before answer, hidden when co
 
 ## Verification and open limitations
 
-- [GitHub Actions run 40778260051](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40778260051): outcome is to be recorded when observed. Merely committing the code is not a PASS.
-- Vercel deployment status and exact URL are to be recorded when verified.
+- [GitHub Actions run 40778260051](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40778260051): **SUCCESS** for implementation commit `a11e579`. Exactly **15/15 automated tests PASS (0 failed)**, TypeScript typecheck PASS, Next.js production build PASS.
+- [Vercel deployment of implementation commit a11e579](https://nordljud-r2-vibe-mxl1gc8au-aleksi9.vercel.app): deployment state **READY**. This proves deployment completion, not successful real audio or every user interaction. Later documentation-only commits may trigger further deployments.
 - No actual click-through / E2E manual validation or device-level audio verification has been reported yet; user should test both wrong → reveal and wrong → retry → correct flows.
 - The tests do not automatically click in the browser. The UI rendering and user experience require the student's acceptance.
 
