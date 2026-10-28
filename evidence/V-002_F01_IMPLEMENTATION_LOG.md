@@ -12,7 +12,14 @@
 - Does not retarget V-001 mini-lesson/quiz to selected verb; V-003/004 are independent future requirements.
 
 ## Verification
-Status on creation of this file: NOT TESTED. Actual CI run URL, deployment status and user browser tests must be recorded after observed execution. Student should click both **Form** and **Example** for e.g. B2/acceptera and test all five conjugations, a different verb, and the Stop button. A successful build cannot verify installed Swedish voices or audible sound.
+The original version of this file was committed before CI. Subsequent observed verification is documented immediately below. Student should click both **Form** and **Example** for e.g. B2/acceptera and test all five conjugations, a different verb, and the Stop button. A successful build cannot verify installed Swedish voices or audible sound.
 
 ## Academic provenance
 This is an incremental feedback-driven corrective edit on V-002 triggered by the student's exact English sentence, not a silently rewritten original V-002 prompt or a new student-approved V-003. ChatGPT authored the implementation through GitHub connector.
+
+## Observed build and release checks (after implementation)
+
+- [Code commit 775fdc6](https://github.com/alikhalessi/nordljud-swcon2627-r2/commit/775fdc6793c212b8c39963fbcbcdc73a4b8c6cff) records the voice-control implementation.
+- [GitHub Actions run 40772903429](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40772903429): **SUCCESS** — dataset automated tests, TypeScript checking and production Next.js build all passed. These checks do not play sound.
+- Vercel deployment for exactly that code SHA: [production deployment](https://nordljud-r2-vibe-hwu9960fl-aleksi9.vercel.app) reported **READY**.
+- **Manual sound output verification remains PENDING:** student has not yet confirmed hearing the selected verb, an inflected form and a sample sentence on their device. Swedish voice availability/quality cannot be asserted from CI alone.
