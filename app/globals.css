@@ -75,3 +75,47 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
   footer { flex-direction:column; }
 }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
+
+/* V-002: vocabulary explorer. The original mini lesson styles are unchanged. */
+.vocabulary { margin-top:34px; border:1px solid var(--line); background:white; border-radius:23px; padding:32px; box-shadow:0 14px 45px rgba(16,57,45,.035); }
+.vocabulary-header { align-items:center; }
+.vocabulary-header h2 { margin:9px 0 7px; font-size:clamp(23px,3vw,29px); letter-spacing:-.8px; }
+.vocabulary-header p { color:var(--muted); line-height:1.6; font-size:14px; margin:0; }
+.vocabulary-count { background:#e9f5f1; border-radius:30px; padding:9px 13px; color:#236b5d!important; font-weight:750; white-space:nowrap; }
+.vocabulary-columns { margin-top:25px; display:grid; grid-template-columns:minmax(240px,.77fr) minmax(0,1.4fr); gap:23px; align-items:start; }
+.vocabulary-browser { border:1px solid #dce7e1; border-radius:15px; padding:16px; background:#f9fcfa; }
+.search-label { font-size:12px; font-weight:750; display:block; margin-bottom:10px; color:#2c5b50; }
+.verb-search { background:white; border:1px solid #cbdcd5; border-radius:10px; font:inherit; font-size:14px; padding:12px; width:100%; min-width:0; }
+.verb-search:focus-visible { outline:3px solid #8dbeab; outline-offset:2px; }
+.vocabulary-results { color:var(--muted); font-size:12px; margin:14px 0; }
+.verb-list { display:flex; flex-direction:column; gap:7px; }
+.verb-list-item { background:white; border:1px solid #e1e8e4; border-radius:9px; min-height:48px; padding:10px 12px; text-align:left; display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+.verb-list-item:hover { border-color:#8eb9a9; }
+.verb-list-item.chosen { background:#e5f4ed; border-color:#398575; }
+.verb-list-word { color:#1e5348; font-size:14px; font-weight:750; }
+.verb-list-meaning { color:#5b6e65; font-size:12px; text-align:right; }
+.vocabulary-pages { display:flex; align-items:center; justify-content:space-between; gap:7px; font-size:12px; color:var(--muted); margin-top:15px; }
+.vocabulary-pages button { font-size:12px; padding:8px 11px; border:1px solid #d6e2dc; background:#fff; color:#285e50; border-radius:8px; font-weight:700; }
+.vocabulary-pages button:disabled { opacity:.35; cursor:not-allowed; }
+.vocabulary-detail { border:1px solid #e1e9e4; border-radius:15px; padding:23px; background:white; min-width:0; }
+.detail-heading { background:#f0f8f3; border-radius:12px; padding:20px; }
+.detail-heading h3 { font-size:clamp(26px,3vw,34px); letter-spacing:-1px; margin:8px 0; }
+.detail-heading p { font-size:14px; color:#516b5f; margin:0; line-height:1.6; }
+.vocabulary-detail h4 { margin:24px 0 15px; font-size:17px; }
+.verb-forms { display:grid; gap:11px; }
+.verb-form-row { border:1px solid #e6eee9; border-radius:11px; padding:16px; }
+.form-title { display:flex; align-items:baseline; gap:15px; flex-wrap:wrap; font-size:13px; color:#678078; }
+.form-title strong { font-size:17px; color:#19594d; }
+.form-swedish { font-size:14px; line-height:1.5; margin:12px 0 5px; font-weight:700; }
+.form-english { font-size:13px; line-height:1.55; margin:0; color:#667870; }
+.detail-footnote { margin:17px 0 0; font-size:12px; color:#73867d; line-height:1.6; }
+.vocabulary-notice { background:#f2f7f4; border-radius:11px; padding:22px; color:#405b51; }
+.empty-results { padding:16px; font-size:14px; color:#647970; }
+.vocabulary-explanation { font-size:12px; line-height:1.7; margin:20px 0 0; color:#6b7c73; }
+@media(max-width:760px) {
+  .vocabulary { padding:23px 15px; border-radius:18px; }
+  .vocabulary-header { display:flex; align-items:flex-start; flex-direction:column; gap:13px; }
+  .vocabulary-columns { grid-template-columns:minmax(0,1fr); gap:15px; }
+  .vocabulary-detail { padding:14px; }
+  .detail-heading { padding:16px; }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import VocabularyExplorer from "./vocabulary-explorer";
 
 export type Level = "A2" | "B1" | "B2" | "C1";
 
@@ -79,8 +80,8 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           <span className="eyebrow">A SMALL STEP EVERY DAY</span>
           <h1>Make Swedish feel a little more familiar.</h1>
           <p>
-            Choose a level, read a real Swedish example, and try a quick
-            question. There is no account or setup needed for this first lesson.
+            Choose a level, browse the Swedish verb library, and try a quick
+            question. No account or setup is needed.
           </p>
         </section>
 
@@ -105,6 +106,8 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
             ))}
           </div>
         </section>
+
+        <VocabularyExplorer level={level} />
 
         <section className="lesson" aria-labelledby="lesson-heading">
           <div className="lesson-head">
