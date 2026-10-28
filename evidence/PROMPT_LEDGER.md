@@ -1,9 +1,9 @@
 # Prompt ledger (authentic executed history)
 
-**Current status: 0 Vibe prompts approved/executed in Round 2.** PC-001 was approved as project charter, not as a coding prompt.
+PC-001 (project charter) approved in advance; separate from coding prompt V-001.
 
-| ID | Human original / reference | AI draft ref | Final student-approved exact text ref | Approval date | Tool/agent and exact input ref | Git commit / output | Result / defect / test | Status |
-|---|---|---|---|---|---|---|---|---|
-| V-001 | PENDING | PENDING | PENDING | — | — | — | — | NOT STARTED |
+| ID | Original and final wording | AI draft | Student approval | Exact executed content | Code result | Real verification | Status |
+|---|---|---|---|---|---|---|---|
+| V-001 | [Verbatim student-confirmed final wording](V-001_APPROVED_PROMPT.md) | Assistant draft in prior chat; student revised and sent full text | 2026-10-28 | **Pending execution; same text to be used** | — | — | **STUDENT_APPROVED — not yet executed** |
 
-For each record preserve original messages, approved draft, actual sent text, and any differing technical agent instructions. Logs must not be rewritten after execution to improve how prompts sound.
+**Evidence rules:** Source wording may reflect an assistant draft but was reviewed, modified and expressly supplied by student. The exact content and separate execution evidence must not be fabricated. Preserve old status with commit history and update in a later commit only after execution.
