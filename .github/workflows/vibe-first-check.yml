@@ -1,0 +1,29 @@
+name: Vibe V-001 first-check
+
+on:
+  push:
+    branches:
+      - condition/vibe
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install packages (exact direct versions, no lockfile yet)
+        run: npm install --no-audit --no-fund
+      - name: Basic learning-data tests
+        run: npm test
+      - name: TypeScript type check
+        run: npm run typecheck
+      - name: Next.js production build
+        run: npm run build
