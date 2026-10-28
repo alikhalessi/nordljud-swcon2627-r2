@@ -199,3 +199,12 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
   .detail-heading.with-visual { grid-template-columns:minmax(0,1fr); }
   .verb-visual { max-width:320px; }
 }
+
+/* V-004-F03: opt-in explorer filter for curated action photographs */
+.vocabulary-photo-filter {
+  display:flex; align-items:center; gap:10px; margin:14px 0 7px;
+  border:1px solid #cfe3d6; border-radius:9px; background:#f3faf5;
+  padding:10px 12px; color:#275b46; font-size:12px; font-weight:700; cursor:pointer;
+}
+.vocabulary-photo-filter input { width:17px; height:17px; accent-color:#267054; cursor:pointer; flex:none; }
+.vocabulary-photo-filter strong { color:#477e5f; }
