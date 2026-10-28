@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import VocabularyExplorer from "./vocabulary-explorer";
+import AuthControls from "./auth-controls";
 
 export type Level = "A2" | "B1" | "B2" | "C1";
 
@@ -72,7 +73,10 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           <span className="brand-symbol" aria-hidden="true">N</span>
           <span>Nordljud</span>
         </div>
-        <span className="header-note">Learn Swedish, one step at a time</span>
+        <div className="header-tools">
+          <span className="header-note">Learn Swedish, one step at a time</span>
+          <AuthControls />
+        </div>
       </header>
 
       <main className="shell">
