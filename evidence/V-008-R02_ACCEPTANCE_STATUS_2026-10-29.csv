@@ -1,0 +1,22 @@
+gate,automated_status,provider_status,evidence,remaining_condition
+R02_exact_prior_student_approval,PASS,PASS,evidence/V-008-R02_STUDENT_APPROVAL_2026-10-29.md,Approval SHA 24e75a1b committed before first R02 change
+R02_isolated_test_first_RED,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40915588376,Genuine 77/78 RED missing auth helper before source implementation
+R02_new_source_unit_checks,PASS_82_OF_82,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40916180895,No live E2E inference
+R02_clean_npm_ci,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40916180895,Pinned working Node and lockfile
+R02_typescript,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40916180895,No real browser inference
+R02_next_production_build,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40916180895,Build success is not Production readiness
+R02_redirect_allowlist,PASS_UNIT,NOT_TESTED,lib/auth-flow.mjs,Preview origins only when explicitly configured and provider allowlisted
+R02_generic_auth_errors,PASS_UNIT,NOT_TESTED,tests/v008-r02-auth-cloud.test.mjs,Live provider behavior requires explicit setting approval
+R02_google_auth_pkce,SOURCE_PREPARED,NOT_TESTED,app/auth/callback/page.tsx,Live Google OAuth settings and account required
+R02_email_sign_up_confirmation,SOURCE_PREPARED,NOT_TESTED,app/auth-controls.tsx,Live email delivery and redirects require testing
+R02_password_recovery,SOURCE_PREPARED,NOT_TESTED,app/auth/reset/page.tsx,Live recovery email and authenticated session flow require testing
+R02_zero_row_mutation_detection,PASS_SOURCE,NOT_TESTED,app/review-state.tsx,Live owner-scoped database tests require schema and 2 accounts
+R02_guest_cloud_account_transition,PASS_PREVIOUS_SOURCE_TESTS,NOT_TESTED,app/review-state.tsx,Live account switching and refresh required
+R02_3_table_sql_prepared,PASS_SOURCE_ONLY,NOT_APPLIED,database/proposed-migrations/V008_R02_SECURE_CLOUD_SCHEMA_NOT_APPLIED.sql,Separate explicit Production SQL project and action approval required
+R02_two_authenticated_user_RLS,NOT_TESTED,BLOCKED,docs/R02_AUTH_CLOUD_DEPLOYMENT_AND_SECURITY_GATES_2026-10-29.md,No authorized test database or two test identities
+R02_existing_tables_unchanged,PASS_READ_ONLY,UNCHANGED,docs/R02_AUTH_CLOUD_DEPLOYMENT_AND_SECURITY_GATES_2026-10-29.md,Old tables present with RLS existing records
+R02_live_auth_provider_changes,NOT_APPLICABLE,NOT_AUTHORIZED,docs/R02_AUTH_CLOUD_DEPLOYMENT_AND_SECURITY_GATES_2026-10-29.md,Requires separate exact user approval
+R01_condition_vibe_to_preview_route,NOT_TESTED,BLOCKED,evidence/V-008-R01_STUDENT_ACCEPTANCE_2026-10-29.md,Vercel rate limit; mandatory before Vibe Freeze
+R01_release_vibe_branch_protection,UNENFORCED,UNENFORCED,evidence/V-008-R01_STUDENT_ACCEPTANCE_2026-10-29.md,Private GitHub Free ruleset limitation documented
+R02_public_merge_or_promotion,NOT_DONE,NOT_DONE,https://github.com/alikhalessi/nordljud-swcon2627-r2/pull/1,User forbade PR1 merge and public code publication
+R02_student_acceptance,PENDING,PENDING,evidence/V-008-R02_IMPLEMENTATION_LOG_2026-10-29.md,Do not start R03 or V009
