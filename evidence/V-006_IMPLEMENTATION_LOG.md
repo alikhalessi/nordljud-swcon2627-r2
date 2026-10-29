@@ -29,3 +29,11 @@
 8. Test auth-specific password error and email signup separately in V-005 acceptance.
 
 **V3 research integrity:** Neutral feature requirements and common source data may be shared between independent V3 Vibe and SDD runs; never copy V2's React code or DB migration into the isolated agents. Record human/provider actions and assistant choices distinctly.
+
+## Observed final outcomes (post-implementation evidence)
+
+- [CI run 40857077928](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40857077928): final outcome **SUCCESS**, **25/25 automated tests PASS**, zero failures. TypeScript PASS; Next.js production build PASS. Intermediate code commit `b41cd14` also passed CI independently. There is **no observed RED CI failure in V-006**; do not manufacture one.
+- [Vercel deployment](https://nordljud-r2-vibe-hh4l2294b-aleksi9.vercel.app) for `46302af1d2cfd3d798545d8bed1e1a25b28a7ca1` **READY**. Later evidence-only commits do not change code but can create new deployments. Stable production domain `https://nordljud-r2-vibe-sepia.vercel.app` needs a human browser review of V-006.
+- Read-only Supabase `pg_policies` query confirmed **exactly nine** policies: for each of three tables `SELECT`, `INSERT`, `DELETE`; every policy restricted to `authenticated` and ownership via `auth.uid() = user_id`. Runtime permission tests using a different authenticated account have **not** been completed.
+- Supabase security advisor warning: **Leaked Password Protection Disabled**. See https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection. No unrelated user-facing Auth configuration changed.
+- The student **has not yet accepted V-006 functionality**, and browser/device-level validation remains pending. User must test all specified acceptance flows and report results.
