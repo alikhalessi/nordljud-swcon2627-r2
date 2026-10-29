@@ -3,12 +3,12 @@
 **Project/course:** Nordljud Round 2, Åbo Akademi SWCON2627
 **Date:** 2026-10-29, Europe/Helsinki (GitHub commit timestamps are the authoritative exact times)
 **Experimental condition:** A — Vibe Coding, branch `condition/vibe`
-**Outcome:** `IMPLEMENTED SOURCE + AUTOMATED GREEN / GUEST LOCAL STORAGE SOURCE TESTED / AUTHENTICATED CLOUD STORAGE BLOCKED PENDING STUDENT DB AUTHORIZATION / LIVE UX ACCEPTANCE PENDING`
+**Outcome:** `FINAL 72/72 TESTS + TYPECHECK + PRODUCTION BUILD PASS / VERCEL INTEGRATION SUCCESS / GUEST LOCAL STORAGE SOURCE TESTED (NOT BROWSER VERIFIED) / AUTHENTICATED CLOUD STORAGE BLOCKED PENDING STUDENT DB AUTHORIZATION / LIVE UX ACCEPTANCE PENDING`
 **Prior user acceptance:** [Exact V-007 student acceptance](V-007_STUDENT_ACCEPTANCE_2026-10-29.md), `0f90d3bf380bfeae7ad6e5f4f61f1f90506843f3`, accepted V-007 with disclosed Swedish expert/browser limits.
 **Exact proposed English prompt saved BEFORE V-008 permission:** [V-008 AI_DRAFT](V-008_AI_DRAFT_LEARNING_HUB_ARCHIVE_REVIEW_2026-10-29.md), `2316b131517ca74c11db56685982a0e8c68357fa`.
 **Student's VERBATIM authorization committed BEFORE ANY V-008 code:** [V-008 STUDENT_APPROVAL](V-008_STUDENT_APPROVAL_2026-10-29.md), `25bb0614e69971985b7d060b6a1a3d363ede84e7`, followed by first V-008 test commit `0e3e2117690f1769e9718dfcf46aaf7f0ded6fce`.
 **Baseline:** last verified V-007 application/test SHA `7e71f78a1e1d299e1a3718d00b76612c2d79c8`, 58/58 green tests, TypeScript/build PASS ([40894383384](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894383384)).
-**Final code edits currently:** Latest `app/daily-lesson.tsx` completion-button code SHA `d9a472ba934aad3dec1c3244cfeefbaa72ca8746`. Verify its corresponding CI [40898856815](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40898856815) before declaring all gates PASS; last previously confirmed full suite [40898676469](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40898676469) had **72/72 tests, TypeScript PASS, Next.js build PASS**.
+**Final application/test code SHA:** `d9a472ba934aad3dec1c3244cfeefbaa72ca8746`. **VERIFIED FINAL GREEN: 72/72 tests, 0 failures, TypeScript PASS, Next.js Production Build PASS**, [GitHub run 40898856815](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40898856815), job `123535318588` with raw test totals. GitHub's Vercel commit status for the **exact same code SHA** reports `SUCCESS / Deployment has completed` ([Vercel status](https://vercel.com/aleksi9/nordljud-r2-vibe/FYVmd9Qt69XHArdNoDdKNjfjvvnp)); this is integration metadata, NOT browser E2E. All later commits are documentation-only.
 **No V-009 work has been started.**
 
 ## 1. Human-driven scope and academic classification
@@ -75,11 +75,13 @@ This is **USER-DRIVEN LATE FEATURE CONSTRUCTION / PRODUCT SCOPE CHANGE**, not an
 | [40898351698](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40898351698) | **GREEN 68/68 tests, 0 failed; TypeScript PASS, Next.js Production Build PASS**, after updating only superseded structural assertions and preserving original behavior checks |
 | [40898542277](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40898542277) | **GREEN 68/68 tests, typecheck/build PASS** after cloud-save verification-state correction |
 | [40898676469](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40898676469) | **GREEN 72/72 tests, 0 failures; TypeScript PASS; Next.js Production Build PASS** after four additional proposed RLS/Guest/logout-security *source tests* |
-| [40898856815](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40898856815) | Latest app-code commit `d9a472ba` added explicit Today's Lesson completed/undo button. Latest CI must be inspected to confirm final 72/72, typecheck and build before reporting fully green |
+| [40898856815](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40898856815) | **VERIFIED FINAL GREEN 72/72, no failures, TypeScript PASS, production Next.js build PASS**, on last app-code commit `d9a472ba`, checked from job `123535318588` and logs; GitHub Vercel integration also reports deployment completed for this exact code SHA. |
 
 **Note on test interpretation:** These include unit/data and source/static checks, not authenticated browser E2E or real database security tests. A source test that checks SQL for RLS statements is **not proof RLS is deployed** or correctly isolates two users in real Supabase.
 
 ## 5. Student acceptance scenarios and residual blockers
+
+**Independent browser check attempted in this turn:** Connected Browser returned `Browser access requires the originating browser context`. No live browser walkthrough, mobile/keyboard/screen reader, audio, Google sign-in, cross-account RLS or actual Supabase records could be tested. These are `BLOCKED / NOT TESTED`, **not PASSED**.
 
 1. Guest: change CEFR levels, open Today's Lesson and Daily Archive; select 2026-10-29 and next dates, verify exact old sets and Explore handoff. Mark today's or historical lesson completed and undo; refreshing should restore only explicitly saved selections.
 2. Guest: choose Remind Me Later for exact `sticka` **knit** and **sting, prick; to leave (colloquial)** separately; verify both in My Review, then Mark reviewed/Snooze/Remove; refresh to verify persistence. Try malformed/unavailable storage to confirm errors and no crash.
