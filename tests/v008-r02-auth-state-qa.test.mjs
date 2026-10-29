@@ -33,3 +33,11 @@ test("R02 QA RED: auth-event revision behavior invalidates stale async work",asy
   revision.advance();
   assert.equal(revision.isCurrent(second),false,"multiple changes must invalidate every stale lookup");
 });
+
+test("R02 QA RED: learning-state account switch cannot be undone by a stale getUser response",()=>{
+  const learning=readFileSync(new URL("../app/learning-state.tsx",import.meta.url),"utf8");
+  assert.match(learning,/createAuthRevisionGuard\(/);
+  assert.match(learning,/authRevision\.advance\(/);
+  assert.match(learning,/const lookupRevision = authRevision\.capture\(\)/);
+  assert.match(learning,/!authRevision\.isCurrent\(lookupRevision\)/);
+});
