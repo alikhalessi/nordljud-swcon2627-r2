@@ -81,6 +81,12 @@ export default function DailyLesson({
     if (typeof window !== "undefined" && "speechSynthesis" in window) window.speechSynthesis.cancel();
   }, []);
 
+  const completedToday = Boolean(dayKey && review.state.completions.some(
+    item => item.level === level && item.lessonOn === dayKey
+  ));
+  const canSaveReview = review.ready && !review.busy &&
+    (review.mode === "guest" || review.cloudAvailable);
+
   const picks = useMemo(
     () => dayKey && loadedLevel === level ? selectDailyVerbs(entries, level, dayKey) : [],
     [dayKey, entries, level, loadedLevel]
@@ -168,6 +174,17 @@ export default function DailyLesson({
             ))}
           </div>
         )
+      )}
+      {!loading && !error && picks.length > 0 && dayKey && (
+        <div className="archive-completion">
+          <p>{completedToday
+            ? "You marked today's lesson completed (self-reported, not a mastery score)."
+            : "Viewing today's words does not automatically mark them studied or completed."}</p>
+          <button type="button" disabled={!canSaveReview}
+            onClick={() => void review.toggleCompletion(level,dayKey)}>
+            {completedToday ? "Undo lesson completion" : "Mark today's lesson as completed"}
+          </button>
+        </div>
       )}
       <div className="daily-audio-status" role="status" aria-live="polite">{audioStatus}</div>
       {review.error && <p className="vocabulary-notice" role="alert">{review.error}</p>}
