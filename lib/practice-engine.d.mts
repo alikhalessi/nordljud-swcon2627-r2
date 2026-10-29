@@ -16,6 +16,8 @@ export type PracticeQuestion = {
   explanation: string;
 };
 
+export function isAvailableFormWord(word: string | null | undefined): boolean;
+
 export function makePracticeQuestions(entry: PracticeEntry, pool: PracticeEntry[]): PracticeQuestion[];
 
 export function canRevealCorrectAnswer(selected: string | null, answer: string, revealed: boolean, solved: boolean): boolean;
