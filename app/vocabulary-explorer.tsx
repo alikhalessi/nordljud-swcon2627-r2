@@ -5,6 +5,7 @@ import type { Level } from "./learning-app";
 import LevelComparison from "./level-comparison";
 import PracticePanel from "./practice-panel";
 import { isAvailableFormWord } from "../lib/practice-engine.mjs";
+import { useReviewStore } from "./review-state";
 import VerbPhoto, { hasVerbPhoto } from "./verb-photo";
 import {useLearningStore} from "./learning-state";
 import { readGuestPreferences, updateGuestPreferences } from "../lib/guest-preferences";
@@ -33,6 +34,7 @@ const forms = [
 
 export default function VocabularyExplorer({ level, target }: { level: Level;target?:{verb:string;meaning:string;level:Level}|null }) {
   const store=useLearningStore();
+  const review=useReviewStore();
   const cachedLevels = useRef<Partial<Record<Level, VocabularyEntry[]>>>({});
   const selectedMeaning = useRef<{ verb: string; meaning: string } | null>(null);
   const [entries, setEntries] = useState<VocabularyEntry[]>([]);
@@ -369,6 +371,11 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
                   <div className="saved-actions">
                    <button type="button" disabled={!store.user||store.busy||store.loading} onClick={()=>void store.toggleFavorite({verb:chosen.verb,meaning:chosen.meaning})}>{chosenSaved?"★ Remove Favorite":"☆ Add to Favorites"}</button>
                    <button type="button" disabled={!store.user||store.busy||store.loading} onClick={()=>void store.toggleStudied({verb:chosen.verb,meaning:chosen.meaning},level)}>{chosenStudied?"✓ Studied — undo":"Mark as studied"}</button>
+                   <button type="button" disabled={!review.ready||review.busy||(review.mode==="cloud"&&!review.cloudAvailable)||
+                     review.hasReminder({level,verb:chosen.verb,meaning:chosen.meaning})}
+                     onClick={()=>void review.addReminder({level,verb:chosen.verb,meaning:chosen.meaning})}>
+                     {review.hasReminder({level,verb:chosen.verb,meaning:chosen.meaning})?"✓ In My Review":"Remind Me Later"}
+                   </button>
                   </div>
                   {!store.user&&<p className="detail-footnote">Guest Mode: sign in to save favorites and studied words.</p>}
                   <div className="detail-audio-actions">
