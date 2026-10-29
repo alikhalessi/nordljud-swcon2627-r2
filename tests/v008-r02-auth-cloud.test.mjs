@@ -26,7 +26,8 @@ test("R02: account flow includes recovery, verified redirect, and callback failu
   assert.match(ui,/resetPasswordForEmail/);
   const reset=readFileSync(new URL("../app/auth/reset/page.tsx",import.meta.url),"utf8");
   assert.match(reset,/updateUser\(/);
-  assert.match(reset,/getSession\(/);
+  assert.match(reset,/exchangeCodeForSession\(/);
+  assert.match(reset,/getUser\(/);
   assert.match(ui,/getAuthRedirectUrl\(/);
   assert.match(ui,/Forgot password/);
   assert.match(ui,/authErrorText\(/);
