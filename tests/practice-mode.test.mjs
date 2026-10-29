@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { canRevealCorrectAnswer, makePracticeQuestions } from "../lib/practice-engine.mjs";
+import { canRevealCorrectAnswer, makePracticeQuestions, isAvailableFormWord } from "../lib/practice-engine.mjs";
 
 const levels = ["A2", "B1", "B2", "C1"];
 function rowsFor(level) {
@@ -21,7 +21,13 @@ test("V-004: unique choices, exactly one correct option, per actual verb", () =>
     const rows = rowsFor(level);
     for (const entry of rows) {
       const questions = makePracticeQuestions(entry, rows);
-      assert.ok(questions.length >= 2, level + "/" + entry.verb + ": missing exercises");
+      // Missing forms cannot create fake form/cloze questions.
+      // Require a contextual meaning item, and additional questions only
+      // when the actual source has at least three different usable forms.
+      const validFormCount = new Set(Object.values(entry.forms)
+        .map((form) => form?.word?.trim()).filter(isAvailableFormWord)).size;
+      assert.ok(questions.length >= (validFormCount >= 3 ? 2 : 1),
+        level + "/" + entry.verb + ": insufficient source-grounded exercises");
       for (const q of questions) {
         assert.ok(["meaning", "form", "cloze"].includes(q.kind));
         assert.ok(q.choices.length >= 3);
