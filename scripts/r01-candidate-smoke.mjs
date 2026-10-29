@@ -1,5 +1,7 @@
 // R01 optional HTTP smoke for a specific immutable Vercel candidate URL.
 // HTTP 200 + app heading is NOT evidence of real auth, E2E or accessibility.
+import { resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 const approvedHost = (host) => /^([a-z0-9-]+\.)+vercel\.app$/.test(host);
 export function parseCandidateUrl(raw) {
   if(typeof raw!=="string"||!raw.trim())throw new Error("Missing exact candidate deployment URL");
@@ -21,7 +23,7 @@ export async function smokeCandidate(raw,fetcher=fetch) {
   if(!/Nordljud/i.test(body))throw new Error("Expected Nordljud app marker in HTML");
   return {status:response.status,host:url.hostname,check:"HTTP/HTML/marker only"};
 }
-if(process.argv[1] && import.meta.url===new URL("file://"+process.argv[1]).href){
+if(process.argv[1] && import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
   const value=process.env.R01_CANDIDATE_URL;
   if(!value){console.log("NOT TESTED: R01_CANDIDATE_URL is unset; candidate HTTP smoke was skipped.");}
   else smokeCandidate(value).then(x=>console.log("HTTP SMOKE PASS (not E2E):",JSON.stringify(x)))
