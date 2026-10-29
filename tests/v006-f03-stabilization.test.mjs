@@ -58,7 +58,7 @@ test("F03 F08: guest preferences persist only a constrained, browser-local selec
 
 test("F03 UX04: independent fixed mini lesson is labeled rather than redesigned", () => {
   assert.match(app, /SEPARATE MINI LESSON/);
-  assert.match(app, /does not change when you select a different verb/i);
+  assert.match(app, /separate from the three rotating daily verbs above/i);
   assert.match(app, /<VocabularyExplorer level=\{level\} target=\{target\}/);
 });
 
