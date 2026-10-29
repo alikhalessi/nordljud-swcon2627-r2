@@ -5,6 +5,7 @@ import VocabularyExplorer from "./vocabulary-explorer";
 import AuthControls from "./auth-controls";
 import {LearningProvider} from "./learning-state";
 import LearningDashboard from "./learning-dashboard";
+import DailyLesson from "./daily-lesson";
 import { readGuestPreferences, updateGuestPreferences } from "../lib/guest-preferences";
 
 export type Level = "A2" | "B1" | "B2" | "C1";
@@ -22,6 +23,7 @@ export type Lesson = {
 };
 
 type MainTab = "explore" | "learning";
+type ExploreView = "verbs" | "daily";
 const levels: Level[] = ["A2", "B1", "B2", "C1"];
 
 const levelDescriptions: Record<Level, string> = {
@@ -34,8 +36,11 @@ const levelDescriptions: Record<Level, string> = {
 export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   const [level, setLevel] = useState<Level>("A2");
   const [activeTab, setActiveTab] = useState<MainTab>("explore");
+  const [exploreView, setExploreView] = useState<ExploreView>("verbs");
   const exploreTabRef = useRef<HTMLButtonElement>(null);
   const learningTabRef = useRef<HTMLButtonElement>(null);
+  const verbTabRef = useRef<HTMLButtonElement>(null);
+  const dailyTabRef = useRef<HTMLButtonElement>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [showTranslation, setShowTranslation] = useState(false);
   const [audioMessage, setAudioMessage] = useState("");
@@ -76,9 +81,20 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
     (next === "explore" ? exploreTabRef : learningTabRef).current?.focus();
   }
 
+  function onExploreTabKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
+    let next: ExploreView;
+    if (event.key === "ArrowLeft" || event.key === "Home") next = "verbs";
+    else if (event.key === "ArrowRight" || event.key === "End") next = "daily";
+    else return;
+    event.preventDefault();
+    setExploreView(next);
+    (next === "verbs" ? verbTabRef : dailyTabRef).current?.focus();
+  }
+
   function returnToVerb(sense: { verb: string; meaning: string }, selectedLevel: Level) {
     changeLevel(selectedLevel);
     setTarget({ ...sense, level: selectedLevel });
+    setExploreView("verbs");
     setActiveTab("explore");
     // Return the keyboard and viewport to the learning area rather than
     // leaving users below a long history list.
@@ -178,7 +194,29 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           </div>
         </section>
 
-        <VocabularyExplorer level={level} target={target} />
+        <div className="explore-subtabs" role="tablist" aria-label="Explore modes">
+          <button type="button" id="explore-verbs-tab" ref={verbTabRef} role="tab"
+            aria-selected={exploreView === "verbs"} aria-controls="explore-verbs-panel"
+            tabIndex={exploreView === "verbs" ? 0 : -1}
+            onKeyDown={onExploreTabKeyDown} onClick={() => setExploreView("verbs")}>
+            Verb Explorer
+          </button>
+          <button type="button" id="explore-daily-tab" ref={dailyTabRef} role="tab"
+            aria-selected={exploreView === "daily"} aria-controls="explore-daily-panel"
+            tabIndex={exploreView === "daily" ? 0 : -1}
+            onKeyDown={onExploreTabKeyDown} onClick={() => setExploreView("daily")}>
+            Today's Lesson · 3 daily verbs
+          </button>
+        </div>
+
+        <div id="explore-verbs-panel" className="explore-subpanel" role="tabpanel"
+          aria-labelledby="explore-verbs-tab" hidden={exploreView !== "verbs"} tabIndex={0}>
+          <VocabularyExplorer level={level} target={target} />
+        </div>
+
+        <div id="explore-daily-panel" className="explore-subpanel" role="tabpanel"
+          aria-labelledby="explore-daily-tab" hidden={exploreView !== "daily"} tabIndex={0}>
+          <DailyLesson level={level} onOpenVerb={returnToVerb} />
 
         <section className="lesson" aria-labelledby="lesson-heading">
           <div className="lesson-head">
@@ -186,7 +224,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
               <span className="eyebrow">SEPARATE MINI LESSON · {level}</span>
               <h2 id="lesson-heading">{lesson.title}</h2>
               <p>{lesson.goal}</p>
-              <p className="mini-lesson-distinction">This is a fixed example for {level}. It does not change when you select a different verb above.</p>
+              <p className="mini-lesson-distinction">This is our fixed {level} example, separate from the three rotating daily verbs above.</p>
             </div>
             <span className="lesson-pill">Mini lesson</span>
           </div>
@@ -198,7 +236,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
             </div>
             <p className="swedish" lang="sv">{lesson.swedish}</p>
             <div className="word-note">
-              Today&apos;s verb: <strong lang="sv">{lesson.verb}</strong>
+              Mini lesson verb: <strong lang="sv">{lesson.verb}</strong>
               <span> · {lesson.meaning}</span>
             </div>
             <div className="sentence-actions">
@@ -261,7 +299,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
             )}
           </div>
         </section>
-
+        </div>
         </div>
         <div id="learning-panel" className="primary-study-panel" role="tabpanel" aria-labelledby="learning-tab" hidden={activeTab !== "learning"} tabIndex={0}>
           <LearningDashboard level={level} onSelect={returnToVerb} />
