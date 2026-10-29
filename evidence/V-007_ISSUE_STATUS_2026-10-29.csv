@@ -1,0 +1,14 @@
+issue,scope,implementation_status,automated_verification,live_browser_status,source,notes
+UX06_contextual_meaning,F07_SCOPE,CODE_FIXED,TEST_PASS,NOT_TESTED,lib/practice-engine.mjs,Exact sense authentic Swedish sentence and same lemma alternatives; ambiguous broad glosses flagged
+UX07_missing_form_audio,F07_SCOPE,CODE_FIXED,TEST_PASS,NOT_TESTED,app/vocabulary-explorer.tsx,Form not available instead of em dash; no placeholder Listen button
+UX07_comparison_forms,F07_SCOPE,CODE_FIXED,TEST_PASS,NOT_TESTED,app/level-comparison.tsx,Unavailable form shown as label; authentic sentence can remain
+V007_missing_form_quiz,F07_SCOPE,CODE_FIXED,TEST_PASS,NOT_TESTED,lib/practice-engine.mjs,Em dash and editorial sentinels excluded from answer distractor and cloze
+V007_sense_question_scoring,F07_SCOPE,CODE_PRESERVED,TEST_PASS,NOT_TESTED,app/practice-panel.tsx,Only actual correct answer increases score; reveal earns no credit
+V007_original_456_per_level,F07_PROTECTED,UNCHANGED,TEST_PASS,NOT_APPLICABLE,shared-content/verb-library,All 1824 sense records preserved
+V007_quality_inventory,F07_SCOPE,RECORDED,TEST_PASS,NOT_APPLICABLE,evidence/V-007_SOURCE_QUALITY_FLAGS_2026-10-29.csv,1118 flags; 131 missing form slots 127 missing bilingual examples four conflicting empty form with example cases
+V007_qualified_swedish_review,F07_FOLLOWUP,REVIEW_PENDING,NOT_CERTIFIED,NOT_TESTED,shared-content/verb-library,Multi-usage glosses source idiomaticity and grammar need independent language expert
+V007_daily_navigation,F07_PROTECTED,SOURCE_PRESERVED,TEST_PASS,NOT_TESTED,app/learning-app.tsx,Your Learning Today and My Progress unchanged
+V007_personal_data_auth,F07_PROTECTED,UNCHANGED,NOT_TESTED,NOT_TESTED,app/learning-state.tsx,No Supabase migrations storage schema auth or RLS modified
+V007_CI_typecheck_build,F07_SCOPE,PASS,58_OF_58_AND_BUILD_PASS,NOT_APPLICABLE,40894383384,Verified successful GitHub workflow on commit 7e71f78a1e1d299e1a3718d00b76612c2d79c8
+V007_Vercel_deployment,F07_SCOPE,INTEGRATION_SUCCESS,GITHUB_STATUS_SUCCESS,NOT_TESTED,7e71f78a1e1d299e1a3718d00b76612c2d79c8,Vercel integration says deployment completed but no live browser validation
+V007_student_acceptance,F07_GATE,PENDING,NOT_APPLICABLE,PENDING,evidence/V-007_IMPLEMENTATION_LOG_2026-10-29.md,Do not start V008 without explicit student acceptance
