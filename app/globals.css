@@ -243,3 +243,16 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
  .nordljud-auth,.auth-status-row { text-align:left; justify-content:flex-start; }
  .auth-drawer { left:0; right:auto; }
 }
+
+/* V-006 cloud learning memory */
+.learning-dashboard{margin:20px 0 24px;padding:23px;border:1px solid #d8e5dd;border-radius:15px;background:#fff;}
+.progress-counters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0;}
+.progress-counters>div{display:flex;flex-direction:column;background:#f1f8f3;border-radius:9px;padding:12px;}
+.progress-counters span{font-size:12px;color:#416d55;}
+.saved-list{margin:16px 0;}
+.saved-row{padding:12px 0;display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid #e5ede7;font-size:13px;}
+.saved-row>div{display:flex;gap:7px;}
+.saved-row button,.saved-list>button,.saved-actions button{border:1px solid #bad4c6;border-radius:8px;padding:8px 11px;background:#f5fbf6;color:#236349;font-size:12px;font-weight:700;}
+.saved-actions{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.saved-actions button:disabled{opacity:.5;cursor:not-allowed;}
+@media(max-width:600px){.progress-counters{grid-template-columns:repeat(2,minmax(0,1fr));}.saved-row{flex-direction:column;align-items:flex-start;}}

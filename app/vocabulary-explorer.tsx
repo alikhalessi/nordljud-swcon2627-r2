@@ -5,6 +5,7 @@ import type { Level } from "./learning-app";
 import LevelComparison from "./level-comparison";
 import PracticePanel from "./practice-panel";
 import VerbPhoto, { hasVerbPhoto } from "./verb-photo";
+import {useLearningStore} from "./learning-state";
 
 type VerbForm = { word?: string; sv?: string; en?: string };
 type VocabularyEntry = {
@@ -28,13 +29,15 @@ const forms = [
   { key: "Sup", label: "Supine" }
 ] as const;
 
-export default function VocabularyExplorer({ level }: { level: Level }) {
+export default function VocabularyExplorer({ level, target }: { level: Level;target?:{verb:string;meaning:string;level:Level}|null }) {
+  const store=useLearningStore();
   const cachedLevels = useRef<Partial<Record<Level, VocabularyEntry[]>>>({});
   const selectedMeaning = useRef<{ verb: string; meaning: string } | null>(null);
   const [entries, setEntries] = useState<VocabularyEntry[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [photosOnly, setPhotosOnly] = useState(false);
+  const [favoritesOnly,setFavoritesOnly]=useState(false);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -194,6 +197,13 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
     void loadLevel();
     return () => controller.abort();
   }, [level]);
+  useEffect(()=>{
+    if(!target||target.level!==level||entries.length===0)return;
+    const index=entries.findIndex(x=>x.verb===target.verb&&x.meaning===target.meaning);
+    if(index<0)return;
+    selectedMeaning.current={verb:target.verb,meaning:target.meaning};
+    setSelectedId(entries[index].id);setFavoritesOnly(false);setPhotosOnly(false);setQuery("");setPage(Math.floor(index/PAGE_SIZE));
+  },[target,level,entries]);
 
   const photoCount = useMemo(() =>
     entries.filter(({ verb, meaning }) => hasVerbPhoto(verb, meaning)).length,
@@ -203,14 +213,17 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
     const term = query.trim().toLocaleLowerCase("sv");
     return entries.filter(({ verb, meaning }) =>
       (!photosOnly || hasVerbPhoto(verb, meaning)) &&
+      (!favoritesOnly || store.favorites.some(f=>f.verb===verb&&f.meaning===meaning)) &&
       (!term || verb.toLocaleLowerCase("sv").includes(term) ||
         meaning.toLocaleLowerCase("en").includes(term))
     );
-  }, [entries, query, photosOnly]);
+  }, [entries, query, photosOnly, favoritesOnly, store.favorites]);
 
   const pageCount = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
   const pageEntries = matching.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
   const chosen = entries.find((row) => row.id === selectedId);
+  const chosenSaved=chosen?store.favorites.some(x=>x.verb===chosen.verb&&x.meaning===chosen.meaning):false;
+  const chosenStudied=chosen?store.studied.some(x=>x.level===level&&x.verb===chosen.verb&&x.meaning===chosen.meaning):false;
 
   return (
     <section className="vocabulary" aria-labelledby="vocabulary-heading">
@@ -260,6 +273,7 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
               />
               <span>Only verbs with photos <strong>({photoCount} available)</strong></span>
             </label>
+            {store.user&&<label className="vocabulary-photo-filter"><input type="checkbox" checked={favoritesOnly} onChange={e=>{setFavoritesOnly(e.target.checked);setPage(0);}}/> Show favorites only</label>}
             <p className="vocabulary-results" role="status">
               {matching.length} {matching.length === 1 ? "entry" : "entries"} found
               {matching.length !== entries.length ? ` from ${entries.length}` : ""}
@@ -308,6 +322,11 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
                     <span className="eyebrow">SELECTED VERB · {level}</span>
                   <h3 lang="sv">{chosen.verb}</h3>
                   <p><strong>English meaning:</strong> {chosen.meaning}</p>
+                  <div className="saved-actions">
+                   <button type="button" disabled={!store.user||store.busy||store.loading} onClick={()=>void store.toggleFavorite({verb:chosen.verb,meaning:chosen.meaning})}>{chosenSaved?"★ Remove Favorite":"☆ Add to Favorites"}</button>
+                   <button type="button" disabled={!store.user||store.busy||store.loading} onClick={()=>void store.toggleStudied({verb:chosen.verb,meaning:chosen.meaning},level)}>{chosenStudied?"✓ Studied — undo":"Mark as studied"}</button>
+                  </div>
+                  {!store.user&&<p className="detail-footnote">Guest Mode: sign in to save favorites and studied words.</p>}
                   <div className="detail-audio-actions">
                     <button
                       type="button"
@@ -420,7 +439,7 @@ export default function VocabularyExplorer({ level }: { level: Level }) {
       <p className="vocabulary-explanation">
         The original mini lesson below still uses a fixed example for each level.
         The new Learning and Practice Modes above follow the verb you selected.
-        Scores are not yet saved to an account.
+        Signed-in users can save favorite words, studied verbs and completed practice sessions.
       </p>
     </section>
   );

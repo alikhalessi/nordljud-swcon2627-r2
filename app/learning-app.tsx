@@ -3,6 +3,8 @@
 import { useState } from "react";
 import VocabularyExplorer from "./vocabulary-explorer";
 import AuthControls from "./auth-controls";
+import {LearningProvider} from "./learning-state";
+import LearningDashboard from "./learning-dashboard";
 
 export type Level = "A2" | "B1" | "B2" | "C1";
 
@@ -32,6 +34,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [showTranslation, setShowTranslation] = useState(false);
   const [audioMessage, setAudioMessage] = useState("");
+  const [target,setTarget] = useState<{verb:string;meaning:string;level:Level}|null>(null);
 
   const lesson = lessons.find((entry) => entry.level === level);
 
@@ -67,7 +70,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   }
 
   return (
-    <div className="site">
+    <LearningProvider><div className="site">
       <header className="site-header">
         <div className="brand" aria-label="Nordljud home">
           <span className="brand-symbol" aria-hidden="true">N</span>
@@ -111,7 +114,8 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           </div>
         </section>
 
-        <VocabularyExplorer level={level} />
+        <LearningDashboard level={level} onSelect={(s,l)=>{setLevel(l);setTarget({...s,level:l});}} />
+        <VocabularyExplorer level={level} target={target} />
 
         <section className="lesson" aria-labelledby="lesson-heading">
           <div className="lesson-head">
@@ -199,6 +203,6 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           <span>Educational examples are from the shared project dataset.</span>
         </footer>
       </main>
-    </div>
+    </div></LearningProvider>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import {useLearningStore} from "./learning-state";
 import type { Level } from "./learning-app";
 import { canRevealCorrectAnswer, makePracticeQuestions, type PracticeEntry } from "../lib/practice-engine.mjs";
 
@@ -11,6 +12,9 @@ export default function PracticePanel({
   pool: PracticeEntry[];
   level: Level;
 }) {
+  const store=useLearningStore();
+  const logged=useRef(false);
+  const [saveStatus,setSaveStatus]=useState("");
   const questions = useMemo(() => makePracticeQuestions(entry, pool), [entry, pool]);
   const [step, setStep] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -19,6 +23,18 @@ export default function PracticePanel({
   const [revealed, setRevealed] = useState(false);
 
   const finished = step >= questions.length;
+  useEffect(()=>{
+   if(!finished||!questions.length||logged.current)return;
+   logged.current=true;
+   if(!store.user){setSaveStatus("Guest practice is not saved permanently.");return;}
+   setSaveStatus("Saving completed practice…");
+   void store.recordPractice({verb:entry.verb,meaning:entry.meaning},level,score,questions.length)
+    .then(ok=>setSaveStatus(ok?"Saved to your account.":"Could not save. Check cloud status."))
+    .catch(()=>setSaveStatus("Could not save this practice session."));
+  // A finished session is recorded only once; restart resets the guard.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[finished]);
+
   const question = questions[step];
   const isCorrect = selected !== null && question && selected === question.answer;
   const canReveal = question ? canRevealCorrectAnswer(selected, question.answer, revealed, solved) : false;
@@ -40,6 +56,8 @@ export default function PracticePanel({
   }
 
   function restart() {
+    logged.current=false;
+    setSaveStatus("");
     setStep(0);
     setScore(0);
     setSelected(null);
@@ -63,7 +81,7 @@ export default function PracticePanel({
         <div className="practice-finish" role="status">
           <span className="eyebrow">PRACTICE FINISHED</span>
           <h4>You answered {score} of {questions.length} questions correctly.</h4>
-          <p>The result stays on this screen only. Saving progress will come in a later version.</p>
+          <p role="status">{saveStatus||"Preparing your result…"}</p>
           <button type="button" className="practice-next" onClick={restart}>Practice again</button>
         </div>
       ) : question ? (
