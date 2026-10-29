@@ -1,3 +1,5 @@
+> **POST-EXECUTION UPDATE (2026-10-29):** The student subsequently gave explicit approval of SQL blob SHA `d4940119f84f8b3a4510e032335ae8df7fe1b1f0` and accepted the role-replay and independent encrypted backup limitations in `evidence/V-008-R02_FINAL_PRODUCTION_SQL_APPROVAL_2026-10-29.md`. The approved migration was applied exactly once and independently verified in `evidence/V-008-R02_PRODUCTION_MIGRATION_EXECUTION_AND_VERIFICATION_2026-10-29.md`, migration history entry `20261029192724 v008_r02_secure_cloud_schema`. All subsequent references to "NOT APPLIED" or "BLOCKED" below represent the **historical pre-authorization gate**, not the current production state. Live two-account/auth and release verification remains pending. No PR merges or public deployment were authorized.
+
 # V-008-R02 — Conditional Production Migration Authorization and Hard Backup Gate
 Date: 2026-10-29 (Europe/Helsinki).
 STATUS: **BLOCKED — BACKUP RECOVERY EVIDENCE NOW DOCUMENTED; ORIGINAL PRODUCTION AUTHORIZATION CONDITIONS STILL REQUIRE RESOLUTION.**
