@@ -1,7 +1,11 @@
-name: Vibe V-001 first-check
+name: Vibe verification — research branches
 
 on:
   push:
+    branches:
+      - condition/vibe
+      - hardening/v008-r01
+  pull_request:
     branches:
       - condition/vibe
   workflow_dispatch:
@@ -14,16 +18,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Use Node 22
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
-      - name: Install packages (exact direct versions, no lockfile yet)
-        run: npm install --no-audit --no-fund
+          node-version: "22.23.4"
+          cache: "npm"
+      - name: Install strictly from committed lockfile
+        run: npm ci --no-audit --no-fund
       - name: Basic learning-data tests
         run: npm test
       - name: TypeScript type check
         run: npm run typecheck
       - name: Next.js production build
         run: npm run build
+      - name: Optional exact candidate HTTP smoke (NOT E2E)
+        env:
+          R01_CANDIDATE_URL: ${{ vars.R01_CANDIDATE_URL }}
+        run: node scripts/r01-candidate-smoke.mjs

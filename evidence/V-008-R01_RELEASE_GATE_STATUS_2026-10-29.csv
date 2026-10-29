@@ -1,0 +1,23 @@
+gate,expected_evidence,observed_status,reference,remaining_blocker
+R01_student_approval_before_code,Exact original approval committed to vibe prior to tests,PASS,evidence/V-008-R01_STUDENT_APPROVAL_2026-10-29.md,none
+R01_isolated_RED_cycle,RED check committed before lock and runbook,PASS,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40903262007,73/75 tests 2 failed before fix preserved
+R01_lockfile_real_registry,Resolved package-lock from GitHub npm Actions,PASS,package-lock.json,Temporary writer workflow removed
+R01_clean_install_npm_ci,CI from package-lock not npm install,PASS,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40904256959,none
+R01_node_version,Pin proven working Node 22.23.4,PASS,.github/workflows/vibe-first-check.yml,Original 22.16.0 mistake recorded
+R01_full_tests,All original and new source tests,PASS_77_OF_77,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40904256959,none
+R01_typecheck,tsc --noEmit,PASS,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40904256959,none
+R01_Next_production_build,Next.js production build,PASS,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40904256959,none
+R01_preview_deployment_metadata,Preview Ready exact green code SHA,PASS_METADATA,https://vercel.com/aleksi9/nordljud-r2-vibe/3t1vp6KXd5RBN7CzNqoLooUQxDnj,Deployment dpl_3t1vp6KXd5RBN7CzNqoLooUQxDnj Ready for 3d3fb6f
+R01_http_preview_smoke,HTTP/HTML/Nordljud from exact URL,NOT_TESTED,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40904256959,No candidate variable; external URL inaccessible via web request tool
+R01_real_E2E_auth_mobile,Actual signed-in browser tests and device checks,NOT_TESTED,docs/R01_CONTROLLED_RELEASE_RUNBOOK.md,R02 and R03 live acceptance
+R01_live_Production_release_separation,Only approved green SHA can reach Production,BLOCKED,docs/R01_CONTROLLED_RELEASE_RUNBOOK.md,Separate student authorization and Vercel settings change required
+R01_draft_pull_request,Draft PR not merged,PASS,https://github.com/alikhalessi/nordljud-swcon2627-r2/pull/1,Await separate publication gate and human review
+R01_production_DB_migration,No SQL applied to Production,UNCHANGED,docs/R01_CONTROLLED_RELEASE_RUNBOOK.md,Separate R02 authorization still required
+R01_SDDBenchmark_source_integrity,Do not modify independent SDD or frozen corpus,PASS_SOURCE_SCOPE,https://github.com/alikhalessi/nordljud-swcon2627-r2/pull/1,No comparative result claims
+R01_student_final_acceptance,Student reviews and accepts R01,PENDING,evidence/V-008-R01_IMPLEMENTATION_LOG_2026-10-29.md,R02 must not start before acceptance
+R01_separate_release_authorization,Verbatim user approval to change live branch,GRANTED_NOT_APPLIED,evidence/V-008-R01_SEPARATE_BRANCH_AUTHORIZATION_AND_PARTIAL_EXECUTION_2026-10-29.md,Recorded original authorization and no Supabase or code-release permission
+R01_release_vibe_branch_created,Branch head equals current READY Production SHA,PASS,https://github.com/alikhalessi/nordljud-swcon2627-r2/tree/release/vibe,Exact 7f64839dbcb8ae945b0416ecf83b84d78009b1f0; no R01 staged code
+R01_prod_alias_after_branch_creation,Public project domain and READY Production SHA unchanged,PASS_PROVIDER_METADATA,evidence/V-008-R01_SEPARATE_BRANCH_AUTHORIZATION_AND_PARTIAL_EXECUTION_2026-10-29.md,Latest Production remains READY on condition/vibe at 7f64839d
+R01_Vercel_Production_Branch_Tracking,Set source branch to release/vibe,SAVED_IN_USER_UI_NOT_PROVIDER_API_VERIFIED,evidence/V-008-R01_SEPARATE_BRANCH_AUTHORIZATION_AND_PARTIAL_EXECUTION_2026-10-29.md,User screenshot shows release/vibe and saved toast; future routing remains untested
+R01_release_branch_GitHub_protection,Prevent unreviewed writes to release/vibe,NOT_ENFORCED_PRIVATE_FREE_RESTRICTION,evidence/V-008-R01_SEPARATE_BRANCH_AUTHORIZATION_AND_PARTIAL_EXECUTION_2026-10-29.md,GitHub user screenshot says rulesets unenforced for current private repository; branch protected false; manual review only
+R01_development_push_preview_only,After switch test condition/vibe no longer emits Production,NOT_TESTED,evidence/V-008-R01_SEPARATE_BRANCH_AUTHORIZATION_AND_PARTIAL_EXECUTION_2026-10-29.md,Do not trigger until provider setting actually verified
