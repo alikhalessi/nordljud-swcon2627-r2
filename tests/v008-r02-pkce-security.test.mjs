@@ -24,3 +24,12 @@ test("R02 security: reset never enables password changes using a pre-existing se
   assert.match(reset,/auth\.getUser\(/);
   assert.doesNotMatch(reset,/if\(error\|\|!data\.session\)/);
 });
+
+test("R02 security: StrictMode replays attach to the same in-flight code exchange",()=>{
+  // React can call effect setup -> cleanup -> setup, so a started:boolean ref is unsafe.
+  for(const page of [callback,reset]){
+    assert.match(page,/useRef<Promise<[^>]+> \| null>\(null\)/);
+    assert.match(page,/\.current \?\?=/);
+    assert.doesNotMatch(page,/if \(started\.current\) return/);
+  }
+});
