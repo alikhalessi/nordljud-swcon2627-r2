@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Level } from "./learning-app";
 import LevelComparison from "./level-comparison";
 import PracticePanel from "./practice-panel";
+import { isAvailableFormWord } from "../lib/practice-engine.mjs";
 import VerbPhoto, { hasVerbPhoto } from "./verb-photo";
 import {useLearningStore} from "./learning-state";
 import { readGuestPreferences, updateGuestPreferences } from "../lib/guest-preferences";
@@ -426,10 +427,10 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
                       <div className="verb-form-row" key={key}>
                         <div className="form-title">
                           <span>{label}</span>
-                          <strong lang="sv">{form?.word || "Not provided"}</strong>
+                          <strong lang="sv">{isAvailableFormWord(form?.word) ? form!.word : "Form not available"}</strong>
                         </div>
                         <div className="form-audio-actions">
-                          {form?.word?.trim() && (
+                          {isAvailableFormWord(form?.word) && (
                             <button
                               type="button"
                               className="speech-control"
@@ -460,7 +461,7 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
                   })}
                 </div>
                 <p className="detail-footnote">
-                  These examples come from the project dataset; linguistic review is planned for a later stage.
+                  These examples come from the original project dataset; automated validation does not certify their Swedish linguistic accuracy.
                 </p>
                 <LevelComparison
                   verb={chosen.verb}
