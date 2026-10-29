@@ -24,7 +24,9 @@ test("R02: provider-disabled and generic auth failures do not echo private provi
 test("R02: account flow includes recovery, verified redirect, and callback failure feedback",()=>{
   const ui=readFileSync(new URL("../app/auth-controls.tsx",import.meta.url),"utf8");
   assert.match(ui,/resetPasswordForEmail/);
-  assert.match(ui,/updateUser\(/);
+  const reset=readFileSync(new URL("../app/auth/reset/page.tsx",import.meta.url),"utf8");
+  assert.match(reset,/updateUser\(/);
+  assert.match(reset,/getSession\(/);
   assert.match(ui,/getAuthRedirectUrl\(/);
   assert.match(ui,/Forgot password/);
   assert.match(ui,/authErrorText\(/);
