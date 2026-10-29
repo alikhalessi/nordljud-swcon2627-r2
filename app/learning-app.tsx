@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef, useState, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import VocabularyExplorer from "./vocabulary-explorer";
 import AuthControls from "./auth-controls";
 import {LearningProvider} from "./learning-state";
 import LearningDashboard from "./learning-dashboard";
+import { readGuestPreferences, updateGuestPreferences } from "../lib/guest-preferences";
 
 export type Level = "A2" | "B1" | "B2" | "C1";
 
@@ -40,6 +41,13 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   const [audioMessage, setAudioMessage] = useState("");
   const [target,setTarget] = useState<{verb:string;meaning:string;level:Level}|null>(null);
 
+  // Restore only a browser-local study selection, never guest scores or history.
+  // Read after hydration to keep server and first client render identical.
+  useEffect(() => {
+    const preferences = readGuestPreferences();
+    if (preferences) setLevel(preferences.level);
+  }, []);
+
   const lesson = lessons.find((entry) => entry.level === level);
 
   if (!lesson) {
@@ -51,6 +59,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
 
   function changeLevel(next: Level) {
     setLevel(next);
+    updateGuestPreferences({ level: next });
     setSelected(null);
     setShowTranslation(false);
     setAudioMessage("");
@@ -174,9 +183,10 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
         <section className="lesson" aria-labelledby="lesson-heading">
           <div className="lesson-head">
             <div>
-              <span className="eyebrow">YOUR {level} LESSON</span>
+              <span className="eyebrow">SEPARATE MINI LESSON · {level}</span>
               <h2 id="lesson-heading">{lesson.title}</h2>
               <p>{lesson.goal}</p>
+              <p className="mini-lesson-distinction">This is a fixed example for {level}. It does not change when you select a different verb above.</p>
             </div>
             <span className="lesson-pill">Mini lesson</span>
           </div>
