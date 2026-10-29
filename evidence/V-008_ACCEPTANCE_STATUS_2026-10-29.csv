@@ -1,0 +1,19 @@
+scenario,source_or_automated_result,live_browser_result,cloud_result,grounded_evidence,interpretation
+Original two main tabs plus four Your Learning areas,PASS_SOURCE,NOT_TESTED,NOT_APPLICABLE,40898856815,Keyboard ARIA/source CSS checked not live
+Daily Archive 3 original sense pairs by earlier local date,PASS_FUNCTIONAL,NOT_TESTED,NOT_APPLICABLE,tests/v008-learning-hub.test.mjs,Deterministic same-date source reconstruction
+Archive first published day and future restriction,PASS_SOURCE,NOT_TESTED,NOT_APPLICABLE,app/daily-archive.tsx,Earliest 2026-10-29 and max previous local day
+Today's and archive manual self-reported completion with Undo,PASS_SOURCE_AND_CORE,NOT_TESTED,BLOCKED_FOR_SIGNED_IN,lib/review-core.mjs,No implicit viewing-as-completion
+Remind Me Later exact level verb meaning identity,PASS_FUNCTIONAL,NOT_TESTED,BLOCKED_FOR_SIGNED_IN,tests/v008-learning-hub.test.mjs,Two sticka senses independent
+Default two-day due and 2/7/14-day snooze,PASS_FUNCTIONAL,NOT_TESTED,BLOCKED_FOR_SIGNED_IN,tests/v008-learning-hub.test.mjs,Pure local date and due checks
+Study again Mark reviewed Remove,PASS_SOURCE_AND_CORE,NOT_TESTED,BLOCKED_FOR_SIGNED_IN,app/my-review.tsx,No mastery auto-decision
+Optional 7 and 14 day recall eligibility,PASS_FUNCTIONAL,NOT_TESTED,BLOCKED_FOR_SIGNED_IN,tests/v008-learning-hub.test.mjs,Clock and minimum five reliable questions
+Context-grounded source question scoring and reveal,PASS_UNIT_AND_SOURCE,NOT_TESTED,BLOCKED_FOR_SIGNED_IN,lib/practice-engine.mjs,Reuse V007 quiz questions; no credit for reveal
+Review session source senses and actual scores,PASS_CORE,NOT_TESTED,BLOCKED_FOR_SIGNED_IN,tests/v008-learning-hub.test.mjs,Separation from Favorites Studied Practice History
+Guest validation bounded local data and clear action,PASS_CORE_AND_SOURCE,NOT_TESTED,NOT_APPLICABLE,tests/v008-storage-security.test.mjs,Runtime browser refresh not verified
+Guest to signed-in account separation and stale request handling,PASS_SOURCE,NOT_TESTED,NOT_VERIFIED,app/review-state.tsx,Live sign-in switch unavailable
+Proposed Supabase tables and RLS statements,PASS_SOURCE_ONLY,NOT_APPLICABLE,NOT_APPLIED,database/proposed-migrations/V008_review_learning_records_PROPOSAL_NOT_APPLIED.sql,SQL candidate not executed
+Actual two-account RLS isolation,NOT_TESTED,NOT_TESTED,BLOCKED,database/proposed-migrations/V008_DEPLOYMENT_GATE_AND_RLS_TEST_PLAN.md,Separate production migration and account testing approval required
+CI tests typecheck and production build,72_OF_72_PASS,NOT_APPLICABLE,NOT_APPLICABLE,40898856815,Exact tested SHA d9a472ba934aad3dec1c3244cfeefbaa72ca8746
+Vercel integration deployment,STATUS_SUCCESS,NOT_TESTED,NOT_APPLICABLE,d9a472ba934aad3dec1c3244cfeefbaa72ca8746,GitHub says completed not browser E2E
+No frozen corpus or independent SDD changes,SOURCE_UNTOUCHED,NOT_APPLICABLE,NOT_APPLICABLE,V-008_IMPLEMENTATION_LOG_2026-10-29.md,Original F01-F15 benchmark also untouched
+User acceptance,PENDING,PENDING,NOT_APPLICABLE,V-008_IMPLEMENTATION_LOG_2026-10-29.md,Do not start V009 before user accepts
