@@ -47,7 +47,7 @@ test("R02: candidate SQL is explicitly UNAPPLIED and ownable on every new table"
   const sql=readFileSync(new URL("../database/proposed-migrations/V008_R02_SECURE_CLOUD_SCHEMA_NOT_APPLIED.sql",import.meta.url),"utf8");
   assert.match(sql,/NOT APPLIED/);
   for(const table of ["nordljud_daily_completions","nordljud_review_items","nordljud_review_sessions"]){
-    assert.ok(sql.includes("create table if not exists public."+table));
+    assert.ok(sql.includes("create table public."+table));
     assert.ok(sql.includes("alter table public."+table+" enable row level security"));
     assert.ok(sql.includes("revoke all on public."+table+" from anon"));
   }
