@@ -61,3 +61,11 @@ Accordingly, after committing original student approval to `condition/vibe`, the
 3. Confirm a Vercel Preview for exact test SHA and run HTTP + authenticated real-user E2E separately; record verified results only.
 4. Student acceptance of R01 is required before preparing/executing R02; R02 production migration needs its own explicit user approval; V009 requires prior acceptance gates.
 5. Before final freeze, merge/publish only through a genuinely protected release path and record tested release SHA, schema version, deployment ID, sign-in status and manual acceptance.
+
+## 6. Later release-control verification after student dashboard actions
+
+The preceding report describes the situation **before** the student performed the Vercel dashboard change. The subsequent user-supplied screenshot visibly shows **Vercel Production → Branch Tracking = `release/vibe`** and the successful saved-setting toast. An additional user-supplied GitHub screenshot identifies a **Free/private repository ruleset enforcement limitation**. These findings are explicitly preserved in the [follow-up authorization/execution log](V-008-R01_SEPARATE_BRANCH_AUTHORIZATION_AND_PARTIAL_EXECUTION_2026-10-29.md) and revised [R01 gate status CSV](V-008-R01_RELEASE_GATE_STATUS_2026-10-29.csv).
+
+Read-only API rechecks confirm: `release/vibe` exists at exact Production-approved SHA `7f64839d...`, and has `protected=false`; `condition/vibe` remains at `47a25779...`; [draft PR #1](https://github.com/alikhalessi/nordljud-swcon2627-r2/pull/1) remains open/unmerged; latest Vercel Production metadata remains READY on old code SHA `7f64839d...`, source ref `condition/vibe` because **no redeployment has been performed**; domain remains verified. These facts are consistent with a successfully saved Branch Tracking setting, **but do not yet test future Git-triggered routing**.
+
+**Revised status:** `STAGED CODE GREEN / UI-SAVED VERCEL RELEASE BRANCH / MANUAL GATE ONLY / REAL FUTURE BRANCH-ROUTING NOT TESTED / STUDENT FINAL ACCEPTANCE PENDING`. The lack of enforced rulesets must remain visible as an explicit accepted-or-rejected limitation at user acceptance; do not call GitHub review rules enforced. No R02/V009, Production migration, PR merge, or public code promotion was performed.
