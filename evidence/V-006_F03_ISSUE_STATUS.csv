@@ -1,0 +1,8 @@
+issue,disposition,phase,code_status,automated_verification,browser_verification,notes
+UX01,SCOPED_F03,V-006-F03,CODE_FIXED,STATIC_PASS,NOT_TESTED,Search/detail mismatch now explained with Clear filters
+UX02_F08,SCOPED_F03,V-006-F03,CODE_FIXED,FUNCTIONAL_HELPER_PASS,NOT_TESTED,Browser-only level+exact sense+mode restored; neutral late F08 interpretation on main
+UX03,SCOPED_F03,V-006-F03,CODE_FIXED,CONTRAST_CALCULATED_PASS,NOT_TESTED,Four selected color pairs above 4.5 to 1; full WCAG not certified
+UX04,SCOPED_F03,V-006-F03,CLARIFIED,STATIC_PASS,NOT_TESTED,Independent fixed mission now explicitly labeled
+UX05,SCOPED_F03,V-006-F03,CODE_FIXED,STATIC_PASS,NOT_TESTED,Retry same level via retryToken and abortable fetch
+UX06,DEFERRED,V-007,UNCHANGED,NOT_TESTED,NOT_TESTED,Homograph context ambiguity reserved for linguistic quality
+UX07,DEFERRED,V-007,UNCHANGED,NOT_TESTED,NOT_TESTED,Placeholder audio reserved for linguistic quality
