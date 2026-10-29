@@ -14,7 +14,8 @@ test("V-005: only public publishable configuration is referenced by browser auth
   assert.doesNotMatch(client, /process\.env\.SUPABASE_SECRET_KEY/);
   assert.match(client, /sb_secret_/);
   assert.match(client, /flowType: "pkce"/);
-  assert.match(client, /detectSessionInUrl: true/);
+  // R02: explicit app callback and reset routes own PKCE code exchange; auto URL detection races them.
+  assert.match(client, /detectSessionInUrl: false/);
   assert.match(example, /YOUR-NEW-PROJECT-REF/);
   assert.doesNotMatch(example, /(?:sb_secret_|service_role)/);
 });

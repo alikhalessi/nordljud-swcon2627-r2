@@ -11,6 +11,12 @@ import {
   type ReviewSnapshot, type ReviewSense, type ReviewSession, type ReviewLevel
 } from "../lib/review-core.mjs";
 
+function requireOneChangedRow(result:{data:unknown[]|null;error:unknown}){
+  if(result.error)throw result.error;
+  if(!Array.isArray(result.data)||result.data.length!==1)
+    throw new Error("No unique owner-scoped record was changed; cloud state not confirmed.");
+}
+
 type Store = {
   state: ReviewSnapshot;
   mode: "loading" | "guest" | "cloud";
@@ -127,7 +133,7 @@ export function ReviewProvider({children}:{children:ReactNode}) {
       s=>toggleDailyCompletion(s,level,day),
       async id=>{
         if(exists){const r=await db().from("nordljud_daily_completions").delete()
-          .eq("user_id",id).eq("level",level).eq("lesson_on",day);if(r.error)throw r.error;}
+          .eq("user_id",id).eq("level",level).eq("lesson_on",day).select("user_id");requireOneChangedRow(r);}
         else {const r=await db().from("nordljud_daily_completions").insert({
           user_id:id,level,lesson_on:day,algorithm_version:"f04-2026-10-29-v1"
         });if(r.error)throw r.error;}
@@ -150,8 +156,8 @@ export function ReviewProvider({children}:{children:ReactNode}) {
   async function removeReminder(sense:ReviewSense):Promise<boolean> {
     return write(s=>dropReminder(s,sense),async id=>{
       const r=await db().from("nordljud_review_items").delete().eq("user_id",id)
-        .eq("level",sense.level).eq("verb",sense.verb).eq("meaning",sense.meaning);
-      if(r.error)throw r.error;
+        .eq("level",sense.level).eq("verb",sense.verb).eq("meaning",sense.meaning).select("user_id");
+      requireOneChangedRow(r);
     });
   }
   async function snooze(sense:ReviewSense,days:2|7|14):Promise<boolean> {
@@ -159,8 +165,8 @@ export function ReviewProvider({children}:{children:ReactNode}) {
     return write(s=>delayReminder(s,sense,day,days),async id=>{
       const r=await db().from("nordljud_review_items").update({
         due_on:(new Date(Date.parse(day+"T00:00:00Z")+days*86400000)).toISOString().slice(0,10)
-      }).eq("user_id",id).eq("level",sense.level).eq("verb",sense.verb).eq("meaning",sense.meaning);
-      if(r.error)throw r.error;
+      }).eq("user_id",id).eq("level",sense.level).eq("verb",sense.verb).eq("meaning",sense.meaning).select("user_id");
+      requireOneChangedRow(r);
     });
   }
   async function markReviewed(sense:ReviewSense):Promise<boolean> {
@@ -170,8 +176,8 @@ export function ReviewProvider({children}:{children:ReactNode}) {
     return write(s=>setReviewed(s,sense,day),async id=>{
       const r=await db().from("nordljud_review_items").update({
         last_reviewed_on:next.lastReviewedOn,reviewed_count:next.reviewedCount,due_on:next.dueOn
-      }).eq("user_id",id).eq("level",sense.level).eq("verb",sense.verb).eq("meaning",sense.meaning);
-      if(r.error)throw r.error;
+      }).eq("user_id",id).eq("level",sense.level).eq("verb",sense.verb).eq("meaning",sense.meaning).select("user_id");
+      requireOneChangedRow(r);
     });
   }
   async function recordSession(session:ReviewSession):Promise<boolean> {

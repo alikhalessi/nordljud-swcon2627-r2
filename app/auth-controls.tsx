@@ -3,6 +3,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import type { User } from "@supabase/supabase-js";
 import { getBrowserAuth, getAuthSetupMessage } from "../lib/supabase-browser";
+import { authErrorText, getAuthRedirectUrl, safeOriginsFromConfig, createAuthRevisionGuard } from "../lib/auth-flow.mjs";
 
 type AuthMode = "sign-in" | "sign-up";
 
@@ -17,6 +18,11 @@ export default function AuthControls() {
   const [status, setStatus] = useState("");
   const [error, setError] = useState("");
   const setupMessage = getAuthSetupMessage();
+  const [recoverySent, setRecoverySent] = useState(false);
+  function redirectFor(path: "/auth/callback"|"/auth/reset") {
+    return getAuthRedirectUrl(window.location.origin,path,
+      safeOriginsFromConfig(process.env.NEXT_PUBLIC_AUTH_ALLOWED_ORIGINS,process.env.NODE_ENV==="development"));
+  }
 
   useEffect(() => {
     const auth = getBrowserAuth();
@@ -25,21 +31,26 @@ export default function AuthControls() {
       return;
     }
     let active = true;
-    const { data: { subscription } } = auth.auth.onAuthStateChange((_event, session) => {
+    const authRevision = createAuthRevisionGuard();
+    const { data: { subscription } } = auth.auth.onAuthStateChange((event, session) => {
       if (active) {
+        // The SDK's initial cached session is not proof that getUser() is fresh.
+        // A later real Auth event invalidates the in-flight initial lookup.
+        if (event !== "INITIAL_SESSION") authRevision.advance();
         setAccount(session?.user ?? null);
         setChecking(false);
       }
     });
+    const lookupRevision = authRevision.capture();
     void auth.auth.getUser().then(({ data, error: authError }) => {
-      if (!active) return;
+      if (!active || !authRevision.isCurrent(lookupRevision)) return;
       if (authError && authError.message !== "Auth session missing!") {
         setError("Could not check the current session. You can still learn as a guest.");
       }
       setAccount(data.user);
       setChecking(false);
     }).catch(() => {
-      if (active) {
+      if (active && authRevision.isCurrent(lookupRevision)) {
         setChecking(false);
         setError("Could not connect to authentication. Guest Mode remains available.");
       }
@@ -60,6 +71,7 @@ export default function AuthControls() {
     setStatus("");
     setError("");
     setPassword("");
+    setRecoverySent(false);
   }
 
   function continueGuest() {
@@ -86,7 +98,7 @@ export default function AuthControls() {
         const { data, error: authError } = await auth.auth.signUp({
           email: normalized,
           password,
-          options: { emailRedirectTo: window.location.origin }
+          options: { emailRedirectTo: redirectFor("/auth/callback") }
         });
         if (authError) throw authError;
         setPassword("");
@@ -107,7 +119,7 @@ export default function AuthControls() {
         setStatus("");
       }
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Unable to complete sign-in. Please try again.");
+      setError(authErrorText(cause instanceof Error ? cause : null));
     } finally {
       setBusy(false);
     }
@@ -123,14 +135,35 @@ export default function AuthControls() {
       // Redirect back to the actual hosted origin, never localhost hard-coded.
       const { error: authError } = await auth.auth.signInWithOAuth({
         provider: "google",
-        options: { redirectTo: window.location.origin }
+        options: { redirectTo: redirectFor("/auth/callback") }
       });
       if (authError) throw authError;
       // A successful invocation redirects to the provider, not yet a completed login.
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Google sign-in could not start.");
+      setError(authErrorText(cause instanceof Error ? cause : null));
       setBusy(false);
     }
+  }
+
+  async function requestPasswordReset() {
+    const auth = getBrowserAuth();
+    if (!auth || busy) return;
+    const normalized=email.trim();
+    if (!normalized || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized)) {
+      setError("Enter your email address first to request a password reset.");
+      return;
+    }
+    setBusy(true);setError("");setRecoverySent(false);
+    try {
+      const { error: authError } = await auth.auth.resetPasswordForEmail(normalized,{
+        redirectTo:redirectFor("/auth/reset")
+      });
+      if (authError) throw authError;
+      setRecoverySent(true);
+      setStatus("If this address is eligible, a recovery email will be sent. Check your inbox.");
+    } catch(cause) {
+      setError(authErrorText(cause instanceof Error ? cause : null));
+    } finally {setBusy(false);}
   }
 
   async function signOut() {
@@ -146,7 +179,7 @@ export default function AuthControls() {
       setPassword("");
       setStatus("You are signed out. You can continue learning as a guest.");
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Could not sign out.");
+      setError(authErrorText(cause instanceof Error ? cause : null));
     } finally {
       setBusy(false);
     }
@@ -205,6 +238,13 @@ export default function AuthControls() {
                   {busy ? "Please wait…" : mode === "sign-up" ? "Create account" : "Sign in with email"}
                 </button>
               </form>
+              {mode === "sign-in" && (
+                <button type="button" disabled={busy} className="auth-guest"
+                  onClick={() => void requestPasswordReset()}>
+                  Forgot password?
+                </button>
+              )}
+              {recoverySent && <p role="status" className="auth-info">If eligible, check your inbox for a recovery link.</p>}
               <div className="auth-divider"><span>or</span></div>
               <button type="button" className="auth-google" disabled={busy} onClick={() => void signInGoogle()}>
                 Continue with Google

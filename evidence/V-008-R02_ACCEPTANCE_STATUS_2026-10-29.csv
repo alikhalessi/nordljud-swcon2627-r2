@@ -1,0 +1,36 @@
+gate,automated_status,provider_status,evidence,remaining_condition
+R02_exact_prior_student_approval,PASS,PASS,evidence/V-008-R02_STUDENT_APPROVAL_2026-10-29.md,Approval SHA 24e75a1b committed before first R02 change
+R02_isolated_test_first_RED,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40915588376,Genuine 77/78 RED missing auth helper before source implementation
+R02_new_source_unit_checks,PASS_90_OF_90,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40924098248,Latest corrected R02 auth and account state code passes 90 tests but not live E2E
+R02_clean_npm_ci,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40924098248,Pinned working Node and lockfile
+R02_typescript,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40924098248,No real browser inference
+R02_next_production_build,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40924098248,Build success is not Production readiness
+R02_redirect_allowlist,PASS_UNIT,NOT_TESTED,lib/auth-flow.mjs,Preview origins only when explicitly configured and provider allowlisted
+R02_generic_auth_errors,PASS_UNIT,NOT_TESTED,tests/v008-r02-auth-cloud.test.mjs,Live provider behavior requires explicit setting approval
+R02_google_auth_pkce,SOURCE_PREPARED,NOT_TESTED,app/auth/callback/page.tsx,Live Google OAuth settings and account required
+R02_email_sign_up_confirmation,SOURCE_PREPARED,NOT_TESTED,app/auth-controls.tsx,Live email delivery and redirects require testing
+R02_password_recovery,SOURCE_PREPARED,NOT_TESTED,app/auth/reset/page.tsx,Live recovery email and authenticated session flow require testing
+R02_zero_row_mutation_detection,PASS_SOURCE,NOT_TESTED,app/review-state.tsx,Live owner-scoped database tests require schema and 2 accounts
+R02_guest_cloud_account_transition,PASS_PREVIOUS_SOURCE_TESTS,NOT_TESTED,app/review-state.tsx,Live account switching and refresh required
+R02_3_table_sql_prepared,PASS_SOURCE_ONLY,NOT_APPLIED,database/proposed-migrations/V008_R02_SECURE_CLOUD_SCHEMA_NOT_APPLIED.sql,Separate explicit Production SQL project and action approval required
+R02_two_authenticated_user_RLS,NOT_TESTED,BLOCKED,docs/R02_AUTH_CLOUD_DEPLOYMENT_AND_SECURITY_GATES_2026-10-29.md,No authorized test database or two test identities
+R02_existing_tables_unchanged,PASS_READ_ONLY,UNCHANGED,docs/R02_AUTH_CLOUD_DEPLOYMENT_AND_SECURITY_GATES_2026-10-29.md,Old tables present with RLS existing records
+R02_live_auth_provider_changes,NOT_APPLICABLE,NOT_AUTHORIZED,docs/R02_AUTH_CLOUD_DEPLOYMENT_AND_SECURITY_GATES_2026-10-29.md,Requires separate exact user approval
+R01_condition_vibe_to_preview_route,NOT_TESTED,BLOCKED,evidence/V-008-R01_STUDENT_ACCEPTANCE_2026-10-29.md,Vercel rate limit; mandatory before Vibe Freeze
+R01_release_vibe_branch_protection,UNENFORCED,UNENFORCED,evidence/V-008-R01_STUDENT_ACCEPTANCE_2026-10-29.md,Private GitHub Free ruleset limitation documented
+R02_public_merge_or_promotion,NOT_DONE,NOT_DONE,https://github.com/alikhalessi/nordljud-swcon2627-r2/pull/1,User forbade PR1 merge and public code publication
+R02_student_acceptance,STUDENT_ACCEPTED_WITH_LIMITATIONS,ACCEPTED,evidence/V-008-R02_STUDENT_ACCEPTANCE_AND_R03_START_2026-10-29.md,R03 start authorized; live Auth RLS Preview and routing still unverified
+R02_PKCE_STALE_SESSION_SECURITY,RED_TO_GREEN_UNIT,NOT_LIVE_TESTED,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40919430702,Original RED 40918630843 82/85 PASS; now 86/86 after code/session identity and StrictMode replay corrections
+R02_Preview_Supabase_Env,READ_ONLY_DIAGNOSIS,PRODUCTION_ONLY,docs/R02_LIVE_AUTH_VERIFICATION_AND_EXACT_CHANGE_REQUEST_2026-10-29.md,Vercel lists both Supabase env names only for Production; Preview auth environment requires separate approval
+R02_Live_Auth_Provider_Enabled_State,PARTIAL_SCREENSHOT_VERIFIED,EMAIL_ENABLED_GOOGLE_UNVERIFIED,docs/R02_LIVE_AUTH_VERIFICATION_AND_EXACT_CHANGE_REQUEST_2026-10-29.md,User supplied screenshots: Email ENABLED and email confirmation ON; Google row not visible; no live changes authorized
+R02_Authoritative_Candidate_HTTP,NOT_TESTED,NOT_TESTED,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40919430702,Smoke skipped because R01_CANDIDATE_URL unset
+R02_Leaked_Password_Protection,READ_ONLY_WARNING,DISABLED,docs/R02_LIVE_AUTH_VERIFICATION_AND_EXACT_CHANGE_REQUEST_2026-10-29.md,Security advisor WARN; live Auth setting may be changed only with separate approval
+R02_QA_AUTH_STATE_RED_TO_GREEN,RED_86_OF_90_GREEN_90_OF_90,NOT_LIVE_TESTED,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40924098248,Genuine additional RED 40923736557 and 40923946297; 4 regressions now pass on d0b8aa4
+R02_AUTH_PROVIDER_USER_SCREENSHOT,PARTIAL_OBSERVED,EMAIL_ENABLED_GOOGLE_UNKNOWN,evidence/V-008-R02_PROTECTED_PREVIEW_AUTHORIZATION_AND_FOLLOWUP_2026-10-29.md,Signup ON confirmation ON Email ENABLED; Google provider row not shown
+R02_AUTH_REDIRECT_USER_SCREENSHOT,CONFIGURATION_OBSERVED,BASE_ORIGIN_ONLY,evidence/V-008-R02_PROTECTED_PREVIEW_AUTHORIZATION_AND_FOLLOWUP_2026-10-29.md,Only bare Site URL listed; explicit app callback and reset URL additions require separate approval
+R02_PROTECTED_PREVIEW_APPROVAL,EXACT_STUDENT_PERMISSION,SSO_ENABLED,evidence/V-008-R02_PROTECTED_PREVIEW_AUTHORIZATION_AND_FOLLOWUP_2026-10-29.md,Only protected R02 Preview authorized; not live provider changes public deploy or Supabase Production
+R02_GREEN_PREVIEW_DEPLOYMENT,SOURCE_CI_PASS,READY_SSO_PROTECTED_PREVIEW,evidence/V-008-R02_STUDENT_ACCEPTANCE_AND_R03_START_2026-10-29.md,Vercel READY observed for R02 branch; authentication and Supabase Preview env NOT verified
+R02_REVISED_SQL_SECURITY,REVISED_SOURCE_94_OF_94,NOT_APPLIED,database/proposed-migrations/V008_R02_SECURE_CLOUD_SCHEMA_NOT_APPLIED.sql,Blob SHA d4940119f84f8b3a4510e032335ae8df7fe1b1f0; user must review exact final revision
+R02_PRODUCTION_BACKUP_RECOVERABILITY,LOCAL_RESTORE_PASS_WITH_EXCEPTIONS,STILL_CONDITIONAL,evidence/V-008-R02_LOCAL_BACKUP_RESTORE_EVIDENCE_2026-10-29.md,Exit0 local schema+data restore counts 1/5/2/1 RLS 9; role replay failed and no encrypted offsite archive
+R02_PRODUCTION_CONDITIONAL_AUTHORIZATION,EXPLICIT_SHA_APPROVAL,PASS,evidence/V-008-R02_FINAL_PRODUCTION_SQL_APPROVAL_2026-10-29.md,Final user consent includes role replay and encryption limitations
+R02_PRODUCTION_SCHEMA_MIGRATION,APPLIED_ONCE,VERIFIED,evidence/V-008-R02_PRODUCTION_MIGRATION_EXECUTION_AND_VERIFICATION_2026-10-29.md,Migration 20261029192724; three new tables RLS ON 12 policies grants verified; two-account live E2E pending
