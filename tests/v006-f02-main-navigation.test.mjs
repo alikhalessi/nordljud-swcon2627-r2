@@ -10,7 +10,9 @@ const explorer = readFileSync(new URL("../app/vocabulary-explorer.tsx", import.m
 test("V-006-F02: exactly two accessible primary tabs, Explore is selected initially", () => {
   assert.match(app, /const \[activeTab, setActiveTab\] = useState<MainTab>\("explore"\)/);
   assert.match(app, /role="tablist" aria-label="Learning sections"/);
-  assert.equal((app.match(/role="tab"/g) || []).length, 2);
+  // Limit the count to the PRIMARY navigation: F04 has two more nested tabs.
+  const primaryTabMarkup = app.split('<div className="primary-study-tabs"')[1]?.split("</div>")[0] ?? "";
+  assert.equal((primaryTabMarkup.match(/role="tab"/g) || []).length, 2);
   assert.match(app, /Explore Your Words/);
   assert.match(app, /Your Learning/);
   assert.match(app, /aria-selected=\{activeTab === "explore"\}/);
