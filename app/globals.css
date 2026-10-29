@@ -256,3 +256,22 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
 .saved-actions{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
 .saved-actions button:disabled{opacity:.5;cursor:not-allowed;}
 @media(max-width:600px){.progress-counters{grid-template-columns:repeat(2,minmax(0,1fr));}.saved-row{flex-direction:column;align-items:flex-start;}}
+
+/* V-006-F01: collapse the saved-learning dashboard instead of pushing lessons down. */
+.learning-dashboard { padding: 16px 20px; }
+.learning-dashboard-top { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.learning-dashboard-heading { min-width:0; }
+.learning-dashboard-heading h2 { margin:4px 0; }
+.learning-dashboard-summary { margin:8px 0 0; color:#416d55; font-size:12px; }
+.learning-dashboard-toggle { display:inline-flex; align-items:center; gap:9px; border:1px solid #b9d8c6; background:#f2f9f4; color:#25634b; font-size:13px; font-weight:750; border-radius:9px; padding:10px 13px; cursor:pointer; }
+.learning-dashboard-toggle:hover { background:#e6f4ea; }
+.learning-dashboard-toggle:focus-visible { outline:3px solid #429b74; outline-offset:2px; }
+.learning-dashboard-chevron { display:inline-block; font-size:20px; line-height:12px; transform:rotate(0deg); transition:transform .15s ease; }
+.learning-dashboard-chevron.open { transform:rotate(180deg); }
+.learning-dashboard-body { padding-top:12px; }
+.saved-list { max-height:320px; overflow-y:auto; overscroll-behavior:contain; padding-right:5px; }
+@media (max-width:600px) {
+  .learning-dashboard { padding:14px; }
+  .learning-dashboard-top { align-items:flex-start; }
+  .saved-list { max-height:40vh; }
+}
