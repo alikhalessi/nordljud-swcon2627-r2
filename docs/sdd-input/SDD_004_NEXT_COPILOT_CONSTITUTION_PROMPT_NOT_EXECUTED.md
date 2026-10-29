@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-30 Europe/Helsinki  
 **Status:** **AGENT_INPUT_READY / NOT EXECUTED / NO CONSTITUTION APPROVAL YET**  
-**Official integration:** `specify-cli==0.12.11`; `.specify/integration.json` declares `copilot` with `invoke_separator="."`. The resulting installed command for this version is `/speckit.constitution` (not `/speckit-constitution` skills mode).
+**Official integration:** `specify-cli==0.12.11`; `.specify/integration.json` declares `copilot` with `invoke_separator="."`. This is the **Copilot commands layout**. In **VS Code Copilot Chat**, the prompt file can expose `/speckit.constitution`; in **Copilot CLI**, choose the installed `speckit.constitution` custom agent through the `/agent` picker (or select `--agent speckit.constitution` when invoking the CLI), then supply the project instructions. Do **not** treat the old dotted shorthand as an executable shell command, and do not confuse it with `/speckit-constitution` in the different skills layout. See [official Copilot integration documentation](https://github.github.com/spec-kit/integrations/copilot.html).
 **Approved input:** `docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md`, `docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md`; preserve original F01–F15 with separate EXT-AC01–07.
 
 ## Agent-facing prompt — user-authorized project requirements, AI-authored execution wrapper
@@ -15,6 +15,8 @@ Define enforceable principles governing: precise source/data fidelity (four leve
 
 Using the real installed Spec Kit Constitution agent instructions and .specify/memory/constitution.md template, replace all unresolved placeholders, update the genuine constitution with adoption and amendment rules, and validate it against the original shared constraints. Do not create product source code or database migrations. Preserve a genuine command/transcript/evidence record with the agent/tool identity and exact commit. Show the completed Constitution to the student for review and wait for acceptance before invoking /speckit.specify.
 ```
+
+**Execution tracking:** [GitHub Issue #5](https://github.com/alikhalessi/nordljud-swcon2627-r2/issues/5) contains the branch-isolated genuine Copilot Constitution task. Issue creation does not prove Copilot began. Never auto-assign a billable agent without separately verified access and permission; capture real session/PR output.
 
 ## Academic honesty
 This file is an **AI-authored proposed Copilot command**, prepared from already user-approved objectives. It is not a command run, agent transcript, generated Constitution or a student-authored direct quote. The official CLI init was run and verified in GitHub Actions 40966668593, but its installed `.specify/memory/constitution.md` currently remains the **template**. Do not label Constitution PASS until the agent actually creates and verifies the project-specific text.
