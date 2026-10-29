@@ -1,0 +1,44 @@
+name: R01 temporary lockfile bootstrap (isolated branch only)
+
+on:
+  push:
+    branches:
+      - hardening/v008-r01
+
+permissions:
+  contents: write
+
+jobs:
+  make-lockfile:
+    if: github.ref == 'refs/heads/hardening/v008-r01'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout isolated branch
+        uses: actions/checkout@v4
+        with:
+          ref: hardening/v008-r01
+          persist-credentials: true
+      - name: Use pinned supported Node version
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+      - name: Generate exact lockfile using npm registry in CI
+        run: |
+          if [ -f package-lock.json ]; then
+            echo "Lockfile already exists; no write needed."
+            exit 0
+          fi
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          test -s package-lock.json
+      - name: Commit lockfile to isolated branch only
+        run: |
+          if [ -f package-lock.json ] && ! git ls-files --error-unmatch package-lock.json >/dev/null 2>&1; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add package-lock.json
+            git commit -m "build(r01 staging): generate npm lockfile from exact package.json"
+            git push origin HEAD:hardening/v008-r01
+          else
+            echo "No new lockfile to commit."
+          fi
