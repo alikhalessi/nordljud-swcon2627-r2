@@ -5,6 +5,7 @@ on:
     branches:
       - condition/vibe
       - hardening/v008-r01
+      - hardening/v008-r02
   pull_request:
     branches:
       - condition/vibe
