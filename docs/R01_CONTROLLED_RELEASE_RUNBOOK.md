@@ -59,3 +59,12 @@ If a bad version goes live, use the prior accepted deployment `dpl_FYVmd9Qt69XHA
 ## Independent SDD fairness
 
 Current Round 2 compares Vibe with **independent Spec Kit SDD**, not the three-condition original pilot. Release-hardening code belongs to Vibe; do not expose implementation to SDD. Present late scope changes transparently and freeze a neutral externally-observable validation pack shared with SDD only if separately approved without rewriting the original F01–F15 benchmark. Record CI and release events by actual time and SHA, not inferred performance comparisons.
+
+## Authorized branch-separation follow-up — 2026-10-29
+
+The student **separately authorized** the switch to `release/vibe`, preserving the current deployment/domains. See [exact authorization, verified before/after evidence and incomplete-operation status](../evidence/V-008-R01_SEPARATE_BRANCH_AUTHORIZATION_AND_PARTIAL_EXECUTION_2026-10-29.md).
+
+- **DONE:** pre-change provider snapshot committed, `release/vibe` branch created from exact READY Production source SHA `7f64839dbcb8ae945b0416ecf83b84d78009b1f0`, branch HEAD verified. Current Production remains READY on ref `condition/vibe`, public domain remains verified. No R01 PR merge or unapproved code publication.
+- **BLOCKED BY CONNECTOR, NOT DONE:** Vercel production branch setting cannot be written using the connected project's supported `update_project` request schema. Required human UI step: **Vercel project → Settings → Environments → Production → Branch Tracking → `release/vibe` → Save**. [Official Vercel documentation](https://vercel.com/docs/git). Do not alter domains, environment secrets, auto-assignment, or manually promote any build.
+- **VERIFY AFTER UI SAVE:** read Vercel Production branch configuration, check READY deployment, aliases/domain, and ensure subsequent non-release pushes are Preview rather than Production. No test push before switch is confirmed. GitHub branch `release/vibe` is presently unprotected, so required review rules also need configuration and independent verification before calling Release Gate fully enforced.
+- The earlier draft PR and R01 GREEN CI evidence remain; R01 final acceptance and R02 are still pending.
