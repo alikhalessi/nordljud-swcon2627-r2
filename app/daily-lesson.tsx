@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { Level } from "./learning-app";
 import { localDateKey, selectDailyVerbs, type DailyVerbEntry } from "../lib/daily-lessons";
+import { useReviewStore } from "./review-state";
 
 type DailyResponse = { level: Level; count: number; entries: DailyVerbEntry[] };
 type Sense = { verb: string; meaning: string };
@@ -14,6 +15,7 @@ export default function DailyLesson({
   level: Level;
   onOpenVerb: (sense: Sense, level: Level) => void;
 }) {
+  const review = useReviewStore();
   const [dayKey, setDayKey] = useState("");
   const [entries, setEntries] = useState<DailyVerbEntry[]>([]);
   const [loadedLevel, setLoadedLevel] = useState<Level | null>(null);
@@ -155,6 +157,12 @@ export default function DailyLesson({
                     aria-label={`Explore ${entry.verb}, meaning ${entry.meaning}, in Verb Explorer`}>
                     Explore this verb
                   </button>
+                  <button type="button"
+                    disabled={!review.ready || review.busy || (review.mode==="cloud" && !review.cloudAvailable) ||
+                      review.hasReminder({level,verb:entry.verb,meaning:entry.meaning})}
+                    onClick={() => void review.addReminder({level,verb:entry.verb,meaning:entry.meaning})}>
+                    {review.hasReminder({level,verb:entry.verb,meaning:entry.meaning})?"✓ In My Review":"Remind Me Later"}
+                  </button>
                 </div>
               </article>
             ))}
@@ -162,6 +170,7 @@ export default function DailyLesson({
         )
       )}
       <div className="daily-audio-status" role="status" aria-live="polite">{audioStatus}</div>
+      {review.error && <p className="vocabulary-notice" role="alert">{review.error}</p>}
     </section>
   );
 }
