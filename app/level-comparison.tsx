@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { Level } from "./learning-app";
+import { isAvailableFormWord } from "../lib/practice-engine.mjs";
 
 type Form = { word?: string; sv?: string; en?: string };
 type ComparedEntry = { id: string; verb: string; meaning: string; forms: Record<string, Form> };
@@ -98,7 +99,7 @@ export default function LevelComparison({
                 </div>
                 {entry ? (
                   <>
-                    <p className="comparison-verb-form" lang="sv">{form?.word || "Form not provided"}</p>
+                    <p className="comparison-verb-form" lang="sv">{isAvailableFormWord(form?.word) ? form!.word : "Form not available"}</p>
                     {form?.sv?.trim()
                       ? <p className="comparison-swedish" lang="sv">{form.sv}</p>
                       : <p className="comparison-missing">No Swedish example in source data.</p>}
@@ -121,7 +122,7 @@ export default function LevelComparison({
         </div>
       )}
       <p className="detail-footnote">
-        Examples are unchanged from the shared library. A successful comparison does not certify their linguistic quality.
+        Examples are unchanged from the shared library. Missing conjugations are not spoken or treated as valid forms; linguistic review remains necessary.
       </p>
     </section>
   );
