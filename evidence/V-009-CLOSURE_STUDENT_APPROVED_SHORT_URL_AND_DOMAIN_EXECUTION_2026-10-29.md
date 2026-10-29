@@ -15,3 +15,8 @@ The student directly replied to a proposal for the exact shorter URL `nordljud-v
 - This is a user-approved URL configuration within the existing V009 Closure, **not** approval to publish an unreviewed Production build or declare Vibe Freeze.
 ## Research chronology
 Actual Vercel branch-domain add and branch-only allowed-origins update were carried out after the user's explicit message and before this GitHub evidence document was committed; do not backdate this evidence as a pre-execution commit. This entry preserves the exact user approval and actual operation sequence.
+
+## Post-change provider verification
+- A subsequent read-only `get_project_domain` verified `nordljud-vibe.vercel.app` belongs to exact Vibe project, `gitBranch=hardening/v009-release-candidate`, and `verified=true`.
+- An independent Vercel `get_deployment` of **the short hostname itself** resolved to `dpl_4F6FYTQFHBVLDdgWtQavzCyhKRd8` (READY, Preview target null, Git SHA `ba3a68b5efe416121cfb35a0edcefb03c26326d0`). The original Production aliases were unaffected.
+- This resolved deployment **predates the addition** of the short hostname to `NEXT_PUBLIC_AUTH_ALLOWED_ORIGINS`; Next.js client-baked configuration needs a new Preview build. A web fetch did not independently verify page content or Google sign-in. Do not claim browser/OAuth E2E PASS.
