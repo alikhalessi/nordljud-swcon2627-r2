@@ -1,0 +1,8 @@
+id,priority,category,evidence_status,phase,source,summary,live_status
+UX01,P1,Usability,SOURCE_VERIFIED,V-009,app/vocabulary-explorer.tsx,Filtered results can disagree with selected verb detail,NOT_TESTED
+UX02,P1,Requirements,REQUIREMENT_CONFLICT,Pre-V-008,evaluation/ACCEPTANCE_MATRIX.md; evidence/V-006_APPROVED_PROMPT.md,Guest reload persistence differs from F08 wording,NOT_TESTED
+UX03,P1-P2,Accessibility,CSS_CALCULATED,V-009,app/globals.css,Several normal-text foreground/background contrast pairs below WCAG 4.5:1,NOT_TESTED
+UX04,P2,Navigation,SOURCE_VERIFIED,V-009,app/learning-app.tsx; app/page.tsx,Fixed mini-lesson is separate from selected-verb learning flow,NOT_TESTED
+UX05,P2,Error recovery,SOURCE_VERIFIED,V-009,app/vocabulary-explorer.tsx,Vocabulary load failures lack direct retry control,NOT_TESTED
+UX06,P1,Content usability,SOURCE_VERIFIED,V-007,lib/practice-engine.mjs,Meaning-only question can be ambiguous for repeated spelling sticka,NOT_TESTED
+UX07,P2,Speech affordance,SOURCE_VERIFIED,V-007,app/vocabulary-explorer.tsx,Missing-form em-dash placeholder qualifies for playback button,NOT_TESTED
