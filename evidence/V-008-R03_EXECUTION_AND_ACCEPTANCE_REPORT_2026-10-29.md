@@ -1,0 +1,32 @@
+# V-008-R03 — Approved prompt execution, factual verification, and proposed acceptance
+Date: 2026-10-29 (Europe/Helsinki). Condition A — Vibe Coding.
+Status: **EXECUTION REVIEW COMPLETED; SOURCE-LEVEL STABILIZATION INHERITS VERIFIED GREEN BASELINE; REAL BROWSER/LIVE E2E AND ROUTING REMAIN BLOCKED / NOT TESTED. STUDENT R03 ACCEPTANCE PENDING.**
+Working branch: `hardening/v008-r03`. Draft PR #3, NOT MERGED.
+
+## Prompt provenance
+- AI-assisted exact approved English prompt and full Persian translation: `evidence/V-008-R03_AI_DRAFT_FINAL_STABILIZATION_2026-10-29.md`; GitHub blob `dfe605bbd29fdaeeb0ad1c717e2d6f96fbf6624d`.
+- Verbatim student approval: `موافقم، اجراش کن لطفاً.`, recorded **before further R03 execution** at `evidence/V-008-R03_STUDENT_APPROVAL_2026-10-29.md`, commit `fde030eade1f0152482210db4177b93c6d961ed2`.
+
+## What was actually done and verified
+1. Independently read the existing repository's experiment/protocol, F01–F15 common matrix, acceptance status, Vibe source, deployment metadata, and GitHub Actions workflow.
+2. [GitHub compare from tested source SHA to R03 branch](https://github.com/alikhalessi/nordljud-swcon2627-r2/compare/357fa7239e3b9b4efb57a57fad6817d49762af90...hardening/v008-r03) reported **13 commits ahead**, touching only: `docs/R02_...` and `evidence/V-008-...` Markdown/CSV files, NOT executable code, tests, dependencies, Swedish datasets, or GitHub Actions workflow. This proves the **application source** being assessed is identical to the last tested green source. It does not itself execute a new test.
+3. [Prior genuine GREEN GitHub Actions run 40928342244](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40928342244), exact code SHA `357fa7239e3b9b4efb57a57fad6817d49762af90`: **94/94 tests PASS, npm ci PASS, TypeScript PASS, Next.js production build PASS.** GitHub workflow job details independently reconfirmed. HTTP smoke step ran but candidate URL was unset, and therefore the smoke test printed NOT TESTED; the step's green status is not an HTTP pass.
+4. Static source inspection confirmed references/wiring (not observed browser behavior): `app/page.tsx` has mission data from four frozen Swedish datasets; `app/learning-app.tsx` has four selectable levels, tabs for Daily, Daily Archive, My Review and My Progress, and keyboard tab navigation/ARIA; `app/review-state.tsx` preserves guest/local and owner-scoped cloud modes, requires affected rows for update/delete and reloads after writes; `app/auth-controls.tsx`, `app/auth/callback/page.tsx`, and `app/auth/reset/page.tsx` contain email/Google/PKCE/recovery code with one-time code guards. `lib/review-core.mjs` uses sense keys including level, verb, meaning to keep distinct `sticka` meanings separate. No concrete high-confidence new R03 source defect was established from this inspection; **no app/test code changes were made**. Static presence is NOT black-box PASS.
+5. Vercel `nordljud-r2-vibe` reported an SSO-protected **READY Preview** for R03 branch, deployment `dpl_5YvoqTJwkkMyw1kf3NXEEdUNeUe1` on documentation SHA `b74df793de5a8cd3a078c1215dcb60127739ee0e`. Later exact HEAD Preview and HTTP do not have confirmed READY/HTTP PASS; deployment rate-limit statuses appeared on newer commits. Source code is unchanged since previous green SHA.
+6. Vercel environment variable **names/targets only** (not secret values) independently rechecked: `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` target **Production only**. Therefore authentic Preview Auth/Cloud cannot be shown as functioning. Production Vercel aliases still track `condition/vibe`; the intended `release/vibe` release-routing guard has not been proven.
+7. GitHub workflow `.github/workflows/vibe-first-check.yml` only has push triggers for `condition/vibe`, `hardening/v008-r01` and `hardening/v008-r02`, plus PRs targeting `condition/vibe`; **no R03 push trigger**. One attempt to add the `hardening/v008-r03` trigger using the connected GitHub write action was **blocked by the tool's safety checks**; no workflow update happened. No local CLI/npm runner was connected to this session. This means **no newly executed exact-R03-HEAD GitHub Actions suite**; the inherited prior GREEN remains the honest source evidence.
+8. A read-only Browser connector attempt failed because no originating connected browser context was available. Public web opening of SSO-protected Preview also failed. **No actual signed-in browser E2E, Guest black-box, keyboard/mobile or HTTP smoke tests** were performed. No screenshots fabricated.
+
+## Final focused result: F01–F15
+- `SOURCE_PREPARED, NOT LIVE TESTED`: F01 four levels; F02 bilingual dataset; F03 speech; F04 practice; F05 lexicon; F06 same-spelling distinct senses; F07 level switch; F08 Guest local persistence; F13 keyboard/mobile; F14 user-visible failure cases. Source and previous automated unit checks are green, but real browser outcomes unverified.
+- `BLOCKED, NOT LIVE TESTED`: F09 Email signup/confirmation/signout, F10 Google OAuth, F11 Cloud persistence, F12 two independent real signed-in account RLS isolation.
+- `PARTIALLY VERIFIED`: F15 reproducibility: previous 94/94 green with exact known code SHA and no subsequent application source changes; new R03 exact-head CI not triggered by existing workflow; Preview metadata READY on earlier R03 docs commit; no HTTP/browser smoke.
+- No new source regression or fix may be inferred when actual browser tests are unavailable.
+
+## Decisions still separate and NOT authorized by this work
+- No PR #1/#2/#3 merges, Vercel public deployment, promotion/alias/production branch changes, Auth/Google/SMTP/redirect config edits, real test account creation, second database migration or destructive rollback.
+- The Supabase R02 schema migration `20261029192724` was already verified; never repeat.
+- R03 can be **student accepted with explicitly retained not-tested gates**, but cannot be declared **live-ready or Vibe-frozen** until actual two-account/Auth/Cloud and development-to-Preview routing checks are proven. V-009 remains subject to separate student authorization.
+
+## Short next decision
+Student should read this factual report and choose whether to accept R03 as source-stabilization complete with live E2E blockers retained, or to authorize exact scoped Preview/Auth environment setup and browser testing. Do not convert implicit urgency into authorization for public release or unsafe testing.
