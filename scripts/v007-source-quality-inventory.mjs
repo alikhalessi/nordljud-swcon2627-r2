@@ -4,6 +4,8 @@
  * Run with Node 22: node scripts/v007-source-quality-inventory.mjs
  */
 import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 import { isAvailableFormWord } from "../lib/practice-engine.mjs";
 
 export const LEVELS = ["A2", "B1", "B2", "C1"];
@@ -75,7 +77,7 @@ export function inspectAll() {
   });
 }
 
-if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const inventory = inspectAll();
   // Machine-readable report includes exact source JSON index and level.
   process.stdout.write(JSON.stringify({
