@@ -1,0 +1,5 @@
+Uninstalling current integration: copilot
+  Removed 20 file(s)
+Installing integration: codex
+
+✓ Switched to integration 'Codex CLI'

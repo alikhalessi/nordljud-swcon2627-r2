@@ -1,0 +1,621 @@
+{
+  "sha": "46e272c2aa60ecff3d6a6a3ccf94ecf4c46f30fd",
+  "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/46e272c2aa60ecff3d6a6a3ccf94ecf4c46f30fd",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0b8dfa2733e2924ed54af44f9aa8601ce465f4e",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/d0b8dfa2733e2924ed54af44f9aa8601ce465f4e"
+    },
+    {
+      "path": ".github/agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3741811b73c73660d173a7602e3955f934f8dec",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/e3741811b73c73660d173a7602e3955f934f8dec"
+    },
+    {
+      "path": ".github/agents/speckit.analyze.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a77fef39388aca7b93ea9a369925e6daa3358a3",
+      "size": 11135,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/6a77fef39388aca7b93ea9a369925e6daa3358a3"
+    },
+    {
+      "path": ".github/agents/speckit.checklist.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0c73d448404f8b81a34c7c148f7a8b83faa4bf8",
+      "size": 20681,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/e0c73d448404f8b81a34c7c148f7a8b83faa4bf8"
+    },
+    {
+      "path": ".github/agents/speckit.clarify.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7dfd844942f038999f9cd59c0f03c0f6ee6fa1c",
+      "size": 17705,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/a7dfd844942f038999f9cd59c0f03c0f6ee6fa1c"
+    },
+    {
+      "path": ".github/agents/speckit.constitution.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ba1c7640fcd5d17b993288dff46c0b648a09fac",
+      "size": 9006,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/7ba1c7640fcd5d17b993288dff46c0b648a09fac"
+    },
+    {
+      "path": ".github/agents/speckit.converge.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a7eae202873ada7fc1e8d78fd310973d1387595",
+      "size": 12130,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/7a7eae202873ada7fc1e8d78fd310973d1387595"
+    },
+    {
+      "path": ".github/agents/speckit.implement.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5efec2c8f56b85f183709bf04e0311a6a3bc45e",
+      "size": 11635,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/e5efec2c8f56b85f183709bf04e0311a6a3bc45e"
+    },
+    {
+      "path": ".github/agents/speckit.plan.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "168b99f25dc4709392f31cb62c91b35d63f7d88f",
+      "size": 7580,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/168b99f25dc4709392f31cb62c91b35d63f7d88f"
+    },
+    {
+      "path": ".github/agents/speckit.specify.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5b366362c9a3c0fb61da5d1367bd5e41f68f0de",
+      "size": 18007,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/e5b366362c9a3c0fb61da5d1367bd5e41f68f0de"
+    },
+    {
+      "path": ".github/agents/speckit.tasks.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d637d4f6b96b6ab36f7232978ab397019ded0ae",
+      "size": 10704,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/5d637d4f6b96b6ab36f7232978ab397019ded0ae"
+    },
+    {
+      "path": ".github/agents/speckit.taskstoissues.agent.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8ba1cb04eda0c6cdaf04e41ce60e0424dec723f",
+      "size": 6765,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/e8ba1cb04eda0c6cdaf04e41ce60e0424dec723f"
+    },
+    {
+      "path": ".github/prompts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f5173a041a40b6ec027f30c6d8e549133900556d",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/f5173a041a40b6ec027f30c6d8e549133900556d"
+    },
+    {
+      "path": ".github/prompts/speckit.analyze.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a83141195d9014c0c3aba226feabaf1e510bee20",
+      "size": 31,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/a83141195d9014c0c3aba226feabaf1e510bee20"
+    },
+    {
+      "path": ".github/prompts/speckit.checklist.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e552492bf1b23837888baeba638fb714dd842fea",
+      "size": 33,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/e552492bf1b23837888baeba638fb714dd842fea"
+    },
+    {
+      "path": ".github/prompts/speckit.clarify.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84c12e0f1fe4ca3c23ddb74ba40f9a877fa39e00",
+      "size": 31,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/84c12e0f1fe4ca3c23ddb74ba40f9a877fa39e00"
+    },
+    {
+      "path": ".github/prompts/speckit.constitution.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b05c5ee44b69c4e5adce18fbdcb874c27da7b541",
+      "size": 36,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/b05c5ee44b69c4e5adce18fbdcb874c27da7b541"
+    },
+    {
+      "path": ".github/prompts/speckit.converge.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39c7ea1a8d8d1bba2e25eef0436383024c13ac29",
+      "size": 32,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/39c7ea1a8d8d1bba2e25eef0436383024c13ac29"
+    },
+    {
+      "path": ".github/prompts/speckit.implement.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fb62ecf37f02a50fbc5acc27e4e3dc5404d118e",
+      "size": 33,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/4fb62ecf37f02a50fbc5acc27e4e3dc5404d118e"
+    },
+    {
+      "path": ".github/prompts/speckit.plan.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf525543d4cf622827e0284cd1f8c2c4a059c90a",
+      "size": 28,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/cf525543d4cf622827e0284cd1f8c2c4a059c90a"
+    },
+    {
+      "path": ".github/prompts/speckit.specify.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b731edc895bb68dd87e952f5d9c9bc3f65f3bb58",
+      "size": 31,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/b731edc895bb68dd87e952f5d9c9bc3f65f3bb58"
+    },
+    {
+      "path": ".github/prompts/speckit.tasks.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93e1f8d24c573d17d7a39495c504a103295684c4",
+      "size": 29,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/93e1f8d24c573d17d7a39495c504a103295684c4"
+    },
+    {
+      "path": ".github/prompts/speckit.taskstoissues.prompt.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa809877d50515d4598949bb18fec1bc2e0f3a2a",
+      "size": 37,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/aa809877d50515d4598949bb18fec1bc2e0f3a2a"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "02a06a477e5770181812326659d32026fe393bbb",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/02a06a477e5770181812326659d32026fe393bbb"
+    },
+    {
+      "path": ".github/workflows/sdd-spec-kit-bootstrap.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b621e5d8088a9123cbe1903767b0b2a61f8832",
+      "size": 1824,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/51b621e5d8088a9123cbe1903767b0b2a61f8832"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76c420d84da4e846601ab5d9e6de61050e96322a",
+      "size": 150,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/76c420d84da4e846601ab5d9e6de61050e96322a"
+    },
+    {
+      "path": ".specify",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55d988f076b625c2725159c1b3630ff661ba7382",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/55d988f076b625c2725159c1b3630ff661ba7382"
+    },
+    {
+      "path": ".specify/init-options.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "487c9b5a36f043c2d69f091023e69b41e89f17ae",
+      "size": 152,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/487c9b5a36f043c2d69f091023e69b41e89f17ae"
+    },
+    {
+      "path": ".specify/integration.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d858abee11cbc5ad2ae8f80d9f6e8679fd94508b",
+      "size": 281,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/d858abee11cbc5ad2ae8f80d9f6e8679fd94508b"
+    },
+    {
+      "path": ".specify/integrations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fef32e0dc63871896dfabad71516352b72bbead9",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/fef32e0dc63871896dfabad71516352b72bbead9"
+    },
+    {
+      "path": ".specify/integrations/copilot.manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dcaa9b6892c5b981773a150538efb2024808614",
+      "size": 2565,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/5dcaa9b6892c5b981773a150538efb2024808614"
+    },
+    {
+      "path": ".specify/integrations/speckit.manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e7e18a3e8654a8e6b1cbadb757e3e158830d9e0",
+      "size": 1264,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/2e7e18a3e8654a8e6b1cbadb757e3e158830d9e0"
+    },
+    {
+      "path": ".specify/memory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1287bd7e34921a5dafc3094b8b37bbb565fd6ef6",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/1287bd7e34921a5dafc3094b8b37bbb565fd6ef6"
+    },
+    {
+      "path": ".specify/memory/constitution.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4670ff46919b276a4c9663b4ca51830108fcfc0",
+      "size": 2346,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/a4670ff46919b276a4c9663b4ca51830108fcfc0"
+    },
+    {
+      "path": ".specify/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dfa975061f5dbe4fea10eaba65161033d9dda08b",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/dfa975061f5dbe4fea10eaba65161033d9dda08b"
+    },
+    {
+      "path": ".specify/scripts/bash",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1201ab6d96a725aabca9f2a0658517dbe262aa21",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/1201ab6d96a725aabca9f2a0658517dbe262aa21"
+    },
+    {
+      "path": ".specify/scripts/bash/check-prerequisites.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "55575db87503dca0726aafe810c4d4f8760d46b2",
+      "size": 6330,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/55575db87503dca0726aafe810c4d4f8760d46b2"
+    },
+    {
+      "path": ".specify/scripts/bash/common.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dc60f9ff5d72d2594f0e7c5999d1e1e6a0fee1e5",
+      "size": 29810,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/dc60f9ff5d72d2594f0e7c5999d1e1e6a0fee1e5"
+    },
+    {
+      "path": ".specify/scripts/bash/create-new-feature.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "50b2ce08ded1dd6cd589653f8a86abfbaa304895",
+      "size": 11577,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/50b2ce08ded1dd6cd589653f8a86abfbaa304895"
+    },
+    {
+      "path": ".specify/scripts/bash/setup-plan.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e01dc44bce25c78f756e773d31b7445345c3d7c2",
+      "size": 2493,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/e01dc44bce25c78f756e773d31b7445345c3d7c2"
+    },
+    {
+      "path": ".specify/scripts/bash/setup-tasks.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "15cc61834679030062c3c809a2df8c5fe1d47c6b",
+      "size": 3239,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/15cc61834679030062c3c809a2df8c5fe1d47c6b"
+    },
+    {
+      "path": ".specify/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f82ca94bbaefbd1404fe478836c1dc6e97eb9cd2",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/f82ca94bbaefbd1404fe478836c1dc6e97eb9cd2"
+    },
+    {
+      "path": ".specify/templates/checklist-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0caeacf8b061d6029d59b25db58659d0f66acb35",
+      "size": 1307,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/0caeacf8b061d6029d59b25db58659d0f66acb35"
+    },
+    {
+      "path": ".specify/templates/constitution-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4670ff46919b276a4c9663b4ca51830108fcfc0",
+      "size": 2346,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/a4670ff46919b276a4c9663b4ca51830108fcfc0"
+    },
+    {
+      "path": ".specify/templates/plan-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27b278cf0bea605527fae51b73fe691f675f86c2",
+      "size": 3682,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/27b278cf0bea605527fae51b73fe691f675f86c2"
+    },
+    {
+      "path": ".specify/templates/spec-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceb28776215a098e977650ac090c785dcbf53651",
+      "size": 4556,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/ceb28776215a098e977650ac090c785dcbf53651"
+    },
+    {
+      "path": ".specify/templates/tasks-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aa8e749203e7fa6d7fed0e998c50c6bbca40965",
+      "size": 9171,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/2aa8e749203e7fa6d7fed0e998c50c6bbca40965"
+    },
+    {
+      "path": ".specify/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc80adec7134d7def2eb87802cafdfd8c5718ca3",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/cc80adec7134d7def2eb87802cafdfd8c5718ca3"
+    },
+    {
+      "path": ".specify/workflows/speckit",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d5f38441227797eb317a3cb7c5129335a92c22e",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/4d5f38441227797eb317a3cb7c5129335a92c22e"
+    },
+    {
+      "path": ".specify/workflows/speckit/workflow.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f69efeaf46cff25f57487ab3f311716a069fb826",
+      "size": 2197,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/f69efeaf46cff25f57487ab3f311716a069fb826"
+    },
+    {
+      "path": ".specify/workflows/workflow-registry.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f09aae80507f44d76cad507a83d8b7407b96c96",
+      "size": 369,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/7f09aae80507f44d76cad507a83d8b7407b96c96"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e66ca9bec36cab58e3f126d8d49bd2ca32a2a4a5",
+      "size": 1869,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/e66ca9bec36cab58e3f126d8d49bd2ca32a2a4a5"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "715cf957ab8ef80dc18e0ece3d810fe09da1a5ed",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/715cf957ab8ef80dc18e0ece3d810fe09da1a5ed"
+    },
+    {
+      "path": "docs/ASSESSMENT_MATRIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc3737627caee7c5b4d42e87011c88a94aa5f7c4",
+      "size": 2235,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/bc3737627caee7c5b4d42e87011c88a94aa5f7c4"
+    },
+    {
+      "path": "docs/EXPERIMENT_PROTOCOL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e83fccf7369b95fc59d365803bc5969ef9e5ddbb",
+      "size": 3298,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/e83fccf7369b95fc59d365803bc5969ef9e5ddbb"
+    },
+    {
+      "path": "docs/PROJECT_CHARTER_PC-001.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "427ba09306215ce58095c26bbccc6d568e83782c",
+      "size": 3825,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/427ba09306215ce58095c26bbccc6d568e83782c"
+    },
+    {
+      "path": "docs/PROMPT_APPROVAL_PROTOCOL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a21b2d242624c6c701a4303e03a1402bcb5af82",
+      "size": 1760,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/6a21b2d242624c6c701a4303e03a1402bcb5af82"
+    },
+    {
+      "path": "docs/SDD-001_OFFICIAL_SPEC_KIT_KICKOFF_AI_DRAFT_2026-10-29.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0f3499db66bec0e9f6698ba40e4fd9ebf3b13d0",
+      "size": 4050,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/d0f3499db66bec0e9f6698ba40e4fd9ebf3b13d0"
+    },
+    {
+      "path": "docs/SUBMISSION_CHECKLIST.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04b4f600b64da7d462399f1363c1a727a1699b8c",
+      "size": 1150,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/04b4f600b64da7d462399f1363c1a727a1699b8c"
+    },
+    {
+      "path": "docs/sdd-input",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1309d4a1bc7cac9d44a80f22bf4d4c960eeed7b",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/e1309d4a1bc7cac9d44a80f22bf4d4c960eeed7b"
+    },
+    {
+      "path": "docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e45c7d20a8039491dcc91afc9e6c5cc0f270394",
+      "size": 5404,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/8e45c7d20a8039491dcc91afc9e6c5cc0f270394"
+    },
+    {
+      "path": "docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61e4f31ea150c827c92ecf785677c56af45ce04f",
+      "size": 14300,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/61e4f31ea150c827c92ecf785677c56af45ce04f"
+    },
+    {
+      "path": "docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d00a5bac308b182dcd5fc99f290089a9d15d26e5",
+      "size": 2813,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/d00a5bac308b182dcd5fc99f290089a9d15d26e5"
+    },
+    {
+      "path": "docs/sdd-input/SDD_003_AUTHENTIC_SPECKIT_CLI_INIT_RED_GREEN_EVIDENCE_2026-10-30.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbadcfb9d7e4778104fa3d3d2c546bf25d4e02bb",
+      "size": 5906,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/dbadcfb9d7e4778104fa3d3d2c546bf25d4e02bb"
+    },
+    {
+      "path": "docs/sdd-input/SDD_004_NEXT_COPILOT_CONSTITUTION_PROMPT_NOT_EXECUTED.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d284c604e7f0b57855037feed89b0a45ef0e36b",
+      "size": 4106,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/5d284c604e7f0b57855037feed89b0a45ef0e36b"
+    },
+    {
+      "path": "evaluation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ae97642f74af0d256f57fd6a9403e1a095441c4",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/8ae97642f74af0d256f57fd6a9403e1a095441c4"
+    },
+    {
+      "path": "evaluation/ACCEPTANCE_MATRIX.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94bc55ca1d3c2c1df932b204194921b911776f9c",
+      "size": 2878,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/94bc55ca1d3c2c1df932b204194921b911776f9c"
+    },
+    {
+      "path": "evidence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ce79fd67b705b5c8c8a9699fb328aff7594d0f7",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/6ce79fd67b705b5c8c8a9699fb328aff7594d0f7"
+    },
+    {
+      "path": "evidence/DECISION_LOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "632bbc740d1ea60e58e8a933b1628c9c32285938",
+      "size": 1018,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/632bbc740d1ea60e58e8a933b1628c9c32285938"
+    },
+    {
+      "path": "evidence/PROMPT_LEDGER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74cb3672731f04e015829165df50dba6d7f78877",
+      "size": 688,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/74cb3672731f04e015829165df50dba6d7f78877"
+    },
+    {
+      "path": "shared-content",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25c0e35556ce965bbab9ea624941deae529df62d",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/25c0e35556ce965bbab9ea624941deae529df62d"
+    },
+    {
+      "path": "shared-content/PRODUCT_BRIEF.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0a8b620bf90fef0bd8c2c34214a1217c8a6c54b",
+      "size": 2386,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/b0a8b620bf90fef0bd8c2c34214a1217c8a6c54b"
+    },
+    {
+      "path": "shared-content/SOURCE_MANIFEST.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ecd276fe9e4c499a92969b1c8fe9b812e12a4da",
+      "size": 2267,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/8ecd276fe9e4c499a92969b1c8fe9b812e12a4da"
+    },
+    {
+      "path": "shared-content/mission-seeds.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61602a9c12e25fdfb04d9bb0705967398b59c706",
+      "size": 2715,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/61602a9c12e25fdfb04d9bb0705967398b59c706"
+    },
+    {
+      "path": "shared-content/verb-library",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69c5e6fce27580e813b924ac984259a8fa124a91",
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/trees/69c5e6fce27580e813b924ac984259a8fa124a91"
+    },
+    {
+      "path": "shared-content/verb-library/A2.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0064f93419503fe4ff967303490bb31284a3959",
+      "size": 402660,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/b0064f93419503fe4ff967303490bb31284a3959"
+    },
+    {
+      "path": "shared-content/verb-library/B1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2ea9af945b72eafc008df20e5cc23541a0c6d9a",
+      "size": 429049,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/b2ea9af945b72eafc008df20e5cc23541a0c6d9a"
+    },
+    {
+      "path": "shared-content/verb-library/B2.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11d79a803d72c7172eda5f09894e4e514c434ec6",
+      "size": 681811,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/11d79a803d72c7172eda5f09894e4e514c434ec6"
+    },
+    {
+      "path": "shared-content/verb-library/C1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b9e7121faf5c45038d845e92eda4f76b886c9cb",
+      "size": 877040,
+      "url": "https://api.github.com/repos/alikhalessi/nordljud-swcon2627-r2/git/blobs/7b9e7121faf5c45038d845e92eda4f76b886c9cb"
+    }
+  ],
+  "truncated": false
+}

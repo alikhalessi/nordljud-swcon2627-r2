@@ -1,0 +1,42 @@
+[
+  {
+    "name": "condition/spec-driven",
+    "sha": "46e272c2aa60ecff3d6a6a3ccf94ecf4c46f30fd"
+  },
+  {
+    "name": "condition/vibe",
+    "sha": "c4424a0b89d2e0dec09c1a9620a49c549be2dfeb"
+  },
+  {
+    "name": "freeze/v009-vibe-research-2026-10-29",
+    "sha": "0b5a4a58631503c3a454ecc36d62b892c569ef14"
+  },
+  {
+    "name": "hardening/v008-r01",
+    "sha": "24e75a1bf49c1a560692107c05ab5647412a94c5"
+  },
+  {
+    "name": "hardening/v008-r02",
+    "sha": "b5ad1b4235db6806f1b0f2e4e2b294592b27fb21"
+  },
+  {
+    "name": "hardening/v008-r03",
+    "sha": "19111fa77d70d8f2d5981fe11f2c435b0a3abbb1"
+  },
+  {
+    "name": "hardening/v009-release-candidate",
+    "sha": "0b5a4a58631503c3a454ecc36d62b892c569ef14"
+  },
+  {
+    "name": "main",
+    "sha": "104e0163a0fc1b75b372482f8100f297fa80c47b"
+  },
+  {
+    "name": "release/vibe",
+    "sha": "7f64839dbcb8ae945b0416ecf83b84d78009b1f0"
+  },
+  {
+    "name": "research/sdd-input-audit-2026-10-30",
+    "sha": "fb2988fd46762b20225ac923be9d4b75e532e88b"
+  }
+]

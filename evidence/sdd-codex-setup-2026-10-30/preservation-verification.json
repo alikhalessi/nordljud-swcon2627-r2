@@ -1,0 +1,158 @@
+{
+  "baseline_commit": "46e272c2aa60ecff3d6a6a3ccf94ecf4c46f30fd",
+  "method": "Git blob SHA-1 over exact working-copy bytes, no text filters",
+  "count": 25,
+  "status": "PASS",
+  "checks": [
+    {
+      "path": ".github/workflows/sdd-spec-kit-bootstrap.yml",
+      "expected": "51b621e5d8088a9123cbe1903767b0b2a61f8832",
+      "actual": "51b621e5d8088a9123cbe1903767b0b2a61f8832",
+      "status": "PASS"
+    },
+    {
+      "path": ".gitignore",
+      "expected": "76c420d84da4e846601ab5d9e6de61050e96322a",
+      "actual": "76c420d84da4e846601ab5d9e6de61050e96322a",
+      "status": "PASS"
+    },
+    {
+      "path": ".specify/memory/constitution.md",
+      "expected": "a4670ff46919b276a4c9663b4ca51830108fcfc0",
+      "actual": "a4670ff46919b276a4c9663b4ca51830108fcfc0",
+      "status": "PASS"
+    },
+    {
+      "path": "README.md",
+      "expected": "e66ca9bec36cab58e3f126d8d49bd2ca32a2a4a5",
+      "actual": "e66ca9bec36cab58e3f126d8d49bd2ca32a2a4a5",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/ASSESSMENT_MATRIX.md",
+      "expected": "bc3737627caee7c5b4d42e87011c88a94aa5f7c4",
+      "actual": "bc3737627caee7c5b4d42e87011c88a94aa5f7c4",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/EXPERIMENT_PROTOCOL.md",
+      "expected": "e83fccf7369b95fc59d365803bc5969ef9e5ddbb",
+      "actual": "e83fccf7369b95fc59d365803bc5969ef9e5ddbb",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/PROJECT_CHARTER_PC-001.md",
+      "expected": "427ba09306215ce58095c26bbccc6d568e83782c",
+      "actual": "427ba09306215ce58095c26bbccc6d568e83782c",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/PROMPT_APPROVAL_PROTOCOL.md",
+      "expected": "6a21b2d242624c6c701a4303e03a1402bcb5af82",
+      "actual": "6a21b2d242624c6c701a4303e03a1402bcb5af82",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/SDD-001_OFFICIAL_SPEC_KIT_KICKOFF_AI_DRAFT_2026-10-29.md",
+      "expected": "d0f3499db66bec0e9f6698ba40e4fd9ebf3b13d0",
+      "actual": "d0f3499db66bec0e9f6698ba40e4fd9ebf3b13d0",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/SUBMISSION_CHECKLIST.md",
+      "expected": "04b4f600b64da7d462399f1363c1a727a1699b8c",
+      "actual": "04b4f600b64da7d462399f1363c1a727a1699b8c",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md",
+      "expected": "8e45c7d20a8039491dcc91afc9e6c5cc0f270394",
+      "actual": "8e45c7d20a8039491dcc91afc9e6c5cc0f270394",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md",
+      "expected": "61e4f31ea150c827c92ecf785677c56af45ce04f",
+      "actual": "61e4f31ea150c827c92ecf785677c56af45ce04f",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md",
+      "expected": "d00a5bac308b182dcd5fc99f290089a9d15d26e5",
+      "actual": "d00a5bac308b182dcd5fc99f290089a9d15d26e5",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/sdd-input/SDD_003_AUTHENTIC_SPECKIT_CLI_INIT_RED_GREEN_EVIDENCE_2026-10-30.md",
+      "expected": "dbadcfb9d7e4778104fa3d3d2c546bf25d4e02bb",
+      "actual": "dbadcfb9d7e4778104fa3d3d2c546bf25d4e02bb",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/sdd-input/SDD_004_NEXT_COPILOT_CONSTITUTION_PROMPT_NOT_EXECUTED.md",
+      "expected": "5d284c604e7f0b57855037feed89b0a45ef0e36b",
+      "actual": "5d284c604e7f0b57855037feed89b0a45ef0e36b",
+      "status": "PASS"
+    },
+    {
+      "path": "evaluation/ACCEPTANCE_MATRIX.md",
+      "expected": "94bc55ca1d3c2c1df932b204194921b911776f9c",
+      "actual": "94bc55ca1d3c2c1df932b204194921b911776f9c",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/DECISION_LOG.md",
+      "expected": "632bbc740d1ea60e58e8a933b1628c9c32285938",
+      "actual": "632bbc740d1ea60e58e8a933b1628c9c32285938",
+      "status": "PASS"
+    },
+    {
+      "path": "evidence/PROMPT_LEDGER.md",
+      "expected": "74cb3672731f04e015829165df50dba6d7f78877",
+      "actual": "74cb3672731f04e015829165df50dba6d7f78877",
+      "status": "PASS"
+    },
+    {
+      "path": "shared-content/PRODUCT_BRIEF.md",
+      "expected": "b0a8b620bf90fef0bd8c2c34214a1217c8a6c54b",
+      "actual": "b0a8b620bf90fef0bd8c2c34214a1217c8a6c54b",
+      "status": "PASS"
+    },
+    {
+      "path": "shared-content/SOURCE_MANIFEST.md",
+      "expected": "8ecd276fe9e4c499a92969b1c8fe9b812e12a4da",
+      "actual": "8ecd276fe9e4c499a92969b1c8fe9b812e12a4da",
+      "status": "PASS"
+    },
+    {
+      "path": "shared-content/mission-seeds.json",
+      "expected": "61602a9c12e25fdfb04d9bb0705967398b59c706",
+      "actual": "61602a9c12e25fdfb04d9bb0705967398b59c706",
+      "status": "PASS"
+    },
+    {
+      "path": "shared-content/verb-library/A2.json",
+      "expected": "b0064f93419503fe4ff967303490bb31284a3959",
+      "actual": "b0064f93419503fe4ff967303490bb31284a3959",
+      "status": "PASS"
+    },
+    {
+      "path": "shared-content/verb-library/B1.json",
+      "expected": "b2ea9af945b72eafc008df20e5cc23541a0c6d9a",
+      "actual": "b2ea9af945b72eafc008df20e5cc23541a0c6d9a",
+      "status": "PASS"
+    },
+    {
+      "path": "shared-content/verb-library/B2.json",
+      "expected": "11d79a803d72c7172eda5f09894e4e514c434ec6",
+      "actual": "11d79a803d72c7172eda5f09894e4e514c434ec6",
+      "status": "PASS"
+    },
+    {
+      "path": "shared-content/verb-library/C1.json",
+      "expected": "7b9e7121faf5c45038d845e92eda4f76b886c9cb",
+      "actual": "7b9e7121faf5c45038d845e92eda4f76b886c9cb",
+      "status": "PASS"
+    }
+  ]
+}

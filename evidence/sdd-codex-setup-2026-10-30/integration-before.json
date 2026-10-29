@@ -1,0 +1,49 @@
+{
+  "status": "error",
+  "default_integration": "copilot",
+  "installed_integrations": [
+    "copilot"
+  ],
+  "recorded_installed_integrations": [
+    "copilot"
+  ],
+  "manifest_checked_integrations": [
+    "copilot",
+    "speckit"
+  ],
+  "multi_install_safe": true,
+  "shared_templates_target_alignment": "copilot",
+  "missing_managed_files": 1,
+  "modified_managed_files": 0,
+  "invalid_manifest_paths": 0,
+  "unchecked_manifests": 0,
+  "manifests": {
+    "copilot": {
+      "manifest": ".specify/integrations/copilot.manifest.json",
+      "readable": true,
+      "tracked_files": 21,
+      "missing_files": [
+        ".vscode/settings.json"
+      ],
+      "modified_files": [],
+      "invalid_files": []
+    },
+    "speckit": {
+      "manifest": ".specify/integrations/speckit.manifest.json",
+      "readable": true,
+      "tracked_files": 10,
+      "missing_files": [],
+      "modified_files": [],
+      "invalid_files": []
+    }
+  },
+  "findings": [
+    {
+      "severity": "error",
+      "code": "managed-files-missing",
+      "message": "1 managed file(s) are missing for integration 'copilot'.",
+      "integration": "copilot",
+      "suggestion": "Run `specify integration upgrade copilot` or reinstall the integration."
+    }
+  ]
+}

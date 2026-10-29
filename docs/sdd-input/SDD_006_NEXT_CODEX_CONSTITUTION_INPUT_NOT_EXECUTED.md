@@ -1,0 +1,42 @@
+# SDD-006 — VS Code preflight and next Codex Constitution input
+
+Date: 2026-10-30 Europe/Helsinki
+Status: AI-AUTHORED EXECUTION WRAPPER / NOT EXECUTED / NO CONSTITUTION APPROVAL.
+This wrapper applies the user's Codex selection to the already approved product inputs. It is not an additional product approval, student quotation, executed transcript or completed Constitution.
+
+## VS Code setup
+
+1. Open the existing Nordljud repository. If Restricted Mode appears, review/trust this repository folder.
+2. Click the branch name at the lower left and choose `origin/condition/spec-driven` (or local `condition/spec-driven`). Fetch first if necessary. Pull using fast-forward only to obtain the integration commit. Stop if there are local changes or divergent commits; do not discard work.
+3. Confirm `git branch --show-current` returns `condition/spec-driven`, the working copy is clean, and `.specify/integration.json` declares Codex with `invoke_separator: "-"`.
+4. Open the Codex icon, or Command Palette → `Codex: Open Codex Sidebar`. Use the local repository session. If signed out, choose `Sign in with ChatGPT` with existing access. Do not enable API billing, paid overage or buy credits. `codex login status` is an optional terminal check if that command is on the VS Code terminal's PATH.
+5. Start a new Codex chat after the branch switch so project skills are discovered. First send the following read-only preflight. Save its actual response and tool results.
+
+## Read-only preflight — no stage execution
+
+```text
+Verify this local Nordljud checkout without editing files or running Spec Kit stages. Confirm the branch is condition/spec-driven, show HEAD and git status, read AGENTS.md and .specify/integration.json, confirm .agents/skills/speckit-constitution/SKILL.md is available, and verify the MBR-B-002, EP-B-001 and SDD_002 approval blobs against the hashes in SDD_005. Confirm Git Bash is available for the installed sh scripts. Do not inspect any other branch's application content, execute hooks, run Constitution, create product files, call Supabase or deploy. Report the real results and any limitation, then stop.
+```
+
+A completed response with actual local checks verifies an agent turn in this VS Code context. Installation or a successful login check alone does not. If the skill is not available, reload the VS Code window/start a fresh Codex chat and recheck; do not invent a successful invocation.
+
+## Constitution only — send when preflight succeeds and the student is ready
+
+Select/type `$speckit-constitution` in the Codex composer and send the complete input below. It is a Codex skill invocation, not a PowerShell or Bash command.
+
+```text
+$speckit-constitution
+Use the officially installed GitHub Spec Kit 0.12.11 Constitution skill to establish the governing Constitution for Nordljud Condition B, on condition/spec-driven only. First verify branch, clean status, and HEAD and read AGENTS.md. If branch, access, skill availability or approved-input hashes are wrong, stop and report BLOCKED.
+
+Read docs/PROJECT_CHARTER_PC-001.md, shared-content/PRODUCT_BRIEF.md, shared-content/SOURCE_MANIFEST.md, evaluation/ACCEPTANCE_MATRIX.md, docs/EXPERIMENT_PROTOCOL.md, docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md, docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md and docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md, plus the installed official skill and relevant .specify templates. Preserve all approved inputs and verbatim approvals byte-for-byte. Never read or copy Vibe application code, tests, SQL, design, screenshots, fixes, ledgers or retrospective evidence, including via Git history or other branches.
+
+Define enforceable principles for precise data/source fidelity: four levels, exactly 456 senses each, two distinct sticka meanings, and no invented forms or example sentences; honest source limitations; privacy and server-enforced account ownership; no elevated browser secrets; Guest access; keyboard/mobile usability; reproducible real tests and genuine RED/failure evidence; exact-SHA provenance; explicit PASS/FAIL/BLOCKED/NOT TESTED reporting; no unsupported runtime/security claims; human oversight and review checkpoints; F01-F15 CORE/PRIMARY and E01-E07/EXT-AC01-07 EXTENDED/SECONDARY with separate denominators; and honest disclosure of order, prior-learning and coding-agent differences.
+
+Fill .specify/memory/constitution.md through the official skill, with adoption/amendment rules, real version/date and genuine Sync Impact Report. Review consistency with the official plan/spec/tasks templates and record any necessary edits. Only Constitution, required dependent template/guidance synchronization, and new evidence files may change. Do not overwrite existing evidence or approved documents.
+
+Do not execute the bundled multi-stage workflow, external-service hooks, application implementation, database migrations, Supabase operations, provider configuration, production/deployment actions or anything requiring payment. There are no authorized paid services. If a hook or required action exceeds these constraints, stop and report the limitation instead of executing it.
+
+Retain the actual Codex session/transcript reference, exact input, tool/model identity as actually displayed (UNKNOWN if unavailable), commands, outputs, changed paths and exact starting revision. Do not fabricate a transcript or completion claim. Present the Constitution and diff for student review, then stop. Do not invoke Specify, Plan, Tasks or Implement, publish or merge until the relevant human review authorization exists.
+```
+
+After execution, save the genuine session evidence and inspect the resulting document/diff. Constitution is a draft until the student explicitly approves it. Preserve the freeze ref at `0b5a4a58631503c3a454ecc36d62b892c569ef14`.
