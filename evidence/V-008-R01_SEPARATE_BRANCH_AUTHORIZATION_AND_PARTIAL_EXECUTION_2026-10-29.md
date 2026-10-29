@@ -59,3 +59,16 @@ The existing READY Production deployment to restore if an authorized settings sw
 - R01 FINAL HUMAN ACCEPTANCE: **PENDING**; R02 and V009 not started.
 
 **Research integrity:** The original student authorization appeared before actions in the chat; the pre-change provider snapshot was committed before branch creation. This file commits the verbatim authorization and observed action/outcome afterward, without falsely claiming it was committed earlier.
+
+## Follow-up — user-confirmed Vercel Production setting and private repository enforcement limitation
+
+The student subsequently supplied **actual UI screenshots**, visually inspected in ChatGPT but **not fabricated or re-created as repository image files**.
+
+1. **Vercel Settings → Environments → Production → Branch Tracking** shows `release/vibe` and the toast **"Branch tracking saved; redeploy a deployment from release/vibe to this environment."** It also shows the unchanged domain `nordljud-r2-vibe-sepia.vercel.app`. **Status correction:** The former provider-setting write blocker was resolved **by the student in the Vercel UI**. This is **SETTING SAVED**, not evidence of a redeployed SHA or proven future push routing. Student was advised **not** to click Redeploy.
+2. **GitHub Settings → Rulesets** screenshot states **"Your rulesets won't be enforced on this private repository until you move to a GitHub Team organization account."** No rulesets exist. GitHub branch GET confirms `release/vibe` `protected=false`. The student agreed to remain on the present free/private setup with a **procedural approval gate**. Do not claim enforceable branch protection or purchased GitHub Team/Pro.
+
+**Fresh read-only verification:** `release/vibe` HEAD is `7f64839dbcb8ae945b0416ecf83b84d78009b1f0`, unprotected. `condition/vibe` HEAD is `47a25779d50455d1dad205ed93f71e6287c31cc1`. Draft PR #1 is OPEN, DRAFT, **NOT MERGED**. Vercel's most recent Production deployment still reports old READY `condition/vibe` SHA `7f64839d`; this is consistent with no new deployment following a setting switch. Public domain remains verified. These records **do not prove** a future development push is Preview-only.
+
+**Gate distinction:** `RELEASE_BRANCH_CREATED = PASS`; `VERCEL_BRANCH_TRACKING = SAVED_IN_USER_UI`; `NO_NEW_PUBLIC_RELEASE = VERIFIED_BY_METADATA`; `ENFORCED_GITHUB_REVIEW = UNAVAILABLE_ON_CURRENT_PRIVATE_FREE_SETUP`; `FUTURE_PUSH_ROUTING = NOT_TESTED`; `HTTP/BROWSER_ACCEPTANCE = NOT_TESTED`. R01 has a manually administered human release gate, **not a technically enforced GitHub protected-release gate**.
+
+**Scope unchanged:** No R01 PR merge, new public release, Supabase migration, or R02/V009 coding. User's later generic "ok" messages are acknowledgments, **not explicit formal acceptance of R01**.
