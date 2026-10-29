@@ -2,6 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import type { User } from "@supabase/supabase-js";
 import { getBrowserAuth } from "../lib/supabase-browser";
+import { createAuthRevisionGuard } from "../lib/auth-flow.mjs";
 import type { Level } from "./learning-app";
 export type Sense = {verb:string;meaning:string};
 export type SavedPractice = Sense & {id:string;level:Level;score:number;total:number;completed_at:string};
@@ -37,6 +38,7 @@ export function LearningProvider({children}:{children:ReactNode}){
   const db=getBrowserAuth();
   if(!db){setLoading(false);return;}
   let active=true;
+  const authRevision=createAuthRevisionGuard();
   const change=(next:User|null)=>{
    if(!active)return;
    const nextId=next?.id||null;
@@ -45,8 +47,15 @@ export function LearningProvider({children}:{children:ReactNode}){
    setFavorites([]);setStudied([]);setHistory([]);setError("");setLoading(Boolean(nextId));
    if(nextId)void load(nextId,version);
   };
-  const {data:{subscription}}=db.auth.onAuthStateChange((_event,session)=>change(session?.user||null));
-  void db.auth.getUser().then(({data})=>change(data.user)).catch(()=>{if(active)setLoading(false);});
+  const {data:{subscription}}=db.auth.onAuthStateChange((event,session)=>{
+   if(event!=="INITIAL_SESSION")authRevision.advance();
+   change(session?.user||null);
+  });
+  const lookupRevision = authRevision.capture();
+  void db.auth.getUser().then(({data})=>{
+   if(!active||!authRevision.isCurrent(lookupRevision))return;
+   change(data.user);
+  }).catch(()=>{if(active&&authRevision.isCurrent(lookupRevision))setLoading(false);});
   return()=>{active=false;subscription.unsubscribe();++epoch.current;};
  },[load]);
  const refresh=useCallback(async()=>{if(uid.current){setLoading(true);await load(uid.current,epoch.current);}},[load]);

@@ -3,7 +3,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import type { User } from "@supabase/supabase-js";
 import { getBrowserAuth, getAuthSetupMessage } from "../lib/supabase-browser";
-import { authErrorText, getAuthRedirectUrl, safeOriginsFromConfig } from "../lib/auth-flow.mjs";
+import { authErrorText, getAuthRedirectUrl, safeOriginsFromConfig, createAuthRevisionGuard } from "../lib/auth-flow.mjs";
 
 type AuthMode = "sign-in" | "sign-up";
 
@@ -31,21 +31,26 @@ export default function AuthControls() {
       return;
     }
     let active = true;
-    const { data: { subscription } } = auth.auth.onAuthStateChange((_event, session) => {
+    const authRevision = createAuthRevisionGuard();
+    const { data: { subscription } } = auth.auth.onAuthStateChange((event, session) => {
       if (active) {
+        // The SDK's initial cached session is not proof that getUser() is fresh.
+        // A later real Auth event invalidates the in-flight initial lookup.
+        if (event !== "INITIAL_SESSION") authRevision.advance();
         setAccount(session?.user ?? null);
         setChecking(false);
       }
     });
+    const lookupRevision = authRevision.capture();
     void auth.auth.getUser().then(({ data, error: authError }) => {
-      if (!active) return;
+      if (!active || !authRevision.isCurrent(lookupRevision)) return;
       if (authError && authError.message !== "Auth session missing!") {
         setError("Could not check the current session. You can still learn as a guest.");
       }
       setAccount(data.user);
       setChecking(false);
     }).catch(() => {
-      if (active) {
+      if (active && authRevision.isCurrent(lookupRevision)) {
         setChecking(false);
         setError("Could not connect to authentication. Guest Mode remains available.");
       }
@@ -174,7 +179,7 @@ export default function AuthControls() {
       setPassword("");
       setStatus("You are signed out. You can continue learning as a guest.");
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Could not sign out.");
+      setError(authErrorText(cause instanceof Error ? cause : null));
     } finally {
       setBusy(false);
     }
