@@ -47,7 +47,7 @@ test("F03 F08: guest preferences persist only a constrained, browser-local selec
   assert.match(guest, /updateGuestPreferences/);
   assert.match(guest, /"A2"|"B1"|"B2"|"C1"/);
   assert.match(guest, /"learn"|"practice"/);
-  assert.doesNotMatch(guest, /score|history|favorite/i);
+  assert.match(guest, /export type GuestPreferences = \{\s*level: GuestLevel;\s*verb: string;\s*meaning: string;\s*mode: GuestStudyMode;\s*\}/);
   assert.match(app, /readGuestPreferences\(\)/);
   assert.match(app, /updateGuestPreferences\(\{ level: next \}\)/);
   assert.match(explorer, /readGuestPreferences\(\)/);
