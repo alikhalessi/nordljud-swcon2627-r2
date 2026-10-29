@@ -1,95 +1,100 @@
-# Nordljud Condition B — Master Requirements Brief for Official GitHub Spec Kit
-**Version:** MBR-B-001, draft dated 2026-10-30 (Europe/Helsinki)  
-**Status:** **AI_DRAFT / HUMAN SCOPE APPROVAL PENDING / NOT AN EXECUTED SPEC KIT PROMPT OR COMPLETED `spec.md`**  
-**Proposed methodology:** Option C, CORE + separately approved SECONDARY parity amendment.  
-**Agent input safety:** This file contains product outcomes only and the neutral original baseline. It **must be reviewed and scoped** by the student before being supplied to the independent SDD coding agent. The retrospective audit and Vibe source are **researcher-only**, not agent context.
+# Nordljud SDD — Master Requirements Brief (MBR-B-002)
+**Research condition:** B — Independent Specification-Driven Development with official GitHub Spec Kit  
+**Date:** 2026-10-30 (Europe/Helsinki)  
+**Status:** **AI_DRAFT — OPTION C POLICY APPROVED; EXACT MASTER TEXT AND EXTENSION NOT YET APPROVED**  
+**Student's verbatim policy approval:** `research/SDD_INPUT_04_OPTION_C_STUDENT_APPROVAL_2026-10-30.md`  
+**Implementation:** **NOT STARTED**. No official Spec Kit stage executed. This file is a human-review brief, not a generated `spec.md` or coding instruction.
 
-## A. Why and for whom
-Build an accessible, responsive web application called **Nordljud** that helps Swedish-language learners study authentic source-linked Swedish verbs and examples through English explanations, study and practice, track their own progress, and optionally authenticate to persist private account data. Users can begin as guests. The course also evaluates *how* the application was developed using genuine official GitHub Spec Kit Specification-Driven Development, versus a separately frozen Vibe Coding implementation.
+## A. Purpose, actors and research boundary
+Build **Nordljud**, a responsive Swedish-through-English learning web application that lets learners study reliable source-linked Swedish vocabulary, see translations and verb forms, practise, use Guest Mode, and optionally authenticate for private progress. Primary actors: Swedish learner/Guest and authenticated learner. Secondary actors: student-researcher, course assessor and authorized test operators. Do not claim linguist certification or measured learning effectiveness.
 
-Primary stakeholder: Swedish learner / course student. Secondary stakeholders: developer/researcher and software-construction assessor. No teacher-validated grading or clinical/educational efficacy claim.
+**Research comparison:** Condition A is an already frozen, informed, feedback-driven Vibe Coding implementation; Condition B creates an **independent** implementation via the official Spec Kit stages. Compare identical pre-registered CORE F01–F15 outcomes as the **primary** result. Evaluate any later user-requested features as **separately versioned EXTENDED PARITY**, never rewrite the original benchmark or present later features as initial requirements. Report knowledge transfer, chronology, scope asymmetry and missing test evidence as limitations.
 
-The desired learning experience is clear, forgiving when source data are incomplete, understandable when a word has multiple meanings, secure for account-specific data, and usable with a keyboard and small screen.
+## B. Shared inputs, fixed scope and technology constraints
+- Start only from original approved `docs/PROJECT_CHARTER_PC-001.md`, `shared-content/PRODUCT_BRIEF.md`, `shared-content/SOURCE_MANIFEST.md`, the original shared datasets and `evaluation/ACCEPTANCE_MATRIX.md`.
+- CEFR levels: **A2, B1, B2, C1**. Each level has **456 semantic/sense records** and **455 distinct written verb spellings**; four levels total **1,824 sense records**. There are **two separate meanings of `sticka`** per level. Maintain distinct sense identity.
+- Use the identical, unchanged original `shared-content/verb-library/A2.json`, `B1.json`, `B2.json`, `C1.json` and `mission-seeds.json` identified by `SOURCE_MANIFEST.md`. Preserve stored Swedish/English examples; do not invent missing forms, examples, translations or linguistic certification.
+- Original common technology **families**: Next.js, React, TypeScript, Supabase, GitHub, Vercel and browser Swedish speech when supported. Exact dependency versions, interfaces, storage schema, privacy mechanism and layout are choices for **Spec Kit Plan**, subject to these constraints; this brief does not supply Vibe code or architecture.
+- Shared explicit exclusions: payment, generative chat tutor, speech-recognition/scoring, admin/social features, large newly authored curriculum and production-grade localization. Android app, PWA push notifications and scheduled push delivery are also excluded from this comparison.
+- **Method isolation:** SDD codebase, tests, deployments, Auth and private data must be separate from Vibe. No copying Vibe source, SQL, CSS, tests, screenshots or release-workflow templates; the SDD agent must not inspect the Vibe retrospective and prompt ledger.
 
-## B. Product input constraints (shared and immutable)
-- Four CEFR levels: **A2, B1, B2, C1**.
-- Use exact **frozen shared source inputs**, including `shared-content/verb-library/{A2,B1,B2,C1}.json` and `mission-seeds.json` from the original neutral branch. Each level has **456 sense records but 455 unique written verb spellings**. The two entries of `sticka` represent independent meanings and must not collapse.
-- Record and verify original data provenance using `shared-content/SOURCE_MANIFEST.md`; don't rewrite source translations, generate missing Swedish examples or invent unsupported verb forms.
-- Original shared evaluation contract: `evaluation/ACCEPTANCE_MATRIX.md` F01–F15, unchanged. All original F cases are PRIMARY comparison criteria.
-- The original shared tech-family constraints are Next.js, React, TypeScript, Supabase, Vercel and GitHub (and browser speech synthesis). Exact versions, deployment routing, security patterns, schema and frontend design are determined later during Spec Kit **Plan**, with independent reasoning. This brief must not prescribe or copy Vibe code or database migrations.
+## C. CORE requirements — primary, unchanged F01–F15 acceptance contract
+Each ID below states an observable **what/why**; implementation choices belong in the later Plan. The authoritative original F01–F15 wording and its pre-registration date remain unchanged.
 
-## C. Product requirements — CORE (product's WHAT and WHY, not implementation HOW)
-**C-FR-01 Levels and missions (F01–F02):** The learner can select A2, B1, B2 or C1 and study at least one appropriate original source-seeded mission per level with Swedish example, English meaning/assistance, and show/hide translation.
+**C01 / F01 — Levels and missions.** Learners can choose each of the four CEFR levels and receive a distinct level-appropriate mission from the frozen source inputs.
 
-**C-FR-02 Spoken Swedish (F03):** For supported devices, the learner can request Swedish pronunciation for legitimate source-backed text. If unavailable, the interface communicates this without preventing reading/practice.
+**C02 / F02 — Source-backed examples.** Swedish examples and English translations agree with the frozen source; users can reveal/hide English assistance without changing the underlying meaning.
 
-**C-FR-03 Practice and feedback (F04):** Learner answers at least one comprehension and one verb-form question using authentic source text. Incorrect answers are identified; no score or mastery is awarded for an incorrect choice or reveal of the answer.
+**C03 / F03 — Swedish speech.** When the browser/device supports it, the user can request Swedish pronunciation of authentic stored text. When unavailable, an understandable fallback leaves reading and practice usable.
 
-**C-FR-04 Complete lexicon, verb forms and search (F05):** Learner can browse/search/select every one of the 456 semantic records for each level and see available verb forms/translated source examples. Missing/empty/editorial placeholder fields are explicitly unavailable and never silently fabricated.
+**C04 / F04 — Two practice checks.** One comprehension and one verb-form check have testable correct/incorrect feedback. Incorrect answers or revealing the answer do not earn credit.
 
-**C-FR-05 Meaning-sense identity (F06):** Two identically spelled `sticka` entries with different meanings can be discovered, independently selected and favorited, without mixing their meaning or examples.
+**C05 / F05 — Complete searchable lexicon.** A level's full 456-sense collection is accessible and searchable; selecting a sense shows its English meaning and the supplied five verb forms/source examples where present. Blank, placeholder or editorial em dash fields are not invented or treated as usable answers.
 
-**C-FR-06 Cross-level semantic comparison (F07):** When moving between CEFR levels, the application preserves the selected meaningful verb/sense where there is a valid cross-level match and makes level-specific differences intelligible; if no valid match exists, clearly explain that rather than silently changing the word.
+**C06 / F06 — Meaning identity.** The two distinct `sticka` senses are individually selectable and retain independent meaning, examples and favorite status; same spelling must not merge them.
 
-**C-FR-07 Genuine Guest Mode (F08):** A user can explore, study and practice without authentication. Appropriate guest-scoped local state survives a same-browser refresh, with a clear explanation that it does not imply cross-device account backup. Guest data must not be exposed as signed-in data for an unrelated account.
+**C07 / F07 — Level switching.** Switching among A2/B1/B2/C1 keeps the current verb/sense when a legitimate match exists and shows level-appropriate examples. Missing counterparts are clearly explained, not silently replaced by an unrelated verb.
 
-**C-FR-08 Email/password and Google identity (F09–F10):** Provide sign-up/sign-in/out flows, invalid-credential feedback and hosted Google OAuth when the authorized provider is available. The user's browser returns to an approved application origin (not localhost). Display current session status clearly; unavailable external provider must not disable Guest learning. Account recovery behavior, if implemented, must resist unsafe session redirects.
+**C08 / F08 — Guest learning.** A learner can complete the basic learning path without signing in; appropriate browser-scoped Guest state survives refresh in the same browser. The exact Guest persistence boundary is resolved in Spec Kit Clarify; Guest state must not leak into an unrelated authenticated account.
 
-**C-FR-09 Owner-private learning persistence (F11):** Signed-in learners can add/remove per-sense favorites, mark/unmark studied items, record supported practice completion/results and review their own progress/history. Required account data survives refresh, sign-out/re-login, and cross-device sessions where backend access is available; destructive user actions require proper authorization.
+**C09 / F09 — Email authentication.** Supported email signup, invalid-credential feedback, login, sign-out and clear session indication work where the authorized external provider is configured. If the provider is unavailable, report that honestly while preserving Guest access. Account recovery is a separately documented quality/security refinement unless specifically accepted into F09.
 
-**C-FR-10 Multi-user privacy (F12):** Two independent authenticated users cannot read, overwrite or delete the other user's private records. Enforcement is server-side and demonstrated with legitimate negative tests, not just hidden UI elements.
+**C10 / F10 — Google OAuth.** Supported Google sign-in opens the provider and returns to an authorized hosted application origin, not localhost, with a valid session where provider setup is available. No unsafe wildcards or elevated browser credentials.
 
-**C-FR-11 Accessible and resilient UI (F13–F14):** Essential learning and authentication flows work on narrow screens and with keyboard navigation; accessible labels/focus state and useful errors are provided; no service-role/elevated database secrets are present in public client assets. Failure/retry should not silently destroy the learner's state.
+**C11 / F11 — Account-owned persistence.** Authenticated users can maintain favorites, studied status, supported lesson/mission completion and practice results/history. Their own supported records persist through refresh and logout/re-login (and device changes where service access permits), without accidental loss or unauthorized modification.
 
-**C-FR-12 Reproducible evidence (F15):** Record dependency versions, exact code SHA, installation, typecheck/test/build evidence, deployment/runtime status and reproducible acceptance steps. A green build, SSO-protected Preview or Google redirect request is not by itself a live F09–F12 PASS.
+**C12 / F12 — Cross-user isolation.** Two separate authenticated users cannot read, alter or delete each other's saved records. Enforcement must occur server-side and be checked with real negative cross-account tests; UI concealment alone is insufficient.
 
-## D. Nonfunctional and evidence obligations
-- **Privacy:** Principle of least privilege; no shared database records across unrelated users; only publishable browser keys where required, never elevated role secrets.
-- **Data integrity:** The frozen Swedish corpus is source of truth. Data gaps, ambiguous meanings and uncertain language-quality remain visible, not “fixed” via generated text; a qualified native-language review is outside current scope.
-- **Access:** Keyboard and mobile-friendly primary interaction; clear errors; Guest remains usable if login/cloud fails.
-- **Determinism:** Dataset order and any generated practice choices should be reproducible under documented test inputs; exact behavior is specified in the eventual verified spec/plan.
-- **Security acceptance:** At least two real permitted test identities are needed for F12; masked evidence only; no false claim of a penetration test.
-- **Comparative provenance:** Preserve every genuine Spec Kit step input/output, time **only if measured**, human clarification, red/green checks, failure mode, exact commit and independent F01–F15 PASS/FAIL/BLOCKED/NOT TESTED.
-- **Environmental safety:** Isolate SDD infrastructure and data from Vibe, avoid altering Vibe's Supabase Production records or deployment. Credentials and paid services require explicit authorization. Do not invent a new backend project or infer it exists.
-- **Academic integrity:** This is informed sequential development with order effects; official approval/command evidence must not be reconstructed after execution.
+**C13 / F13 — Mobile and keyboard.** The essential study, navigation and login flows work on a narrow viewport and keyboard alone, including visible focus and clear controls. Do not prescribe Vibe's specific tabs or accordion.
 
-## E. Candidate SECONDARY feature parity — excluded from primary F01–F15 unless separately approved
-**Status: DECISION_PENDING (do not hand to SDD implementation agent as mandatory work until amended).**
+**C14 / F14 — Sensitive data and failures.** No privileged secret appears in client code or public bundles; real errors produce actionable, non-disclosing feedback and safe retry or Guest fallback where applicable.
 
-- **E01 — Illustrative verb-sense photos:** optional photos linked to the correct source meaning with genuine permissions/provenance; 26 photographed senses occurred in Vibe but numeric coverage should not be silently imposed as baseline.
-- **E02 — Daily micro-lessons:** a predictable small daily set from existing source-backed learning records; do not claim it is a new authored curriculum.
-- **E03 — Daily Archive:** browse prior day-based sets without falsely asserting personal completion.
-- **E04 — Completion/undo:** user explicitly marks a daily activity completed or reverses it; viewing is not completion or verified language mastery.
-- **E05 — Remind Me Later:** user-chosen per-sense review intent with clear due/snooze status, separate from favorites/studied.
-- **E06 — 7-/14-day review:** optional source-grounded recall questions with honest scoring, due/eligibility conditions and accessible explanations.
-- **E07 — Optional secondary cloud/guest persistence:** extension-related personal records follow same owner/privacy requirements and clear Guest boundaries.
-- **Not included:** Android native app, PWA push/notifications, AI tutoring, speech recognition, social features, payment or admin portal.
+**C15 / F15 — Reproducibility.** Record exact source SHA, dependencies/versions, install, TypeScript/typecheck, tests, build, provider deployment and actual browser acceptance cases. Passing CI, a READY Preview or an OAuth redirect alone is not a live authentication/security PASS.
 
-If the student chooses Option C, define a separate *versioned scope amendment* with `E01–E07` and separate, independent `EXT-AC` acceptance cases. The amendment must be approved and dated **before** those SDD features are specified/implemented, not retroactively imported into CORE. Report primary and secondary results separately.
+## D. Cross-cutting quality and validation rules
+- **Data fidelity:** preserve exact immutable teaching data, including incomplete forms and semantic ambiguities; never fill gaps with unsupported AI-generated Swedish.
+- **Privacy and security:** least privilege, owner-based backend access checks, no service-role key in client, protected OAuth redirects, minimal synthetic data and redacted evidence. Separate legitimate authorization is required for external provider setup, real test identities and database modifications.
+- **Usability:** practical error feedback, readable responsive interaction and accessible essential controls; the later specification and checklist must define measurable scenarios rather than assert untested accessibility certification.
+- **Reliability:** tests must include both expected and failure paths, including absent/partial source fields and unavailable cloud/audio/provider functionality; do not mark unavailable live services as PASS.
+- **Test fairness:** independently reproduce the original F01–F15 tests for both frozen implementations. Each result is PASS, FAIL, BLOCKED or NOT TESTED with environment, steps, expected/actual, tested SHA and source/screenshot evidence. Do not artificially inflate score based on unit-test counts.
+- **Research integrity:** retain actual human/AI roles, approvals, stage artifacts, failures, code changes and timestamps where recorded. Do not invent elapsed development times, cost, security proof or a comparative causal conclusion.
 
-## F. Open questions to be settled by Spec Kit Clarify (not presumed answers)
-1. If a semantic sense exists in one level but does not have a reliable matching example at another, does cross-level view retain the lexical choice and display missing status, or explicitly reset with explanation?
-2. What exact non-sensitive Guest state must survive reload under F08: selection, studied intent, local practice result, or all? The original F08 is broad and the source-level Vibe solution must not be assumed.
-3. Is password recovery a required CORE F09 acceptance item or a tracked security/product refinement beyond F09? Decide once, with an acceptance scenario.
-4. What data must persist across account sign-out and re-login, and should Guest entries be intentionally importable? Default privacy posture: **no implicit cross-account merge**.
-5. What authorized SDD Supabase project/Google provider test configuration, two-user test identities, HTTPS origin and delivery permissions will exist? Do not create or use Vibe identities without approval.
-6. Which exact outcomes do we require for accessibility checks, and what test environments are available (mobile, keyboard, Swedish voice availability)? Do not invent WCAG conformance proof.
-7. **Research scope policy (A/B/C)** — human decision must occur before implementation. This is not a clarifying question for the coding agent to answer on its own.
+## E. Option C — separate EXTENDED PARITY scope, secondary evaluation only
+**Student APPROVED Option C's methodology, not yet the exact E01–E07 feature contract.** This section is a **distinct, pending versioned amendment**: `research/SDD_INPUT_05_EXTENDED_PARITY_AMENDMENT_AI_DRAFT_2026-10-30.md`. If explicitly approved, define a second feature specification and independent EXT-AC acceptance suite. Do **not** change, renumber or enlarge primary F01–F15.
 
-## G. Official Spec Kit execution contract and review gates
-1. **Set up official GitHub Spec Kit** in the independent `condition/spec-driven` work environment, with version/integration logged. This document is currently research-only: **no genuine Spec Kit agent command is marked completed**.
-2. **Constitution:** establish explicit rules for independent code, source fidelity, privacy, accessibility, test provenance and student oversight. This is stable project governance.
-3. **Specify:** give the final approved relevant sections A–D (plus E only after approved amendment) as the user's natural-language **what/why**. Agent creates authentic `spec.md`, not a copy of this research draft.
-4. **Clarify:** ask targeted questions and commit student answers to genuine versioned `spec.md`; eliminate ambiguity before plan.
-5. **Plan:** decide exact technologies/architecture, schema, browser UI and deployment in `plan.md`; respect neutral technology-family constraint, don't copy Vibe source/SQL/workflows.
-6. **Checklist → Tasks → Analyze:** validate requirements and cross-artifact consistency; produce actionable tasks; correct source specification if analysis finds gaps.
-7. **Implement → Converge:** execute actual tasks, record real red/green outputs, repeat only when verified convergence identifies gaps. All code stays in independent SDD branch, not frozen Vibe.
-8. **Independent comparison:** run original F01–F15 black-box cases on exact frozen Vibe and SDD snapshots, plus separate EXT-AC cases if approved. Report results and missing evidence honestly; obtain student acceptance of SDD output before claiming final completion.
+**E01 — Sense-relevant illustrations:** where included, display an appropriately licensed and accurately meaning-matched verb illustration/photo; report actual coverage separately.
 
-Official procedure: https://github.github.com/spec-kit/quickstart.html (invocation syntax depends on integration; full path includes constitution, specify, clarify, plan, checklist, tasks, analyze, implement, converge).
+**E02 — Daily micro-lessons:** expose a small, predictable selection of authentic source-backed lessons for a local day without falsely claiming newly authored Swedish materials.
 
-## H. Explicit stop and confidentiality boundaries
-- **Do not** execute this AI_DRAFT, create SDD implementation code, claim a Spec Kit Constitution/Specify step ran, change SDD auth/provider settings, or silently copy Vibe code based on this research draft alone.
-- The independent SDD coding agent **must not read** `research/SDD_INPUT_01_VIBE_RETROSPECTIVE_AUDIT_2026-10-30.md`, the Vibe evidence ledger or implementation source. The researcher/assistant can use those for study and analysis, but must gate the final coding-agent input.
-- Before execution: student confirms scope A/B/C, reviews final edited Master Brief and exact agent-facing instructions (English, with full Persian translation in chat). Capture approval verbatim before real Spec Kit actions.
-- Original pre-registered acceptance matrix remains unmodified throughout; late additions are tracked distinctly.
+**E03 — Daily Archive:** permit viewing eligible historical daily selections; never conflate reconstructed past lessons with the user's attendance.
+
+**E04 — Completion and Undo:** user explicitly marks or reverses a completion; viewing alone is not completion or language mastery.
+
+**E05 — Remind Me Later:** a deliberate per-sense review reminder with due/snooze and user removal, distinguishable from favorites and studied flags; no unsolicited push.
+
+**E06 — 7-/14-day recall:** optional eligible source-grounded review checks with honest scoring, appropriate timing and correct/incorrect feedback.
+
+**E07 — Extension persistence and privacy:** Guest records follow explicitly disclosed browser boundaries; authenticated extension records are owner-isolated and survive appropriate refresh/re-login.
+
+**Secondary acceptance:** EXT-AC01–EXT-AC07 track the above one-to-one and are reported **in a separate denominator** from F01–F15. Even a completed extension does not alter the pre-registered primary score. Record the informed, sequential order effect: SDD received a structured extension set after the Vibe condition discovered these features incrementally.
+
+## F. Matters for genuine Spec Kit Clarify (do not silently decide implementation here)
+1. How should level switching behave if a source sense has no reliable counterpart in another level?
+2. Exactly which Guest preferences/practice records must persist across a same-browser refresh, and how does a guest become a signed-in user without accidental data mixing?
+3. Is email password recovery in CORE acceptance or in a separately tracked refinement? What are supported provider test conditions?
+4. Which mission/practice records count as completion and are required to persist for F11?
+5. Which independent SDD backend and authorized test identities can safely demonstrate F09–F12 without altering Vibe data?
+6. Which real device/browser/audio environments are available for F03/F13, and what accessibility behavior can actually be evidenced?
+7. For E01–E07, what feature coverage, retention limits, date/time behavior and test identities are approved? These questions belong to the **secondary amendment** and must not delay an otherwise clarified CORE spec.
+
+## G. Official Spec Kit process and human checkpoints
+- Work only from the original neutral `condition/spec-driven` branch/source baseline. The researcher-only audit and Vibe frozen source are NOT inputs to the coding agent.
+- On exact student approval of this English Master, initialize official Spec Kit with a supported coding agent and record **genuine** integration/version and command outputs. Do not pretend Spec Kit has been run just because this brief exists.
+- Apply the documented full sequence: **Constitution → Specify → Clarify → Plan → Checklist → Tasks → Analyze → Implement → Converge**, with real review at significant decision points. Constitution is project governance; Specify captures WHAT/WHY; Plan makes independent HOW choices; task implementation requires checked and reviewed quality gates. The exact agent skill syntax depends on its integration.
+- **Primary first:** generate and approve CORE specification, plan and acceptance cases before CORE implementation.
+- **Secondary separately:** only after a versioned human approval of the E amendment, specify/clarify/plan/tasks/implement its independent additional scope and evaluate EXT-AC without rewriting CORE.
+- Do not paste a completed SRS or Vibe solution into a single coding prompt; use genuine Spec Kit artifacts and approvals. Distinguish reviewer-approved quality checklist from tests run against software.
+- Record full stage inputs/outputs, exact SHAs and human decisions. Finish with one fixed-SHA SDD research snapshot, comparable primary black-box results, separate secondary comparison if executed, and an evidence-based university report.
+
+## H. Pending final student approval / hard stop
+**THIS IS AI_DRAFT.** The student's Option C approval authorized drafting this revision, **not its execution**. Do not run official Spec Kit commands, create SDD app/test code, copy Vibe artifacts or change cloud provider configuration until the student reviews and explicitly approves (a) exact English Master **MBR-B-002** and (b) separately versioned extension amendment **EP-B-001** if secondary scope is to be implemented. Preserve original user wording and approved artifact commit SHAs before real agent execution.
