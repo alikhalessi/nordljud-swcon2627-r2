@@ -1,0 +1,14 @@
+case,scope,automated_result,live_browser_result,primary_evidence,notes
+F04-01,Two primary tabs and nested Explore destinations,STATIC_PASS,NOT_TESTED,40887257970,Two main tabs preserved; two sub-tabs with keyboard handlers
+F04-02,Three authentic daily verb senses for each CEFR level,FUNCTIONAL_PASS,NOT_TESTED,40887257970,Real 456-row A2/B1/B2/C1 data checked
+F04-03,Same local date stable across selections and refresh algorithm,FUNCTIONAL_PASS,NOT_TESTED,40887257970,Deterministic selection algorithm tested; actual browser reload pending
+F04-04,Next local day rotates with no immediate repeats,FUNCTIONAL_PASS,NOT_TESTED,40887257970,One-day shift tested across four source levels
+F04-05,Exact distinct sticka word senses and missing examples,FUNCTIONAL_PASS,NOT_TESTED,40887257970,Synthetic ambiguous-sense test and source-data filtering
+F04-06,Original fixed mini-lesson and quiz moved once,STATIC_PASS,NOT_TESTED,40887257970,Original mission generation unchanged; user experience not verified
+F04-07,Explore this verb reaches correct selected word and Learning/Practice,STATIC_PASS,NOT_TESTED,40887257970,Code navigation path inspected; browser click pending
+F04-08,Mobile and keyboard accessibility,STATIC_PARTIAL,NOT_TESTED,40887257970,Responsive rules and ARIA handlers; no browser screenshot or keyboard traversal
+F04-09,Swedish audio,STATIC_PARTIAL,NOT_TESTED,40887257970,SpeechSynthesis call configured sv-SE; audio untested
+F04-10,Android push/PWA future scope,NOT_IMPLEMENTED,NOT_APPLICABLE,CR-F04,Deliberately postponed after student approval
+F04-11,Hosted deployment,GITHUB_STATUS_SUCCESS,NOT_TESTED,aa86cb6d,GitHub Vercel integration says Deployment has completed; no visual check
+F04-12,CI typecheck and production build,PASS,NOT_APPLICABLE,40887257970,46 of 46 tests passed on aa86cb6d
+F04-13,Student acceptance,PENDING,PENDING,V-006_F04_IMPLEMENTATION_LOG.md,Require student review before V-007
