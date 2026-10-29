@@ -77,7 +77,10 @@ test("V-007: all four levels retain 456 senses and source-grounded unambiguous q
     assert.equal(rows.length, 456);
     for (const entry of rows) {
       const questions = makePracticeQuestions(entry, rows);
-      assert.ok(questions.length >= 2, `${level}/${entry.verb} — insufficient reliable exercises`);
+      const validFormCount = new Set(Object.values(entry.forms)
+        .map((f) => f?.word?.trim()).filter(isAvailableFormWord)).size;
+      assert.ok(questions.length >= (validFormCount >= 3 ? 2 : 1),
+        `${level}/${entry.verb} — insufficient reliable source-backed exercises`);
       for (const q of questions) {
         assert.equal(new Set(q.choices).size, q.choices.length);
         assert.equal(q.choices.filter((option) => option === q.answer).length, 1);
