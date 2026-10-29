@@ -480,8 +480,8 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
         </div>
       )}
       <p className="vocabulary-explanation">
-        The separate mini lesson below uses a fixed example for each level, regardless of the verb selected here.
-        Learning and Practice Modes above follow the verb you selected.
+        The fixed mini lesson is now inside Today's Lesson, alongside three daily picks.
+        Learning and Practice Modes here follow the verb you selected.
         Signed-in users can save favorite words, studied verbs and completed practice sessions.
       </p>
     </section>
