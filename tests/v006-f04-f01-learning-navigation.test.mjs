@@ -19,7 +19,7 @@ test("F04-F01: exactly two primary areas; Explore directly contains word explora
 
 test("F04-F01: Your Learning contains accessible default Today and My Progress subviews", () => {
   const learning = app.split('id="learning-panel"')[1] ?? "";
-  assert.match(app, /type LearningAreaView = "daily" \| "progress"/);
+  assert.match(app, /type LearningAreaView = "daily" \| "archive" \| "review" \| "progress"/);
   assert.match(app, /useState<LearningAreaView>\("daily"\)/);
   assert.match(learning, /role="tablist" aria-label="Your Learning views"/);
   assert.match(learning, /Today's Lesson/);
@@ -59,9 +59,11 @@ test("F04-F01: both level controls share state; exact sense handoff returns to E
   assert.match(daily, /verb: entry\.verb, meaning: entry\.meaning/);
 });
 
-test("F04-F01: existing account features are preserved, no reminders/archive added", () => {
+test("F04-F01: original saved account features survive approved V008 archive and reminders", () => {
   for (const feature of ["Favorites", "Learning Progress", "Practice History"]) {
     assert.ok(dashboard.includes(feature));
   }
-  assert.doesNotMatch(app, /Remind Me Later|Daily Archive|PushManager|requestPermission/);
+  assert.match(app, /Daily Archive/);
+  assert.match(app, /My Review/);
+  assert.doesNotMatch(app, /PushManager|requestPermission/);
 });
