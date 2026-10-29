@@ -3,9 +3,9 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const app = readFileSync(new URL("../app/learning-app.tsx", import.meta.url), "utf8");
-const ui = readFileSync(new URL("../app/learning-dashboard.tsx", import.meta.url), "utf8";
-const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8";
-const explorer = readFileSync(new URL("../app/vocabulary-explorer.tsx", import.meta.url), "utf8";
+const ui = readFileSync(new URL("../app/learning-dashboard.tsx", import.meta.url), "utf8");
+const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+const explorer = readFileSync(new URL("../app/vocabulary-explorer.tsx", import.meta.url), "utf8");
 
 test("V-006-F02: exactly two accessible primary tabs, Explore is selected initially", () => {
   assert.match(app, /const \[activeTab, setActiveTab\] = useState<MainTab>\("explore"\)/);
