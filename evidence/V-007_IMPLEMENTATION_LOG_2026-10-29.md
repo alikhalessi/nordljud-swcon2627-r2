@@ -3,12 +3,12 @@
 **Recorded date:** 2026-10-29 (Europe/Helsinki; exact GitHub commit timestamps are authoritative)
 **Course/project:** Åbo Akademi SWCON2627 / Nordljud Round 2
 **Condition:** A / Vibe Coding, branch `condition/vibe`
-**Status:** `IMPLEMENTED / AUTOMATED CHECKS PASSED / STUDENT ACCEPTANCE PENDING`
+**Status:** `IMPLEMENTED / FINAL 58 OF 58 CI TESTS PASS / TYPECHECK PASS / PRODUCTION BUILD PASS / STUDENT ACCEPTANCE PENDING`
 **Original accepted predecessor:** [Exact student acceptance of V-006-F04-F01](V-006-F04-F01_STUDENT_ACCEPTANCE_2026-10-29.md) commit `84e0b2f3daaadbc8f528c1611934cd289e1d6574`.
 **Original exact AI-written V-007 prompt:** [AI_DRAFT](V-007_AI_DRAFT_LANGUAGE_AND_EXERCISE_QUALITY_2026-10-29.md) commit `172510c74f8e1f6541ea4a47702e00a2e1267485`.
 **Explicit student approval committed BEFORE code:** [Verbatim V-007 approval](V-007_STUDENT_APPROVAL_2026-10-29.md) commit `7e1eed57fb32eb3168d1e507779d2921ce5465be`. The student read the Persian translation in ChatGPT; only the exact English approved prompt is stored as the official implementation instruction in GitHub.
 **Pre-V-007 tested application baseline:** `f5e7bf653f966c6b8a53537b55740b7ef026beaf` — [51/51 green](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40890668799).
-**Last focused code and test commits:** `29d4cef847458cfc9e7b960edf4c45ac92d226dc` (56/56 green CI), `c9bebb048fffef1464049b7636cb2eda2e05d11d` (inventory CLI bug fix), `7e71f78a1e1d299e1a3718d00b76612c2d2c79c8` (adds two inventory tests; latest targeted run [40894383384](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894383384)). Actual workflow outcome for last run should be checked before citing it as complete.
+**Last focused code and test commits:** `29d4cef847458cfc9e7b960edf4c45ac92d226dc` (56/56 green CI), `c9bebb048fffef1464049b7636cb2eda2e05d11d` (inventory CLI bug fix), `7e71f78a1e1d299e1a3718d00b76612c2d2c79c8` (adds two inventory tests; latest targeted run [40894383384](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894383384)). **VERIFIED GREEN: 58/58 tests, zero failures, TypeScript PASS, Next.js production build PASS**. Confirmed from completed GitHub Actions job and logs (job `123519397045`).
 
 ## 1. Why this iteration was necessary
 
@@ -70,8 +70,8 @@ The student **explicitly approved** exactly the V-007 English draft *before codi
 | [40894130171](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894130171) | Intermediate RED while updating old exercise-count assumption. |
 | [40894139234](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894139234) | First **GREEN: 56/56 tests, TypeScript PASS, production build PASS** after revised context/placeholder tests. |
 | [40894208610](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894208610) and [40894351366](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894351366) | GREEN after reproducible inventory script and portable CLI fix (before two inventory tests). |
-| [40894383384](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894383384) | Added **two inventory tests** to 56 previous checks. Check actual completed CI status before asserting a final 58/58 green run. |
-| [40894542411](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894542411) | Latest evidence-only CSV commit; CI may be running and should be reported from the observed conclusion rather than inferred. |
+| [40894383384](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894383384) | **FINAL GREEN: 58/58 PASS, 0 FAIL, TypeScript PASS, Next.js build PASS**, verified from job `123519397045` and raw logs. |
+| [40894542411](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40894542411) | SUCCESS on evidence-only CSV commit; no new application changes. |
 
 **Method integrity:** Failed CI runs include both true pre-fix defects and a ChatGPT-authored regex error, plus regression-tests properly revised after removal of a formerly invalid question. Do not claim all RED events are intrinsic to Vibe Coding, or that failing tests are product defects without root-cause analysis.
 
@@ -81,7 +81,7 @@ The student **explicitly approved** exactly the V-007 English draft *before codi
 - No expert bilingual/linguistic proof, school-grade language quality certification, or CEFR audit was performed.
 - Potential residual ambiguity: the exact-source English meaning may combine several uses (e.g. `sticka` "sting, prick; to leave (colloquial)"). A contextual Swedish sentence supports one usage; source gloss may list multiple uses. Prompt/feedback now explicitly discloses this, and such records are flagged for qualified Swedish reviewer.
 - New helper rejects unavailable placeholders but does not retroactively fill unavailable forms. A form field may be blank while a Swedish sentence example is present in original source (four cases): these source inconsistencies are retained and flagged.
-- Current GitHub/Vercel deployment status must be checked against the **actual final code/test SHA** and cannot be inferred solely from GitHub Actions. Real on-page acceptance remains pending.
+- GitHub's Vercel commit status for the final tested SHA `7e71f78a1e1d299e1a3718d00b76612c2d79c8` returned **SUCCESS — Deployment has completed**, [Vercel status link](https://vercel.com/aleksi9/nordljud-r2-vibe/297p9TXi3DNvmP5SyiTPHXzBxi3Z). This is integration metadata **only**, not a manual browser success or guarantee of public domain alias behavior. Real on-page acceptance remains pending.
 - No additional storage, new study state, Android reminders, archive/review features or SDD code touched.
 
 ## 6. Proposed student acceptance checklist (genuine browser check still required)
