@@ -156,3 +156,16 @@ The prior F01 expanding accordion was **intentionally superseded**, not silently
 - [Structured F04-F01 acceptance matrix](V-006_F04_F01_ACCEPTANCE_STATUS_2026-10-29.csv).
 - F04-F01 is explicitly **not** a new daily-lesson generation feature nor approval for new backend storage. The existing pre-registered F01–F15 evaluation remains unchanged. Human acceptance is a separate gate from 51/51 automatic CI PASS.
 - Historical pilot three approaches and current Round 2 two conditions remain distinct. Student authored/approved the UX feedback and approval, while ChatGPT prepared the English prompt and code. Preserve true negative CI events rather than retroactively implying everything passed first attempt.
+
+## V-006-F04-F01 accepted; V-007 proposed ONLY — no coding permission
+
+| Stage | Provenance | Outcome / current gate |
+|---|---|---|
+| V-006-F04-F01 **user acceptance** | [Exact student original wording, 2026-10-29](V-006-F04-F01_STUDENT_ACCEPTANCE_2026-10-29.md), commit `84e0b2f3daaadbc8f528c1611934cd289e1d6574`. Student stated explicitly: "I have reviewed the V-006-F04-F01 app and accept the new navigation." | USER_ACCEPTED for corrected navigation. Prior [CI run 40890668799](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40890668799) 51/51 + TS/build PASS on `f5e7bf65`. Agent browser/mobile/keyboard/speech still NOT independently verified; do not upgrade those to PASS from user statement. |
+| V-007 **proposed prompt** | [AI-written V-007 exact proposal](V-007_AI_DRAFT_LANGUAGE_AND_EXERCISE_QUALITY_2026-10-29.md), commit `172510c74f8e1f6541ea4a47702e00a2e1267485`. Based on source-verified UX06 and UX07 and tests `tests/practice-mode.test.mjs`, `tests/vocabulary-explorer.test.mjs`. | `AI_DRAFT / STUDENT_APPROVAL_REQUIRED / NOT EXECUTED`. Fix ambiguous `sticka` meaning questions, missing-form `—` speech/exercise defects, source-grounded exercises and quality inventory only after **new exact approval committed before code**. Do not start V-008 until student accepts V-007. |
+
+**Research integrity:** Student approval of F04-F01 navigation is **not** permission for V-007 coding. No V-007 test, code, DB, shared lexicon, common benchmark or independent SDD branch has been changed. Future Daily Archive/Remind Me Later/7+14-day reviews are pending V-008, and phone notifications are deferred. Preserve the teacher-facing chain of distinct human decisions, drafts, approvals, failures, green CI, user acceptance and unresolved browser verification.
+
+## V-007 — language and exercise quality, draft only
+
+See the exact version-controlled text in [V-007_AI_DRAFT_LANGUAGE_AND_EXERCISE_QUALITY_2026-10-29.md](V-007_AI_DRAFT_LANGUAGE_AND_EXERCISE_QUALITY_2026-10-29.md). Await explicit student approval of that exact wording before any V-007 coding, as required by [docs/PROMPT_APPROVAL_PROTOCOL.md](../docs/PROMPT_APPROVAL_PROTOCOL.md).
