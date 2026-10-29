@@ -1,0 +1,48 @@
+name: SDD official Spec Kit CLI initialization (one-time)
+on:
+  push:
+    branches:
+      - condition/spec-driven
+    paths:
+      - .github/workflows/sdd-spec-kit-bootstrap.yml
+permissions:
+  contents: write
+concurrency:
+  group: sdd-spec-kit-bootstrap
+  cancel-in-progress: false
+jobs:
+  initialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout independent neutral SDD branch
+        uses: actions/checkout@v4
+        with:
+          ref: condition/spec-driven
+          persist-credentials: true
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+      - name: Install official GitHub Spec Kit CLI (pinned release)
+        run: uv tool install specify-cli==0.12.11
+      - name: Verify real official CLI
+        run: |
+          specify version
+          python3 --version
+          git rev-parse HEAD
+      - name: Initialize Spec Kit files in this existing independent repository
+        run: |
+          specify init --here --force --non-interactive --ignore-agent-tools --integration copilot --script sh
+          echo 'OFFICIAL_SPEC_KIT_INIT_EXIT_ZERO'
+          git status --short
+      - name: Commit official generated toolkit templates only
+        run: |
+          git config user.name 'sdd-bootstrap[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .specify .github/skills .github/prompts .github/agents .agents/skills 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo 'NO_GENERATED_FILE_CHANGES'
+          else
+            git diff --cached --stat
+            git commit -m 'chore(sdd): install official GitHub Spec Kit 0.12.11 template integration'
+            git push origin HEAD:condition/spec-driven
+          fi
