@@ -56,7 +56,7 @@ button:focus-visible { outline:3px solid #8dbeab; outline-offset:3px; }
 .feedback-good { background:#e7f7ed; color:#22653e; }
 .feedback-try { background:#fff1eb; color:#94533c; }
 .reset-button { margin-top:5px; background:transparent; color:inherit; font-weight:800; border:0; text-decoration:underline; padding:4px 0; }
-footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; margin-top:29px; font-size:12px; }
+footer { display:flex; justify-content:space-between; gap:14px; color:#52696d; margin-top:29px; font-size:12px; }
 @media (max-width:760px) {
   .shell { padding:40px 16px 25px; }
   .site-header { padding:18px 16px; }
@@ -108,10 +108,10 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
 .form-title strong { font-size:17px; color:#19594d; }
 .form-swedish { font-size:14px; line-height:1.5; margin:12px 0 5px; font-weight:700; }
 .form-english { font-size:13px; line-height:1.55; margin:0; color:#667870; }
-.detail-footnote { margin:17px 0 0; font-size:12px; color:#73867d; line-height:1.6; }
+.detail-footnote { margin:17px 0 0; font-size:12px; color:#51695c; line-height:1.6; }
 .vocabulary-notice { background:#f2f7f4; border-radius:11px; padding:22px; color:#405b51; }
 .empty-results { padding:16px; font-size:14px; color:#647970; }
-.vocabulary-explanation { font-size:12px; line-height:1.7; margin:20px 0 0; color:#6b7c73; }
+.vocabulary-explanation { font-size:12px; line-height:1.7; margin:20px 0 0; color:#536c5e; }
 @media(max-width:760px) {
   .vocabulary { padding:23px 15px; border-radius:18px; }
   .vocabulary-header { display:flex; align-items:flex-start; flex-direction:column; gap:13px; }
@@ -193,7 +193,7 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
 .verb-visual img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; }
 .verb-visual figcaption { padding:10px; background:#fff; line-height:1.4; }
 .visual-caption { display:block; font-size:11px; font-weight:650; color:#315c4b; margin-bottom:5px; }
-.visual-credits { display:block; font-size:10px; color:#687d72; overflow-wrap:anywhere; }
+.visual-credits { display:block; font-size:10px; color:#52695e; overflow-wrap:anywhere; }
 .visual-credits a { color:#236751; text-decoration:underline; }
 @media(max-width:520px) {
   .detail-heading.with-visual { grid-template-columns:minmax(0,1fr); }
@@ -291,3 +291,10 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#7d8a8b; m
   .learning-totals strong { font-size:20px; }
   .learning-totals span { font-size:11px; }
 }
+
+/* V-006-F03: small, scoped recovery and clarity affordances. */
+.mini-lesson-distinction { margin-top:7px; color:#3e6351; font-size:13px; line-height:1.6; }
+.vocabulary-recovery { border:1px solid #dfbbb0; background:#fff7f4; border-radius:10px; padding:12px 14px; }
+.vocabulary-recovery p { margin:0 0 10px; }
+.vocabulary-recovery button,.selection-outside-results button { display:inline-block; margin:6px 0 0 9px; padding:8px 12px; border:1px solid #a8cbb6; border-radius:8px; background:#fff; color:#215a47; font-size:13px; font-weight:750; }
+.selection-outside-results { border-left:3px solid #3f8766; padding:9px 11px; background:#f3f9f5; color:#315b49; line-height:1.6; }
