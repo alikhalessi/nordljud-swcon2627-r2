@@ -6,6 +6,9 @@ import AuthControls from "./auth-controls";
 import {LearningProvider} from "./learning-state";
 import LearningDashboard from "./learning-dashboard";
 import DailyLesson from "./daily-lesson";
+import DailyArchive from "./daily-archive";
+import MyReview from "./my-review";
+import { ReviewProvider } from "./review-state";
 import { readGuestPreferences, updateGuestPreferences } from "../lib/guest-preferences";
 
 export type Level = "A2" | "B1" | "B2" | "C1";
@@ -23,7 +26,7 @@ export type Lesson = {
 };
 
 type MainTab = "explore" | "learning";
-type LearningAreaView = "daily" | "progress";
+type LearningAreaView = "daily" | "archive" | "review" | "progress";
 const levels: Level[] = ["A2", "B1", "B2", "C1"];
 
 const levelDescriptions: Record<Level, string> = {
@@ -40,6 +43,8 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   const exploreTabRef = useRef<HTMLButtonElement>(null);
   const learningTabRef = useRef<HTMLButtonElement>(null);
   const dailyTabRef = useRef<HTMLButtonElement>(null);
+  const archiveTabRef = useRef<HTMLButtonElement>(null);
+  const reviewTabRef = useRef<HTMLButtonElement>(null);
   const progressTabRef = useRef<HTMLButtonElement>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -82,14 +87,17 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   }
 
   function onLearningViewKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
-    // Roving focus for the two secondary views, independent of main tabs.
+    const order: LearningAreaView[] = ["daily", "archive", "review", "progress"];
+    const index = order.indexOf(learningView);
     let next: LearningAreaView;
-    if (event.key === "ArrowLeft" || event.key === "Home") next = "daily";
-    else if (event.key === "ArrowRight" || event.key === "End") next = "progress";
+    if (event.key === "Home") next = order[0];
+    else if (event.key === "End") next = order[order.length - 1];
+    else if (event.key === "ArrowLeft") next = order[(index + order.length - 1) % order.length];
+    else if (event.key === "ArrowRight") next = order[(index + 1) % order.length];
     else return;
     event.preventDefault();
     setLearningView(next);
-    (next === "daily" ? dailyTabRef : progressTabRef).current?.focus();
+    ({daily:dailyTabRef,archive:archiveTabRef,review:reviewTabRef,progress:progressTabRef}[next]).current?.focus();
   }
 
   function returnToVerb(sense: { verb: string; meaning: string }, selectedLevel: Level) {
@@ -120,7 +128,7 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   }
 
   return (
-    <LearningProvider><div className="site">
+    <LearningProvider><ReviewProvider><div className="site">
       <header className="site-header">
         <div className="brand" aria-label="Nordljud home">
           <span className="brand-symbol" aria-hidden="true">N</span>
@@ -218,6 +226,18 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
               onKeyDown={onLearningViewKeyDown} onClick={() => setLearningView("daily")}>
               Today's Lesson
             </button>
+            <button type="button" id="learning-archive-tab" role="tab" ref={archiveTabRef}
+              aria-controls="learning-archive-panel" aria-selected={learningView === "archive"}
+              tabIndex={learningView === "archive" ? 0 : -1}
+              onKeyDown={onLearningViewKeyDown} onClick={() => setLearningView("archive")}>
+              Daily Archive
+            </button>
+            <button type="button" id="learning-review-tab" role="tab" ref={reviewTabRef}
+              aria-controls="learning-review-panel" aria-selected={learningView === "review"}
+              tabIndex={learningView === "review" ? 0 : -1}
+              onKeyDown={onLearningViewKeyDown} onClick={() => setLearningView("review")}>
+              My Review
+            </button>
             <button type="button" id="learning-progress-tab" role="tab" ref={progressTabRef}
               aria-controls="learning-progress-panel" aria-selected={learningView === "progress"}
               tabIndex={learningView === "progress" ? 0 : -1}
@@ -311,6 +331,14 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           </div>
         </section>
           </div>
+          <div id="learning-archive-panel" className="learning-subpanel" role="tabpanel"
+            aria-labelledby="learning-archive-tab" hidden={learningView !== "archive"} tabIndex={0}>
+            <DailyArchive level={level} onOpenVerb={returnToVerb} />
+          </div>
+          <div id="learning-review-panel" className="learning-subpanel" role="tabpanel"
+            aria-labelledby="learning-review-tab" hidden={learningView !== "review"} tabIndex={0}>
+            <MyReview onOpenVerb={returnToVerb} enabled={activeTab === "learning" && learningView === "review"} />
+          </div>
           <div id="learning-progress-panel" className="learning-subpanel" role="tabpanel"
             aria-labelledby="learning-progress-tab" hidden={learningView !== "progress"} tabIndex={0}>
             <LearningDashboard level={level} onSelect={returnToVerb} />
@@ -322,6 +350,6 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           <span>Educational examples are from the shared project dataset.</span>
         </footer>
       </main>
-    </div></LearningProvider>
+    </div></ReviewProvider></LearningProvider>
   );
 }
