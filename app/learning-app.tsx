@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState, type KeyboardEvent } from "react";
 import VocabularyExplorer from "./vocabulary-explorer";
 import AuthControls from "./auth-controls";
 import {LearningProvider} from "./learning-state";
@@ -20,6 +20,7 @@ export type Lesson = {
   choices: string[];
 };
 
+type MainTab = "explore" | "learning";
 const levels: Level[] = ["A2", "B1", "B2", "C1"];
 
 const levelDescriptions: Record<Level, string> = {
@@ -31,6 +32,9 @@ const levelDescriptions: Record<Level, string> = {
 
 export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   const [level, setLevel] = useState<Level>("A2");
+  const [activeTab, setActiveTab] = useState<MainTab>("explore");
+  const exploreTabRef = useRef<HTMLButtonElement>(null);
+  const learningTabRef = useRef<HTMLButtonElement>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [showTranslation, setShowTranslation] = useState(false);
   const [audioMessage, setAudioMessage] = useState("");
@@ -50,6 +54,27 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
     setSelected(null);
     setShowTranslation(false);
     setAudioMessage("");
+  }
+
+  function onMainTabKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
+    // Accessible tab navigation: only the active tab participates in the tab order.
+    let next: MainTab;
+    if (event.key === "ArrowLeft" || event.key === "Home") next = "explore";
+    else if (event.key === "ArrowRight" || event.key === "End") next = "learning";
+    else return;
+    event.preventDefault();
+    setActiveTab(next);
+    (next === "explore" ? exploreTabRef : learningTabRef).current?.focus();
+  }
+
+  function returnToVerb(sense: { verb: string; meaning: string }, selectedLevel: Level) {
+    changeLevel(selectedLevel);
+    setTarget({ ...sense, level: selectedLevel });
+    setActiveTab("explore");
+    // Return the keyboard and viewport to the learning area rather than
+    // leaving users below a long history list.
+    exploreTabRef.current?.focus();
+    exploreTabRef.current?.scrollIntoView({ block: "start" });
   }
 
   function playSwedish() {
@@ -92,6 +117,36 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           </p>
         </section>
 
+        <div className="primary-study-tabs" role="tablist" aria-label="Learning sections">
+          <button
+            ref={exploreTabRef}
+            type="button"
+            id="explore-tab"
+            role="tab"
+            aria-selected={activeTab === "explore"}
+            aria-controls="explore-panel"
+            tabIndex={activeTab === "explore" ? 0 : -1}
+            onKeyDown={onMainTabKeyDown}
+            onClick={() => setActiveTab("explore")}
+          >
+            Explore Your Words
+          </button>
+          <button
+            ref={learningTabRef}
+            type="button"
+            id="learning-tab"
+            role="tab"
+            aria-selected={activeTab === "learning"}
+            aria-controls="learning-panel"
+            tabIndex={activeTab === "learning" ? 0 : -1}
+            onKeyDown={onMainTabKeyDown}
+            onClick={() => setActiveTab("learning")}
+          >
+            Your Learning
+          </button>
+        </div>
+
+        <div id="explore-panel" className="primary-study-panel" role="tabpanel" aria-labelledby="explore-tab" hidden={activeTab !== "explore"} tabIndex={0}>
         <section aria-labelledby="levels-heading" className="levels-section">
           <div className="section-top">
             <h2 id="levels-heading">Choose your level</h2>
@@ -114,7 +169,6 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           </div>
         </section>
 
-        <LearningDashboard level={level} onSelect={(s,l)=>{setLevel(l);setTarget({...s,level:l});}} />
         <VocabularyExplorer level={level} target={target} />
 
         <section className="lesson" aria-labelledby="lesson-heading">
@@ -197,6 +251,11 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
             )}
           </div>
         </section>
+
+        </div>
+        <div id="learning-panel" className="primary-study-panel" role="tabpanel" aria-labelledby="learning-tab" hidden={activeTab !== "learning"} tabIndex={0}>
+          <LearningDashboard level={level} onSelect={returnToVerb} />
+        </div>
 
         <footer>
           <span>Nordljud · First learning prototype</span>
