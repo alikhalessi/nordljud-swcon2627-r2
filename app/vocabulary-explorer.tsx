@@ -480,7 +480,7 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
         </div>
       )}
       <p className="vocabulary-explanation">
-        The fixed mini lesson is now inside Today's Lesson, alongside three daily picks.
+        The fixed mini lesson is in Your Learning → Today's Lesson, alongside three daily picks.
         Learning and Practice Modes here follow the verb you selected.
         Signed-in users can save favorite words, studied verbs and completed practice sessions.
       </p>
