@@ -1,6 +1,6 @@
 # V-008-R02 — Conditional Production Migration Authorization and Hard Backup Gate
 Date: 2026-10-29 (Europe/Helsinki).
-STATUS: **BLOCKED — DO NOT EXECUTE MIGRATION**.
+STATUS: **BLOCKED — BACKUP RECOVERY EVIDENCE NOW DOCUMENTED; ORIGINAL PRODUCTION AUTHORIZATION CONDITIONS STILL REQUIRE RESOLUTION.**
 Repository: `alikhalessi/nordljud-swcon2627-r2`, isolated branch `hardening/v008-r02`, Draft PR #2.
 Supabase Production project: `rhtrzuoqycdnwcbgctpe` (`nordljud-v2-auth`, Free tier).
 Approved scope **conditional only**: 3 new tables and required indexes, constraints, least-privilege client grants, 12 owner-RLS policies, registered once via supported Supabase `apply_migration` when all gates are proven.
@@ -44,11 +44,14 @@ Approved scope **conditional only**: 3 new tables and required indexes, constrai
 - Aggregate Auth users: 1. Supabase Storage buckets: 0; objects: 0. These are metadata counts, not backup data.
 - Security advisor still warns leaked-password protection disabled; unrelated to this SQL, requires separate Auth change permission.
 
-## Backup requirement — NOT SATISFIED
+## Backup recovery evidence — local test passed with explicit remaining limits
 - The organization is on the Supabase **Free** tier. Managed daily database backups are not included. Supabase recommends a manual CLI `db dump` with off-site storage; see https://supabase.com/docs/guides/platform/backups and https://supabase.com/docs/guides/platform/migrating-within-supabase/backup-restore .
-- The connected Supabase tools offer schema/read-only SQL and migrations but **no backup generation or restore-test action**. No complete exported roles/schema/data snapshot, encrypted storage receipt, or successful isolated restore evidence was provided or created. Do not substitute counts, screenshots, SQL query output, GitHub contents, or a promise of backup for a recoverable backup.
-- Required evidence before execution: timestamped verified encrypted/off-site logical database dump (roles + schema + data, including public user data and auth accounts), confidential location, integrity checksum, and **successful test restore** into an isolated instance with matching essential table/user counts and RLS policies. Do not commit user data, passwords, DB connection strings, or backups to GitHub.
-- Review whether separate provider configuration and storage assets would be needed for full platform disaster recovery; the proposed migration changes only database schema, not Auth configurations.
+- User-generated confidential files confirmed by PowerShell: roles.sql (370 bytes), schema.sql (8,204 bytes), data.sql (14,473 bytes), plus data-local-restore.sql excluding two restricted internal Storage vector tables. SHA-256 hashes were generated locally for all four; see [local backup/restore evidence](../evidence/V-008-R02_LOCAL_BACKUP_RESTORE_EVIDENCE_2026-10-29.md). The confidential SQL content remains on the user's Windows PC, not GitHub.
+- **Successful isolated Docker restore**: schema.sql + data-local-restore.sql using PostgreSQL psql with ON_ERROR_STOP=1 and single transaction, exit code 0. The user independently verified local counts auth.users=1, Favorites=5, Studied=2, Practice History=1, three public tables with RLS ON and nine policies. Docker development environment was stopped after the test.
+- **Explicit remaining limitation:** replaying roles.sql failed on log_min_messages privilege in local Postgres; the successful restore used Supabase-managed standard roles already available locally. The original data.sql also triggered a privilege error on an internal Storage vector table; the successful test used a freshly dumped restore variant excluding those tables.
+- No encrypted/off-site archive or complete platform disaster-recovery drill was demonstrated. The user explicitly requested to skip extra encryption steps and finish quickly. This is a documented trade-off, **not** evidence that the original requirement for a full independently verified recoverable backup was fulfilled.
+- Exact SHA `d4940119f84f8b3a4510e032335ae8df7fe1b1f0` and SQL file link were shown to the user. After being told of backup limitations, the user said `ادامه بده، تمومش کن بريم سراغ نُه.` (continue, finish it, move to nine). This indicates strong intent to proceed; it must **not** be falsely recorded as a verbatim declaration that the user has line-by-line reviewed this SHA or that every original conditional gate is satisfied.
+- Before Production execution, reconcile the prior conditions with an explicit, unambiguous instruction covering the exact SHA and the residual role/off-site backup limitations. No migration may be executed merely because status documentation was updated. Do not put credentials, user data, or backup SQL into GitHub.
 
 ## Pre-execution stop gates and proposed one-time operation (NOT EXECUTED)
 1. Student personally reviews the **exact blob SHA** `d4940119f84f8b3a4510e032335ae8df7fe1b1f0` and confirms it rather than implicitly accepting an evolving branch link.
