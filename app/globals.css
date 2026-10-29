@@ -300,13 +300,13 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#52696d; m
 .selection-outside-results { border-left:3px solid #3f8766; padding:9px 11px; background:#f3f9f5; color:#315b49; line-height:1.6; }
 
 
-/* V-006-F04: two accessible nested destinations inside Explore. */
-.explore-subtabs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:23px 0 12px; }
-.explore-subtabs button { border:1px solid #b6d5c5; background:#f2f8f4; color:#315e48; border-radius:11px; padding:13px 12px; font-size:15px; font-weight:800; text-align:center; }
-.explore-subtabs button[aria-selected="true"] { background:#286e55; color:#fff; border-color:#286e55; }
-.explore-subtabs button:focus-visible { outline:3px solid #58a57e; outline-offset:3px; }
-.explore-subpanel[hidden] { display:none !important; }
-.explore-subpanel { min-width:0; }
+/* V-006-F04-F01: secondary Today / My Progress destinations inside Your Learning. */
+.learning-subtabs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:23px 0 12px; }
+.learning-subtabs button { border:1px solid #b6d5c5; background:#f2f8f4; color:#315e48; border-radius:11px; padding:13px 12px; font-size:15px; font-weight:800; text-align:center; }
+.learning-subtabs button[aria-selected="true"] { background:#286e55; color:#fff; border-color:#286e55; }
+.learning-subtabs button:focus-visible { outline:3px solid #58a57e; outline-offset:3px; }
+.learning-subpanel[hidden] { display:none !important; }
+.learning-subpanel { min-width:0; }
 .daily-lesson { margin:20px 0 24px; border:1px solid #dce9e1; border-radius:20px; background:#fff; padding:28px; }
 .daily-lesson-heading { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; }
 .daily-lesson-heading h2 { font-size:26px; letter-spacing:-.65px; margin:8px 0 10px; }
@@ -328,12 +328,24 @@ footer { display:flex; justify-content:space-between; gap:14px; color:#52696d; m
 .daily-audio-status { min-height:20px; font-size:13px; color:#35634c; margin-top:10px; }
 @media(max-width:850px) { .daily-cards { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:600px) {
-  .explore-subtabs { gap:7px; }
-  .explore-subtabs button { font-size:13px; padding:11px 7px; }
+  .learning-subtabs { gap:7px; }
+  .learning-subtabs button { font-size:13px; padding:11px 7px; }
   .daily-lesson { padding:17px 13px; }
   .daily-lesson-heading { display:block; }
   .daily-date { display:inline-block; margin-top:9px; }
   .daily-cards { grid-template-columns:minmax(0,1fr); gap:10px; }
   .daily-card { padding:15px; }
   .daily-meaning { min-height:0; }
+}
+
+/* F04-F01: a single CEFR level state shown in both primary areas. */
+.learning-level-picker { margin:16px 0 12px; border:1px solid #d9e9df; border-radius:13px; padding:16px 18px; background:#f6faf7; display:flex; justify-content:space-between; align-items:center; gap:14px; }
+.learning-level-picker h2 { margin:0 0 5px; font-size:20px; color:#244f39; }
+.learning-level-picker p { margin:0; font-size:13px; color:#486855; line-height:1.5; }
+.learning-level-picker label { flex:none; display:flex; flex-direction:column; gap:5px; color:#305d45; font-size:12px; font-weight:750; }
+.learning-level-picker select { border:1px solid #aac8b8; border-radius:8px; background:white; color:#214e37; padding:8px 12px; min-width:94px; font-size:14px; font-weight:700; }
+.learning-level-picker select:focus-visible { outline:3px solid #58a57e; outline-offset:2px; }
+@media(max-width:600px) {
+  .learning-level-picker { flex-direction:column; align-items:stretch; padding:13px; }
+  .learning-level-picker label { flex-direction:row; justify-content:space-between; align-items:center; }
 }
