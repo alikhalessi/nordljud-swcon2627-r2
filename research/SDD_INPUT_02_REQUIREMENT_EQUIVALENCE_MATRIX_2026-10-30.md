@@ -1,6 +1,6 @@
 # Nordljud Round 2 — Requirement Equivalence and Experiment Leakage Matrix
 **Date:** 2026-10-30 Europe/Helsinki  
-**Status:** RESEARCH_DRAFT / SCOPE DECISION REQUIRED — NOT YET AN APPROVED SDD IMPLEMENTATION INPUT  
+**Status:** OPTION C SCOPE POLICY **STUDENT APPROVED** 2026-10-30; revised Master MBR-B-002 and EP-B-001 exact texts remain **AI_DRAFT / STUDENT APPROVAL PENDING**  
 **Source precedence:** 2026-10-28 original PC-001, shared `PRODUCT_BRIEF`, immutable `SOURCE_MANIFEST`, pre-implementation `ACCEPTANCE_MATRIX` F01–F15. Then *later* Vibe user-approved increments **only as evidence of scope change**, not as automatically symmetric requirements. The Vibe frozen snapshot remains untouched.
 
 ## Classification key
@@ -59,7 +59,7 @@ Note F05: “456 entries” is **456 senses per level, not 456 unique written ve
 - **Option B — Full feature parity:** Approve an explicit **dated late-scope amendment** adding visual photos and all Daily/Archive/Review features to SDD. This can compare whole-product feature coverage, but the SDD method receives an advantage of knowing the future feature set; disclose **informed-order effect** and don't claim equal initial information.
 - **Option C — Two-layer comparator (RECOMMENDED):** SDD receives a **primary immutable CORE F01–F15 specification** before any coding, plus a **separate, versioned, explicitly student-approved SECONDARY parity extension** (e.g. daily/archive/review/photos) with its own acceptance cases and denominator. Track CORE-only and EXTENDED-PARITY results distinctly; don't quietly add feature requirements during implementation. The secondary specification is approved before the SDD agent implements that extension; never supply Vibe's technical solutions.
 
-**Proposed default pending student approval: Option C.** The original benchmark F01–F15 must never be rewritten; the secondary extension uses separate criteria `E01+` and its approval date. If student rejects extensions, use A.
+**Student decision: Option C APPROVED.** Verbatim exact approval recorded at `research/SDD_INPUT_04_OPTION_C_STUDENT_APPROVAL_2026-10-30.md` **before** the Master revision. The original benchmark F01–F15 remains immutable. Draft Master is `research/SDD_INPUT_03_MASTER_REQUIREMENTS_BRIEF_AI_DRAFT_2026-10-30.md` (MBR-B-002); separate secondary amendment `research/SDD_INPUT_05_EXTENDED_PARITY_AMENDMENT_AI_DRAFT_2026-10-30.md` (EP-B-001), with EXT-AC01–EXT-AC07. **Neither document's exact text is yet approved or executed.**
 
 ## 4. Independence guard and implementation handoff
 - Human researcher may review Vibe prompts, bugs and source-quality flags for audit and bias disclosure. **The independent coding agent must NOT receive `evidence/PROMPT_LEDGER.md`, Vibe code, Vibe migration SQL, screenshots, Vibe test implementations or this comparison audit as its implementation reference.**
@@ -68,5 +68,5 @@ Note F05: “456 entries” is **456 senses per level, not 456 unique written ve
 - Run the SAME independent black-box F01–F15 scenarios for both frozen snapshots; honest statuses per case. External provider credentials and multi-account RLS test access must be documented for each condition. No unverified PASS for either one.
 - For any new scope amendment, log who requested it, when, before/after SDD implementation, and which results are unaffected. Do not overwrite the preregistered matrix.
 
-## 5. Student decision required before implementation
-Approve **A, B or C** as the research scope policy. That is the only unresolved product-scope question that materially changes the SDD Master Brief. Everything else can proceed as draft on a research-only branch without touching SDD code.
+## 5. Remaining decision before real SDD execution
+**Completed:** student expressly chose **Option C** on 2026-10-30; preserve their exact message and original artifacts. **Still required:** student reviews/approves exact English Master MBR-B-002 and separately the E01–E07 extension text EP-B-001 before either becomes an agent execution input. Constitution/Specify and all official Spec Kit commands remain NOT RUN; `condition/spec-driven` branch and frozen Vibe remain unchanged. Any subsequent Clarify decisions must be dated, logged and applied symmetrically where relevant.
