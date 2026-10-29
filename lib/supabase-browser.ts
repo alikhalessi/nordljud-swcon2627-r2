@@ -39,7 +39,9 @@ export function getBrowserAuth(): SupabaseClient | null {
         auth: {
           autoRefreshToken: true,
           persistSession: true,
-          detectSessionInUrl: true,
+          // Explicit PKCE callback and reset pages exchange the one-time code.
+          // Avoid racing automatic SDK code consumption with our route handling.
+          detectSessionInUrl: false,
           flowType: "pkce"
         }
       }
