@@ -105,7 +105,9 @@ test("V008: source contains four learning subviews, record boundaries and remind
   for(const label of ["Today's Lesson","Daily Archive","My Review","My Progress"]) assert.ok(app.includes(label));
   assert.match(daily,/Remind Me Later/);
   assert.match(explore,/Remind Me Later/);
-  assert.match(provider,/Clear guest learning data/);
+  const reviewUI=readFileSync(new URL("../app/my-review.tsx",import.meta.url),"utf8");
+  assert.match(reviewUI,/Clear guest learning data/);
+  assert.match(provider,/clearGuest/);
   assert.match(app,/<DailyArchive/);
   assert.match(app,/<MyReview/);
 });
