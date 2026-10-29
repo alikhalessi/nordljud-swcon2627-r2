@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-29 (Europe/Helsinki; precise timestamps from GitHub CI / commits).
 **Condition:** Nordljud Round 2, Vibe Coding. Isolated branch `hardening/v008-r02`, based on R01-approved `hardening/v008-r01`.
-**Status:** `STAGING SOURCE IMPLEMENTED / AUTOMATED 82/82 GREEN / LIVE AUTH PROVIDER AND PROD SCHEMA CHANGE NOT AUTHORIZED / TWO-USER RLS NOT TESTED / STUDENT R02 ACCEPTANCE PENDING`
+**Status:** `STAGING SOURCE IMPLEMENTED / AUTOMATED 90/90 GREEN (CURRENT SHA d0b8aa4; earlier 82/82 preserved in timeline) / LIVE AUTH PROVIDER AND PROD SCHEMA CHANGE NOT AUTHORIZED / TWO-USER RLS NOT TESTED / STUDENT R02 ACCEPTANCE PENDING`
 **Exact student [R02 authorization](V-008-R02_STUDENT_APPROVAL_2026-10-29.md)** committed `24e75a1bf49c1a560692107c05ab5647412a94c5` **BEFORE any R02 application, test, or CI change**. The prior English-only [AI draft](V-008-R02_AI_DRAFT_AUTHENTICATION_AND_CLOUD_COMPLETION_2026-10-29.md), commit `879368da5cf80bbe0423b822646e0112d248a615`, was shown to the student in complete Persian in chat; GitHub records only English.
 **First R02 change:** CI branch trigger extension `868ae4ec165fb086d7b08fa9ad856f3be542a2eb`, after approval; first new RED tests `b4ff67f5e001567f93eeff7be8f9108f8b4f0f5f`.
 **Known original R01 source-check baseline:** 77/77 green tests, TypeScript and Next build at `9f2945c81a55acbf26d6bdebe7f72e5a8c97dfaa`. R01 Draft PR #1 remains unmerged; `release/vibe` is a separately tracked production branch and has not received R02 source.
@@ -75,3 +75,24 @@ Connected Supabase project `nordljud-v2-auth` (`rhtrzuoqycdnwcbgctpe`) reports `
 - Current Provider enablement and Auth Site URL/redirect settings cannot be read from the connected provider schema. Review the [specific read-only screenshots, proposed changes, risks and rollback guidance](../docs/R02_LIVE_AUTH_VERIFICATION_AND_EXACT_CHANGE_REQUEST_2026-10-29.md). **No change to live Auth, Google, SMTP, Vercel Production/Preview variables, database migrations, PR merges or public release** was performed.
 
 **Remaining blockers:** Real email/Google/recovery flows, authorized Preview environment, true two-account RLS, Production schema approval and application, browser/device E2E, Vercel branch-routing test and student acceptance **still NOT TESTED/BLOCKED/PENDING**. Code/CI GREEN does not clear them. R03 and V009 not started.
+
+
+## 7. 2026-10-29 follow-up: screenshot evidence, protected Preview approval, additional genuine RED → GREEN
+
+**Scope:** Student separately granted only **protected Preview testing** with the exact Persian sentence **«اجازهٔ Preview محافظت‌شده را می‌دهم»** in this chat. This is NOT approval for public deployment, PR merge, Production Supabase SQL, live Supabase Google/Email/SMTP/redirect setting changes, or R03/V009. [Contemporaneous scope/evidence record](evidence/V-008-R02_PROTECTED_PREVIEW_AUTHORIZATION_AND_FOLLOWUP_2026-10-29.md).
+
+**Read-only user-supplied screenshots (not stored publicly or in repository):** Authentication > Sign In / Providers on Supabase Production project `rhtrzuoqycdnwcbgctpe` shows *Allow new users to sign up ON*, *Confirm email ON*, *Email ENABLED*. The Google provider row is **not visible**, hence Google state remains **UNKNOWN**. Authentication > URL Configuration shows Site URL `https://nordljud-r2-vibe-sepia.vercel.app` and **one** listed allowed Redirect URL, exactly that same base origin, without the explicit `/auth/callback` and `/auth/reset` paths needed by current R02 code. No setting was edited; specific additions need separate explicit approval and rollback plan. Screenshots show the Production environment; do not claim Preview is Auth-capable.
+
+**Authentic regression evidence, without rewriting original R02 test history:**
+
+| CI / commit | Verified outcome |
+|---|---|
+| [RED #40923736557](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40923736557) / `3c01cdd8e51e7ba8ee0875b5aacdf81387badbbc` | New tests added first; **86/89 PASS, 3 FAIL**: sign-out raw error and auth-event revision guard absent. |
+| [RED #40923946297](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40923946297) / `9d37263f3ef1ad177dfe469605d73b01e713bd6d` | Added separate stale cloud identity regression before implementation; **86/90 PASS, 4 FAIL**. |
+| [GREEN #40924098248](https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40924098248) / `d0b8aa430a04271bd03e6015d2d3623b9ffdfb71` | Atomic isolated source correction: **90/90 PASS, 0 FAIL; npm ci PASS; TypeScript PASS; Next.js production build PASS.** Candidate HTTP smoke still **NOT TESTED** (`R01_CANDIDATE_URL` unset). |
+
+**Source changes:** `authErrorText` is used rather than exposing raw sign-out exceptions; `createAuthRevisionGuard()` uses a captured monotonic revision so a pending `getUser()` response cannot overwrite a later Auth event. Guard applied in `app/auth-controls.tsx` and `app/learning-state.tsx`; behavior and source contracts covered by four regressions in `tests/v008-r02-auth-state-qa.test.mjs`. This remains **source/runtime-helper validation**, not actual two-account browser E2E.
+
+**Vercel diagnostics:** The linked Vercel project reports SSO protection `enabled:true`, `deploymentType:all_except_custom_domains`. Two **test-only RED commits** (`3c01cdd8`, `9d37263f`) each produced a Vercel `READY` Preview with `target:null`; neither changed application runtime code. **Green source commit `d0b8aa4` has no independently verified READY Preview**, and its Vercel status reports build-rate limiting. This proves some branch-to-Preview routing for the R02 branch, **not** the mandatory `condition/vibe`→Preview probe or a working deployed GREEN build. Do not claim Production Ready.
+
+**Still blocked:** Google provider enabled-state (not visible in screenshot), live Auth callback/reset redirect additions (not authorized), Preview Supabase auth environment (currently only Production variable targets), real Email/Google/recovery E2E, two-account RLS and missing three tables, authoritative HTTP smoke, mandatory R01 release-routing verification, and final student R02 acceptance. No live Auth changes, SQL execution, public release, merge or R03/V009 initiated.
