@@ -61,18 +61,19 @@ test("F04 preserves homograph senses and excludes incomplete bilingual examples"
   assert.ok(!identities(chosen).includes("tom\u0000missing"));
   assert.equal(new Set(identities(chosen)).size, 3);
 });
-test("F04 route structure has two primary tabs, two nested views and original fixed lesson once", () => {
+test("F04/F04-F01 route retains two main tabs, guest daily content and original lesson once", () => {
   const app = readFileSync(new URL("../app/learning-app.tsx", import.meta.url), "utf8");
   const ui = readFileSync(new URL("../app/daily-lesson.tsx", import.meta.url), "utf8");
   assert.match(app, /role="tablist" aria-label="Learning sections"/);
-  assert.match(app, /role="tablist" aria-label="Explore modes"/);
-  assert.match(app, /Verb Explorer/);
+  assert.match(app, /role="tablist" aria-label="Your Learning views"/);
   assert.match(app, /Today's Lesson/);
+  assert.match(app, /My Progress/);
+  assert.match(app, /<VocabularyExplorer level=\{level\} target=\{target\}/);
   assert.match(app, /<DailyLesson level=\{level\} onOpenVerb=\{returnToVerb\}/);
   assert.equal((app.match(/className="lesson" aria-labelledby="lesson-heading"/g) || []).length, 1);
-  assert.match(app, /onExploreTabKeyDown/);
-  assert.match(app, /hidden=\{exploreView !== "verbs"\}/);
-  assert.match(app, /hidden=\{exploreView !== "daily"\}/);
+  assert.match(app, /onLearningViewKeyDown/);
+  assert.match(app, /hidden=\{learningView !== "daily"\}/);
+  assert.match(app, /hidden=\{learningView !== "progress"\}/);
   assert.match(ui, /Explore this verb/);
   assert.match(ui, /speechSynthesis/);
   assert.match(ui, /localDateKey\(new Date\(\)\)/);
