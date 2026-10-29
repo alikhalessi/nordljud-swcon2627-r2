@@ -1,7 +1,11 @@
-name: Vibe V-001 first-check
+name: Vibe verification — research branches
 
 on:
   push:
+    branches:
+      - condition/vibe
+      - hardening/v008-r01
+  pull_request:
     branches:
       - condition/vibe
   workflow_dispatch:
