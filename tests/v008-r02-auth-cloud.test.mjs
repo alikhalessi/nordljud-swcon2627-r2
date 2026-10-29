@@ -49,7 +49,7 @@ test("R02: candidate SQL is explicitly UNAPPLIED and ownable on every new table"
   for(const table of ["nordljud_daily_completions","nordljud_review_items","nordljud_review_sessions"]){
     assert.ok(sql.includes("create table public."+table));
     assert.ok(sql.includes("alter table public."+table+" enable row level security"));
-    assert.ok(sql.includes("revoke all on public."+table+" from anon"));
+    assert.ok(sql.includes("revoke all on table public."+table+" from public, anon, authenticated;"));
   }
   assert.match(sql,/with check \(\(select auth\.uid\(\)\) = user_id\)/);
   assert.match(sql,/jsonb_array_length\(question_results\)/);
