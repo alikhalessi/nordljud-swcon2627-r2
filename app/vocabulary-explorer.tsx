@@ -6,6 +6,7 @@ import LevelComparison from "./level-comparison";
 import PracticePanel from "./practice-panel";
 import VerbPhoto, { hasVerbPhoto } from "./verb-photo";
 import {useLearningStore} from "./learning-state";
+import { readGuestPreferences, updateGuestPreferences } from "../lib/guest-preferences";
 
 type VerbForm = { word?: string; sv?: string; en?: string };
 type VocabularyEntry = {
@@ -40,6 +41,8 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
   const [favoritesOnly,setFavoritesOnly]=useState(false);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [loadedLevel, setLoadedLevel] = useState<Level | null>(null);
+  const [retryToken, setRetryToken] = useState(0);
   const [error, setError] = useState("");
   const [selectionNotice, setSelectionNotice] = useState("");
   const [mode, setMode] = useState<"learn" | "practice">("learn");
@@ -139,6 +142,18 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
     }
   }, []);
 
+  // The persisted guest preferences include only the selected sense and mode.
+  // Restore before the initial asynchronous vocabulary request resolves.
+  useEffect(() => {
+    const preferences = readGuestPreferences();
+    if (preferences) {
+      if (preferences.verb && preferences.meaning) {
+        selectedMeaning.current = { verb: preferences.verb, meaning: preferences.meaning };
+      }
+      setMode(preferences.mode);
+    }
+  }, []);
+
   function setSelectedEntry(rows: VocabularyEntry[]) {
     const previous = selectedMeaning.current;
     const index = previous
@@ -160,6 +175,7 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
     const cached = cachedLevels.current[level];
     if (cached) {
       setEntries(cached);
+      setLoadedLevel(level);
       setSelectedEntry(cached);
       setLoading(false);
       setError("");
@@ -168,6 +184,7 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
 
     const controller = new AbortController();
     setEntries([]);
+    setLoadedLevel(null);
     setLoading(true);
     setError("");
 
@@ -185,6 +202,7 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
         if (controller.signal.aborted) return;
         cachedLevels.current[level] = payload.entries;
         setEntries(payload.entries);
+        setLoadedLevel(level);
         setSelectedEntry(payload.entries);
       } catch (cause) {
         if (controller.signal.aborted) return;
@@ -196,7 +214,7 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
 
     void loadLevel();
     return () => controller.abort();
-  }, [level]);
+  }, [level, retryToken]);
   useEffect(()=>{
     if(!target||target.level!==level||entries.length===0)return;
     const index=entries.findIndex(x=>x.verb===target.verb&&x.meaning===target.meaning);
@@ -222,6 +240,17 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
   const pageCount = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
   const pageEntries = matching.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
   const chosen = entries.find((row) => row.id === selectedId);
+  const selectionOutsideResults = Boolean(chosen && !matching.some((item) => item.id === selectedId));
+
+  useEffect(() => {
+    if (!chosen || loadedLevel !== level) return;
+    updateGuestPreferences({
+      level,
+      verb: chosen.verb,
+      meaning: chosen.meaning,
+      mode
+    });
+  }, [chosen, loadedLevel, level, mode]);
   const chosenSaved=chosen?store.favorites.some(x=>x.verb===chosen.verb&&x.meaning===chosen.meaning):false;
   const chosenStudied=chosen?store.studied.some(x=>x.level===level&&x.verb===chosen.verb&&x.meaning===chosen.meaning):false;
 
@@ -239,10 +268,12 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
       </div>
 
       {loading && <p className="vocabulary-notice" role="status">Loading {level} verbs...</p>}
-      {error && <p className="vocabulary-notice" role="alert">
-        Could not load the vocabulary. {error}
-        <span> Select another level and return to try again.</span>
-      </p>}
+      {error && <div className="vocabulary-notice vocabulary-recovery" role="alert">
+        <p>Could not load the vocabulary. {error}</p>
+        <button type="button" disabled={loading} onClick={() => setRetryToken((value) => value + 1)}>
+          Retry loading {level}
+        </button>
+      </div>}
 
       {!loading && !error && (
         <div className="vocabulary-columns">
@@ -278,6 +309,18 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
               {matching.length} {matching.length === 1 ? "entry" : "entries"} found
               {matching.length !== entries.length ? ` from ${entries.length}` : ""}
             </p>
+
+            {selectionOutsideResults && (
+              <p className="vocabulary-notice selection-outside-results" role="status">
+                Your selected word is outside your current results. The detail panel still shows your previous selection.
+                <button type="button" onClick={() => {
+                  setQuery("");
+                  setPhotosOnly(false);
+                  setFavoritesOnly(false);
+                  setPage(0);
+                }}>Clear filters</button>
+              </p>
+            )}
 
             {matching.length === 0 ? (
               <p className="empty-results">No matching verbs. Try another search.</p>
@@ -437,8 +480,8 @@ export default function VocabularyExplorer({ level, target }: { level: Level;tar
         </div>
       )}
       <p className="vocabulary-explanation">
-        The original mini lesson below still uses a fixed example for each level.
-        The new Learning and Practice Modes above follow the verb you selected.
+        The separate mini lesson below uses a fixed example for each level, regardless of the verb selected here.
+        Learning and Practice Modes above follow the verb you selected.
         Signed-in users can save favorite words, studied verbs and completed practice sessions.
       </p>
     </section>
