@@ -28,7 +28,7 @@ test("F03 UX01: selected word outside visible search results is clearly explaine
   assert.match(explorer, /matching\.some\(\(item\) => item\.id === selectedId\)/);
   assert.match(explorer, /selected word is outside your current results/i);
   assert.match(explorer, /Clear filters/);
-  assert.match(explorer, /setQuery\(""]\)/);
+  assert.match(explorer, /setQuery\(""\)/);
   assert.match(explorer, /setPhotosOnly\(false\)/);
   assert.match(explorer, /setFavoritesOnly\(false\)/);
 });
