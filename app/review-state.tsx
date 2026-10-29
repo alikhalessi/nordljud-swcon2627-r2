@@ -43,9 +43,9 @@ export function ReviewProvider({children}:{children:ReactNode}) {
   const userIdRef=useRef<string|null>(null);
   const mode:Store["mode"]=auth.loading?"loading":auth.user?"cloud":"guest";
 
-  async function loadCloud(id:string,version:number) {
+  async function loadCloud(id:string,version:number):Promise<boolean> {
     const db=getBrowserAuth();
-    if(!db){if(version===generation.current){setCloudAvailable(false);setError("BLOCKED: Supabase client is unavailable.");setReady(true);}return;}
+    if(!db){if(version===generation.current){setCloudAvailable(false);setError("BLOCKED: Supabase client is unavailable.");setReady(true);}return false;}
     try{
       const [c,r,s]=await Promise.all([
         db.from("nordljud_daily_completions").select("level,lesson_on,algorithm_version").eq("user_id",id).order("lesson_on",{ascending:false}).limit(500),
@@ -53,7 +53,7 @@ export function ReviewProvider({children}:{children:ReactNode}) {
         db.from("nordljud_review_sessions").select("id,window_days,reviewed_on,score,total,question_results").eq("user_id",id).order("created_at",{ascending:false}).limit(100)
       ]);
       if(c.error||r.error||s.error)throw (c.error||r.error||s.error);
-      if(generation.current!==version||userIdRef.current!==id)return;
+      if(generation.current!==version||userIdRef.current!==id)return false;
       const next:ReviewSnapshot={
         version:1,
         completions:(c.data||[]).map(x=>({level:x.level,lessonOn:x.lesson_on,algorithmVersion:x.algorithm_version})),
@@ -63,11 +63,13 @@ export function ReviewProvider({children}:{children:ReactNode}) {
           score:x.score,total:x.total,results:x.question_results}))
       } as ReviewSnapshot;
       setState(next);setCloudAvailable(true);setError("");
+      return true;
     }catch{
       if(generation.current===version&&userIdRef.current===id){
         setCloudAvailable(false);
         setError("BLOCKED: Secure cloud review tables or permissions are not deployed or independently verified. No review data has been saved.");
       }
+      return false;
     }finally{if(generation.current===version)setReady(true);}
   }
 
@@ -111,8 +113,8 @@ export function ReviewProvider({children}:{children:ReactNode}) {
     try{
       await cloud(id);
       if(version!==generation.current||userIdRef.current!==id)return false;
-      await loadCloud(id,version);
-      return version===generation.current&&userIdRef.current===id;
+      const verified=await loadCloud(id,version);
+      return verified && version===generation.current&&userIdRef.current===id;
     }catch{
       if(version===generation.current)setError("BLOCKED: Could not save your review data. Please check cloud migration status.");
       return false;
