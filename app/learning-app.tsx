@@ -23,7 +23,7 @@ export type Lesson = {
 };
 
 type MainTab = "explore" | "learning";
-type ExploreView = "verbs" | "daily";
+type LearningAreaView = "daily" | "progress";
 const levels: Level[] = ["A2", "B1", "B2", "C1"];
 
 const levelDescriptions: Record<Level, string> = {
@@ -36,11 +36,11 @@ const levelDescriptions: Record<Level, string> = {
 export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
   const [level, setLevel] = useState<Level>("A2");
   const [activeTab, setActiveTab] = useState<MainTab>("explore");
-  const [exploreView, setExploreView] = useState<ExploreView>("verbs");
+  const [learningView, setLearningView] = useState<LearningAreaView>("daily");
   const exploreTabRef = useRef<HTMLButtonElement>(null);
   const learningTabRef = useRef<HTMLButtonElement>(null);
-  const verbTabRef = useRef<HTMLButtonElement>(null);
   const dailyTabRef = useRef<HTMLButtonElement>(null);
+  const progressTabRef = useRef<HTMLButtonElement>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [showTranslation, setShowTranslation] = useState(false);
   const [audioMessage, setAudioMessage] = useState("");
@@ -81,20 +81,20 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
     (next === "explore" ? exploreTabRef : learningTabRef).current?.focus();
   }
 
-  function onExploreTabKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
-    let next: ExploreView;
-    if (event.key === "ArrowLeft" || event.key === "Home") next = "verbs";
-    else if (event.key === "ArrowRight" || event.key === "End") next = "daily";
+  function onLearningViewKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
+    // Roving focus for the two secondary views, independent of main tabs.
+    let next: LearningAreaView;
+    if (event.key === "ArrowLeft" || event.key === "Home") next = "daily";
+    else if (event.key === "ArrowRight" || event.key === "End") next = "progress";
     else return;
     event.preventDefault();
-    setExploreView(next);
-    (next === "verbs" ? verbTabRef : dailyTabRef).current?.focus();
+    setLearningView(next);
+    (next === "daily" ? dailyTabRef : progressTabRef).current?.focus();
   }
 
   function returnToVerb(sense: { verb: string; meaning: string }, selectedLevel: Level) {
     changeLevel(selectedLevel);
     setTarget({ ...sense, level: selectedLevel });
-    setExploreView("verbs");
     setActiveTab("explore");
     // Return the keyboard and viewport to the learning area rather than
     // leaving users below a long history list.
@@ -194,30 +194,41 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
           </div>
         </section>
 
-        <div className="explore-subtabs" role="tablist" aria-label="Explore modes">
-          <button type="button" id="explore-verbs-tab" ref={verbTabRef} role="tab"
-            aria-selected={exploreView === "verbs"} aria-controls="explore-verbs-panel"
-            tabIndex={exploreView === "verbs" ? 0 : -1}
-            onKeyDown={onExploreTabKeyDown} onClick={() => setExploreView("verbs")}>
-            Verb Explorer
-          </button>
-          <button type="button" id="explore-daily-tab" ref={dailyTabRef} role="tab"
-            aria-selected={exploreView === "daily"} aria-controls="explore-daily-panel"
-            tabIndex={exploreView === "daily" ? 0 : -1}
-            onKeyDown={onExploreTabKeyDown} onClick={() => setExploreView("daily")}>
-            Today's Lesson · 3 daily verbs
-          </button>
+        <VocabularyExplorer level={level} target={target} />
         </div>
+        <div id="learning-panel" className="primary-study-panel" role="tabpanel" aria-labelledby="learning-tab" hidden={activeTab !== "learning"} tabIndex={0}>
+          <section className="learning-level-picker" aria-labelledby="learning-level-heading">
+            <div>
+              <h2 id="learning-level-heading">Your Learning</h2>
+              <p>Today’s Swedish and your saved progress, all in one place.</p>
+            </div>
+            <label htmlFor="learning-level-select">
+              Learning level
+              <select id="learning-level-select" value={level}
+                onChange={(event) => changeLevel(event.target.value as Level)}>
+                {levels.map((item) => <option value={item} key={item}>{item}</option>)}
+              </select>
+            </label>
+          </section>
 
-        <div id="explore-verbs-panel" className="explore-subpanel" role="tabpanel"
-          aria-labelledby="explore-verbs-tab" hidden={exploreView !== "verbs"} tabIndex={0}>
-          <VocabularyExplorer level={level} target={target} />
-        </div>
+          <div className="learning-subtabs" role="tablist" aria-label="Your Learning views">
+            <button type="button" id="learning-daily-tab" role="tab" ref={dailyTabRef}
+              aria-controls="learning-daily-panel" aria-selected={learningView === "daily"}
+              tabIndex={learningView === "daily" ? 0 : -1}
+              onKeyDown={onLearningViewKeyDown} onClick={() => setLearningView("daily")}>
+              Today's Lesson
+            </button>
+            <button type="button" id="learning-progress-tab" role="tab" ref={progressTabRef}
+              aria-controls="learning-progress-panel" aria-selected={learningView === "progress"}
+              tabIndex={learningView === "progress" ? 0 : -1}
+              onKeyDown={onLearningViewKeyDown} onClick={() => setLearningView("progress")}>
+              My Progress
+            </button>
+          </div>
 
-        <div id="explore-daily-panel" className="explore-subpanel" role="tabpanel"
-          aria-labelledby="explore-daily-tab" hidden={exploreView !== "daily"} tabIndex={0}>
-          <DailyLesson level={level} onOpenVerb={returnToVerb} />
-
+          <div id="learning-daily-panel" className="learning-subpanel" role="tabpanel"
+            aria-labelledby="learning-daily-tab" hidden={learningView !== "daily"} tabIndex={0}>
+            <DailyLesson level={level} onOpenVerb={returnToVerb} />
         <section className="lesson" aria-labelledby="lesson-heading">
           <div className="lesson-head">
             <div>
@@ -299,10 +310,11 @@ export default function LearningApp({ lessons }: { lessons: Lesson[] }) {
             )}
           </div>
         </section>
-        </div>
-        </div>
-        <div id="learning-panel" className="primary-study-panel" role="tabpanel" aria-labelledby="learning-tab" hidden={activeTab !== "learning"} tabIndex={0}>
-          <LearningDashboard level={level} onSelect={returnToVerb} />
+          </div>
+          <div id="learning-progress-panel" className="learning-subpanel" role="tabpanel"
+            aria-labelledby="learning-progress-tab" hidden={learningView !== "progress"} tabIndex={0}>
+            <LearningDashboard level={level} onSelect={returnToVerb} />
+          </div>
         </div>
 
         <footer>
