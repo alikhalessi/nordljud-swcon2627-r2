@@ -1,10 +1,10 @@
 gate,automated_status,provider_status,evidence,remaining_condition
 R02_exact_prior_student_approval,PASS,PASS,evidence/V-008-R02_STUDENT_APPROVAL_2026-10-29.md,Approval SHA 24e75a1b committed before first R02 change
 R02_isolated_test_first_RED,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40915588376,Genuine 77/78 RED missing auth helper before source implementation
-R02_new_source_unit_checks,PASS_82_OF_82,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40916180895,No live E2E inference
-R02_clean_npm_ci,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40916180895,Pinned working Node and lockfile
-R02_typescript,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40916180895,No real browser inference
-R02_next_production_build,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40916180895,Build success is not Production readiness
+R02_new_source_unit_checks,PASS_86_OF_86,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40919430702,Current corrected auth PKCE code passes 86 tests but not live E2E
+R02_clean_npm_ci,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40919430702,Pinned working Node and lockfile
+R02_typescript,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40919430702,No real browser inference
+R02_next_production_build,PASS,NOT_APPLICABLE,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40919430702,Build success is not Production readiness
 R02_redirect_allowlist,PASS_UNIT,NOT_TESTED,lib/auth-flow.mjs,Preview origins only when explicitly configured and provider allowlisted
 R02_generic_auth_errors,PASS_UNIT,NOT_TESTED,tests/v008-r02-auth-cloud.test.mjs,Live provider behavior requires explicit setting approval
 R02_google_auth_pkce,SOURCE_PREPARED,NOT_TESTED,app/auth/callback/page.tsx,Live Google OAuth settings and account required
@@ -20,3 +20,8 @@ R01_condition_vibe_to_preview_route,NOT_TESTED,BLOCKED,evidence/V-008-R01_STUDEN
 R01_release_vibe_branch_protection,UNENFORCED,UNENFORCED,evidence/V-008-R01_STUDENT_ACCEPTANCE_2026-10-29.md,Private GitHub Free ruleset limitation documented
 R02_public_merge_or_promotion,NOT_DONE,NOT_DONE,https://github.com/alikhalessi/nordljud-swcon2627-r2/pull/1,User forbade PR1 merge and public code publication
 R02_student_acceptance,PENDING,PENDING,evidence/V-008-R02_IMPLEMENTATION_LOG_2026-10-29.md,Do not start R03 or V009
+R02_PKCE_STALE_SESSION_SECURITY,RED_TO_GREEN_UNIT,NOT_LIVE_TESTED,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40919430702,Original RED 40918630843 82/85 PASS; now 86/86 after code/session identity and StrictMode replay corrections
+R02_Preview_Supabase_Env,READ_ONLY_DIAGNOSIS,PRODUCTION_ONLY,docs/R02_LIVE_AUTH_VERIFICATION_AND_EXACT_CHANGE_REQUEST_2026-10-29.md,Vercel lists both Supabase env names only for Production; Preview auth environment requires separate approval
+R02_Live_Auth_Provider_Enabled_State,NOT_DETERMINED,NOT_TESTED,docs/R02_LIVE_AUTH_VERIFICATION_AND_EXACT_CHANGE_REQUEST_2026-10-29.md,Need redacted read-only Supabase Providers and URL Configuration screenshots before any actual change
+R02_Authoritative_Candidate_HTTP,NOT_TESTED,NOT_TESTED,https://github.com/alikhalessi/nordljud-swcon2627-r2/actions/runs/40919430702,Smoke skipped because R01_CANDIDATE_URL unset
+R02_Leaked_Password_Protection,READ_ONLY_WARNING,DISABLED,docs/R02_LIVE_AUTH_VERIFICATION_AND_EXACT_CHANGE_REQUEST_2026-10-29.md,Security advisor WARN; live Auth setting may be changed only with separate approval
