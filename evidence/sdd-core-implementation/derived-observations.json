@@ -1,0 +1,367 @@
+{
+  "recordedAtUtc": "2026-10-30T22:48:05.344913+00:00",
+  "basis": {
+    "browserFile": "T079.jsonl",
+    "browserLine": 2,
+    "targetedFile": "T041.jsonl",
+    "targetedLine": 1
+  },
+  "performance": [
+    {
+      "run": "full",
+      "kind": "supplementary-observation-no-threshold",
+      "browser": "156.0.4314.50",
+      "platform": "win32",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "method": "PerformanceResourceTiming for source requests; search/render samples include Playwright command and assertion overhead, not pure component latency",
+      "counts": {
+        "A2": 1,
+        "B1": 1,
+        "B2": 1,
+        "C1": 1
+      },
+      "sourceRequests": [
+        {
+          "url": "/api/lexicon?level=A2",
+          "durationMs": 28.400000005960464
+        },
+        {
+          "url": "/api/lexicon?level=B1",
+          "durationMs": 40.900000005960464
+        },
+        {
+          "url": "/api/lexicon?level=B2",
+          "durationMs": 45.70000000298023
+        },
+        {
+          "url": "/api/lexicon?level=C1",
+          "durationMs": 34.5
+        }
+      ],
+      "observations": [
+        {
+          "level": "A2",
+          "searchObservedMs": 58.29999999701977,
+          "clearAndRenderObservedMs": 103.70000000298023
+        },
+        {
+          "level": "B1",
+          "searchObservedMs": 87.09999999403954,
+          "clearAndRenderObservedMs": 95.79999999701977
+        },
+        {
+          "level": "B2",
+          "searchObservedMs": 93.5,
+          "clearAndRenderObservedMs": 109.90000000596046
+        },
+        {
+          "level": "C1",
+          "searchObservedMs": 81.20000000298023,
+          "clearAndRenderObservedMs": 91.70000000298023
+        }
+      ]
+    },
+    {
+      "run": "full",
+      "kind": "supplementary-observation-no-threshold",
+      "browser": "156.0.4314.50",
+      "platform": "win32",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "method": "PerformanceResourceTiming for source requests; search/render samples include Playwright command and assertion overhead, not pure component latency",
+      "counts": {
+        "A2": 1,
+        "B1": 1,
+        "B2": 1,
+        "C1": 1
+      },
+      "sourceRequests": [
+        {
+          "url": "/api/lexicon?level=A2",
+          "durationMs": 9.199999988079071
+        },
+        {
+          "url": "/api/lexicon?level=B1",
+          "durationMs": 7.300000011920929
+        },
+        {
+          "url": "/api/lexicon?level=B2",
+          "durationMs": 8.5
+        },
+        {
+          "url": "/api/lexicon?level=C1",
+          "durationMs": 30.5
+        }
+      ],
+      "observations": [
+        {
+          "level": "A2",
+          "searchObservedMs": 43.3999999910593,
+          "clearAndRenderObservedMs": 87.79999999701977
+        },
+        {
+          "level": "B1",
+          "searchObservedMs": 38.20000000298023,
+          "clearAndRenderObservedMs": 81.20000000298023
+        },
+        {
+          "level": "B2",
+          "searchObservedMs": 44.79999999701977,
+          "clearAndRenderObservedMs": 79.5
+        },
+        {
+          "level": "C1",
+          "searchObservedMs": 72,
+          "clearAndRenderObservedMs": 81.59999999403954
+        }
+      ]
+    },
+    {
+      "run": "targeted",
+      "kind": "supplementary-observation-no-threshold",
+      "browser": "156.0.4314.50",
+      "platform": "win32",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "method": "PerformanceResourceTiming for source requests; search/render samples include Playwright command and assertion overhead, not pure component latency",
+      "counts": {
+        "A2": 1,
+        "B1": 1,
+        "B2": 1,
+        "C1": 1
+      },
+      "sourceRequests": [
+        {
+          "url": "/api/lexicon?level=A2",
+          "durationMs": 8.800000011920929
+        },
+        {
+          "url": "/api/lexicon?level=B1",
+          "durationMs": 7.899999991059303
+        },
+        {
+          "url": "/api/lexicon?level=B2",
+          "durationMs": 9
+        },
+        {
+          "url": "/api/lexicon?level=C1",
+          "durationMs": 45.400000005960464
+        }
+      ],
+      "observations": [
+        {
+          "level": "A2",
+          "searchObservedMs": 45.3999999910593,
+          "clearAndRenderObservedMs": 95.79999999701977
+        },
+        {
+          "level": "B1",
+          "searchObservedMs": 41.20000000298023,
+          "clearAndRenderObservedMs": 82.8999999910593
+        },
+        {
+          "level": "B2",
+          "searchObservedMs": 47.79999999701977,
+          "clearAndRenderObservedMs": 86.70000000298023
+        },
+        {
+          "level": "C1",
+          "searchObservedMs": 116.79999999701977,
+          "clearAndRenderObservedMs": 93.3999999910593
+        }
+      ]
+    },
+    {
+      "run": "targeted",
+      "kind": "supplementary-observation-no-threshold",
+      "browser": "156.0.4314.50",
+      "platform": "win32",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "method": "PerformanceResourceTiming for source requests; search/render samples include Playwright command and assertion overhead, not pure component latency",
+      "counts": {
+        "A2": 1,
+        "B1": 1,
+        "B2": 1,
+        "C1": 1
+      },
+      "sourceRequests": [
+        {
+          "url": "/api/lexicon?level=A2",
+          "durationMs": 8.700000002980232
+        },
+        {
+          "url": "/api/lexicon?level=B1",
+          "durationMs": 8.399999991059303
+        },
+        {
+          "url": "/api/lexicon?level=B2",
+          "durationMs": 10.5
+        },
+        {
+          "url": "/api/lexicon?level=C1",
+          "durationMs": 10.200000002980232
+        }
+      ],
+      "observations": [
+        {
+          "level": "A2",
+          "searchObservedMs": 49.599999994039536,
+          "clearAndRenderObservedMs": 98.09999999403954
+        },
+        {
+          "level": "B1",
+          "searchObservedMs": 38.400000005960464,
+          "clearAndRenderObservedMs": 87.3999999910593
+        },
+        {
+          "level": "B2",
+          "searchObservedMs": 43.20000000298023,
+          "clearAndRenderObservedMs": 80.5
+        },
+        {
+          "level": "C1",
+          "searchObservedMs": 38.099999994039536,
+          "clearAndRenderObservedMs": 79.40000000596046
+        }
+      ]
+    }
+  ],
+  "speech": [
+    {
+      "run": "full",
+      "browser": "156.0.4314.50",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "hasSpeechApi": true,
+      "voices": [
+        {
+          "language": "en-US",
+          "localService": true,
+          "default": true
+        },
+        {
+          "language": "de-DE",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "de-DE",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "de-DE",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "da-DK",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "en-US",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "en-US",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "fi-FI",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "nb-NO",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "sv-SE",
+          "localService": true,
+          "default": false
+        }
+      ],
+      "message": "Swedish speech requested from this browser. Audio output has not been verified.Stop speech",
+      "audioHeard": "NOT OBSERVED; automated API/fallback check only"
+    },
+    {
+      "run": "full",
+      "browser": "156.0.4314.50",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "hasSpeechApi": true,
+      "voices": [
+        {
+          "language": "en-US",
+          "localService": true,
+          "default": true
+        },
+        {
+          "language": "de-DE",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "de-DE",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "de-DE",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "da-DK",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "en-US",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "en-US",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "fi-FI",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "nb-NO",
+          "localService": true,
+          "default": false
+        },
+        {
+          "language": "sv-SE",
+          "localService": true,
+          "default": false
+        }
+      ],
+      "message": "Swedish speech requested from this browser. Audio output has not been verified.Stop speech",
+      "audioHeard": "NOT OBSERVED; automated API/fallback check only"
+    }
+  ]
+}

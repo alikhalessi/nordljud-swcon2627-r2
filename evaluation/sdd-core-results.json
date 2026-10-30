@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "condition": "SDD",
+  "scope": "CORE",
+  "primaryDenominator": 15,
+  "recordedAtUtc": "2026-10-30T22:52:43.711532+00:00",
+  "snapshot": {
+    "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+    "dirty": true,
+    "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+    "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+  },
+  "cases": [
+    {
+      "id": "F01",
+      "scenario": "Four levels",
+      "expected": "A2, B1, B2 and C1 are selectable; distinct source-linked missions appear",
+      "status": "PASS",
+      "actual": "All four levels and distinct source-linked missions were selected in actual Edge at both D01 viewports.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F02",
+      "scenario": "Source sentences",
+      "expected": "Swedish text and English translation correspond to frozen inputs; reveal/hide assistance works",
+      "status": "PASS",
+      "actual": "All raw source fields are compared by adapter tests; four missions display exact Swedish/English fields with reversible assistance in actual Edge.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        },
+        {
+          "kind": "source",
+          "path": "evidence/sdd-core-implementation/T020.jsonl"
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F03",
+      "scenario": "Speech",
+      "expected": "Request Swedish speech when available, otherwise show meaningful unavailable status",
+      "status": "PASS",
+      "actual": "Native Edge exposed a local-service sv-SE voice and accepted the source-backed speech request. Audio heard/quality NOT OBSERVED; unsupported/error behavior is separately mocked.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F04",
+      "scenario": "Two practice checks",
+      "expected": "Correct **and incorrect** answers produce appropriate feedback, no credit for incorrect",
+      "status": "PASS",
+      "actual": "Both checks exercise wrong/right/revealed/no-credit/new attempts. Correct submission after reveal stays revealed; labelled unavailable fixture preserves other study.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        },
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T041.jsonl",
+          "line": 1,
+          "observed": true
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F05",
+      "scenario": "Lexicon completeness",
+      "expected": "Search and load 456 sense records for each of four levels",
+      "status": "PASS",
+      "actual": "API and rendered collections expose all 456 senses/455 spellings for each of four levels. Exact search and per-session collection reuse are observed.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        },
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T041.jsonl",
+          "line": 1,
+          "observed": true
+        },
+        {
+          "kind": "source",
+          "path": "evidence/sdd-core-implementation/T020.jsonl"
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F06",
+      "scenario": "Same spelling, different senses",
+      "expected": "Two `sticka` senses can be selected independently and retain correct meaning",
+      "status": "PASS",
+      "actual": "Both sticka meanings are independently selected with correct examples; per-meaning flags remain separate.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        },
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T041.jsonl",
+          "line": 1,
+          "observed": true
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F07",
+      "scenario": "Level switch",
+      "expected": "Selected *sense* is stable across A2→C1 change, with level-specific examples",
+      "status": "PASS",
+      "actual": "Selected knit meaning stays stable from A2 through C1 using destination examples and independent destination flags.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        },
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T041.jsonl",
+          "line": 1,
+          "observed": true
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F08",
+      "scenario": "Guest work",
+      "expected": "A guest can study and retain appropriate browser-scoped local state after reload",
+      "status": "PASS",
+      "actual": "Guest preferences/flags survive reload; completion/practice reset. Native transactions, isolated clearing and labelled preservation/failure checks pass. Actual account transition remains unobserved.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        },
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T041.jsonl",
+          "line": 1,
+          "observed": true
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F09",
+      "scenario": "Email authentication",
+      "expected": "Account registration, invalid credentials, sign-in and sign-out behave correctly",
+      "status": "BLOCKED",
+      "actual": "No authorized independent email-provider/test-account environment. Local PKCE/session/control contracts exist; real registration/confirmation/invalid/sign-in/sign-out not executed.",
+      "evidence": [
+        {
+          "kind": "audit",
+          "path": "docs/account-prerequisites.md",
+          "observed": false
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F10",
+      "scenario": "Google OAuth",
+      "expected": "Hosted sign-in returns to hosted origin and authenticates, not localhost",
+      "status": "BLOCKED",
+      "actual": "No authorized hosted origin/Google provider flow. Canonical redirect policy exists; no hosted verified session observed.",
+      "evidence": [
+        {
+          "kind": "audit",
+          "path": "docs/account-prerequisites.md",
+          "observed": false
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F11",
+      "scenario": "Cloud persistence",
+      "expected": "Personal mission completion and favorites survive refresh, sign-out and re-login",
+      "status": "NOT TESTED",
+      "actual": "Private progress handlers/account store/context are unimplemented. No owned cloud state was created or restored.",
+      "evidence": [
+        {
+          "kind": "audit",
+          "path": "docs/account-prerequisites.md",
+          "observed": false
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F12",
+      "scenario": "Account isolation",
+      "expected": "Two different users cannot read or overwrite each other's saved state",
+      "status": "BLOCKED",
+      "actual": "No authorized independent schema/policies or legitimate A/B test accounts. RLS schema/policies and live ownership suites are unimplemented; no isolation PASS inferred.",
+      "evidence": [
+        {
+          "kind": "audit",
+          "path": "docs/account-prerequisites.md",
+          "observed": false
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F13",
+      "scenario": "Mobile + keyboard",
+      "expected": "Essential study navigation and login operate on narrow viewport and keyboard",
+      "status": "NOT TESTED",
+      "actual": "Guest keyboard/focus/narrow checks pass at both sizes. Complete login/provider accessibility has not been observed.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      },
+      "coverage": {
+        "guestVerified": true,
+        "loginVerified": false
+      }
+    },
+    {
+      "id": "F14",
+      "scenario": "Secrets and failures",
+      "expected": "No elevated keys in code/client; failures display actionable messages",
+      "status": "NOT TESTED",
+      "actual": "Delivered local source/build review and safe Guest/unconfigured errors pass their bounded checks. Private cloud/provider/ownership failure/security coverage remains incomplete.",
+      "evidence": [
+        {
+          "kind": "browser",
+          "path": "evidence/sdd-core-implementation/T079.jsonl",
+          "line": 4,
+          "observed": true
+        },
+        {
+          "kind": "audit",
+          "path": "docs/security-review.md"
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    },
+    {
+      "id": "F15",
+      "scenario": "Reproducibility",
+      "expected": "Dependencies, tested commits, expected source count, typecheck and build are recorded",
+      "status": "PASS",
+      "actual": "Actual lockfile, installation, versions, counts, typecheck/lint/source/unit/build/browser commands and dirty base plus exact runtime artifact manifest are retained. No clean-checkout run claimed.",
+      "evidence": [
+        {
+          "kind": "source",
+          "path": "evidence/sdd-core-implementation/T020.jsonl"
+        },
+        {
+          "kind": "build",
+          "path": "evidence/sdd-core-implementation/T074.jsonl"
+        }
+      ],
+      "testedRevision": {
+        "baseCommit": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+        "dirty": true,
+        "artifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+        "artifactManifest": "evidence/sdd-core-implementation/tested-artifacts.json"
+      }
+    }
+  ],
+  "supplementary": [
+    {
+      "topic": "performance",
+      "source": "evidence/sdd-core-implementation/derived-observations.json",
+      "threshold": "none; automation overhead included"
+    },
+    {
+      "topic": "G01",
+      "source": "docs/operation-recovery-verification.md",
+      "qualification": "client waiting, not server rollback or SLA"
+    },
+    {
+      "topic": "G02",
+      "source": "docs/testing/schema-recovery-review.md",
+      "status": "NOT EXERCISED"
+    },
+    {
+      "topic": "manual flags/Guest failure fixtures",
+      "source": "docs/verification-us4.md",
+      "qualification": "independent flags; denied/quota/abort/blocked/corrupt/newer cases labelled; no live ownership proof"
+    },
+    {
+      "topic": "checklists/setup/validator",
+      "qualification": "documentary/setup only; excluded from runtime acceptance denominator"
+    }
+  ]
+}

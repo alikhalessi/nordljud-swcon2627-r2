@@ -10,3 +10,7 @@ node_modules/
 coverage/
 playwright-report/
 test-results/
+
+# Local tool/runtime outputs
+.tools/
+*.tsbuildinfo
