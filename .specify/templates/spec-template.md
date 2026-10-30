@@ -1,12 +1,32 @@
 # Feature Specification: [FEATURE NAME]
 
-**Feature Branch**: `[###-feature-name]`
+**Feature Branch**: `condition/spec-driven`
 
 **Created**: [DATE]
 
 **Status**: Draft
 
 **Input**: User description: "$ARGUMENTS"
+
+## Constitution Alignment *(mandatory)*
+
+- **Governance**: [Constitution version and explicit student approval evidence; draft blocks progression]
+- **Scope**: [CORE/PRIMARY F01-F15, N=15 OR separate EXTENDED/SECONDARY E01-E07 and EXT-AC01-07, N=7]
+- **Traceability**: [Applicable acceptance IDs, approved input blob IDs and source manifest]
+- **Review**: [Draft/review decision and exact artifact revision; no implicit next-stage authorization]
+
+Preserve the original primary acceptance contract and separate secondary denominator. State
+observable WHAT/WHY requirements without choosing an imported architecture or Vibe layout.
+Cover applicable source/sense identity and missing fields; Guest persistence/account transfer;
+server-enforced ownership and cross-user failures; keyboard/narrow-viewport behavior; and
+provider/speech/error fallbacks. Define expected wrong/reveal/completion behavior explicitly.
+Mark unresolved details for clarification instead of inventing source content or hidden policy.
+
+Acceptance cases MUST map to the applicable F/EXT-AC IDs, expected outcomes, test environment
+and evidence procedure. Record future runtime checks as NOT TESTED until real execution;
+use PASS/FAIL/BLOCKED/NOT TESTED with exact tested SHAs when results exist. Source limitations,
+rights, prior-learning/order/agent differences and unauthorized external prerequisites MUST
+remain visible. This template does not authorize Specify, implementation or external actions.
 
 ## User Scenarios & Testing *(mandatory)*
 

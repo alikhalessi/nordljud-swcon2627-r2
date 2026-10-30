@@ -1,0 +1,39 @@
+{
+  "all_files_check": {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 2,
+    "stdout": "evidence/sdd-constitution-2026-10-30/review.diff:33: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:35: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:101: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:112: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:118: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:129: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:140: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:144: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:152: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:162: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:229: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:232: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:253: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:262: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:264: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:281: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:284: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:286: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:288: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:290: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:315: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:317: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:319: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:321: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:335: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:338: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:340: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:342: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:344: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:366: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:373: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:375: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:390: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:392: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:394: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:396: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:399: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:401: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:403: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:405: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:408: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:412: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:414: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:417: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:421: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:423: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:431: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:437: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:444: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:446: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:460: trailing whitespace.\n+ \nevidence/sdd-constitution-2026-10-30/review.diff:462: trailing whitespace.\n+ \n",
+    "stderr": ""
+  },
+  "classification": "Findings are only literal space-prefixed blank context lines inside the immutable historical unified-diff evidence. Original bytes are retained; this is not a changed document or product-test failure.",
+  "preserved_patch_sha256": "9FAA3AFCD48460F72D1F882AF5B219FC406A38A1951A3F7CAD1311345338D169",
+  "all_other_staged_files_check": {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      ".",
+      ":(exclude)evidence/sdd-constitution-2026-10-30/review.diff"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,61 @@
+{
+    "SessionId":  "01a18a09-eeac-7901-b13e-f306d7ac8ce3",
+    "Branch":  "condition/spec-driven",
+    "GitStatus":  [
+
+                  ],
+    "Agent":  "Codex",
+    "ApprovedInputs":  [
+                           {
+                               "Path":  "docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md",
+                               "Blob":  "61e4f31ea150c827c92ecf785677c56af45ce04f",
+                               "RawSHA256":  "B088E1D7F7E3499BCB88CB3B4AB36478BB504B6442DAD35B332D010D81AE20C6"
+                           },
+                           {
+                               "Path":  "docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md",
+                               "Blob":  "8e45c7d20a8039491dcc91afc9e6c5cc0f270394",
+                               "RawSHA256":  "F662CF24D91DC77A3F6A5AA1F55BEAE46674723627883088117BCF82FFD0A9E1"
+                           },
+                           {
+                               "Path":  "docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md",
+                               "Blob":  "d00a5bac308b182dcd5fc99f290089a9d15d26e5",
+                               "RawSHA256":  "806D9EDADFBBB30BFCC23B4AD875D314DDF37E8C30407B615F7298A057F1AE93"
+                           }
+                       ],
+    "ModelFromSessionTurnContext":  "gpt-6.1-sol",
+    "ModelDisplayInUI":  "UNKNOWN",
+    "CLIVersion":  "0.164.0-alpha.11.1",
+    "AuthoringFiles":  [
+                           {
+                               "RawSHA256":  "29FC1837B20F493D302203554923322A245123B4BE9ED5734D9E1AF96CD5EF0B",
+                               "Path":  ".specify/memory/constitution.md"
+                           },
+                           {
+                               "RawSHA256":  "543CC3D587DA1F316B947AFC63990D01BA6356EE2B973C588DB54787D6B360F1",
+                               "Path":  ".specify/templates/plan-template.md"
+                           },
+                           {
+                               "RawSHA256":  "CFC2F4605B4366D798D184956CA848A8301AD701D548E0C2C1A33AD7AEDA7289",
+                               "Path":  ".specify/templates/spec-template.md"
+                           },
+                           {
+                               "RawSHA256":  "FB57E624CEF756EC4E016E23A93193CC158508ABE3187FFB6F157D667338D5CF",
+                               "Path":  ".specify/templates/tasks-template.md"
+                           },
+                           {
+                               "RawSHA256":  "A06C7782A6908C9D2C3310315F8FF94F7CB6D8EE1396E053CC53FF1C5E85D638",
+                               "Path":  ".specify/templates/checklist-template.md"
+                           },
+                           {
+                               "RawSHA256":  "14FB7CD89C5130CAF8B5F6704AEB190A64677E5096525844C4CB4D1660F96708",
+                               "Path":  "README.md"
+                           }
+                       ],
+    "HEAD":  "bc397a95f10c71b65f0562921716f9a36d8224d2",
+    "FreezeRef":  "refs/remotes/origin/freeze/v009-vibe-research-2026-10-29",
+    "AuthoringDate":  "2026-10-30",
+    "FreezeSHA":  "0b5a4a58631503c3a454ecc36d62b892c569ef14",
+    "TurnId":  "01a18a15-c3b0-7ca2-b4dc-f2519686fbfa",
+    "Originator":  "codex_vscode",
+    "Timezone":  "Europe/Helsinki"
+}

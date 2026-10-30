@@ -1,6 +1,6 @@
 # Implementation Plan: [FEATURE]
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
+**Branch**: `condition/spec-driven` | **Date**: [DATE] | **Spec**: [link]
 
 **Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
 
@@ -40,7 +40,29 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Read `.specify/memory/constitution.md` and record its version and human approval evidence.
+An unratified draft blocks progression; this template does not authorize running Plan.
+Feature directories do not authorize creating or switching branches.
+
+For each gate, record PASS/FAIL/BLOCKED/NOT TESTED with evidence or a named open action:
+
+- **I-II — Source:** frozen source blob IDs, four levels/456 senses each/two `sticka`
+  meanings, missing-field behavior, educational limitations and any media rights.
+- **III — Ownership:** planned server enforcement, authorized two-account negative cases,
+  minimal test data and no elevated browser secrets; planned checks are not runtime PASS.
+- **IV — Guest/usability:** clarified local-state boundaries, no account mixing, keyboard,
+  narrow viewport, speech/provider fallbacks and honest answer/completion credit.
+- **V — Verification:** acceptance mapping, real failing/passing runs, exact versions/SHA,
+  reproducible procedures and explicit limitations for unavailable/manual checks.
+- **VI — Isolation:** neutral inputs only, Condition B branch/state separation, protected
+  refs unchanged and disclosed chronology/prior-learning/agent differences.
+- **VII — Evaluation:** CORE F01-F15 N=15; separately versioned E01-E07/EXT-AC01-07 N=7;
+  fixed separate denominators and all four result statuses.
+- **VIII — Authorization:** actual stage provenance, required student reviews, primary-first
+  order and no inferred permission for hooks, services, spending or deployment.
+
+Recheck these gates after design. Requirements for future runtime tests remain NOT TESTED
+until executed; documentary plan alignment alone cannot establish application acceptance.
 
 ## Project Structure
 
@@ -106,6 +128,10 @@ directories captured above]
 ## Complexity Tracking
 
 > **Fill ONLY if Constitution Check has violations that must be justified**
+
+This table does not waive Constitution obligations. A governance conflict requires an explicit
+reviewed amendment; immutable inputs, truthful evidence, ownership, method isolation and the
+fixed primary benchmark cannot be bypassed by recording a complexity rationale.
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
 |-----------|------------|-------------------------------------|

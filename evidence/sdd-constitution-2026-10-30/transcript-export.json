@@ -1,0 +1,29 @@
+{
+    "SessionId":  "01a18a09-eeac-7901-b13e-f306d7ac8ce3",
+    "ClarificationTimestamp":  "2026-10-30T00:05:32.747Z",
+    "Policy":  "Original selected response_item lines only: current user messages, explicit visible assistant commentary/final phases, and tool calls/results. Internal reasoning, system/developer messages, session base instructions and unrelated earlier turn records excluded. Snapshot ends at a completed result before its own export and final answer; consult live session for continuation.",
+    "SourceFirstLine":  157,
+    "StartingHEAD":  "bc397a95f10c71b65f0562921716f9a36d8224d2",
+    "SHA256":  "AE6A0CD94EBDBA3548A2491C76256874D29C2055359CAEB0AC7573D784C59C5F",
+    "ClarificationSourceLine":  249,
+    "SelectedRecords":  41,
+    "Source":  "C:\\Users\\alikh\\.codex\\sessions\\2026\\10\\30\\rollout-2026-10-30T01-41-09-01a18a09-eeac-7901-b13e-f306d7ac8ce3.jsonl",
+    "ConstitutionTurnId":  "01a18a15-c3b0-7ca2-b4dc-f2519686fbfa",
+    "RecordTypes":  [
+                        {
+                            "Count":  9,
+                            "Type":  "message"
+                        },
+                        {
+                            "Count":  16,
+                            "Type":  "custom_tool_call"
+                        },
+                        {
+                            "Count":  16,
+                            "Type":  "custom_tool_call_output"
+                        }
+                    ],
+    "Bytes":  304635,
+    "ExportedAtUTC":  "2026-10-30T00:08:41.6235463Z",
+    "SourceLastCompletedResultLine":  271
+}

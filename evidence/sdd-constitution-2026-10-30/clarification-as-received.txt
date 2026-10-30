@@ -1,0 +1,3 @@
+Apply this clarification to the current run; do not restart or repeat Constitution.
+Preflight confirmed all three approved committed Git blobs. Raw working-copy differences are solely CRLF conversion from core.autocrlf=true; converting CRLF to LF in memory reproduced the expected blobs exactly.
+Preserve the approved files unchanged and record this qualification in new execution evidence. If any approved file has changed, report it for review. Stop after Constitution; do not push or start Specify.

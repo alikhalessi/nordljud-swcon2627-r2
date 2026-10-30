@@ -1,0 +1,173 @@
+{
+  "version": "1.0.0",
+  "status": "STUDENT_RATIFIED",
+  "starting_head": "bc397a95f10c71b65f0562921716f9a36d8224d2",
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": ".specify/memory/constitution.md",
+      "sha256": "F7B21D93281C76F25DA5AB17C99CFAED7590009A846A7E67BB94F1D237DDA82B",
+      "bytes": 15486
+    },
+    {
+      "path": ".specify/templates/checklist-template.md",
+      "sha256": "0B7D22E11E8500DD4F02EA78D3EF983852065C02BDA86203789C38376FD07419",
+      "bytes": 1850
+    },
+    {
+      "path": ".specify/templates/plan-template.md",
+      "sha256": "00BA48C5859CE18165C9F314E76032780B0C45087B0474740F37E9707A6BA0F6",
+      "bytes": 5762
+    },
+    {
+      "path": ".specify/templates/spec-template.md",
+      "sha256": "F29FEB6B4929E81DDD840E1A3DE4BF64990C3E2E83DBBA82D4288C5C8C1F8F8E",
+      "bytes": 6182
+    },
+    {
+      "path": ".specify/templates/tasks-template.md",
+      "sha256": "0B41FA88828F8C3CED83A00E1ADA269F4BA50076A25703CB215BF9949FA6DB81",
+      "bytes": 10455
+    },
+    {
+      "path": "README.md",
+      "sha256": "0D15B8987BA3E6273363A689E3E81FB9D84B02EDD2E8BF3608A1ADA959CA6960",
+      "bytes": 2672
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/README.md",
+      "sha256": "90C11DE6B275DA4EDCE61D14F876147B7E393C0D12ADE6F198922CB3DE38D779",
+      "bytes": 8354
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/artifact-manifest.json",
+      "sha256": "BAD0264B7D43CFB4B0005425870864BD7746469F2E5D16CBA382C745EACD01B3",
+      "bytes": 5618
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/authoring-changes.json",
+      "sha256": "A402481F32D351AEADC2BB5E1E6E52BD52E7D4FFC682434AB412277AA266419B",
+      "bytes": 23387
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/clarification-as-received.txt",
+      "sha256": "97FF6C1C3CB13B8F79DA8C9CFEA87FF1AEFE7C0F29437406FA276071EBF4B89A",
+      "bytes": 502
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/completion-review.md",
+      "sha256": "DDA85514A68B960A82AF133BF3776B3A5ECC93D2228BB37CB276D57AD35C13C2",
+      "bytes": 3050
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/constitution-input.txt",
+      "sha256": "F6473A6F919B6FB97B93A967744F09E8F5150C885646B9B5B390A6468E20124D",
+      "bytes": 2932
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/pre-edit-state.json",
+      "sha256": "2F2D58A1784226C15D20E069D1A3152D4B2E98EC6ACBEB895855DC7A47384023",
+      "bytes": 3357
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/request-as-received.txt",
+      "sha256": "9504EC160BCBF64744ABF9BEE1715047F5C3BC45B3D0FDC475FD2BEE662C2D01",
+      "bytes": 5876
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/review.diff",
+      "sha256": "9FAA3AFCD48460F72D1F882AF5B219FC406A38A1951A3F7CAD1311345338D169",
+      "bytes": 29409
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/session-visible-records.jsonl",
+      "sha256": "AE6A0CD94EBDBA3548A2491C76256874D29C2055359CAEB0AC7573D784C59C5F",
+      "bytes": 304635
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/transcript-export.json",
+      "sha256": "9C3DBF93D4672D29A418EACB37018C7F1E4F697ADFE2D6946BEC9E41286280DF",
+      "bytes": 1602
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/validation-001.json",
+      "sha256": "AA00DA86C3E59668BC32F501FE1BABFFE1E81E0C2E2DB9922AFD146DEDE49E84",
+      "bytes": 24292
+    },
+    {
+      "path": "evidence/sdd-constitution-2026-10-30/verify-constitution.ps1",
+      "sha256": "2764CC359FFFF598349B5025FB68479626D407D45B7B5F6B54DB06BFCAADE512",
+      "bytes": 8173
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/README.md",
+      "sha256": "3A312B83A218F3C945387287B90398BA2D39273EAB5797E0356B8EB1F28B781B",
+      "bytes": 4253
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/commands-before-commit.json",
+      "sha256": "A329BCD587EE33D5AED2BF53584CD910F5F5076D34D668C1EF4B887BD86E36A2",
+      "bytes": 11425
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/ratification-record.json",
+      "sha256": "6D57D9097F71E5A3B3A0F6BA55DDD6767F1376C1DE911F7FF33D1CBCA1B44318",
+      "bytes": 16528
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/ratification-request-as-received.txt",
+      "sha256": "0AE813E88BFA812166932EBB0621099891073A888840F6EF741DEB5DD9C1B593",
+      "bytes": 2003
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/refs-before.json",
+      "sha256": "0AB6E315F46130A7585DBB91226B00FB3C84EE76C60D7181D6E778BE9432EA09",
+      "bytes": 1001
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/memory/constitution.md",
+      "sha256": "90B8BDF5E5657F84102AF65BA6D49F5027B88CE994824FA1D2BBE15DBF4E9CE4",
+      "bytes": 15038
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/templates/checklist-template.md",
+      "sha256": "0B7D22E11E8500DD4F02EA78D3EF983852065C02BDA86203789C38376FD07419",
+      "bytes": 1850
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/templates/plan-template.md",
+      "sha256": "00BA48C5859CE18165C9F314E76032780B0C45087B0474740F37E9707A6BA0F6",
+      "bytes": 5762
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/templates/spec-template.md",
+      "sha256": "F29FEB6B4929E81DDD840E1A3DE4BF64990C3E2E83DBBA82D4288C5C8C1F8F8E",
+      "bytes": 6182
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/templates/tasks-template.md",
+      "sha256": "0B41FA88828F8C3CED83A00E1ADA269F4BA50076A25703CB215BF9949FA6DB81",
+      "bytes": 10455
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/README.md",
+      "sha256": "37EF66A3385B057BC61B17B3CCFBD313B47A53AFC67A60871D50F9C05A2F6276",
+      "bytes": 2546
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/staging-whitespace-check.json",
+      "sha256": "E38B8BDA2F3038D95886362507B841424021BC045D01CD1A56C7BEF3C1624A8A",
+      "bytes": 5191
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/student-approval-extract.txt",
+      "sha256": "0F8CF81702F00205D8182A062D872B710369B4ED250833C09DA34F7713DEC4BD",
+      "bytes": 406
+    },
+    {
+      "path": "evidence/sdd-ratification-2026-10-30/validation.json",
+      "sha256": "88D13D8153B5B00809AF0BEA5958D2B675A017D54CCA5EBCC62E831D0DC00C9E",
+      "bytes": 2489
+    }
+  ]
+}

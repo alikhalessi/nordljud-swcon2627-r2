@@ -1,0 +1,104 @@
+{
+    "ValidationPassed":  true,
+    "StartingHEAD":  "bc397a95f10c71b65f0562921716f9a36d8224d2",
+    "Ratification":  "PENDING",
+    "GitCommitCreated":  false,
+    "Excludes":  "This manifest itself",
+    "Branch":  "condition/spec-driven",
+    "ConstitutionVersion":  "0.1.0",
+    "Artifacts":  [
+                      {
+                          "Path":  ".specify/memory/constitution.md",
+                          "SHA256":  "90B8BDF5E5657F84102AF65BA6D49F5027B88CE994824FA1D2BBE15DBF4E9CE4",
+                          "Bytes":  15038
+                      },
+                      {
+                          "Path":  ".specify/templates/checklist-template.md",
+                          "SHA256":  "0B7D22E11E8500DD4F02EA78D3EF983852065C02BDA86203789C38376FD07419",
+                          "Bytes":  1850
+                      },
+                      {
+                          "Path":  ".specify/templates/plan-template.md",
+                          "SHA256":  "00BA48C5859CE18165C9F314E76032780B0C45087B0474740F37E9707A6BA0F6",
+                          "Bytes":  5762
+                      },
+                      {
+                          "Path":  ".specify/templates/spec-template.md",
+                          "SHA256":  "F29FEB6B4929E81DDD840E1A3DE4BF64990C3E2E83DBBA82D4288C5C8C1F8F8E",
+                          "Bytes":  6182
+                      },
+                      {
+                          "Path":  ".specify/templates/tasks-template.md",
+                          "SHA256":  "0B41FA88828F8C3CED83A00E1ADA269F4BA50076A25703CB215BF9949FA6DB81",
+                          "Bytes":  10455
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/authoring-changes.json",
+                          "SHA256":  "A402481F32D351AEADC2BB5E1E6E52BD52E7D4FFC682434AB412277AA266419B",
+                          "Bytes":  23387
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/clarification-as-received.txt",
+                          "SHA256":  "97FF6C1C3CB13B8F79DA8C9CFEA87FF1AEFE7C0F29437406FA276071EBF4B89A",
+                          "Bytes":  502
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/completion-review.md",
+                          "SHA256":  "DDA85514A68B960A82AF133BF3776B3A5ECC93D2228BB37CB276D57AD35C13C2",
+                          "Bytes":  3050
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/constitution-input.txt",
+                          "SHA256":  "F6473A6F919B6FB97B93A967744F09E8F5150C885646B9B5B390A6468E20124D",
+                          "Bytes":  2932
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/pre-edit-state.json",
+                          "SHA256":  "2F2D58A1784226C15D20E069D1A3152D4B2E98EC6ACBEB895855DC7A47384023",
+                          "Bytes":  3357
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/README.md",
+                          "SHA256":  "90C11DE6B275DA4EDCE61D14F876147B7E393C0D12ADE6F198922CB3DE38D779",
+                          "Bytes":  8354
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/request-as-received.txt",
+                          "SHA256":  "9504EC160BCBF64744ABF9BEE1715047F5C3BC45B3D0FDC475FD2BEE662C2D01",
+                          "Bytes":  5876
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/review.diff",
+                          "SHA256":  "9FAA3AFCD48460F72D1F882AF5B219FC406A38A1951A3F7CAD1311345338D169",
+                          "Bytes":  29409
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/session-visible-records.jsonl",
+                          "SHA256":  "AE6A0CD94EBDBA3548A2491C76256874D29C2055359CAEB0AC7573D784C59C5F",
+                          "Bytes":  304635
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/transcript-export.json",
+                          "SHA256":  "9C3DBF93D4672D29A418EACB37018C7F1E4F697ADFE2D6946BEC9E41286280DF",
+                          "Bytes":  1602
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/validation-001.json",
+                          "SHA256":  "AA00DA86C3E59668BC32F501FE1BABFFE1E81E0C2E2DB9922AFD146DEDE49E84",
+                          "Bytes":  24292
+                      },
+                      {
+                          "Path":  "evidence/sdd-constitution-2026-10-30/verify-constitution.ps1",
+                          "SHA256":  "2764CC359FFFF598349B5025FB68479626D407D45B7B5F6B54DB06BFCAADE512",
+                          "Bytes":  8173
+                      },
+                      {
+                          "Path":  "README.md",
+                          "SHA256":  "37EF66A3385B057BC61B17B3CCFBD313B47A53AFC67A60871D50F9C05A2F6276",
+                          "Bytes":  2546
+                      }
+                  ],
+    "LaterStagesExecuted":  false,
+    "Pushed":  false,
+    "Validation":  "validation-001.json"
+}

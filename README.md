@@ -2,6 +2,17 @@
 
 **Status:** PRE-IMPLEMENTATION / shared baseline preparation, 28 October 2026. No Condition A or B application code has been implemented.
 
+## Condition B governance — 2026-10-30
+
+The opening status is the preserved historical shared-baseline label. On
+`condition/spec-driven`, the [Constitution](.specify/memory/constitution.md) is student-ratified
+version 1.0.0 as of 2026-10-30. The reviewed 0.1.0 draft was generated through the installed
+official Codex Constitution skill; [original session evidence](evidence/sdd-constitution-2026-10-30/README.md)
+retains that execution history. [Ratification evidence](evidence/sdd-ratification-2026-10-30/README.md)
+preserves the exact student approval and reviewed files. No Specify or later stage is
+authorized or executed by this ratification. Follow [AGENTS.md](AGENTS.md); preserve the
+approved inputs and keep CORE N=15 and EXTENDED N=7 results separate.
+
 This **private** Åbo Akademi Software Construction course project compares exactly two approaches:
 - **A — Vibe Coding:** natural student-approved prompts, iterative observation and correction.
 - **B — Specification-Driven Development (SDD):** official GitHub Spec Kit, requirements-first agent workflow, implementation and convergence.

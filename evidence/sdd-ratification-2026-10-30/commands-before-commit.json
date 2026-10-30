@@ -1,0 +1,242 @@
+[
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "branch",
+      "--show-current"
+    ],
+    "exit_code": 0,
+    "stdout": "condition/spec-driven\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "bc397a95f10c71b65f0562921716f9a36d8224d2\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "diff",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": ".specify/memory/constitution.md\n.specify/templates/checklist-template.md\n.specify/templates/plan-template.md\n.specify/templates/spec-template.md\n.specify/templates/tasks-template.md\nREADME.md\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "ls-files",
+      "--others",
+      "--exclude-standard"
+    ],
+    "exit_code": 0,
+    "stdout": "evidence/sdd-constitution-2026-10-30/README.md\nevidence/sdd-constitution-2026-10-30/artifact-manifest.json\nevidence/sdd-constitution-2026-10-30/authoring-changes.json\nevidence/sdd-constitution-2026-10-30/clarification-as-received.txt\nevidence/sdd-constitution-2026-10-30/completion-review.md\nevidence/sdd-constitution-2026-10-30/constitution-input.txt\nevidence/sdd-constitution-2026-10-30/pre-edit-state.json\nevidence/sdd-constitution-2026-10-30/request-as-received.txt\nevidence/sdd-constitution-2026-10-30/review.diff\nevidence/sdd-constitution-2026-10-30/session-visible-records.jsonl\nevidence/sdd-constitution-2026-10-30/transcript-export.json\nevidence/sdd-constitution-2026-10-30/validation-001.json\nevidence/sdd-constitution-2026-10-30/verify-constitution.ps1\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "rev-parse",
+      "HEAD:docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md"
+    ],
+    "exit_code": 0,
+    "stdout": "61e4f31ea150c827c92ecf785677c56af45ce04f\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "rev-parse",
+      "HEAD:docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md"
+    ],
+    "exit_code": 0,
+    "stdout": "8e45c7d20a8039491dcc91afc9e6c5cc0f270394\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "rev-parse",
+      "HEAD:docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md"
+    ],
+    "exit_code": 0,
+    "stdout": "d00a5bac308b182dcd5fc99f290089a9d15d26e5\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "ls-files"
+    ],
+    "exit_code": 0,
+    "stdout": ".agents/skills/speckit-analyze/SKILL.md\n.agents/skills/speckit-checklist/SKILL.md\n.agents/skills/speckit-clarify/SKILL.md\n.agents/skills/speckit-constitution/SKILL.md\n.agents/skills/speckit-converge/SKILL.md\n.agents/skills/speckit-implement/SKILL.md\n.agents/skills/speckit-plan/SKILL.md\n.agents/skills/speckit-specify/SKILL.md\n.agents/skills/speckit-tasks/SKILL.md\n.agents/skills/speckit-taskstoissues/SKILL.md\n.github/workflows/sdd-spec-kit-bootstrap.yml\n.gitignore\n.specify/init-options.json\n.specify/integration.json\n.specify/integrations/codex.manifest.json\n.specify/integrations/speckit.manifest.json\n.specify/memory/constitution.md\n.specify/scripts/bash/check-prerequisites.sh\n.specify/scripts/bash/common.sh\n.specify/scripts/bash/create-new-feature.sh\n.specify/scripts/bash/setup-plan.sh\n.specify/scripts/bash/setup-tasks.sh\n.specify/templates/checklist-template.md\n.specify/templates/constitution-template.md\n.specify/templates/plan-template.md\n.specify/templates/spec-template.md\n.specify/templates/tasks-template.md\n.specify/workflows/speckit/workflow.yml\n.specify/workflows/workflow-registry.json\nAGENTS.md\nREADME.md\ndocs/ASSESSMENT_MATRIX.md\ndocs/EXPERIMENT_PROTOCOL.md\ndocs/PROJECT_CHARTER_PC-001.md\ndocs/PROMPT_APPROVAL_PROTOCOL.md\ndocs/SDD-001_OFFICIAL_SPEC_KIT_KICKOFF_AI_DRAFT_2026-10-29.md\ndocs/SUBMISSION_CHECKLIST.md\ndocs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md\ndocs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md\ndocs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md\ndocs/sdd-input/SDD_003_AUTHENTIC_SPECKIT_CLI_INIT_RED_GREEN_EVIDENCE_2026-10-30.md\ndocs/sdd-input/SDD_004_NEXT_COPILOT_CONSTITUTION_PROMPT_NOT_EXECUTED.md\ndocs/sdd-input/SDD_005_CODEX_INTEGRATION_SETUP_EVIDENCE_2026-10-30.md\ndocs/sdd-input/SDD_006_NEXT_CODEX_CONSTITUTION_INPUT_NOT_EXECUTED.md\nevaluation/ACCEPTANCE_MATRIX.md\nevidence/DECISION_LOG.md\nevidence/PROMPT_LEDGER.md\nevidence/sdd-codex-setup-2026-10-30/baseline-tree.json\nevidence/sdd-codex-setup-2026-10-30/codex-login-status.txt\nevidence/sdd-codex-setup-2026-10-30/commands-and-results.txt\nevidence/sdd-codex-setup-2026-10-30/integration-after.json\nevidence/sdd-codex-setup-2026-10-30/integration-before.json\nevidence/sdd-codex-setup-2026-10-30/preservation-verification.json\nevidence/sdd-codex-setup-2026-10-30/refs-before.json\nevidence/sdd-codex-setup-2026-10-30/switch-output.txt\nshared-content/PRODUCT_BRIEF.md\nshared-content/SOURCE_MANIFEST.md\nshared-content/mission-seeds.json\nshared-content/verb-library/A2.json\nshared-content/verb-library/B1.json\nshared-content/verb-library/B2.json\nshared-content/verb-library/C1.json\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "status",
+      "--porcelain=v1",
+      "--branch",
+      "--untracked-files=all"
+    ],
+    "exit_code": 0,
+    "stdout": "## condition/spec-driven...origin/condition/spec-driven\n M .specify/memory/constitution.md\n M .specify/templates/checklist-template.md\n M .specify/templates/plan-template.md\n M .specify/templates/spec-template.md\n M .specify/templates/tasks-template.md\n M README.md\n?? evidence/sdd-constitution-2026-10-30/README.md\n?? evidence/sdd-constitution-2026-10-30/artifact-manifest.json\n?? evidence/sdd-constitution-2026-10-30/authoring-changes.json\n?? evidence/sdd-constitution-2026-10-30/clarification-as-received.txt\n?? evidence/sdd-constitution-2026-10-30/completion-review.md\n?? evidence/sdd-constitution-2026-10-30/constitution-input.txt\n?? evidence/sdd-constitution-2026-10-30/pre-edit-state.json\n?? evidence/sdd-constitution-2026-10-30/request-as-received.txt\n?? evidence/sdd-constitution-2026-10-30/review.diff\n?? evidence/sdd-constitution-2026-10-30/session-visible-records.jsonl\n?? evidence/sdd-constitution-2026-10-30/transcript-export.json\n?? evidence/sdd-constitution-2026-10-30/validation-001.json\n?? evidence/sdd-constitution-2026-10-30/verify-constitution.ps1\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "rev-parse",
+      "HEAD:docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md"
+    ],
+    "exit_code": 0,
+    "stdout": "61e4f31ea150c827c92ecf785677c56af45ce04f\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "rev-parse",
+      "HEAD:docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md"
+    ],
+    "exit_code": 0,
+    "stdout": "8e45c7d20a8039491dcc91afc9e6c5cc0f270394\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "rev-parse",
+      "HEAD:docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md"
+    ],
+    "exit_code": 0,
+    "stdout": "d00a5bac308b182dcd5fc99f290089a9d15d26e5\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "diff",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "stdout": ".specify/memory/constitution.md\n.specify/templates/checklist-template.md\n.specify/templates/plan-template.md\n.specify/templates/spec-template.md\n.specify/templates/tasks-template.md\nREADME.md\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "ls-files",
+      "--others",
+      "--exclude-standard"
+    ],
+    "exit_code": 0,
+    "stdout": "evidence/sdd-constitution-2026-10-30/README.md\nevidence/sdd-constitution-2026-10-30/artifact-manifest.json\nevidence/sdd-constitution-2026-10-30/authoring-changes.json\nevidence/sdd-constitution-2026-10-30/clarification-as-received.txt\nevidence/sdd-constitution-2026-10-30/completion-review.md\nevidence/sdd-constitution-2026-10-30/constitution-input.txt\nevidence/sdd-constitution-2026-10-30/pre-edit-state.json\nevidence/sdd-constitution-2026-10-30/request-as-received.txt\nevidence/sdd-constitution-2026-10-30/review.diff\nevidence/sdd-constitution-2026-10-30/session-visible-records.jsonl\nevidence/sdd-constitution-2026-10-30/transcript-export.json\nevidence/sdd-constitution-2026-10-30/validation-001.json\nevidence/sdd-constitution-2026-10-30/verify-constitution.ps1\nevidence/sdd-ratification-2026-10-30/README.md\nevidence/sdd-ratification-2026-10-30/ratification-record.json\nevidence/sdd-ratification-2026-10-30/ratification-request-as-received.txt\nevidence/sdd-ratification-2026-10-30/refs-before.json\nevidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/memory/constitution.md\nevidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/templates/checklist-template.md\nevidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/templates/plan-template.md\nevidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/templates/spec-template.md\nevidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/.specify/templates/tasks-template.md\nevidence/sdd-ratification-2026-10-30/reviewed-v0.1.0/README.md\nevidence/sdd-ratification-2026-10-30/student-approval-extract.txt\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "bc397a95f10c71b65f0562921716f9a36d8224d2\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "branch",
+      "--show-current"
+    ],
+    "exit_code": 0,
+    "stdout": "condition/spec-driven\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "--no-optional-locks",
+      "-C",
+      "E:\\DevStorage\\nordljud-swcon2627-r2",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

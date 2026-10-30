@@ -1,0 +1,438 @@
+{
+    "GitVersion":  [
+                       "git version 2.47.1.windows.1"
+                   ],
+    "Passed":  true,
+    "RuntimeTests":  "NOT TESTED",
+    "StartingHEAD":  "bc397a95f10c71b65f0562921716f9a36d8224d2",
+    "CurrentHEAD":  "bc397a95f10c71b65f0562921716f9a36d8224d2",
+    "Commands":  [
+                     {
+                         "Output":  [
+                                        "condition/spec-driven"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "branch",
+                                           "--show-current"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "bc397a95f10c71b65f0562921716f9a36d8224d2"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "rev-parse",
+                                           "HEAD"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "61e4f31ea150c827c92ecf785677c56af45ce04f"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "rev-parse",
+                                           "HEAD:docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "ab088da7fedb0a929a3d9cb467c74d0cd732a17c"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "hash-object",
+                                           "--no-filters",
+                                           "--",
+                                           "docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "8e45c7d20a8039491dcc91afc9e6c5cc0f270394"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "rev-parse",
+                                           "HEAD:docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "fc93121f74fd6d3298b68d1e9cc651dfc013b80d"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "hash-object",
+                                           "--no-filters",
+                                           "--",
+                                           "docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "d00a5bac308b182dcd5fc99f290089a9d15d26e5"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "rev-parse",
+                                           "HEAD:docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "690bb721a096a3253f75c0f3a887594e74328cb0"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "hash-object",
+                                           "--no-filters",
+                                           "--",
+                                           "docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        ".specify/memory/constitution.md",
+                                        ".specify/templates/checklist-template.md",
+                                        ".specify/templates/plan-template.md",
+                                        ".specify/templates/spec-template.md",
+                                        ".specify/templates/tasks-template.md",
+                                        "README.md"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "diff",
+                                           "--no-ext-diff",
+                                           "--no-textconv",
+                                           "--name-only"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "diff",
+                                           "--cached",
+                                           "--no-ext-diff",
+                                           "--no-textconv",
+                                           "--name-only"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "evidence/sdd-constitution-2026-10-30/README.md",
+                                        "evidence/sdd-constitution-2026-10-30/authoring-changes.json",
+                                        "evidence/sdd-constitution-2026-10-30/constitution-input.txt",
+                                        "evidence/sdd-constitution-2026-10-30/pre-edit-state.json",
+                                        "evidence/sdd-constitution-2026-10-30/request-as-received.txt",
+                                        "evidence/sdd-constitution-2026-10-30/verify-constitution.ps1"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "ls-files",
+                                           "--others",
+                                           "--exclude-standard"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "refs/remotes/origin/freeze/v009-vibe-research-2026-10-29 0b5a4a58631503c3a454ecc36d62b892c569ef14"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "for-each-ref",
+                                           "--format=%(refname) %(objectname)",
+                                           "refs/heads/freeze/v009-vibe-research-2026-10-29",
+                                           "refs/remotes/origin/freeze/v009-vibe-research-2026-10-29"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "-c",
+                                           "core.whitespace=cr-at-eol",
+                                           "diff",
+                                           "--check",
+                                           "--no-ext-diff",
+                                           "--no-textconv"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "git version 2.47.1.windows.1"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "--version"
+                                       ],
+                         "Executable":  "git"
+                     },
+                     {
+                         "Output":  [
+                                        "## condition/spec-driven...origin/condition/spec-driven",
+                                        " M .specify/memory/constitution.md",
+                                        " M .specify/templates/checklist-template.md",
+                                        " M .specify/templates/plan-template.md",
+                                        " M .specify/templates/spec-template.md",
+                                        " M .specify/templates/tasks-template.md",
+                                        " M README.md",
+                                        "?? evidence/sdd-constitution-2026-10-30/README.md",
+                                        "?? evidence/sdd-constitution-2026-10-30/authoring-changes.json",
+                                        "?? evidence/sdd-constitution-2026-10-30/constitution-input.txt",
+                                        "?? evidence/sdd-constitution-2026-10-30/pre-edit-state.json",
+                                        "?? evidence/sdd-constitution-2026-10-30/request-as-received.txt",
+                                        "?? evidence/sdd-constitution-2026-10-30/verify-constitution.ps1"
+                                    ],
+                         "ExitCode":  0,
+                         "Arguments":  [
+                                           "-C",
+                                           "E:\\DevStorage\\nordljud-swcon2627-r2",
+                                           "--no-optional-locks",
+                                           "status",
+                                           "--porcelain=v1",
+                                           "--branch",
+                                           "--untracked-files=all"
+                                       ],
+                         "Executable":  "git"
+                     }
+                 ],
+    "Ratification":  "PENDING",
+    "Kind":  "Constitution documentary/preservation checks; not application acceptance",
+    "ResultPath":  "E:\\DevStorage\\nordljud-swcon2627-r2\\evidence\\sdd-constitution-2026-10-30\\validation-001.json",
+    "Timezone":  "Europe/Helsinki",
+    "LaterStages":  "NOT EXECUTED",
+    "Date":  "2026-10-30",
+    "Checks":  [
+                   {
+                       "Status":  "PASS",
+                       "Name":  "branch_and_starting_revision",
+                       "Details":  {
+                                       "HEAD":  "bc397a95f10c71b65f0562921716f9a36d8224d2",
+                                       "Branch":  "condition/spec-driven"
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "approved_input:docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md",
+                       "Details":  {
+                                       "UnchangedBytes":  true,
+                                       "LFNormalizedBlob":  "61e4f31ea150c827c92ecf785677c56af45ce04f",
+                                       "RawWorkingBlob":  "ab088da7fedb0a929a3d9cb467c74d0cd732a17c",
+                                       "Normalization":  "in memory only",
+                                       "RawSHA256":  "B088E1D7F7E3499BCB88CB3B4AB36478BB504B6442DAD35B332D010D81AE20C6",
+                                       "HEADBlob":  "61e4f31ea150c827c92ecf785677c56af45ce04f",
+                                       "ExpectedBlob":  "61e4f31ea150c827c92ecf785677c56af45ce04f"
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "approved_input:docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md",
+                       "Details":  {
+                                       "UnchangedBytes":  true,
+                                       "LFNormalizedBlob":  "8e45c7d20a8039491dcc91afc9e6c5cc0f270394",
+                                       "RawWorkingBlob":  "fc93121f74fd6d3298b68d1e9cc651dfc013b80d",
+                                       "Normalization":  "in memory only",
+                                       "RawSHA256":  "F662CF24D91DC77A3F6A5AA1F55BEAE46674723627883088117BCF82FFD0A9E1",
+                                       "HEADBlob":  "8e45c7d20a8039491dcc91afc9e6c5cc0f270394",
+                                       "ExpectedBlob":  "8e45c7d20a8039491dcc91afc9e6c5cc0f270394"
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "approved_input:docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md",
+                       "Details":  {
+                                       "UnchangedBytes":  true,
+                                       "LFNormalizedBlob":  "d00a5bac308b182dcd5fc99f290089a9d15d26e5",
+                                       "RawWorkingBlob":  "690bb721a096a3253f75c0f3a887594e74328cb0",
+                                       "Normalization":  "in memory only",
+                                       "RawSHA256":  "806D9EDADFBBB30BFCC23B4AD875D314DDF37E8C30407B615F7298A057F1AE93",
+                                       "HEADBlob":  "d00a5bac308b182dcd5fc99f290089a9d15d26e5",
+                                       "ExpectedBlob":  "d00a5bac308b182dcd5fc99f290089a9d15d26e5"
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "tracked_change_scope",
+                       "Details":  {
+                                       "Unexpected":  [
+
+                                                      ],
+                                       "Actual":  [
+                                                      ".specify/memory/constitution.md",
+                                                      ".specify/templates/checklist-template.md",
+                                                      ".specify/templates/plan-template.md",
+                                                      ".specify/templates/spec-template.md",
+                                                      ".specify/templates/tasks-template.md",
+                                                      "README.md"
+                                                  ],
+                                       "Missing":  [
+
+                                                   ],
+                                       "Staged":  [
+
+                                                  ]
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "new_file_scope",
+                       "Details":  {
+                                       "Unexpected":  [
+
+                                                      ],
+                                       "Files":  [
+                                                     "evidence/sdd-constitution-2026-10-30/README.md",
+                                                     "evidence/sdd-constitution-2026-10-30/authoring-changes.json",
+                                                     "evidence/sdd-constitution-2026-10-30/constitution-input.txt",
+                                                     "evidence/sdd-constitution-2026-10-30/pre-edit-state.json",
+                                                     "evidence/sdd-constitution-2026-10-30/request-as-received.txt",
+                                                     "evidence/sdd-constitution-2026-10-30/verify-constitution.ps1"
+                                                 ]
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "no_unexplained_constitution_placeholders",
+                       "Details":  {
+                                       "Deferred":  [
+                                                        "RATIFICATION_DATE"
+                                                    ],
+                                       "BracketTokens":  [
+
+                                                         ]
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "version_dates_and_review_status",
+                       "Details":  {
+                                       "Ratification":  "PENDING",
+                                       "Drafted":  "2026-10-30",
+                                       "Version":  "0.1.0"
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "template_heading_hierarchy",
+                       "Details":  {
+                                       "Principles":  [
+                                                          "I",
+                                                          "II",
+                                                          "III",
+                                                          "IV",
+                                                          "V",
+                                                          "VI",
+                                                          "VII",
+                                                          "VIII"
+                                                      ]
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "no_unqualified_should_rules",
+                       "Details":  "Normative rules use MUST; substantive review is recorded separately."
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "post_execution_hook_file_absent",
+                       "Details":  {
+                                       "Exists":  false,
+                                       "HooksExecuted":  false
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "cached_freeze_anchor_unchanged",
+                       "Details":  {
+                                       "Observed":  [
+                                                        "refs/remotes/origin/freeze/v009-vibe-research-2026-10-29 0b5a4a58631503c3a454ecc36d62b892c569ef14"
+                                                    ],
+                                       "Limitation":  "Cached ref only; no remote contact. Local freeze ref absent at start."
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "received_request_exact_bytes",
+                       "Details":  {
+                                       "SourceSHA256":  "9504EC160BCBF64744ABF9BEE1715047F5C3BC45B3D0FDC475FD2BEE662C2D01",
+                                       "CopySHA256":  "9504EC160BCBF64744ABF9BEE1715047F5C3BC45B3D0FDC475FD2BEE662C2D01"
+                                   }
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "exact_constitution_block_retained",
+                       "Details":  "Exact text extracted from the received wrapper, not reconstructed."
+                   },
+                   {
+                       "Status":  "PASS",
+                       "Name":  "git_diff_whitespace",
+                       "Details":  [
+
+                                   ]
+                   }
+               ],
+    "GitStatus":  [
+                      "## condition/spec-driven...origin/condition/spec-driven",
+                      " M .specify/memory/constitution.md",
+                      " M .specify/templates/checklist-template.md",
+                      " M .specify/templates/plan-template.md",
+                      " M .specify/templates/spec-template.md",
+                      " M .specify/templates/tasks-template.md",
+                      " M README.md",
+                      "?? evidence/sdd-constitution-2026-10-30/README.md",
+                      "?? evidence/sdd-constitution-2026-10-30/authoring-changes.json",
+                      "?? evidence/sdd-constitution-2026-10-30/constitution-input.txt",
+                      "?? evidence/sdd-constitution-2026-10-30/pre-edit-state.json",
+                      "?? evidence/sdd-constitution-2026-10-30/request-as-received.txt",
+                      "?? evidence/sdd-constitution-2026-10-30/verify-constitution.ps1"
+                  ]
+}

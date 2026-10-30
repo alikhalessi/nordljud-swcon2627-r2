@@ -1,0 +1,11 @@
+Record the student's authorized ratification of the existing Nordljud Constitution draft. Do not rerun Constitution or execute Specify or any later stage.
+Read AGENTS.md. Confirm branch condition/spec-driven and HEAD bc397a95f10c71b65f0562921716f9a36d8224d2. Expect the existing six reviewed modified files and the new Constitution evidence directory; preserve that work.
+Verify the draft Constitution's raw SHA-256 is:
+90B8BDF5E5657F84102AF65BA6D49F5027B88CE994824FA1D2BBE15DBF4E9CE4
+The following is an exact extract of the student's approval, not the complete conversation message:
+«متن Constitution نسخهٔ 0.1.0 و تغییرات همراه آن را مطالعه و تأیید کردم. اجازه می‌دهم تصویب آن به‌عنوان نسخهٔ 1.0.0 و شواهد واقعی تأیید من ثبت شود و تغییرات فقط در شاخهٔ condition/spec-driven کامیت و پوش شوند. فعلاً Specify یا مراحل بعدی اجرا نشوند.»
+Preserve the reviewed v0.1.0 draft and all original execution evidence. Record this approval verbatim in new ratification evidence. Ratify the approved content as v1.0.0, using the actual approval date, 2026-10-30 Europe/Helsinki. Update only the necessary version, ratification and status references; do not change substantive principles.
+Verify approved MBR-B-002, EP-B-001 and verbatim prior approvals remain unchanged, including their working-copy bytes. Preserve historical evidence and the Vibe freeze.
+Review the final diff and staged paths. Commit the reviewed Constitution changes and evidence, then push only condition/spec-driven using a normal fast-forward push. Do not force-push. Stop if unexpected changes or remote divergence appear.
+No Supabase, production, paid-service, deployment or other-branch changes. Do not execute Specify.
+Return the exact commit SHA, push result, final Git status, preservation results and any limitations. Do not record planning estimates as measured execution time.

@@ -34,6 +34,13 @@
 
 ## Notes
 
+- Review requirements against the ratified Nordljud Constitution and map applicable F/EXT-AC IDs.
+- Keep CORE N=15 and EXTENDED N=7 evaluation separate, with exact artifact revisions.
+- A checked requirements-quality item is not a runtime test result or student approval.
+- Runtime claims require actual PASS/FAIL/BLOCKED/NOT TESTED evidence and a tested SHA.
+- Unavailable prerequisites and unresolved human gates remain explicit; no stage/service authorization
+  is implied by this checklist.
+
 - Check items off as completed: `[x]`
 - Add comments or findings inline
 - Link to relevant resources or documentation
