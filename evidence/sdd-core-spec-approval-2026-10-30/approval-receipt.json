@@ -1,0 +1,40 @@
+{
+  "status": "APPROVED BY STUDENT",
+  "specification_revision": "0.3.1",
+  "approval_exact_extract": "من گفتم تأیید نهایی انجام شد یعنی من کانفرم کردم.",
+  "approval_date": "2026-10-30",
+  "approval_timezone": "Europe/Helsinki",
+  "source_timestamp_utc": "2026-10-30T10:25:20.529Z",
+  "recorded_at_utc": "2026-10-30T10:27:13.721396+00:00",
+  "source_session": "C:\\Users\\alikh\\.codex\\sessions\\2026\\10\\30\\rollout-2026-10-30T01-14-05-01a189f1-258e-7cb2-b93d-e5fb3b56db4c.jsonl",
+  "session_id": "01a189f1-258e-7cb2-b93d-e5fb3b56db4c",
+  "approval_source_line": 1215,
+  "version_confirmation_question_line": 1208,
+  "scope": "Final approval of reviewed Nordljud CORE v0.3.1 requirements, scenarios and acceptance mappings, with its document-quality checklist.",
+  "approved_artifact_sha256": {
+    "specs/001-nordljud-core/spec.md": "A72604B80878A924486FFB632FBF50748B3AD5777DFD874FF7A78EBB8C69EC60",
+    "specs/001-nordljud-core/checklists/requirements.md": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+    "C:\\Users\\alikh\\Documents\\Codex\\2026-10-30\\referenced-chatgpt-conversation-this-is-an\\outputs\\Nordljud_CORE_spec_v0.3.1_FOR_REVIEW.md": "A72604B80878A924486FFB632FBF50748B3AD5777DFD874FF7A78EBB8C69EC60",
+    "C:\\Users\\alikh\\Documents\\Codex\\2026-10-30\\referenced-chatgpt-conversation-this-is-an\\outputs\\Nordljud_CORE_requirements_checklist_v0.3.1.md": "DB7692F321703FEB6475658BBBAF35E6C4421BBD670CE0ED29BDBE04F4DD45B3"
+  },
+  "status_history": "Earlier PENDING labels describe the pre-approval state and remain unchanged; this dated hash-bound receipt records the later approval.",
+  "starting_and_current_head": "7ab6822ad5ac2411b3453911ad9abfb9e098783c",
+  "branch": "condition/spec-driven",
+  "approved_artifacts_modified": false,
+  "constitution_or_templates_modified": false,
+  "all_application_cases": "NOT TESTED",
+  "application_cases_count": 15,
+  "later_stage_authorization": "NOT GRANTED BY THIS APPROVAL",
+  "clarify_executed": false,
+  "plan_executed": false,
+  "commit_authorized": false,
+  "push_authorized": false,
+  "staged": false,
+  "committed": false,
+  "pushed": false,
+  "unchanged_limitations": [
+    "D02 independent authorized provider/two-account environment remains unverified.",
+    "D03 source accuracy and publication rights remain unverified.",
+    "Edge/Windows responsive viewport profile is not a physical-device or broader accessibility certification."
+  ]
+}

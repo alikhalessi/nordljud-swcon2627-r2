@@ -1,0 +1,12 @@
+# Context from my IDE setup:
+
+## Active file: c:\Users\alikh\Documents\Codex\2026-10-30\referenced-chatgpt-conversation-this-is-an\outputs\Nordljud_CORE_v0.3.0_Execution_Evidence.md
+
+## Open tabs:
+- Nordljud_CORE_v0.3.0_Execution_Evidence.md: c:\Users\alikh\Documents\Codex\2026-10-30\referenced-chatgpt-conversation-this-is-an\outputs\Nordljud_CORE_v0.3.0_Execution_Evidence.md
+- Nordljud_CORE_requirements_checklist_v0.3.0.md: c:\Users\alikh\Documents\Codex\2026-10-30\referenced-chatgpt-conversation-this-is-an\outputs\Nordljud_CORE_requirements_checklist_v0.3.0.md
+- Nordljud_CORE_spec_v0.3.0_FOR_REVIEW.md: c:\Users\alikh\Documents\Codex\2026-10-30\referenced-chatgpt-conversation-this-is-an\outputs\Nordljud_CORE_spec_v0.3.0_FOR_REVIEW.md
+- Nordljud_Constitution_v1.0.0_Publication_Receipt.json: c:\Users\alikh\Documents\Codex\2026-10-30\referenced-chatgpt-conversation-this-is-an\outputs\Nordljud_Constitution_v1.0.0_Publication_Receipt.json
+
+## My request:
+با پیشنهاد جلو می‌ریم و من کنفرمیشن رو بعد از اجرای تغییراتی که مد نظرت بود بهت می‌دم. پس منتظر کنفرمیشن بعدی من نباش و شروع کن.

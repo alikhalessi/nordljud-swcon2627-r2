@@ -1,0 +1,258 @@
+# Feature Specification: Nordljud CORE Learning and Private Progress
+
+**Feature Branch**: `condition/spec-driven`
+
+**Created**: 2026-10-30 (Europe/Helsinki)
+
+**Status**: Draft v0.3.1 — Q1=B, Q2=B, Q3=B and D01 profile recorded; specification-quality checklist complete; full human approval and later-stage authorization PENDING.
+
+**Input**: The student's `$speckit-specify` instruction authorizes only one CORE specification, its quality checklist, required feature metadata and new execution evidence. The exact received request and invocation are retained in `../../evidence/sdd-specify-core-2026-10-30/`.
+
+## Constitution Alignment *(mandatory)*
+
+- **Governance**: Constitution v1.0.0, ratified 2026-10-30; approval and reviewed content are recorded in `../../evidence/sdd-ratification-2026-10-30/`. Starting HEAD is `7ab6822ad5ac2411b3453911ad9abfb9e098783c`. This specification is a new unapproved working-copy artifact, not content committed at that SHA.
+- **Scope**: CORE/PRIMARY F01–F15, N=15, only. This one feature covers the common classroom learning MVP and its evaluation obligations. E01–E07/EXT-AC01–07 are excluded from this feature and retain their separate SECONDARY N=7 denominator.
+- **Traceability**: MBR-B-002 Git blob `61e4f31ea150c827c92ecf785677c56af45ce04f`; SDD_002 verbatim approval blob `d00a5bac308b182dcd5fc99f290089a9d15d26e5`; original charter, product brief, source manifest and acceptance matrix. EP-B-001 blob `8e45c7d20a8039491dcc91afc9e6c5cc0f270394` is consulted only for the secondary-scope boundary. Historical AI_DRAFT labels are preserved; SDD_002 records their later exact approval.
+- **Review**: Specify is authorized by the current user invocation. The student answered Q1–Q3 with B/B/B; the revised specification and checklist still require full human review. No Clarify, Plan, standalone Checklist, Tasks, Analyze, Implement or Converge stage is executed or authorized by creating this document. No commit or push is authorized.
+
+The immutable primary acceptance matrix is not rewritten. The mapping below specifies observable outcomes and intended evidence for the existing F01–F15 cases; it does not add cases to their denominator. Requirements-quality checks are separate from runtime results. Every application case remains **NOT TESTED** in this document-only stage.
+
+Only the neutral common inputs and current SDD documents inform this feature. No Vibe implementation, tests, design, screenshots, fixes, ledgers or retrospective are inputs. The frozen Vibe anchor remains `0b5a4a58631503c3a454ecc36d62b892c569ef14`. No external provider access, expenditure or deployment is inferred from the approved requirements.
+
+## User Scenarios & Testing *(mandatory)*
+
+All scenarios below describe future acceptance observations, not tests performed during Specify. Priorities describe user value and sequencing; every mapped CORE obligation remains required.
+
+### User Story 1 - Explore the complete source lexicon (Priority: P1)
+
+As a learner, I want to find a verb meaning at my level and inspect its authentic forms and examples so that I study the intended sense rather than an invented or merged entry.
+
+**Why this priority**: Reliable access to the common teaching data is the foundation for the other learning journeys.
+
+**Independent Test**: In a permitted Guest browser session, choose each level, search supplied verb spellings, inspect entries and compare displayed values with the exact frozen source inputs. Authentication is not required for this journey.
+
+**Acceptance Scenarios**:
+
+1. **US1.1 — F05:** Given a selected level among A2, B1, B2 and C1, when the learner browses the full collection, then all 456 distinct sense records for that level are retrievable; 455 distinct written spellings are not misreported as 456 unique spellings.
+2. **US1.2 — F05:** Given an exact supplied written-verb query, when the learner searches, then its matching sense entries can be retrieved and individually selected; matching a spelling does not collapse multiple meanings into one entry.
+3. **US1.3 — F02/F05:** Given a selected sense, when its details are shown, then the supplied English meaning, five verb forms and Swedish/English examples are displayed where present. Missing, blank, placeholder or editorial em-dash fields are identified as unavailable and are not invented or used as answer keys.
+4. **US1.4 — F06:** Given the two `sticka` senses, when the learner selects or favorites either meaning, then its meaning, examples and favorite state remain distinguishable from the other sense under the selected Guest/account policy.
+5. **US1.5 — F07:** Given a selected sense with a legitimate counterpart in a target level, when the learner changes level, then the same semantic meaning remains selected and the examples belong to the target level.
+6. **US1.6 — F07:** Given no legitimate counterpart, when the learner changes to the target level, then the absence is explained, active selection in that level is cleared and study/practice requiring a selected sense waits for a new explicit selection. No unrelated sense is substituted and existing favorites/studied records are not deleted.
+
+### User Story 2 - Study an authentic mission with optional speech (Priority: P1)
+
+As a learner, I want a representative mission at each level, optional English assistance and supported Swedish pronunciation so that I can study source-backed material in a form I can understand.
+
+**Why this priority**: This is the basic source-linked learning path described in the common product brief.
+
+**Independent Test**: As a Guest, select all four levels, inspect each representative mission, toggle English assistance and exercise speech-supported and speech-unavailable conditions in an authorized browser/audio profile.
+
+**Acceptance Scenarios**:
+
+1. **US2.1 — F01:** Given any of the four levels, when its mission is opened, then a distinct level-appropriate representative mission is presented from the frozen mission inputs; this is not a daily lesson or newly authored curriculum.
+2. **US2.2 — F02:** Given source-backed Swedish text and English assistance, when assistance is revealed or hidden, then the underlying Swedish example and its meaning remain unchanged and source-linked.
+3. **US2.3 — F03:** Given supported Swedish speech, when pronunciation is requested, then it uses the authentic selected stored text and requests Swedish (`sv-SE`). When speech is unsupported or unavailable, the learner receives meaningful feedback and can continue reading and practice without a false claim that speech succeeded.
+
+### User Story 3 - Practise with honest feedback (Priority: P1)
+
+As a learner, I want a comprehension check and a verb-form check with truthful feedback so that a wrong or revealed answer is not counted as correct learning performance.
+
+**Why this priority**: Practice feedback is part of the common classroom MVP and must remain trustworthy before progress is saved.
+
+**Independent Test**: For source-supported mission checks, submit correct and incorrect answers and reveal an answer, retaining the observed feedback and correctness-credit outcomes for each check type.
+
+**Acceptance Scenarios**:
+
+1. **US3.1 — F04:** Given a comprehension check with a supplied valid answer, when a correct or incorrect answer is submitted, then the result is identified accurately and incorrect answers receive no correctness credit.
+2. **US3.2 — F04:** Given a verb-form check with a supplied valid form, when a correct or incorrect form is submitted, then the result is identified accurately and incorrect answers receive no correctness credit.
+3. **US3.3 — F04:** Given either check type, when its answer is revealed, then the reveal is distinguished from an independently correct response and earns no correctness credit. Any later retry must reflect the actual response rather than retroactively converting the reveal into credit.
+4. **US3.4 — F04/F14:** Given a missing or unusable source field, when a check would require that field, then the application explains that the check is unavailable and does not invent a question answer, award credit or prevent other supported study activity.
+
+### User Story 4 - Return to learning as a Guest (Priority: P1)
+
+As a learner who has not signed in, I want the supported learning path and clearly bounded saved Guest state so that I can resume appropriately without my records entering another person's account.
+
+**Why this priority**: Guest access must remain useful when an account is unwanted or an external service is unavailable.
+
+**Independent Test**: Complete the basic Guest study/practice journey, create the agreed Guest state, refresh the same browser and inspect its retention and clearing boundaries. Then sign into a separate legitimate account and check that no unapproved Guest/account mixing occurs.
+
+**Acceptance Scenarios**:
+
+1. **US4.1 — F08:** Given no authenticated account, when the learner opens the application, then level selection, source-backed mission reading, lexicon exploration and supported practice are usable without signing in.
+2. **US4.2 — F08:** Given a Guest's selected level/sense, per-sense favorites/studied state and current mission/practice activity, when the same browser is refreshed, then level/selection/favorites/studied state is retained, while Guest mission-completion and practice-result state is not retained. These records stay browser-scoped; clearing the browser's application data removes its Guest records. No cross-browser continuity, new clearing interface or retention timer is implied.
+3. **US4.3 — F08/F11/F12:** Given Guest state and a legitimate account sign-in, when the user changes identity context, then Guest and account records remain separate, with no Guest-to-account import or automatic merge. Neither context exposes another account's private state.
+
+### User Story 5 - Keep account learning records private (Priority: P2)
+
+As an authenticated learner, I want supported sign-in, clear session controls and private saved learning state so that I can return to my records without exposing them to another account.
+
+**Why this priority**: Persistent account use adds value beyond the independently useful Guest path and introduces mandatory ownership and external-verification obligations.
+
+**Independent Test**: In a separately authorized independent SDD test environment, exercise email and Google sign-in, save supported state, refresh and sign out/in, and use two legitimate test users to verify positive ownership and negative cross-account cases. No such environment is configured or exercised by this Specify stage.
+
+**Acceptance Scenarios**:
+
+1. **US5.1 — F09:** Given an authorized functioning email provider environment, when a learner registers, supplies invalid credentials, signs in or signs out, then each outcome and the active session state are communicated truthfully without disclosing another user's information.
+2. **US5.2 — F10:** Given an authorized hosted origin and configured Google sign-in, when a learner completes the provider flow, then the learner returns to that hosted origin, not localhost, with a demonstrably valid application session. A redirect alone is not evidence of authentication.
+3. **US5.3 — F09/F14:** Given an unavailable provider or an expired/rejected session, when an account operation is attempted, then the application gives actionable, non-disclosing feedback, does not imply a valid session and preserves the supported Guest learning path.
+4. **US5.4 — F11:** Given an authenticated owner with favorites, studied status, explicitly self-reported mission completion and latest practice results, when the owner refreshes, signs out/in and uses another device where permitted, then those owned records are restored without unintended loss. Completion stays separate from practice correctness or mastery; a full attempt history is not required. Device coverage and unavailable service conditions are reported explicitly.
+5. **US5.5 — F12:** Given legitimate users A and B with distinct synthetic records, when either attempts to read, create, modify or delete records as the other owner, then ownership is enforced on the server and unauthorized operations fail. Successful own-record operations are checked separately; hidden controls alone are insufficient.
+
+### User Story 6 - Use essential controls and recover from failures (Priority: P1)
+
+As a learner, I want usable essential controls and truthful error handling so that keyboard use, a narrow screen or an unavailable dependency does not silently produce false progress or expose private information.
+
+**Why this priority**: These are cross-cutting obligations for the basic learning and account journeys, not optional polish.
+
+**Independent Test**: In Edge on Windows at 1280×800 and 360×800 CSS-pixel viewports, exercise essential study/navigation/login with keyboard alone; observe focus, labels, feedback and safe failures. Record actual browser/OS versions and viewport conditions at execution; this is not a physical-phone certification.
+
+**Acceptance Scenarios**:
+
+1. **US6.1 — F13:** Given keyboard-only use, when the learner follows essential study, navigation and login flows, then required controls are reachable and usable with visible focus, meaningful labels and understandable feedback.
+2. **US6.2 — F13:** Given Edge on Windows at the D01 desktop 1280×800 and narrow 360×800 CSS-pixel viewports, when those same flows are exercised, then essential controls and feedback remain usable, including keyboard operation and visible focus. Only actual tested coverage is claimed; a responsive desktop viewport is not evidence of physical-phone compatibility.
+3. **US6.3 — F14:** Given a supported operation that fails, when the learner receives an error, then the feedback explains an appropriate next action or supported Guest fallback without exposing secrets, another account's data or false success.
+4. **US6.4 — F14:** Given a reviewed application artifact and evidence set, when credential exposure is assessed, then no privileged secret is present in browser-delivered material or public source/evidence. This requirement is not a claim that a security audit ran here.
+
+### User Story 7 - Reproduce the CORE evaluation honestly (Priority: P2)
+
+As the student-researcher or assessor, I want traceable, reproducible evaluation records so that observed outcomes can be compared without replacing missing evidence with claims.
+
+**Why this priority**: The project is a construction-method experience report; traceability and honest limitations are part of the agreed outcome.
+
+**Independent Test**: From a later reviewed SDD snapshot, follow the recorded installation and declared type-check/test/build procedures, then independently reproduce the existing acceptance cases with actual environment, expected/observed outcomes and tested revision.
+
+**Acceptance Scenarios**:
+
+1. **US7.1 — F15:** Given a later tested snapshot, when its recorded setup and verification procedure is followed, then exact source revision, teaching input identities, dependency/tool versions, commands, outputs, exit codes and unavailable prerequisites are available for reproduction.
+2. **US7.2 — F15/all CORE cases:** Given evaluation results, when the primary score is reported, then all 15 original cases receive one of PASS, FAIL, BLOCKED or NOT TESTED at the exact tested SHA, with the four counts summing to N=15. Unit-test totals do not replace acceptance-case results; a future secondary suite remains separately reported at N=7.
+
+### Edge Cases
+
+- The same written verb has two senses; selection, examples and favorites must not merge them.
+- A supplied form, translation or example is blank, a placeholder or an editorial em dash; missing content remains unavailable and must not become an invented answer.
+- The selected sense has no legitimate target-level counterpart; explain the absence, clear active selection in the target level and wait for a new explicit selection without deleting existing per-sense saved records.
+- A search produces no matching supplied spelling; show a truthful empty result, not fabricated vocabulary.
+- A wrong answer or reveal is followed by retry, refresh or sign-in; no unearned correctness credit is created.
+- A Guest refresh retains only level/selected sense and per-sense favorites/studied state, not mission-completion or practice-result state. Browser application-data clearing removes Guest records; sign-in never imports or merges them into an account.
+- The learner marks mission completion before or after wrong, revealed or unavailable checks; record completion only as explicit self-report, without granting correctness credit or implying assessed success/mastery. Practice outcomes remain separate.
+- Provider cancellation, rejection, expired sessions, network loss or failed persistence must not imply successful authentication or saving.
+- User A attempts every supported record operation as user B; server ownership must hold even when the visible interface is bypassed.
+- Swedish speech or an appropriate voice is unavailable; reading and supported practice remain usable.
+- Keyboard use or a narrow screen exposes a hidden/unreachable control; the relevant F13 observation must not be reported as PASS.
+- A source artifact compiles or a provider returns a redirect while runtime behavior remains unobserved; F09–F14 cannot be inferred to pass.
+- Source rights or linguistic validation are unverified; no publication permission or educational certification is invented.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001 — F01**: The learner MUST be able to select A2, B1, B2 or C1 and open a distinct representative source-linked mission for each level.
+- **FR-002 — F02**: Displayed Swedish examples and English assistance MUST agree with the frozen inputs; revealing/hiding assistance MUST preserve the underlying example and meaning.
+- **FR-003 — F03**: The learner MUST be able to request Swedish pronunciation of authentic selected stored text where supported, and receive meaningful unavailability feedback otherwise without losing supported study/practice access.
+- **FR-004 — F04**: Each source-supported representative mission MUST offer one comprehension check and one verb-form check with independently verifiable correct/incorrect feedback.
+- **FR-005 — F04/F14**: Incorrect and revealed answers MUST earn no correctness credit. Reveals, retries and unavailable answer fields MUST remain distinguishable from correct responses; missing valid source content MUST NOT be invented or treated as correct.
+- **FR-006 — F05**: All 456 sense records per level MUST be retrievable and searchable by supplied verb spelling. Sense details MUST show supplied meanings, five verb forms and source examples where present, with honest missing-field behavior.
+- **FR-007 — F06**: The two `sticka` meanings MUST retain independently selectable sense identity, correct meaning/examples and independent favorite state across every supported persistence context.
+- **FR-008 — F07**: Changing level MUST retain a legitimate semantic counterpart with target-level examples. When no counterpart exists, the absence MUST be explained and active selection in the target level MUST be cleared until the learner explicitly selects another sense. No unrelated meaning may be substituted, and existing per-sense favorites/studied records MUST remain intact.
+- **FR-009 — F08**: The basic learning path MUST work without sign-in. Same-browser refresh MUST retain the Guest's level/selected sense and per-sense favorites/studied state only; Guest mission-completion and practice-result state MUST NOT persist across refresh. Guest records MUST remain browser-scoped and separate from account records, with no account import or automatic merge. Clearing browser application data removes those local records; no additional retention period or clearing interface is specified.
+- **FR-010 — F09**: Supported email registration, invalid-credential feedback, sign-in, sign-out and clear session indication MUST work in the authorized provider environment; unavailability MUST be reported truthfully while preserving Guest access.
+- **FR-011 — F10**: Supported Google sign-in MUST return to an authorized hosted application origin rather than localhost and establish a verifiable valid session. Unsafe redirect permissions or privileged browser credentials MUST NOT be required.
+- **FR-012 — F11**: The learner MUST explicitly mark representative-mission completion as self-report. For an authenticated owner, favorites, studied status, that completion state and the latest result for each practice check MUST persist separately through refresh and sign-out/in, with device changes where service access permits. Completion MUST NOT imply practice correctness or verified mastery and MUST NOT award correctness credit; wrong/revealed answers still earn none. A full history of attempts is not required. Guest retention follows FR-009.
+- **FR-013 — F12**: Ownership MUST be enforced on the server for supported read, create, change and delete operations. Two legitimate users MUST be unable to operate on each other's saved state; positive own-record and negative cross-account observations are required.
+- **FR-014 — F13**: Essential study, navigation and login controls MUST work in Edge on Windows at 1280×800 desktop and 360×800 narrow CSS-pixel viewports (D01), including keyboard-only operation, visible focus, meaningful labels and readable feedback. Actual browser/OS versions and viewport conditions MUST be recorded at verification; only actually tested coverage may be claimed.
+- **FR-015 — F14**: Privileged secrets MUST NOT appear in browser-delivered material, public source or evidence. Real failures MUST produce actionable, non-disclosing feedback and safe retry or a supported Guest fallback without false success or another user's state.
+- **FR-016 — F15**: Evaluation evidence MUST identify exact source/tested revisions, immutable input identities, dependency/tool versions, setup and declared type-check/test/build procedures, actual commands/outputs/exit codes, expected/observed outcomes and unavailable prerequisites.
+- **FR-017 — F02/F05/F15**: Frozen teaching inputs MUST remain unchanged and source-linked. The product MUST NOT invent missing forms/examples/translations or claim linguistic certification, verified publication rights or measured learning effectiveness without evidence.
+- **FR-018 — F08/F11/F12/F14**: Guest and account state MUST remain separate, with no Guest-to-account import or automatic merge. Sign-out, expired sessions and identity changes MUST prevent unauthorized access to another owner's records. Clearing active selection does not authorize deleting another sense's saved state.
+- **FR-019 — F15/all CORE cases**: Acceptance reporting MUST retain the unchanged F01–F15 PRIMARY N=15 contract and distinguish PASS/FAIL/BLOCKED/NOT TESTED by actual evidence and tested SHA. Unavailable services remain in the denominator. Build success, a redirect or a checklist tick MUST NOT substitute for runtime/security acceptance.
+
+### Key Entities *(include if feature involves data)*
+
+- **Learning level**: One of A2, B1, B2 or C1, associated with its unchanged source collection and representative mission.
+- **Source-linked sense**: A semantic record distinct from its written verb spelling, with supplied meaning, forms and examples; same spelling never establishes sense identity by itself.
+- **Representative mission**: A source-backed learning selection for a level, associated with its stored text and source-supported comprehension/verb-form checks; no daily schedule is implied.
+- **Practice outcome**: An actual response classified as correct, incorrect, revealed or unavailable, related to its check and source sense. An authenticated owner retains the latest result for each check separately from self-reported completion; Guest results do not persist across refresh. A full attempt history is not required.
+- **Guest learning state**: Browser-scoped level/selected sense and per-sense favorites/studied state retained across refresh. Mission-completion/practice-result state is transient across refresh; no Guest record is imported into an account.
+- **Learner account/session**: A legitimate authenticated identity and its valid/signed-out/unavailable state, without prescribing an implementation mechanism.
+- **Account-owned learning state**: Favorites, studied status, explicitly self-reported mission completion and latest per-check results belonging to one verified owner, with completion and correctness kept separate. Another account cannot access or change ownership implicitly.
+- **Evaluation record**: An existing acceptance-case ID, exact tested revision and environment, expected/actual outcome, evidence and one truthful result status. It is not a new acceptance case or an application architecture.
+
+### Primary Acceptance Traceability and Intended Evidence
+
+The original matrix at `../../evaluation/ACCEPTANCE_MATRIX.md` is authoritative. These are future procedures and observation targets, not executed application checks. Q1–Q3 and the intended D01 profile are resolved. Actual D01 execution observations and authorized D02 conditions must still be evidenced before affected acceptance can be completed.
+
+An approved Master/Constitution obligation may require additional observations, such as the latest saved result for each practice check, reveal-credit behavior or denial of record creation/deletion. Where it exceeds an original case's exact wording, retain that observation under its FR/scenario identity as supplementary requirement verification. Do not silently turn it into a new primary-case condition, change the original expected outcome or alter the primary denominator.
+
+| Original case | Requirement mapping | Scenario mapping | Intended environment and observable procedure | Current runtime status |
+| --- | --- | --- | --- | --- |
+| F01 | FR-001 | US2.1 | Guest browser: select all four levels and compare the four distinct displayed missions with frozen mission inputs. | NOT TESTED |
+| F02 | FR-002, FR-017 | US1.3, US2.2 | Browser/source comparison: inspect stored Swedish/English meaning and toggle assistance without content changes. | NOT TESTED |
+| F03 | FR-003 | US2.3 | Edge on Windows under D01: record actual Swedish voice/audio availability, request authentic Swedish speech where supported and verify meaningful unsupported/unavailable fallback without claiming audio success from metadata alone. | NOT TESTED |
+| F04 | FR-004, FR-005 | US3.1–US3.4 | Controlled valid/invalid/reveal inputs for both check types; observe truthful feedback and zero wrong/reveal credit. | NOT TESTED |
+| F05 | FR-006, FR-017 | US1.1–US1.3 | Full source/collection and browser inspection: retrieve 456 senses per level, search supplied spellings and inspect available/missing fields. | NOT TESTED |
+| F06 | FR-007 | US1.4 | Browser and permitted saved-state context: select/favorite the two `sticka` senses independently and compare their meaning/examples/state. | NOT TESTED |
+| F07 | FR-008 | US1.5–US1.6 | Browser with source-linked counterparts and a permitted no-counterpart fixture: verify semantic preservation, an explanation and cleared active target-level selection when no match exists. | NOT TESTED |
+| F08 | FR-009, FR-018 | US4.1–US4.3 | Same-browser Guest journey: refresh retains only level/selection/favorites/studied; completion/results reset, browser data clearing removes Guest records and sign-in performs no import. | NOT TESTED |
+| F09 | FR-010, FR-018 | US5.1, US5.3 | Authorized independent email test environment D02: real registration, invalid credentials, sign-in/out and session/failure feedback. | NOT TESTED |
+| F10 | FR-011 | US5.2 | Authorized hosted origin/provider D02: complete Google sign-in, verify hosted return and actual valid session rather than redirect alone. | NOT TESTED |
+| F11 | FR-012 | US5.4 | Authorized owner D02: save favorites and explicitly self-reported mission completion, then refresh/sign out/in; separately verify studied/latest practice results required by the Master and record device limitations. | NOT TESTED |
+| F12 | FR-013, FR-018 | US5.5 | Two legitimate users with minimal synthetic records in D02: verify own access and denial of cross-owner read/create/change/delete, independently of UI hiding. | NOT TESTED |
+| F13 | FR-014 | US6.1–US6.2 | Edge on Windows at 1280×800 and 360×800 CSS-pixel viewports: perform essential study/navigation/login with keyboard, inspect focus/labels/feedback and record actual versions and viewport conditions. | NOT TESTED |
+| F14 | FR-005, FR-015, FR-018 | US3.4, US5.3, US6.3–US6.4 | Later source/artifact review plus permitted browser failure cases: inspect secret exclusion, safe ownership behavior and actionable non-disclosing errors. | NOT TESTED |
+| F15 | FR-016, FR-017, FR-019 | US7.1–US7.2 | Reproduce a later tested SDD snapshot's declared setup/type-check/test/build and case records, with exact revisions, versions, results and missing evidence. | NOT TESTED |
+
+Document-stage application result counts: PASS=0, FAIL=0, BLOCKED=0, NOT TESTED=15, N=15. This records the absence of application execution in this stage, not a completed evaluation of a built or frozen SDD application. Secondary acceptance is outside this feature; no combined denominator or secondary result is produced.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+Each outcome below is a requirement for later observation, not a measurement claimed by Specify.
+
+- **SC-001 — F01/F02:** All four selectable levels expose distinct source-linked representative missions, and their Swedish/English assistance remains faithful when shown or hidden.
+- **SC-002 — F05:** The learner can retrieve 456 senses at each of four levels, 1,824 level-specific sense records in total, while each level's 455 written spellings and missing fields are represented honestly.
+- **SC-003 — F06/F07:** The two `sticka` meanings are independently selectable and favoriteable; every tested legitimate level counterpart preserves meaning, and every tested missing counterpart produces an explanation and cleared active target-level selection without unrelated substitution.
+- **SC-004 — F04:** For each supported check type, observed incorrect/revealed responses earn zero correctness credit, correct responses are identified accurately, and missing-source cases create no fabricated answer or credit.
+- **SC-005 — F08:** A Guest can perform the supported basic learning path without sign-in. Refresh retains level/selected sense, favorites and studied state; Guest mission completion and practice results are not retained. Browser application-data clearing removes Guest records, and sign-in causes zero Guest-to-account imports or automatic merges.
+- **SC-006 — F09/F10:** In authorized functioning provider conditions, all specified email flows and the Google hosted-return flow produce their truthful session outcomes; tested unavailable/expired/cancelled conditions do not create false success and retain Guest access.
+- **SC-007 — F11/F12:** Both legitimate test users can restore their own favorites, studied status, self-reported mission completion and latest per-check results after refresh/sign-out/in; completion is separate from correctness and mastery. Cross-owner read/create/change/delete attempts are denied for every supported category. Actual verification requires authorized D02.
+- **SC-008 — F13:** All essential study/navigation/login flows are usable with keyboard alone in Edge on Windows at both 1280×800 and 360×800 CSS-pixel viewports, with visible focus and understandable controls/feedback. Evidence identifies actual browser/OS versions and viewport conditions. No physical-phone or broader accessibility certification is inferred.
+- **SC-009 — F14:** The reviewed later browser-delivered/source/evidence artifacts contain zero privileged secrets, and permitted failure cases expose neither another user's records nor false operation success.
+- **SC-010 — F15:** Every reported primary case has exact tested revision, environment, expected/observed outcome and supporting or missing evidence; the four result-status counts sum to 15 without using unit-test totals as acceptance passes. Declared setup/type-check/test/build procedures and exact dependencies are reproducible or explicitly reported unavailable.
+
+## Assumptions
+
+### Carried-forward boundaries, without new product-policy decisions
+
+- The learning audience uses English assistance to study supplied Swedish content. This feature does not claim learning effectiveness, teacher certification, new linguistic content or production localization.
+- Source counts and sense distinctions are approved requirements from the neutral inputs. This Specify stage verifies input identity, not the linguistic correctness or distribution rights of every source record.
+- Exact supplied spellings are sufficient to define a minimum observable search case. Ranking, fuzzy matching and advanced search behavior are not added requirements here.
+- Missing content and unavailable dependencies must be explained truthfully; optional unavailable speech does not require signing in or block supported reading/practice.
+- Email password recovery remains the separately documented refinement stated by MBR-B-002 C09 unless a later explicit human scope decision changes that boundary. It is not silently added to the fixed F09 benchmark.
+- Mission completion does not imply verified language mastery. Daily lessons, historical daily archives, Undo for daily completion, reminder queues, 7/14-day recall and extension-specific privacy remain E01–E07/EXT-AC01–07 scope, outside this CORE feature.
+- The approved common technology constraints remain in their source documents for the later Plan. This specification selects no architecture, dependency versions, storage design, interfaces, layout or imported Vibe solution.
+
+### Verification Profile and External Dependencies
+
+- **D01 — Student-selected future verification profile:** Edge on Windows, with a desktop viewport of 1280×800 and a narrow viewport of 360×800 CSS pixels. Essential study/navigation/login flows are checked at both sizes with keyboard-only operation, visible focus and understandable controls/feedback. At actual execution, record browser/OS versions, actual viewport conditions and available Swedish speech/voice/audio observations; exercise truthful unavailability behavior where appropriate. The installed Edge binary version observed during this document update was 156.0.4314.50; binary presence is not a functional or speech test, and the actual future tested version may differ. This is a desktop-browser responsive-viewport profile, not a physical handset test or certification. The profile was selected on 2026-10-30 after the common baseline and Vibe freeze; do not label it preregistered. For the eventual comparison, apply the same recorded operational profile to both methods without changing frozen source or rewriting older evidence. No browser was launched and no test was executed by selecting this profile.
+- **D02 — Authorized independent account/provider environment:** Hosted origins, provider availability, legitimate two-account test identities and permission for necessary independent SDD setup are not supplied or verified by this stage. No provider setting, private data, database or deployment was accessed. Later unavailable prerequisites must be reported honestly without removing cases from N=15.
+- **D03 — Publication/source limitations:** Original PDFs, distribution licenses and Swedish-teacher validation have not been independently rechecked. Publication remains subject to authorized rights/accuracy review; the current stage grants no publication permission.
+
+The student answered all three product-policy questions with B/B/B and explicitly selected the D01 profile. These decisions are recorded in new evidence without rewriting the earlier drafts. D02/D03 remain explicit execution/publication prerequisites, not unresolved expected product behavior or permission to configure services. The document-quality checklist is complete, but the entire revised specification still requires human approval and relevant later-stage authorization. No Plan or other stage is authorized by resolving these details.
+
+### Recorded Specify Decisions
+
+The student's actual response selected **Q1: B, Q2: B, Q3: B**. Stray Markdown backticks in the received text were treated as formatting, not a different answer. The exact received message and source reference are preserved in `../../evidence/sdd-specify-core-answers-2026-10-30/`.
+
+| Question | Selected answer from draft v0.1.0 | Applied outcome |
+| --- | --- | --- |
+| Q1 — B | Retain level/selected sense and per-sense favorites/studied only; mission/practice state is not retained across refresh; keep Guest/account records separate. | Guest refresh retains only those selections/favorites/studied categories. Completion/results do not survive refresh. No account import or automatic merge is introduced. Browser application-data clearing removes browser-scoped records; no new clearing interface or arbitrary expiry is added. |
+| Q2 — B | Let the learner explicitly mark mission completion as self-report; save that status and latest practice results separately. | Representative-mission completion is an explicit learner assertion, separate from practice correctness/mastery. Authenticated owners retain completion plus latest per-check results, favorites and studied status; a full attempt history is not required. Wrong/revealed answers never earn correctness credit. |
+| Q3 — B | Explain the absence, clear active selection in the target level and require a new explicit selection before study/practice resumes. | A missing counterpart clears active target-level selection with an explanation and waits for deliberate reselection, without unrelated substitution or deletion of existing per-sense saved records. |
+
+These decisions resolve the three current product-policy markers. They are not approval of the entire revised specification, an instruction to start another stage, or evidence that any application behavior has been implemented or tested. The original v0.1.0 questions/options, draft and validation evidence remain unchanged for chronology.
+
+### Recorded D01 Profile Decision
+
+The student explicitly selected **Edge on Windows; 1280×800 and 360×800 CSS-pixel viewports** through the profile question on 2026-10-30. The actual question/answer, source reference and revision evidence are preserved in `../../evidence/sdd-specify-core-profile-2026-10-30/`. This approves an intended verification profile only, not application behavior, a passing test, service access, implementation, a later stage or the full specification. The earlier v0.1.0 and v0.2.0 review states remain preserved.

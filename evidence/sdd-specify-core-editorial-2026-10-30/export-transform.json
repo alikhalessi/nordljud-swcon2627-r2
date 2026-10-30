@@ -1,0 +1,14 @@
+{
+  "reason": "The repository checklist link is correct; an exported copy in outputs needs its own working link.",
+  "canonical_path": "specs/001-nordljud-core/checklists/requirements.md",
+  "canonical_link": "../spec.md",
+  "exported_path": "C:\\Users\\alikh\\Documents\\Codex\\2026-10-30\\referenced-chatgpt-conversation-this-is-an\\outputs\\Nordljud_CORE_requirements_checklist_v0.3.1.md",
+  "exported_target": "C:\\Users\\alikh\\Documents\\Codex\\2026-10-30\\referenced-chatgpt-conversation-this-is-an\\outputs\\Nordljud_CORE_spec_v0.3.1_FOR_REVIEW.md",
+  "only_export_difference": {
+    "from": "**Feature**: [spec.md](../spec.md)",
+    "to": "**Feature**: [Nordljud CORE specification v0.3.1](C:/Users/alikh/Documents/Codex/2026-10-30/referenced-chatgpt-conversation-this-is-an/outputs/Nordljud_CORE_spec_v0.3.1_FOR_REVIEW.md)"
+  },
+  "canonical_sha256": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+  "exported_sha256": "DB7692F321703FEB6475658BBBAF35E6C4421BBD670CE0ED29BDBE04F4DD45B3",
+  "byte_identical_copy_claimed": false
+}

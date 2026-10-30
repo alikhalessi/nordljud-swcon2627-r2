@@ -1,0 +1,9 @@
+# Context from my IDE setup:
+
+## Active file: c:\Users\alikh\Documents\Codex\2026-10-30\referenced-chatgpt-conversation-this-is-an\outputs\Nordljud_Constitution_v1.0.0_Publication_Receipt.json
+
+## Open tabs:
+- Nordljud_Constitution_v1.0.0_Publication_Receipt.json: c:\Users\alikh\Documents\Codex\2026-10-30\referenced-chatgpt-conversation-this-is-an\outputs\Nordljud_Constitution_v1.0.0_Publication_Receipt.json
+
+## My request:
+`Q1: B، Q2: B، Q3: `B  

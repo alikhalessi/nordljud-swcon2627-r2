@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-30T10:04:39.954200+00:00",
+  "all_tracked_files_unchanged": 90,
+  "original_specify_evidence_files_unchanged": 18,
+  "local_refs_unchanged": true,
+  "head": "7ab6822ad5ac2411b3453911ad9abfb9e098783c",
+  "git_status": "## condition/spec-driven...origin/condition/spec-driven\n?? .specify/feature.json\n?? evidence/sdd-specify-core-2026-10-30/\n?? evidence/sdd-specify-core-answers-2026-10-30/\n?? specs/",
+  "answers": {
+    "Q1": "B",
+    "Q2": "B",
+    "Q3": "B"
+  },
+  "unresolved_product_markers": 0,
+  "quality": "INCOMPLETE",
+  "checklist": "11/16",
+  "full_specification_approval": "PENDING",
+  "remaining_measurement_gap": "D01 concrete browser/device/audio/narrow viewport profile",
+  "runtime_tests": "NOT TESTED",
+  "committed": false,
+  "pushed": false,
+  "other_stage_executed": false
+}

@@ -1,0 +1,11 @@
+{
+  "result": "PASS — approval binding and preservation checks only",
+  "protected_tracked_files_unchanged": 90,
+  "previous_specify_evidence_files_unchanged": 61,
+  "previous_output_files_unchanged": 28,
+  "reviewed_manifest_entries_matching": 13,
+  "reviewed_spec_and_checklist_unchanged": true,
+  "index_and_refs_unchanged": true,
+  "git_status": "## condition/spec-driven...origin/condition/spec-driven\n?? .specify/feature.json\n?? evidence/sdd-core-spec-approval-2026-10-30/\n?? evidence/sdd-specify-core-2026-10-30/\n?? evidence/sdd-specify-core-answers-2026-10-30/\n?? evidence/sdd-specify-core-editorial-2026-10-30/\n?? evidence/sdd-specify-core-profile-2026-10-30/\n?? specs/",
+  "runtime_tests_performed": false
+}

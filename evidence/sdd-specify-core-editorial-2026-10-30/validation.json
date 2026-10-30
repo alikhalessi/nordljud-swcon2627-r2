@@ -1,0 +1,47 @@
+{
+  "revision": "0.3.1",
+  "result": "PASS — editorial/document checks only",
+  "head": "7ab6822ad5ac2411b3453911ad9abfb9e098783c",
+  "branch": "condition/spec-driven",
+  "human_full_specification_approval": "PENDING",
+  "later_stage_authorization": "PENDING",
+  "wording_corrected": true,
+  "repository_checklist_link_resolves": true,
+  "exported_checklist_link_resolves": true,
+  "unchanged_document_checklist": "16/16",
+  "all_application_cases": "NOT TESTED",
+  "application_cases_count": 15,
+  "protected_tracked_files_unchanged": 90,
+  "historical_evidence_files_unchanged": 49,
+  "historical_manifest_entries_verified": 53,
+  "previous_output_files_unchanged": 23,
+  "feature_metadata_unchanged": true,
+  "refs_unchanged": true,
+  "approved_input_checks": {
+    "docs/sdd-input/MBR-B-002_APPROVED_CORE_MASTER.md": {
+      "committed_git_blob": "61e4f31ea150c827c92ecf785677c56af45ce04f",
+      "raw_sha256": "B088E1D7F7E3499BCB88CB3B4AB36478BB504B6442DAD35B332D010D81AE20C6",
+      "crlf_to_lf_in_memory_matches_blob": true,
+      "working_bytes_changed": false
+    },
+    "docs/sdd-input/EP-B-001_APPROVED_SECONDARY_EXTENSION.md": {
+      "committed_git_blob": "8e45c7d20a8039491dcc91afc9e6c5cc0f270394",
+      "raw_sha256": "F662CF24D91DC77A3F6A5AA1F55BEAE46674723627883088117BCF82FFD0A9E1",
+      "crlf_to_lf_in_memory_matches_blob": true,
+      "working_bytes_changed": false
+    },
+    "docs/sdd-input/SDD_002_VERBATIM_APPROVAL_BEFORE_SPECKIT_2026-10-30.md": {
+      "committed_git_blob": "d00a5bac308b182dcd5fc99f290089a9d15d26e5",
+      "raw_sha256": "806D9EDADFBBB30BFCC23B4AD875D314DDF37E8C30407B615F7298A057F1AE93",
+      "crlf_to_lf_in_memory_matches_blob": true,
+      "working_bytes_changed": false
+    }
+  },
+  "git_status": "## condition/spec-driven...origin/condition/spec-driven\n?? .specify/feature.json\n?? evidence/sdd-specify-core-2026-10-30/\n?? evidence/sdd-specify-core-answers-2026-10-30/\n?? evidence/sdd-specify-core-editorial-2026-10-30/\n?? evidence/sdd-specify-core-profile-2026-10-30/\n?? specs/",
+  "browser_or_application_tests_run": false,
+  "new_spec_kit_stage_run": false,
+  "staged": false,
+  "committed": false,
+  "pushed": false,
+  "measured_elapsed_time_claimed": false
+}

@@ -1,0 +1,320 @@
+[
+  {
+    "version": "0.1.0",
+    "original_path": ".specify/feature.json",
+    "verified_path": ".specify/feature.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/README.md",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/README.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/authoring-and-validation-commands.json",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/authoring-and-validation-commands.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/authoring-payload.json",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/authoring-payload.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/clarification-questions.md",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/clarification-questions.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/requirements.md",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/requirements.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/spec.md",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/spec.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/feature-initialization.json",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/feature-initialization.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/final-preservation-check.json",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/final-preservation-check.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/preflight-commands.json",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/preflight-commands.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/preflight.json",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/preflight.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/quality-review.md",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/quality-review.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/request-as-received.txt",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/request-as-received.txt",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/review.diff",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/review.diff",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/session-visible-records.jsonl",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/session-visible-records.jsonl",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/specify-invocation.txt",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/specify-invocation.txt",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/transcript-export.json",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/transcript-export.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "evidence/sdd-specify-core-2026-10-30/validation-001.json",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/validation-001.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "specs/001-nordljud-core/checklists/requirements.md",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/requirements.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.1.0",
+    "original_path": "specs/001-nordljud-core/spec.md",
+    "verified_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/spec.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/README.md",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/README.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/answer-interpretation.json",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/answer-interpretation.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/answers-as-received.txt",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/answers-as-received.txt",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/commands.json",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/commands.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/requirements.md",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/requirements.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/spec.md",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/spec.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/final-preservation-check.json",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/final-preservation-check.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/pre-edit-state.json",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/pre-edit-state.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/prior-stage-artifact-resolution.json",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/prior-stage-artifact-resolution.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/revision.diff",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/revision.diff",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/session-visible-records.jsonl",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/session-visible-records.jsonl",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/transcript-export.json",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/transcript-export.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "evidence/sdd-specify-core-answers-2026-10-30/validation-001.json",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/validation-001.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "specs/001-nordljud-core/checklists/requirements.md",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/requirements.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.2.0",
+    "original_path": "specs/001-nordljud-core/spec.md",
+    "verified_path": "evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/spec.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/README.md",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/README.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/commands.json",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/commands.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/requirements.md",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/requirements.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/spec.md",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/spec.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/final-wording-review.json",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/final-wording-review.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/historical-artifact-resolution.json",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/historical-artifact-resolution.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/pre-edit-state.json",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/pre-edit-state.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/pre-final-wording/spec.md",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/pre-final-wording/spec.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/profile-answer-as-received.txt",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/profile-answer-as-received.txt",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/profile-decision.json",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/profile-decision.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/review.diff",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/review.diff",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/revision.diff",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/revision.diff",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/session-visible-records.jsonl",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/session-visible-records.jsonl",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/transcript-export.json",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/transcript-export.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/validation-001.json",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/validation-001.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "evidence/sdd-specify-core-profile-2026-10-30/validation-002.json",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/validation-002.json",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "specs/001-nordljud-core/checklists/requirements.md",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/requirements.md",
+    "status": "PASS"
+  },
+  {
+    "version": "0.3.0",
+    "original_path": "specs/001-nordljud-core/spec.md",
+    "verified_path": "evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/spec.md",
+    "status": "PASS"
+  }
+]

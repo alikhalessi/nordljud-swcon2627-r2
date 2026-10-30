@@ -1,0 +1,34 @@
+diff --git a/evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/spec.md b/specs/001-nordljud-core/spec.md
+index cb8eb5a..a4f6c97 100644
+--- a/evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/spec.md
++++ b/specs/001-nordljud-core/spec.md
+@@ -4,7 +4,7 @@
+ 
+ **Created**: 2026-10-30 (Europe/Helsinki)
+ 
+-**Status**: Draft v0.3.0 — Q1=B, Q2=B, Q3=B and D01 profile recorded; specification-quality checklist complete; full human approval and later-stage authorization PENDING.
++**Status**: Draft v0.3.1 — Q1=B, Q2=B, Q3=B and D01 profile recorded; specification-quality checklist complete; full human approval and later-stage authorization PENDING.
+ 
+ **Input**: The student's `$speckit-specify` instruction authorizes only one CORE specification, its quality checklist, required feature metadata and new execution evidence. The exact received request and invocation are retained in `../../evidence/sdd-specify-core-2026-10-30/`.
+ 
+@@ -182,7 +182,7 @@ As the student-researcher or assessor, I want traceable, reproducible evaluation
+ 
+ The original matrix at `../../evaluation/ACCEPTANCE_MATRIX.md` is authoritative. These are future procedures and observation targets, not executed application checks. Q1–Q3 and the intended D01 profile are resolved. Actual D01 execution observations and authorized D02 conditions must still be evidenced before affected acceptance can be completed.
+ 
+-An approved Master/Constitution obligation may require additional observations, such as saved practice history, reveal-credit behavior or denial of record creation/deletion. Where it exceeds an original case's exact wording, retain that observation under its FR/scenario identity as supplementary requirement verification. Do not silently turn it into a new primary-case condition, change the original expected outcome or alter the primary denominator.
++An approved Master/Constitution obligation may require additional observations, such as the latest saved result for each practice check, reveal-credit behavior or denial of record creation/deletion. Where it exceeds an original case's exact wording, retain that observation under its FR/scenario identity as supplementary requirement verification. Do not silently turn it into a new primary-case condition, change the original expected outcome or alter the primary denominator.
+ 
+ | Original case | Requirement mapping | Scenario mapping | Intended environment and observable procedure | Current runtime status |
+ | --- | --- | --- | --- | --- |
+diff --git a/evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/requirements.md b/specs/001-nordljud-core/checklists/requirements.md
+index 7ae4962..81a7cfe 100644
+--- a/evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/requirements.md
++++ b/specs/001-nordljud-core/checklists/requirements.md
+@@ -3,6 +3,7 @@
+ **Purpose**: Review the completeness and quality of the CORE specification before any later stage.
+ **Created**: 2026-10-30 (Europe/Helsinki)
+ **Feature**: [spec.md](../spec.md)
++**Specification revision**: Draft v0.3.1 — wording/link corrections; full human approval remains PENDING.
+ **Status**: DOCUMENT QUALITY COMPLETE — 16 of 16 standard items complete after B/B/B and the explicit D01 profile selection; full-specification human approval remains PENDING.
+ 
+ **Provenance**: Generated as part of the installed official `speckit-specify` skill's Specification Quality Validation step. The separate `speckit-checklist` stage was NOT executed. A tick is a documentary review result, not student approval or an application/runtime PASS.

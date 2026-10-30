@@ -1,0 +1,16 @@
+{
+  "source": "C:\\Users\\alikh\\.codex\\sessions\\2026\\10\\30\\rollout-2026-10-30T01-14-05-01a189f1-258e-7cb2-b93d-e5fb3b56db4c.jsonl",
+  "session_id": "01a189f1-258e-7cb2-b93d-e5fb3b56db4c",
+  "turn_id": "01a18c28-1365-7a53-9821-7345f9c8c77d",
+  "source_first_line": 775,
+  "source_last_completed_result_line": 881,
+  "selected_records": 17,
+  "record_types": {
+    "message": 3,
+    "custom_tool_call": 7,
+    "custom_tool_call_output": 7
+  },
+  "bytes": 182200,
+  "sha256": "2DDBD5471DD13AF441B8C7EC0527ABA6929A3454287D9AF9D1FB5DA6ADB1FF73",
+  "policy": "Original selected response_item lines only: current user and visible assistant commentary/final, tool calls/results. Reasoning, system/developer instructions and unrelated earlier turns excluded. Bounded snapshot excludes its own export result and future final answer."
+}

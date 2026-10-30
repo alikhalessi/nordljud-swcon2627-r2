@@ -1,0 +1,39 @@
+{
+  "status": "PASS — documentary checks only",
+  "revision": "0.3.0",
+  "checked_at_utc": "2026-10-30T10:10:48.187519+00:00",
+  "checklist_complete": 16,
+  "checklist_total": 16,
+  "product_choices": {
+    "Q1": "B",
+    "Q2": "B",
+    "Q3": "B"
+  },
+  "profile": {
+    "browser": "Edge",
+    "os": "Windows",
+    "viewports_css_pixels": [
+      "1280x800",
+      "360x800"
+    ]
+  },
+  "unresolved_product_markers": 0,
+  "human_full_specification_approval": "PENDING",
+  "later_stage_authorization": "PENDING",
+  "ready_for_plan_execution": false,
+  "protected_tracked_files_unchanged": 90,
+  "earlier_specify_evidence_files_unchanged": 32,
+  "head": "7ab6822ad5ac2411b3453911ad9abfb9e098783c",
+  "local_refs_unchanged": true,
+  "git_status": "## condition/spec-driven...origin/condition/spec-driven\n?? .specify/feature.json\n?? evidence/sdd-specify-core-2026-10-30/\n?? evidence/sdd-specify-core-answers-2026-10-30/\n?? evidence/sdd-specify-core-profile-2026-10-30/\n?? specs/",
+  "runtime_counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "NOT TESTED": 15
+  },
+  "browser_launched": false,
+  "other_stage_executed": false,
+  "committed": false,
+  "pushed": false
+}

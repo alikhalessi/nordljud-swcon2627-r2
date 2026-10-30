@@ -1,0 +1,40 @@
+{
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": "evidence/sdd-core-spec-approval-2026-10-30/approval-context-source-records.jsonl",
+      "sha256": "A52FDB46D504ADE9CECD309981B09A4F339E647ED746ED3248354B7993B76FEE",
+      "bytes": 4088
+    },
+    {
+      "path": "evidence/sdd-core-spec-approval-2026-10-30/approval-exact-extract.txt",
+      "sha256": "7060E9891E2DB66EB0CCC5A0570E2945B7129121BE16FA30A23DE60BC58E452B",
+      "bytes": 88
+    },
+    {
+      "path": "evidence/sdd-core-spec-approval-2026-10-30/approval-message-as-received.txt",
+      "sha256": "9ED357C7F2CCCC5970ADA81352DAF09AF0FDE1EB9DF3DB06F60CBB5E2A50DDB0",
+      "bytes": 1054
+    },
+    {
+      "path": "evidence/sdd-core-spec-approval-2026-10-30/approval-receipt.json",
+      "sha256": "0DE68BB68A95164B22692439E6911988BF0DB6F6298D72B846656966016D20BF",
+      "bytes": 2484
+    },
+    {
+      "path": "evidence/sdd-core-spec-approval-2026-10-30/commands.json",
+      "sha256": "82D76C5DBFE1CAF3A44AD3F77F902FA0FDD8BBC7971B976EBFF73A96EE140813",
+      "bytes": 16195
+    },
+    {
+      "path": "evidence/sdd-core-spec-approval-2026-10-30/preservation.json",
+      "sha256": "8694873A6166C98EF5D8AADEE4AB3735C841B6D13E65F38134F36594B017C9C0",
+      "bytes": 727
+    },
+    {
+      "path": "evidence/sdd-core-spec-approval-2026-10-30/README.md",
+      "sha256": "458F689C5C2D70384F12F7BD0DCC6A8EA0DF2BCBE948C9CDBF18BFC669120151",
+      "bytes": 2221
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "stage": "Specify — answer-driven revision",
+  "revision": "0.2.0",
+  "quality": "INCOMPLETE",
+  "full_specification_approval": "PENDING",
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/README.md",
+      "sha256": "DCD4F9A0A473BBBFFEA073E4F9C8C90AD86886447B78BD7ADDE36BF10D127C36",
+      "bytes": 5158
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/answer-interpretation.json",
+      "sha256": "2B20B19D47F3A9252F95727ABBCB1BCE4E68586D5FA9DE15C66F7A730784F876",
+      "bytes": 671
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/answers-as-received.txt",
+      "sha256": "08E2D7FD395AFBE75CA76FC46728DEDF3C093A881C8DD5347A1D53C16FDA3604",
+      "bytes": 454
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/commands.json",
+      "sha256": "5A57C39B1B52C54BA987F8306908616F06A5BE69536E169B35DC6BD552420F88",
+      "bytes": 51818
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/requirements.md",
+      "sha256": "27BA65627D8F26F29FD0A32F2DB988838F873EA3F36AC9E3FEB63DABD4C69B93",
+      "bytes": 4565
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/spec.md",
+      "sha256": "11F9DDCF3E9E423018CF686E2359D48F638B02759A2D5EA56293B432BFC59290",
+      "bytes": 37099
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/final-preservation-check.json",
+      "sha256": "D70A77DF4F1AF4F2E2A8B6AD0D5C412049B081DE6B81D483D2D416D4B2B814E1",
+      "bytes": 850
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/pre-edit-state.json",
+      "sha256": "EA1A4A339D4F3E0AA2889087884569429D82A9C5C1EB8EEF3A7CBF7AF4511ED4",
+      "bytes": 15398
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/prior-stage-artifact-resolution.json",
+      "sha256": "BAB5D92A6F0BF559EEF0F67AB5704643C5188FA2155E062E272D5CFECC819CE0",
+      "bytes": 5984
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/revision.diff",
+      "sha256": "40339B2980B24C6B4576A0A106BEA3DE0D07086ECE34A3F93F822236718415A1",
+      "bytes": 41927
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/session-visible-records.jsonl",
+      "sha256": "37FE0D426EFB6ADAB058E08D7E5B9B253D4DDE9247F1A3C0224197059CF938C5",
+      "bytes": 85301
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/transcript-export.json",
+      "sha256": "899CCF372799364ED8A68A04B70BEDE37D41D5DE4F3177FE223693407FA40613",
+      "bytes": 808
+    },
+    {
+      "path": "evidence/sdd-specify-core-answers-2026-10-30/validation-001.json",
+      "sha256": "0F46C918E8CFB06FD57BBE9B1452E8CD40B3DDB783EAE981A170FE94DD884419",
+      "bytes": 2875
+    },
+    {
+      "path": "specs/001-nordljud-core/checklists/requirements.md",
+      "sha256": "27BA65627D8F26F29FD0A32F2DB988838F873EA3F36AC9E3FEB63DABD4C69B93",
+      "bytes": 4565
+    },
+    {
+      "path": "specs/001-nordljud-core/spec.md",
+      "sha256": "11F9DDCF3E9E423018CF686E2359D48F638B02759A2D5EA56293B432BFC59290",
+      "bytes": 37099
+    }
+  ]
+}

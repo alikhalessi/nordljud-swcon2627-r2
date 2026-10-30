@@ -1,0 +1,10 @@
+$speckit-specify
+Execute only the official installed Spec Kit 0.12.11 Specify skill for Nordljud CORE.
+First read AGENTS.md. Confirm branch condition/spec-driven, clean Git status, HEAD 7ab6822ad5ac2411b3453911ad9abfb9e098783c, ratified Constitution v1.0.0, and the approved input blob hashes. Stop on unexpected differences.
+Read the ratified Constitution, approved MBR-B-002, SDD_002 approval, original project charter, product brief, source manifest and acceptance matrix. Consult EP-B-001 only to distinguish the separately approved secondary scope. Preserve historical approval labels and all source files.
+Create one CORE specification in specs/001-nordljud-core using the installed skill and resolved project template. If that feature directory already exists, stop and report it. Keep the existing branch; do not create or switch branches.
+Specify observable WHAT/WHY requirements and acceptance mappings for F01–F15. Preserve source/sense fidelity, Guest learning, authentication, ownership, accessibility and honest failure behavior. Keep E01–E07/EXT-AC01–07 outside this CORE feature. Do not choose architecture or silently settle material open product decisions; present unresolved questions for human clarification.
+Create the required specification-quality checklist. Report incomplete items honestly; documentary checks are not runtime acceptance tests.
+Changes are limited to the new feature specification/checklist, required .specify/feature.json metadata, and new execution evidence. Preserve the ratified Constitution, templates, approved inputs, previous evidence and Vibe freeze.
+Do not run other Spec Kit stages, the bundled workflow, external hooks, application implementation, Supabase operations, deployment or paid services. Do not commit or push.
+Retain actual input, session reference, commands/results, starting SHA and changed paths. Present the specification, checklist, diff and unresolved questions, then stop for human review.

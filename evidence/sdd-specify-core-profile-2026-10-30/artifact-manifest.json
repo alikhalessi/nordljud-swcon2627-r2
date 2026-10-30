@@ -1,0 +1,98 @@
+{
+  "revision": "0.3.0",
+  "quality": "PASS — document only",
+  "full_specification_approval": "PENDING",
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/README.md",
+      "sha256": "DE896C7F7AC669911EE2A1613CC90B3C9CABD56E9DC0425E9EEFF26CD1DF00FB",
+      "bytes": 4717
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/commands.json",
+      "sha256": "AF1A42669A7DB0788265BAF149027485AD3575B9D6BEAEB3E3316DB584002188",
+      "bytes": 35042
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/requirements.md",
+      "sha256": "BBEB6F9E9D53DABD5F4ECEA1EBB240CC996F1FC326CEBB2B8B7EF88055A27989",
+      "bytes": 4617
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/spec.md",
+      "sha256": "E6FB0570CB803AA469FE29D7DBA3971F05A474587DD11F537E338D484BAAEFB2",
+      "bytes": 39063
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/final-wording-review.json",
+      "sha256": "CA287F1667C633F3515E1FD05EE0C76DEE83D369E1BDEF94BA1002CDBD098137",
+      "bytes": 924
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/historical-artifact-resolution.json",
+      "sha256": "3748871AFFD926DBCEF5B50179AF7BFFDA968BC1262248DA94A85B2717D71033",
+      "bytes": 7935
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/pre-edit-state.json",
+      "sha256": "60B3CB51A839D0E7BD0BC89D29DF0587BE6BDB2B6166E57C743F7BDF0066004D",
+      "bytes": 17341
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/pre-final-wording/spec.md",
+      "sha256": "464CA96BECF12DF7D4873737E0176CDCC2AD5A59026BDD1F5AB72AFE830B9C2B",
+      "bytes": 39001
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/profile-answer-as-received.txt",
+      "sha256": "2F996FFD726D1307F782EC6AD5754207E8F309F957E430B4621EFA6E629B9A93",
+      "bytes": 688
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/profile-decision.json",
+      "sha256": "9F4975E7EB82EE4E04B7064605E9A6E71BFBD66B2AA3AED4EF4BD59B5B8A55F3",
+      "bytes": 1491
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/review.diff",
+      "sha256": "DA5430C70EE3D14E75979DD36B0C129C677208063D9053B3D3B6BBBB9D8D2FD4",
+      "bytes": 25979
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/revision.diff",
+      "sha256": "E753091F2778BA16BE7B23D24655FA279A7C6D58522960266D825821AAC444E3",
+      "bytes": 24715
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/session-visible-records.jsonl",
+      "sha256": "859F7D673294140E8901F2E3EB5554A74FA37317F6E5581947E801769E275278",
+      "bytes": 34753
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/transcript-export.json",
+      "sha256": "46B904E20280A1FAD827D70C012A73E5568FEB8603041ECFD8D2246BB9820103",
+      "bytes": 516
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/validation-001.json",
+      "sha256": "0D424BC4BAAB34D847CA26D1CAA5DD6724CF51E1AE542B5B64F8E28D5744134B",
+      "bytes": 5848
+    },
+    {
+      "path": "evidence/sdd-specify-core-profile-2026-10-30/validation-002.json",
+      "sha256": "AE8018888FFE689D60BD1E8F1D72342ABDB552608D76AA6DEB1636592BDC3607",
+      "bytes": 1185
+    },
+    {
+      "path": "specs/001-nordljud-core/checklists/requirements.md",
+      "sha256": "BBEB6F9E9D53DABD5F4ECEA1EBB240CC996F1FC326CEBB2B8B7EF88055A27989",
+      "bytes": 4617
+    },
+    {
+      "path": "specs/001-nordljud-core/spec.md",
+      "sha256": "E6FB0570CB803AA469FE29D7DBA3971F05A474587DD11F537E338D484BAAEFB2",
+      "bytes": 39063
+    }
+  ]
+}

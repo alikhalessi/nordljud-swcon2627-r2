@@ -1,0 +1,122 @@
+[
+  {
+    "original_path": ".specify/feature.json",
+    "historical_verification_path": ".specify/feature.json",
+    "expected_sha256": "CFB7EF5EC19F6E4232E65A5BE9C90DE968AA17F11786D473187EE16BAF5DE6D3",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/README.md",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/README.md",
+    "expected_sha256": "95C4FE08FDD3AC97FA6EE9DD6773BA5DDC5C6F8A214864D39AE7B93DAF8726E0",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/authoring-and-validation-commands.json",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/authoring-and-validation-commands.json",
+    "expected_sha256": "9ABF6580353C6B1762965ECC4CEFB478FE9A4EAA1DCC0AF467F5093D76E649AB",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/authoring-payload.json",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/authoring-payload.json",
+    "expected_sha256": "6F8BB51792D757E7ECF999AB11390DF65ED31138818B3FD5EABB38FF663F76CA",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/clarification-questions.md",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/clarification-questions.md",
+    "expected_sha256": "744F9F9D1368685EEE1613DB590390332CE53E6C1F930D22794EBADDDA958233",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/requirements.md",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/requirements.md",
+    "expected_sha256": "7B52280608A46A23B7E4A57F3E57DD71FB0978996DAD968A5D8BEE556524C464",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/spec.md",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/spec.md",
+    "expected_sha256": "1BDB05A8FC6235FC18DC9FB4A6CAD6D59452F198CE68248AD3B198ABF73B2521",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/feature-initialization.json",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/feature-initialization.json",
+    "expected_sha256": "424974D6397D2F47F7FE3C82D7CD22DEC337AC52DFC564BED6295F5998634E86",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/final-preservation-check.json",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/final-preservation-check.json",
+    "expected_sha256": "3F9AE64331F20C068E05ECC2B3CC7699E8C9BE22045626CCA670C4DDE992EAEC",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/preflight-commands.json",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/preflight-commands.json",
+    "expected_sha256": "410FDF5462AD96809AA5A34ED9A6DA5BCD347053C7B3018C4F586D7F6B7D8130",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/preflight.json",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/preflight.json",
+    "expected_sha256": "5FFFD4F92187D4B49D0FBB5CF25FC0E05DDC38FB69E370B7186019F45821D0A8",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/quality-review.md",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/quality-review.md",
+    "expected_sha256": "7786A4518E81AD97AD0A22A87F11838DAE2B407042A0B91E6BB256D9D2DFB1CF",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/request-as-received.txt",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/request-as-received.txt",
+    "expected_sha256": "FA6D7A2A6961419C18F990D7403BAD1B632CF9D266F8F0FA9A100E0EAF3CA82B",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/review.diff",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/review.diff",
+    "expected_sha256": "37E1384A1E630C0F2E6FEF92394857CDEEB6D96493527F703C79DB3A49C8DA25",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/session-visible-records.jsonl",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/session-visible-records.jsonl",
+    "expected_sha256": "2DDBD5471DD13AF441B8C7EC0527ABA6929A3454287D9AF9D1FB5DA6ADB1FF73",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/specify-invocation.txt",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/specify-invocation.txt",
+    "expected_sha256": "C7D82C227F43FE4381F0FB90AEF28D828A851777C968E3B9B9804DFAC419A2BA",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/transcript-export.json",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/transcript-export.json",
+    "expected_sha256": "75485A56B9C908122C851837D160803C9DA24C8299556049C1C382A8FD349EE2",
+    "status": "PASS"
+  },
+  {
+    "original_path": "evidence/sdd-specify-core-2026-10-30/validation-001.json",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/validation-001.json",
+    "expected_sha256": "960972694ABFC635BD2BC47F1FE13A8636C14E0552A54A2423CB9521E3EF81C5",
+    "status": "PASS"
+  },
+  {
+    "original_path": "specs/001-nordljud-core/checklists/requirements.md",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/requirements.md",
+    "expected_sha256": "7B52280608A46A23B7E4A57F3E57DD71FB0978996DAD968A5D8BEE556524C464",
+    "status": "PASS"
+  },
+  {
+    "original_path": "specs/001-nordljud-core/spec.md",
+    "historical_verification_path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/spec.md",
+    "expected_sha256": "1BDB05A8FC6235FC18DC9FB4A6CAD6D59452F198CE68248AD3B198ABF73B2521",
+    "status": "PASS"
+  }
+]

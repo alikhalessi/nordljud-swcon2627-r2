@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\alikh\\.codex\\sessions\\2026\\10\\30\\rollout-2026-10-30T01-14-05-01a189f1-258e-7cb2-b93d-e5fb3b56db4c.jsonl",
+  "source_first_line": 1010,
+  "source_last_completed_result_line": 1051,
+  "records": 8,
+  "bytes": 34753,
+  "sha256": "859F7D673294140E8901F2E3EB5554A74FA37317F6E5581947E801769E275278",
+  "policy": "Original selected user/visible assistant and tool call/result lines only; reasoning and system/developer records excluded; bounded snapshot excludes its future final answer."
+}

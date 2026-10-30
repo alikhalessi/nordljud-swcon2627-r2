@@ -1,0 +1,158 @@
+{
+  "git_commands": [
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "condition/spec-driven\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "7ab6822ad5ac2411b3453911ad9abfb9e098783c\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "diff",
+        "--name-only"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "https://github.com/alikhalessi/nordljud-swcon2627-r2.git\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "for-each-ref",
+        "--format=%(refname) %(objectname)"
+      ],
+      "exit_code": 0,
+      "stdout": "refs/codex/turn-diffs/checkpoints/0da229b1a16738c0b44d896f294fe296/2961337bf7fb81a652063215a4a08101/1793318947456/c93e9d99-2711-44e1-88e8-653b23519861 63b76cf37e709aab0737d19f0fc8e028121d2d64\nrefs/heads/condition/spec-driven 7ab6822ad5ac2411b3453911ad9abfb9e098783c\nrefs/heads/main 104e0163a0fc1b75b372482f8100f297fa80c47b\nrefs/remotes/origin/HEAD 104e0163a0fc1b75b372482f8100f297fa80c47b\nrefs/remotes/origin/condition/spec-driven 7ab6822ad5ac2411b3453911ad9abfb9e098783c\nrefs/remotes/origin/condition/vibe c4424a0b89d2e0dec09c1a9620a49c549be2dfeb\nrefs/remotes/origin/freeze/v009-vibe-research-2026-10-29 0b5a4a58631503c3a454ecc36d62b892c569ef14\nrefs/remotes/origin/hardening/v008-r01 24e75a1bf49c1a560692107c05ab5647412a94c5\nrefs/remotes/origin/hardening/v008-r02 b5ad1b4235db6806f1b0f2e4e2b294592b27fb21\nrefs/remotes/origin/hardening/v008-r03 19111fa77d70d8f2d5981fe11f2c435b0a3abbb1\nrefs/remotes/origin/hardening/v009-release-candidate 0b5a4a58631503c3a454ecc36d62b892c569ef14\nrefs/remotes/origin/main 104e0163a0fc1b75b372482f8100f297fa80c47b\nrefs/remotes/origin/release/vibe 7f64839dbcb8ae945b0416ecf83b84d78009b1f0\nrefs/remotes/origin/research/sdd-input-audit-2026-10-30 fb2988fd46762b20225ac923be9d4b75e532e88b\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "ls-files",
+        "--others",
+        "--exclude-standard",
+        "-z"
+      ],
+      "exit_code": 0,
+      "stdout": ".specify/feature.json\u0000evidence/sdd-core-spec-approval-2026-10-30/README.md\u0000evidence/sdd-core-spec-approval-2026-10-30/approval-context-source-records.jsonl\u0000evidence/sdd-core-spec-approval-2026-10-30/approval-exact-extract.txt\u0000evidence/sdd-core-spec-approval-2026-10-30/approval-message-as-received.txt\u0000evidence/sdd-core-spec-approval-2026-10-30/approval-receipt.json\u0000evidence/sdd-core-spec-approval-2026-10-30/artifact-manifest.json\u0000evidence/sdd-core-spec-approval-2026-10-30/commands.json\u0000evidence/sdd-core-spec-approval-2026-10-30/preservation.json\u0000evidence/sdd-specify-core-2026-10-30/README.md\u0000evidence/sdd-specify-core-2026-10-30/artifact-manifest.json\u0000evidence/sdd-specify-core-2026-10-30/authoring-and-validation-commands.json\u0000evidence/sdd-specify-core-2026-10-30/authoring-payload.json\u0000evidence/sdd-specify-core-2026-10-30/clarification-questions.md\u0000evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/requirements.md\u0000evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/spec.md\u0000evidence/sdd-specify-core-2026-10-30/feature-initialization.json\u0000evidence/sdd-specify-core-2026-10-30/final-preservation-check.json\u0000evidence/sdd-specify-core-2026-10-30/preflight-commands.json\u0000evidence/sdd-specify-core-2026-10-30/preflight.json\u0000evidence/sdd-specify-core-2026-10-30/quality-review.md\u0000evidence/sdd-specify-core-2026-10-30/request-as-received.txt\u0000evidence/sdd-specify-core-2026-10-30/review.diff\u0000evidence/sdd-specify-core-2026-10-30/session-visible-records.jsonl\u0000evidence/sdd-specify-core-2026-10-30/specify-invocation.txt\u0000evidence/sdd-specify-core-2026-10-30/transcript-export.json\u0000evidence/sdd-specify-core-2026-10-30/validation-001.json\u0000evidence/sdd-specify-core-answers-2026-10-30/README.md\u0000evidence/sdd-specify-core-answers-2026-10-30/answer-interpretation.json\u0000evidence/sdd-specify-core-answers-2026-10-30/answers-as-received.txt\u0000evidence/sdd-specify-core-answers-2026-10-30/artifact-manifest.json\u0000evidence/sdd-specify-core-answers-2026-10-30/commands.json\u0000evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/requirements.md\u0000evidence/sdd-specify-core-answers-2026-10-30/draft-v0.2.0/spec.md\u0000evidence/sdd-specify-core-answers-2026-10-30/final-preservation-check.json\u0000evidence/sdd-specify-core-answers-2026-10-30/pre-edit-state.json\u0000evidence/sdd-specify-core-answers-2026-10-30/prior-stage-artifact-resolution.json\u0000evidence/sdd-specify-core-answers-2026-10-30/revision.diff\u0000evidence/sdd-specify-core-answers-2026-10-30/session-visible-records.jsonl\u0000evidence/sdd-specify-core-answers-2026-10-30/transcript-export.json\u0000evidence/sdd-specify-core-answers-2026-10-30/validation-001.json\u0000evidence/sdd-specify-core-editorial-2026-10-30/README.md\u0000evidence/sdd-specify-core-editorial-2026-10-30/artifact-manifest.json\u0000evidence/sdd-specify-core-editorial-2026-10-30/authorization-source-record.jsonl\u0000evidence/sdd-specify-core-editorial-2026-10-30/commands.json\u0000evidence/sdd-specify-core-editorial-2026-10-30/draft-v0.3.1/requirements.md\u0000evidence/sdd-specify-core-editorial-2026-10-30/draft-v0.3.1/spec.md\u0000evidence/sdd-specify-core-editorial-2026-10-30/export-transform.json\u0000evidence/sdd-specify-core-editorial-2026-10-30/historical-artifact-resolution.json\u0000evidence/sdd-specify-core-editorial-2026-10-30/preflight.json\u0000evidence/sdd-specify-core-editorial-2026-10-30/request-as-received.txt\u0000evidence/sdd-specify-core-editorial-2026-10-30/review.diff\u0000evidence/sdd-specify-core-editorial-2026-10-30/validation.json\u0000evidence/sdd-specify-core-profile-2026-10-30/README.md\u0000evidence/sdd-specify-core-profile-2026-10-30/artifact-manifest.json\u0000evidence/sdd-specify-core-profile-2026-10-30/commands.json\u0000evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/requirements.md\u0000evidence/sdd-specify-core-profile-2026-10-30/draft-v0.3.0/spec.md\u0000evidence/sdd-specify-core-profile-2026-10-30/final-wording-review.json\u0000evidence/sdd-specify-core-profile-2026-10-30/historical-artifact-resolution.json\u0000evidence/sdd-specify-core-profile-2026-10-30/pre-edit-state.json\u0000evidence/sdd-specify-core-profile-2026-10-30/pre-final-wording/spec.md\u0000evidence/sdd-specify-core-profile-2026-10-30/profile-answer-as-received.txt\u0000evidence/sdd-specify-core-profile-2026-10-30/profile-decision.json\u0000evidence/sdd-specify-core-profile-2026-10-30/review.diff\u0000evidence/sdd-specify-core-profile-2026-10-30/revision.diff\u0000evidence/sdd-specify-core-profile-2026-10-30/session-visible-records.jsonl\u0000evidence/sdd-specify-core-profile-2026-10-30/transcript-export.json\u0000evidence/sdd-specify-core-profile-2026-10-30/validation-001.json\u0000evidence/sdd-specify-core-profile-2026-10-30/validation-002.json\u0000specs/001-nordljud-core/checklists/requirements.md\u0000specs/001-nordljud-core/spec.md\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "config",
+        "--get",
+        "core.hooksPath"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "rev-parse",
+        "--path-format=absolute",
+        "--git-path",
+        "hooks"
+      ],
+      "exit_code": 0,
+      "stdout": "E:/DevStorage/nordljud-swcon2627-r2/.git/hooks\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "ls-remote",
+        "--heads",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "7ab6822ad5ac2411b3453911ad9abfb9e098783c\trefs/heads/condition/spec-driven\nc4424a0b89d2e0dec09c1a9620a49c549be2dfeb\trefs/heads/condition/vibe\n0b5a4a58631503c3a454ecc36d62b892c569ef14\trefs/heads/freeze/v009-vibe-research-2026-10-29\n24e75a1bf49c1a560692107c05ab5647412a94c5\trefs/heads/hardening/v008-r01\nb5ad1b4235db6806f1b0f2e4e2b294592b27fb21\trefs/heads/hardening/v008-r02\n19111fa77d70d8f2d5981fe11f2c435b0a3abbb1\trefs/heads/hardening/v008-r03\n0b5a4a58631503c3a454ecc36d62b892c569ef14\trefs/heads/hardening/v009-release-candidate\n104e0163a0fc1b75b372482f8100f297fa80c47b\trefs/heads/main\n7f64839dbcb8ae945b0416ecf83b84d78009b1f0\trefs/heads/release/vibe\nfb2988fd46762b20225ac923be9d4b75e532e88b\trefs/heads/research/sdd-input-audit-2026-10-30\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "--no-optional-locks",
+        "-C",
+        "E:\\DevStorage\\nordljud-swcon2627-r2",
+        "config",
+        "--get",
+        "core.autocrlf"
+      ],
+      "exit_code": 0,
+      "stdout": "true\n",
+      "stderr": ""
+    }
+  ],
+  "authoring_script": "C:\\Users\\alikh\\Documents\\Codex\\2026-10-30\\referenced-chatgpt-conversation-this-is-an\\work\\prepare_core_publication.py",
+  "authoring_script_sha256": "4CD7312B1B9796260860BC3858CDF8AEFFDFBFF871B79E594BFBFD6530EB0143"
+}

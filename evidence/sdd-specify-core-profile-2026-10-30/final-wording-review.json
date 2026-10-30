@@ -1,0 +1,10 @@
+{
+  "kind": "final documentary consistency correction",
+  "before_sha256": "464CA96BECF12DF7D4873737E0176CDCC2AD5A59026BDD1F5AB72AFE830B9C2B",
+  "after_sha256": "E6FB0570CB803AA469FE29D7DBA3971F05A474587DD11F537E338D484BAAEFB2",
+  "old_sentence": "Q1–Q3 are resolved by B/B/B; D01/D02 must still be resolved where relevant before affected acceptance can be completed.",
+  "new_sentence": "Q1–Q3 and the intended D01 profile are resolved. Actual D01 execution observations and authorized D02 conditions must still be evidenced before affected acceptance can be completed.",
+  "reason": "Distinguish the now-selected D01 specification profile from future runtime observations and provider authorization; no product policy changed.",
+  "prior_wording_preserved": "evidence/sdd-specify-core-profile-2026-10-30/pre-final-wording/spec.md",
+  "classification": "Document wording correction, not a product defect or TDD RED."
+}

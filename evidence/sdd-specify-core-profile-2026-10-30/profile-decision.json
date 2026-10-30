@@ -1,0 +1,29 @@
+{
+  "selected_answer_exact": "Edge روی ویندوز؛ اندازه‌های ۱۲۸۰×۸۰۰ و ۳۶۰×۸۰۰ پیکسل CSS (پیشنهاد)",
+  "question_exact": "برای تکمیل معیار آزمون موبایل و مرورگر (D01)، کدام پروفایل آینده را در مشخصات ثبت کنیم؟ هر دو مرورگر روی سیستم تو نصب‌اند. این انتخاب فقط مشخصات را کامل می‌کند؛ الان هیچ آزمون، نصب یا مرحلهٔ دیگری اجرا نمی‌شود.",
+  "question_item_id": "[\"request_user_input_async\",\"call_2623a6e3767c45759b2887197ffb4c31\",0]",
+  "source_session_file": "C:\\Users\\alikh\\.codex\\sessions\\2026\\10\\30\\rollout-2026-10-30T01-14-05-01a189f1-258e-7cb2-b93d-e5fb3b56db4c.jsonl",
+  "source_line": 1010,
+  "source_timestamp": "2026-10-30T10:04:36.277Z",
+  "browser": "Microsoft Edge",
+  "os_family": "Windows",
+  "viewports_css_pixels": [
+    {
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "width": 360,
+      "height": 800
+    }
+  ],
+  "current_host_observed": "Windows-10-10.0.26300-SP0",
+  "edge_binary_version_observed_read_only": "156.0.4314.50",
+  "future_test_must_record_actual_versions_and_viewports": true,
+  "browser_launched": false,
+  "functional_test_executed": false,
+  "physical_handset_test_claimed": false,
+  "full_specification_approved": false,
+  "later_stage_authorized": false,
+  "recorded_at_utc": "2026-10-30T10:08:47.920203+00:00"
+}

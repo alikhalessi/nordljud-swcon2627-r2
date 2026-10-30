@@ -1,0 +1,10 @@
+{
+  "feature_directory": "specs/001-nordljud-core",
+  "spec_file": "specs/001-nordljud-core/spec.md",
+  "template_source": ".specify/templates/spec-template.md",
+  "template_sha256": "F29FEB6B4929E81DDD840E1A3DE4BF64990C3E2E83DBBA82D4288C5C8C1F8F8E",
+  "initial_spec_sha256": "F29FEB6B4929E81DDD840E1A3DE4BF64990C3E2E83DBBA82D4288C5C8C1F8F8E",
+  "template_copied_exactly": true,
+  "branch_created": false,
+  "other_stage_executed": false
+}

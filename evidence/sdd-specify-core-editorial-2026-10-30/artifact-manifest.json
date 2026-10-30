@@ -1,0 +1,72 @@
+{
+  "revision": "0.3.1",
+  "human_approval": "PENDING",
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/authorization-source-record.jsonl",
+      "sha256": "B6D6DCABADB21E5A4D274095126C38033213072D89AE19716CFBC6C7B9D7776E",
+      "bytes": 3317
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/commands.json",
+      "sha256": "69188BD721D9A89D8D8645C487D358A0A7AC65D9EFD2065372659281AA4188CA",
+      "bytes": 24479
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/draft-v0.3.1/requirements.md",
+      "sha256": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+      "bytes": 4725
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/draft-v0.3.1/spec.md",
+      "sha256": "A72604B80878A924486FFB632FBF50748B3AD5777DFD874FF7A78EBB8C69EC60",
+      "bytes": 39088
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/export-transform.json",
+      "sha256": "4D2F7C714880C80F875B05F9A8D2B7B33B1B36AA70C00D34D674ED4334A55272",
+      "bytes": 1059
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/historical-artifact-resolution.json",
+      "sha256": "68A412B129349B181080A06BBBC7EC734C91FA9C982EE4DB1BDCBFBA65DD5CA2",
+      "bytes": 12072
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/preflight.json",
+      "sha256": "D742311275C7C4DC6F6588706B88919834A17A05C5B7E2CDA856A67229F74F62",
+      "bytes": 27417
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/README.md",
+      "sha256": "6320FD383A765B74E94B0FE8F1240EB607D8E60ADB3602D086390AF9821F0FEC",
+      "bytes": 3659
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/request-as-received.txt",
+      "sha256": "4D32D0ADA333439C0F6341995A956CBC78A48E9C50C351CD0C00BB634D4BB2E9",
+      "bytes": 1196
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/review.diff",
+      "sha256": "9754F03B480C640FA28D1AE080B4D3D173E68DF3D0E6926D993A10FA59C5BD9E",
+      "bytes": 3572
+    },
+    {
+      "path": "evidence/sdd-specify-core-editorial-2026-10-30/validation.json",
+      "sha256": "C2FFE8376EAA4132E900F4521D21681CFCAA829F8A4BA454179EAF887B1DC192",
+      "bytes": 2221
+    },
+    {
+      "path": "specs/001-nordljud-core/checklists/requirements.md",
+      "sha256": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+      "bytes": 4725
+    },
+    {
+      "path": "specs/001-nordljud-core/spec.md",
+      "sha256": "A72604B80878A924486FFB632FBF50748B3AD5777DFD874FF7A78EBB8C69EC60",
+      "bytes": 39088
+    }
+  ]
+}

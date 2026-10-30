@@ -1,0 +1,110 @@
+{
+  "stage": "Specify CORE",
+  "draft_revision": "0.1.0",
+  "starting_head": "7ab6822ad5ac2411b3453911ad9abfb9e098783c",
+  "quality_status": "INCOMPLETE",
+  "human_approval": "PENDING",
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": ".specify/feature.json",
+      "sha256": "CFB7EF5EC19F6E4232E65A5BE9C90DE968AA17F11786D473187EE16BAF5DE6D3",
+      "bytes": 53
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/README.md",
+      "sha256": "95C4FE08FDD3AC97FA6EE9DD6773BA5DDC5C6F8A214864D39AE7B93DAF8726E0",
+      "bytes": 6024
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/authoring-and-validation-commands.json",
+      "sha256": "9ABF6580353C6B1762965ECC4CEFB478FE9A4EAA1DCC0AF467F5093D76E649AB",
+      "bytes": 47927
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/authoring-payload.json",
+      "sha256": "6F8BB51792D757E7ECF999AB11390DF65ED31138818B3FD5EABB38FF663F76CA",
+      "bytes": 42007
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/clarification-questions.md",
+      "sha256": "744F9F9D1368685EEE1613DB590390332CE53E6C1F930D22794EBADDDA958233",
+      "bytes": 4259
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/requirements.md",
+      "sha256": "7B52280608A46A23B7E4A57F3E57DD71FB0978996DAD968A5D8BEE556524C464",
+      "bytes": 4147
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/draft-v0.1.0/spec.md",
+      "sha256": "1BDB05A8FC6235FC18DC9FB4A6CAD6D59452F198CE68248AD3B198ABF73B2521",
+      "bytes": 37118
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/feature-initialization.json",
+      "sha256": "424974D6397D2F47F7FE3C82D7CD22DEC337AC52DFC564BED6295F5998634E86",
+      "bytes": 440
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/final-preservation-check.json",
+      "sha256": "3F9AE64331F20C068E05ECC2B3CC7699E8C9BE22045626CCA670C4DDE992EAEC",
+      "bytes": 2099
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/preflight-commands.json",
+      "sha256": "410FDF5462AD96809AA5A34ED9A6DA5BCD347053C7B3018C4F586D7F6B7D8130",
+      "bytes": 8243
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/preflight.json",
+      "sha256": "5FFFD4F92187D4B49D0FBB5CF25FC0E05DDC38FB69E370B7186019F45821D0A8",
+      "bytes": 17666
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/quality-review.md",
+      "sha256": "7786A4518E81AD97AD0A22A87F11838DAE2B407042A0B91E6BB256D9D2DFB1CF",
+      "bytes": 2842
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/request-as-received.txt",
+      "sha256": "FA6D7A2A6961419C18F990D7403BAD1B632CF9D266F8F0FA9A100E0EAF3CA82B",
+      "bytes": 2395
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/review.diff",
+      "sha256": "37E1384A1E630C0F2E6FEF92394857CDEEB6D96493527F703C79DB3A49C8DA25",
+      "bytes": 42261
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/session-visible-records.jsonl",
+      "sha256": "2DDBD5471DD13AF441B8C7EC0527ABA6929A3454287D9AF9D1FB5DA6ADB1FF73",
+      "bytes": 182200
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/specify-invocation.txt",
+      "sha256": "C7D82C227F43FE4381F0FB90AEF28D828A851777C968E3B9B9804DFAC419A2BA",
+      "bytes": 1967
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/transcript-export.json",
+      "sha256": "75485A56B9C908122C851837D160803C9DA24C8299556049C1C382A8FD349EE2",
+      "bytes": 832
+    },
+    {
+      "path": "evidence/sdd-specify-core-2026-10-30/validation-001.json",
+      "sha256": "960972694ABFC635BD2BC47F1FE13A8636C14E0552A54A2423CB9521E3EF81C5",
+      "bytes": 28682
+    },
+    {
+      "path": "specs/001-nordljud-core/checklists/requirements.md",
+      "sha256": "7B52280608A46A23B7E4A57F3E57DD71FB0978996DAD968A5D8BEE556524C464",
+      "bytes": 4147
+    },
+    {
+      "path": "specs/001-nordljud-core/spec.md",
+      "sha256": "1BDB05A8FC6235FC18DC9FB4A6CAD6D59452F198CE68248AD3B198ABF73B2521",
+      "bytes": 37118
+    }
+  ]
+}
