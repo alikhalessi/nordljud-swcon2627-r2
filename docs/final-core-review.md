@@ -1,7 +1,11 @@
-# Final CORE increment review
+# Current CORE increment review
 
-Runnable local Guest learning and disabled-by-default authentication groundwork are delivered. All four source lexicons/missions, two honest checks, independent manual flags, refresh retention and safe local failure states have actual tests. Private cloud progress, schema/RLS and real providers remain unfinished/blocked.
+The local Guest learning path is runnable. Private cloud progress, schema/RLS and live account/provider verification remain unfinished or blocked. Full CORE completion and convergence are not claimed.
 
-The derived evaluation/sdd-core-results.json retains all 15 cases: 9 PASS + 0 FAIL + 3 BLOCKED + 3 NOT TESTED = 15. Evidence-integrity validation is documentary only. F03 is a request observation with no heard/quality claim; F13/F14 retain incomplete account coverage. No full CORE or Implement-stage completion is claimed.
+The current derived evaluation/sdd-core-results.json retains F01–F15 and N=15: 8 PASS + 0 FAIL + 3 BLOCKED + 4 NOT TESTED. F01–F07 and F15 pass their qualified recorded criteria; F09/F10/F12 are BLOCKED; F08/F11/F13/F14 are NOT TESTED as full mapped cases. Passing Guest portions do not establish full account coverage. Native Swedish speech request/text/language were observed; audible quality was not.
 
-Source/build/evidence inspection, independent read-only review, original failed runs, corrections, exact tested artifact digest and preservation are retained. See implementation-review-receipt.md for task dispositions and the local Git handoff. No push, deployment, paid service, external provider/database action or other Spec Kit stage occurred.
+The existing focused-verification receipt records 86 offline tests, 56 real Edge checks across 1280×800 and 360×800 CSS viewports, typecheck and build. These tests exercised commit 9d2f273d55a83b15863604b75174c689bb7a0c05 with the recorded dirty documentary state and exact runtime digest. No tests were rerun for publication and the later publication commit is not a newly tested application revision.
+
+Official Converge executed once and appended T083–T094; its result is tasks_appended, converged=false. The task bytes and existing checkbox states are preserved during publication. Original implementation-checkpoint documents and the older nine-PASS ledger are preserved under evidence/sdd-technical-publication-2026-10-31/historical/ and remain in the existing commit history.
+
+See ../evidence/sdd-technical-publication-2026-10-31/README.md for selected technical stage evidence, original-record hash bindings, publication qualifications and verification receipts. Historical receipts retain their original labels and temporal authority; later execution does not backdate an earlier checkpoint.

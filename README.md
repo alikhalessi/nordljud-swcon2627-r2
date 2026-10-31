@@ -1,5 +1,19 @@
 # Nordljud 2.0 — SWCON2627 (Round 2)
 
+## Current Condition B technical status — 2026-10-31
+
+The independent SDD branch contains a runnable local Guest learning increment and approved specification/design/task documents. CORE is incomplete: **8 PASS, 0 FAIL, 3 BLOCKED, 4 NOT TESTED; F01–F15, N=15**. Account/cloud/RLS work remains incomplete or unavailable. The older nine-PASS checkpoint is historical.
+
+- [Current qualified acceptance ledger](evaluation/sdd-core-results.json)
+- [Current review and limitations](docs/final-core-review.md)
+- [Technical publication and evidence index](evidence/sdd-technical-publication-2026-10-31/README.md)
+- [Local reproduction](specs/001-nordljud-core/quickstart.md)
+
+Publication is a documentation/configuration change; it does not rerun tests, complete implementation or authorize deployment. Automatic Vercel deployments are disabled for the exact `condition/spec-driven` branch through its versioned `vercel.json`; no other branch or project-wide setting is changed. Reports and conversation-bearing originals remain local.
+
+## Preserved historical baseline and governance notes
+
+
 **Status:** PRE-IMPLEMENTATION / shared baseline preparation, 28 October 2026. No Condition A or B application code has been implemented.
 
 ## Condition B governance — 2026-10-30

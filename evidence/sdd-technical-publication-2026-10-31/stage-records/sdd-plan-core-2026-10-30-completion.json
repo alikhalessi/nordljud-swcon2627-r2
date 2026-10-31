@@ -1,0 +1,11 @@
+{
+  "stage": "Plan",
+  "date": "2026-10-30",
+  "recorded_at_utc": "2026-10-30T17:28:36.988145+00:00",
+  "branch": "condition/spec-driven",
+  "official_setup_invocations": 1,
+  "official_setup_exit_code": 0,
+  "execution_status": "COMPLETED through Phase 1 — human review PENDING",
+  "publicationQualification": "Selected technical fields from the historical completion record. Original generation/review labels remain historical; later approval bindings and implementation evidence govern subsequent authority.",
+  "originalRecordSha256": "8637565b3864a9c0f92538f5dcc20bf8f45f40c710864befaa9049b0ef0ce242"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "APPROVED — bounded documentation clarifications/checklist review, then Tasks only",
+  "date": "2026-10-30",
+  "timezone": "Europe/Helsinki",
+  "approval_timestamp_utc": "2026-10-30T19:44:39.629Z",
+  "approved_assessments": 33,
+  "approved_policies": {
+    "G01": "15-second client waiting limit for automatic source/save operations, unknown writes reconciled by same-owner read-back before explicit retry, no automatic replay; interactive consent excluded.",
+    "G02": "Stop/preserve/report after schema failure; normal failed-transaction abort permitted; destructive resets or recovery affecting existing data require a reviewed plan and separate approval."
+  },
+  "authorized_stage": "Official installed Spec Kit 0.12.11 Tasks only",
+  "originalReceiptSha256": "1c6fb77d693cbd941300ca4814ef97fcea701c79a2c97981a4efd724733a1522",
+  "publicationQualification": "Technical approval binding only. Exact mixed receipt and conversation-bearing records remain unchanged locally; no approval message is reproduced."
+}

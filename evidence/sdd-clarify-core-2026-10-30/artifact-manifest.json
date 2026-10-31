@@ -1,0 +1,238 @@
+{
+  "stage": "Clarify",
+  "revision": "0.4.0 draft",
+  "human_review": "PENDING",
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/after-answer-01/revision.diff",
+      "sha256": "617E694EDFEB3C27CFF158D478C811296E0440A3D63643931A63EAA1052E48A6",
+      "bytes": 17556
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/after-answer-01/spec.md",
+      "sha256": "925660277AC773EC00F4294E464B08EFC62410DB608E329375D514398D73D2D7",
+      "bytes": 40969
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/after-answer-02/revision.diff",
+      "sha256": "6D346D5ED49020258E8469629309AFE7094DDA14C8C9C4FAEFF3DABAFBBAA11A",
+      "bytes": 21862
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/after-answer-02/spec.md",
+      "sha256": "7AC546793D8EF63DA8563AB4B3CFF081374EB3ED4CFB98DE052DC0944275B2A1",
+      "bytes": 43137
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-01-commands.json",
+      "sha256": "5E26E72B8B6C85FA25C59D398973BEBD2CF8B31587DD9FD0989508EB85DC6137",
+      "bytes": 21924
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-01-message-as-received.txt",
+      "sha256": "DD0760B4E3A5BE44FB8F875A9C053721181072E63CEE76B7E431F9D64F62AE13",
+      "bytes": 468
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-01-source-records.jsonl",
+      "sha256": "7F9B38D7D7859B36064E0950B57318F7512A65207154226E6B3C4AA7F91FDFB0",
+      "bytes": 4269
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-01-validation.json",
+      "sha256": "2E88B03FBC198CFA5790A7F1A977175B474AA97E41873577C26E6AA431391773",
+      "bytes": 486
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-01.json",
+      "sha256": "BC2FFC889C41D4291262D3C8CFBB13D7A700F9C59FF2E47A1A0D8DE0C36C4520",
+      "bytes": 806
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-02-commands.json",
+      "sha256": "5200A7DC398056776E93A90307208697B2C24F0A05CD6DE3FC1588A860FE11B4",
+      "bytes": 26113
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-02-message-as-received.txt",
+      "sha256": "33B02557FF2093A6620BE223C598AD31FDED49933A11876F9468BA8E822F1C41",
+      "bytes": 468
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-02-source-records.jsonl",
+      "sha256": "34395EBB3006490E30CB80312B79350577E1472C3A8A29D0B98F34548C921D00",
+      "bytes": 4248
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-02-validation.json",
+      "sha256": "FEED77F885816B92455BDB2BFE54D2BC6197C67C4F90356DF45F7DCDA9396DD6",
+      "bytes": 333
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/answer-02.json",
+      "sha256": "ECCDC54FBD28153C1E7DA0D5C8D32E0BC6ECF3288E853E65F05D03600D6A49FD",
+      "bytes": 820
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/approved-v0.3.1/requirements.md",
+      "sha256": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+      "bytes": 4725
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/approved-v0.3.1/spec.md",
+      "sha256": "A72604B80878A924486FFB632FBF50748B3AD5777DFD874FF7A78EBB8C69EC60",
+      "bytes": 39088
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/artifact-manifest-before-output-qualification.json",
+      "sha256": "1D078989DF4BF20F4EEC8175DACBF1907685E3C4022634C0EF421ECB551BC3F3",
+      "bytes": 7938
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/checklist-revalidation.json",
+      "sha256": "5231D2989BCA4C084A942009E52964FA3290E6F4D8DEC015899E2C0D3E506227",
+      "bytes": 4930
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/completion.json",
+      "sha256": "07CEDBD626ACA4E1D7124B9C8764F9708C0D1E981C1B98D349F2AE00AD34A735",
+      "bytes": 4678
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/coverage-summary.json",
+      "sha256": "19ECE27B31EBDACA042B5456C8B4CBE79CAAD957590767192D976ED72BABEC9B",
+      "bytes": 2710
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/final-review-commands.json",
+      "sha256": "86489DCC7F548EDCBFDE7E78F2864DBE6B2940229F2C8D7A849BA9A91DC5F86D",
+      "bytes": 28697
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/final-v0.4.0/requirements.md",
+      "sha256": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+      "bytes": 4725
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/final-v0.4.0/spec.md",
+      "sha256": "7AC546793D8EF63DA8563AB4B3CFF081374EB3ED4CFB98DE052DC0944275B2A1",
+      "bytes": 43137
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/final-verification.json",
+      "sha256": "C854BCAA7DB4C85635C543FC70C89614B6FD2881D2E25A5CDF20E06CE5091FB5",
+      "bytes": 2964
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/finalization-output-error-source-record.jsonl",
+      "sha256": "542BC313C4DE668B253E70BFB0191051BA91C57AA14A042EA86CADBAD0FE8D99",
+      "bytes": 1561
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/finalization-output-qualification.json",
+      "sha256": "208ECECBC467B5CD1F34CB87DF1CDA67189E1357381DA5891C94A8E1F2A603F1",
+      "bytes": 1203
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/FINALIZATION_NOTE.md",
+      "sha256": "7B6FA182ADE8EF0E995541199242A272F13A5277DD268D86BBFACAE5BE9B3A62",
+      "bytes": 846
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/post-finalization-verification-commands.json",
+      "sha256": "4CB8563359F86930B597D129A7FC1DD2231DA8CDD1A366288E89310B20B8C444",
+      "bytes": 3012
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/post-hooks-check.json",
+      "sha256": "956830328FD572251D0ABFFA977A942795F408607332858B61E9D6EC5CF81CC6",
+      "bytes": 140
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/preflight-commands.json",
+      "sha256": "DD258BD9F75A72BC8B20693C8D3BE281D8B67C56A286D1B93C274D1719FB696B",
+      "bytes": 17732
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/preflight.json",
+      "sha256": "840E018BB08A4FE1FBAB6E5EC628F69977DA6660C673D55C8EF5D910008D516B",
+      "bytes": 26897
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/question-01.json",
+      "sha256": "3C32B4F0E1430534F6F83B87A7657B9ABC62C2E71BED9B4845FBBE7AAAE74D1E",
+      "bytes": 1052
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/question-02.json",
+      "sha256": "A5B0DAC9C1BC0DE1F538C01FA9A30AE90A44F3C95D3E37CCCA32A70169D61446",
+      "bytes": 1173
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/README.md",
+      "sha256": "A1F2AA0223FF2603A0CFD7E9586EC3278EA197583CF025F847DE4CBEE40F3F13",
+      "bytes": 7754
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/request-as-received.txt",
+      "sha256": "2D4306B7D3538A72F31A91AE3241B82E0817A1B3FA600F81102C4050697E5696",
+      "bytes": 2062
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/request-source-record.jsonl",
+      "sha256": "0053774A84DC75878881EC16628E14A7128182DCB3FA9F067B34935911DB5FCC",
+      "bytes": 4197
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/review.diff",
+      "sha256": "6D346D5ED49020258E8469629309AFE7094DDA14C8C9C4FAEFF3DABAFBBAA11A",
+      "bytes": 21862
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/session-visible-records.jsonl",
+      "sha256": "829716204BFCD3F40BF5E3AA4CB603ADA039B0D8091B1D8798B9016710FC4F4C",
+      "bytes": 268670
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/stage-state-before-answer-01.json",
+      "sha256": "6A65CA55BEE4C1F53203AF1FA4EA96CABAC2D33FB24A329F5E84403B341666C7",
+      "bytes": 505
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/stage-state-before-answer-02.json",
+      "sha256": "75C693943F841A28BDFC84C3AD8A285914D27BEF382F859CCA62D7AB82CD4CD1",
+      "bytes": 497
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/stage-state-before-completion.json",
+      "sha256": "65C7B0DA9958EB38737C945176F749F71E0E147391147AC1F1EF5E212ABC17DA",
+      "bytes": 508
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/stage-state-before-question-02.json",
+      "sha256": "580072C18C1F85C8E247AD03F22EAF8AB352ACF943DAC51AFEACF7697F757439",
+      "bytes": 492
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/stage-state.json",
+      "sha256": "00460104F89797030ECED103D2460F57AF9FFD5A6DBCE62F1B6617DABFCD6DD4",
+      "bytes": 409
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/transcript-export.json",
+      "sha256": "07546A1CD9BE9F8BE1BEF3AD3DB07421C215462D02455296469D2F8BAB50A9CC",
+      "bytes": 490
+    },
+    {
+      "path": "specs/001-nordljud-core/checklists/requirements.md",
+      "sha256": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+      "bytes": 4725
+    },
+    {
+      "path": "specs/001-nordljud-core/spec.md",
+      "sha256": "7AC546793D8EF63DA8563AB4B3CFF081374EB3ED4CFB98DE052DC0944275B2A1",
+      "bytes": 43137
+    }
+  ]
+}

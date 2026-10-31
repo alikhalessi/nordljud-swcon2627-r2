@@ -1,0 +1,41 @@
+{
+  "approved_artifact": "Nordljud CORE Plan v0.1.0 and seven presented design documents",
+  "status": "APPROVED BY STUDENT",
+  "date": "2026-10-30",
+  "timezone": "Europe/Helsinki",
+  "approval_timestamp_utc": "2026-10-30T17:51:59.211Z",
+  "approved_artifacts": {
+    "specs/001-nordljud-core/plan.md": {
+      "sha256": "16FD261A04E2A15DBA6A81563ECF9A3527DC589D16BC647BC5F82BFB62A90FE7",
+      "snapshot": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/plan.md"
+    },
+    "specs/001-nordljud-core/research.md": {
+      "sha256": "596E3B64B75647EBFD9F8C0DDFB662EFB5F767EA85B33E054D0A0E0504A17857",
+      "snapshot": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/research.md"
+    },
+    "specs/001-nordljud-core/data-model.md": {
+      "sha256": "58E93FAA1361E22AFF803EFACF91E3226F8032A8F144827BD8FF3E70FE57F212",
+      "snapshot": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/data-model.md"
+    },
+    "specs/001-nordljud-core/quickstart.md": {
+      "sha256": "4930AF614AE10716E80DAE2AB7C8DCD0494D9C4E90471F050BE11A459763AA88",
+      "snapshot": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/quickstart.md"
+    },
+    "specs/001-nordljud-core/contracts/core-http.md": {
+      "sha256": "F0B441CF3D1FEB842C4331C9B925323E886309F943D411FE47C412480223E50E",
+      "snapshot": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/core-http.md"
+    },
+    "specs/001-nordljud-core/contracts/auth.md": {
+      "sha256": "9235AC74A92C409877D76E059B13EBB845BF34130358F5EDE37218A3EB3999AD",
+      "snapshot": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/auth.md"
+    },
+    "specs/001-nordljud-core/contracts/ui-behavior.md": {
+      "sha256": "7A12915F3B7F2B4D9026E30AC4A14772704BC6F890C00CA907DDBFCEF09D7AE2",
+      "snapshot": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/ui-behavior.md"
+    }
+  },
+  "authorized_next_stage": "Official installed Spec Kit 0.12.11 Checklist only",
+  "earlier_pending_labels": "Retained historical pre-approval metadata; this receipt records the later hash-bound approval.",
+  "originalReceiptSha256": "c0b134edd9df145493264edfade01dfeb91645ec6edfb393b8df0d377614b1de",
+  "publicationQualification": "Technical approval binding only. Exact mixed receipt and conversation-bearing records remain unchanged locally; no approval message is reproduced."
+}

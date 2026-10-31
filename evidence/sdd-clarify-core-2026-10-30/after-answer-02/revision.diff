@@ -1,0 +1,116 @@
+diff --git a/specs/001-nordljud-core/spec.md b/specs/001-nordljud-core/spec.md
+index a4f6c97..fa6cd1f 100644
+--- a/specs/001-nordljud-core/spec.md
++++ b/specs/001-nordljud-core/spec.md
+@@ -4,21 +4,28 @@
+ 
+ **Created**: 2026-10-30 (Europe/Helsinki)
+ 
+-**Status**: Draft v0.3.1 — Q1=B, Q2=B, Q3=B and D01 profile recorded; specification-quality checklist complete; full human approval and later-stage authorization PENDING.
++**Status**: Clarify draft v0.4.0 — based on student-approved v0.3.1; CLARIFY-C01=A and CLARIFY-C02=B integrated. This new clarification draft awaits full human review; Plan and later stages are not authorized.
+ 
+-**Input**: The student's `$speckit-specify` instruction authorizes only one CORE specification, its quality checklist, required feature metadata and new execution evidence. The exact received request and invocation are retained in `../../evidence/sdd-specify-core-2026-10-30/`.
++**Input**: The original Specify request is retained in `../../evidence/sdd-specify-core-2026-10-30/`. The current user instruction authorizes only the installed official Clarify skill for this existing CORE feature; its actual request, prior approved snapshot and answer evidence are retained in `../../evidence/sdd-clarify-core-2026-10-30/`.
+ 
+ ## Constitution Alignment *(mandatory)*
+ 
+-- **Governance**: Constitution v1.0.0, ratified 2026-10-30; approval and reviewed content are recorded in `../../evidence/sdd-ratification-2026-10-30/`. Starting HEAD is `7ab6822ad5ac2411b3453911ad9abfb9e098783c`. This specification is a new unapproved working-copy artifact, not content committed at that SHA.
++- **Governance**: Constitution v1.0.0, ratified 2026-10-30; its evidence remains in `../../evidence/sdd-ratification-2026-10-30/`. The student approved v0.3.1 in `../../evidence/sdd-core-spec-approval-2026-10-30/`; that version was published at `d140bc9898ef134efff7dc14ef95b2f2158ebc5f`, the starting HEAD for this Clarify session. The approved bytes remain in the retained snapshot; this new clarification draft is not committed at that SHA.
+ - **Scope**: CORE/PRIMARY F01–F15, N=15, only. This one feature covers the common classroom learning MVP and its evaluation obligations. E01–E07/EXT-AC01–07 are excluded from this feature and retain their separate SECONDARY N=7 denominator.
+ - **Traceability**: MBR-B-002 Git blob `61e4f31ea150c827c92ecf785677c56af45ce04f`; SDD_002 verbatim approval blob `d00a5bac308b182dcd5fc99f290089a9d15d26e5`; original charter, product brief, source manifest and acceptance matrix. EP-B-001 blob `8e45c7d20a8039491dcc91afc9e6c5cc0f270394` is consulted only for the secondary-scope boundary. Historical AI_DRAFT labels are preserved; SDD_002 records their later exact approval.
+-- **Review**: Specify is authorized by the current user invocation. The student answered Q1–Q3 with B/B/B; the revised specification and checklist still require full human review. No Clarify, Plan, standalone Checklist, Tasks, Analyze, Implement or Converge stage is executed or authorized by creating this document. No commit or push is authorized.
++- **Review**: The current invocation authorizes Clarify only. The prior Q1=B, Q2=B, Q3=B and D01 decisions remain unchanged. New answers are incorporated individually; the resulting draft still requires full human review. Plan, standalone Checklist, Tasks, Analyze, Implement and Converge are not executed or authorized here. No commit or push is authorized.
+ 
+ The immutable primary acceptance matrix is not rewritten. The mapping below specifies observable outcomes and intended evidence for the existing F01–F15 cases; it does not add cases to their denominator. Requirements-quality checks are separate from runtime results. Every application case remains **NOT TESTED** in this document-only stage.
+ 
+ Only the neutral common inputs and current SDD documents inform this feature. No Vibe implementation, tests, design, screenshots, fixes, ledgers or retrospective are inputs. The frozen Vibe anchor remains `0b5a4a58631503c3a454ecc36d62b892c569ef14`. No external provider access, expenditure or deployment is inferred from the approved requirements.
+ 
++## Clarifications
++
++### Session 2026-10-30
++
++- Q: [CLARIFY-C01] What should change a verb sense’s “Studied” status? → A: The learner explicitly marks or unmarks the sense as Studied. Viewing or practising does not change it automatically. (Option A.)
++- Q: [CLARIFY-C02] When the same legitimate sense exists at different levels, how should its Favorites and Studied flags behave across levels? → A: Keep both flags independent for each level-specific sense record. (Option B.)
++
+ ## User Scenarios & Testing *(mandatory)*
+ 
+ All scenarios below describe future acceptance observations, not tests performed during Specify. Priorities describe user value and sequencing; every mapped CORE obligation remains required.
+@@ -40,6 +47,10 @@ As a learner, I want to find a verb meaning at my level and inspect its authenti
+ 5. **US1.5 — F07:** Given a selected sense with a legitimate counterpart in a target level, when the learner changes level, then the same semantic meaning remains selected and the examples belong to the target level.
+ 6. **US1.6 — F07:** Given no legitimate counterpart, when the learner changes to the target level, then the absence is explained, active selection in that level is cleared and study/practice requiring a selected sense waits for a new explicit selection. No unrelated sense is substituted and existing favorites/studied records are not deleted.
+ 
++7. **US1.7 — F08/F11 (supplementary Studied-state verification):** Given a sense with its current Studied state, when the learner explicitly marks or unmarks it, then that choice is reflected and retained under the existing Guest/account policy. Viewing the sense, practising or marking mission completion does not automatically change Studied. The action does not grant correctness credit or imply mastery.
++
++8. **US1.8 — F06/F07/F08/F11 (supplementary level-specific flag verification):** Given a legitimate counterpart at another level with its own saved Favorites/Studied choices, when the learner changes flags in the current level and switches to the counterpart, then the target level shows its own saved choices, not copied current-level flags. Switching back restores the original level's choices. A record without saved choices is unfavorited and unmarked; distinct meanings remain independent even when spelling matches.
++
+ ### User Story 2 - Study an authentic mission with optional speech (Priority: P1)
+ 
+ As a learner, I want a representative mission at each level, optional English assistance and supported Swedish pronunciation so that I can study source-backed material in a form I can understand.
+@@ -132,10 +143,12 @@ As the student-researcher or assessor, I want traceable, reproducible evaluation
+ - The same written verb has two senses; selection, examples and favorites must not merge them.
+ - A supplied form, translation or example is blank, a placeholder or an editorial em dash; missing content remains unavailable and must not become an invented answer.
+ - The selected sense has no legitimate target-level counterpart; explain the absence, clear active selection in the target level and wait for a new explicit selection without deleting existing per-sense saved records.
++- Legitimate counterparts at different levels can have different Favorites/Studied flags. Changing or restoring one level's flags does not copy, merge or overwrite the other level's choices; semantic selection continuity does not imply shared saved flags.
+ - A search produces no matching supplied spelling; show a truthful empty result, not fabricated vocabulary.
+ - A wrong answer or reveal is followed by retry, refresh or sign-in; no unearned correctness credit is created.
+ - A Guest refresh retains only level/selected sense and per-sense favorites/studied state, not mission-completion or practice-result state. Browser application-data clearing removes Guest records; sign-in never imports or merges them into an account.
+ - The learner marks mission completion before or after wrong, revealed or unavailable checks; record completion only as explicit self-report, without granting correctness credit or implying assessed success/mastery. Practice outcomes remain separate.
++- Viewing a sense, practising or marking mission completion does not automatically mark or unmark Studied; only an explicit learner mark/unmark changes that choice, subject to the existing retention, clearing and ownership boundaries.
+ - Provider cancellation, rejection, expired sessions, network loss or failed persistence must not imply successful authentication or saving.
+ - User A attempts every supported record operation as user B; server ownership must hold even when the visible interface is bypassed.
+ - Swedish speech or an appropriate voice is unavailable; reading and supported practice remain usable.
+@@ -167,15 +180,19 @@ As the student-researcher or assessor, I want traceable, reproducible evaluation
+ - **FR-018 — F08/F11/F12/F14**: Guest and account state MUST remain separate, with no Guest-to-account import or automatic merge. Sign-out, expired sessions and identity changes MUST prevent unauthorized access to another owner's records. Clearing active selection does not authorize deleting another sense's saved state.
+ - **FR-019 — F15/all CORE cases**: Acceptance reporting MUST retain the unchanged F01–F15 PRIMARY N=15 contract and distinguish PASS/FAIL/BLOCKED/NOT TESTED by actual evidence and tested SHA. Unavailable services remain in the denominator. Build success, a redirect or a checklist tick MUST NOT substitute for runtime/security acceptance.
+ 
++- **FR-020 — F08/F11 (supplementary Studied-state verification)**: The learner MUST explicitly mark or unmark an individual sense as Studied. Viewing, practising, practice correctness or mission completion MUST NOT automatically change that choice. A sense without a prior stored choice starts unmarked. Studied MUST remain separate from favorites, mission completion, correctness credit and mastery; its retention, clearing and ownership follow the already approved Guest/account policy.
++
++- **FR-021 — F06/F07/F08/F11 (supplementary level-specific flag verification)**: Favorites and Studied MUST be independent for each level-specific sense record, in both supported Guest and account contexts. Switching to a legitimate counterpart MUST show that target record's own saved flags; changing one level MUST NOT copy, merge or overwrite another level's flags. With no prior choices, the target record is unfavorited and unmarked. Semantic selection continuity and distinct-meaning identity remain unchanged; no storage schema or identifier algorithm is selected here.
++
+ ### Key Entities *(include if feature involves data)*
+ 
+ - **Learning level**: One of A2, B1, B2 or C1, associated with its unchanged source collection and representative mission.
+-- **Source-linked sense**: A semantic record distinct from its written verb spelling, with supplied meaning, forms and examples; same spelling never establishes sense identity by itself.
++- **Source-linked sense**: A level-specific semantic record distinct from its written verb spelling, with supplied meaning, forms and examples. Legitimate semantic counterparts support selection continuity across levels, but each level-specific record has independent Favorites/Studied choices. Same spelling never establishes sense identity by itself.
+ - **Representative mission**: A source-backed learning selection for a level, associated with its stored text and source-supported comprehension/verb-form checks; no daily schedule is implied.
+ - **Practice outcome**: An actual response classified as correct, incorrect, revealed or unavailable, related to its check and source sense. An authenticated owner retains the latest result for each check separately from self-reported completion; Guest results do not persist across refresh. A full attempt history is not required.
+-- **Guest learning state**: Browser-scoped level/selected sense and per-sense favorites/studied state retained across refresh. Mission-completion/practice-result state is transient across refresh; no Guest record is imported into an account.
++- **Guest learning state**: Browser-scoped level/selected sense and per-level, per-sense favorites/studied state retained across refresh. Studied is an explicit learner mark/unmark, independent of viewing, practice or mission completion. Mission-completion/practice-result state is transient across refresh; no Guest record is imported into an account.
+ - **Learner account/session**: A legitimate authenticated identity and its valid/signed-out/unavailable state, without prescribing an implementation mechanism.
+-- **Account-owned learning state**: Favorites, studied status, explicitly self-reported mission completion and latest per-check results belonging to one verified owner, with completion and correctness kept separate. Another account cannot access or change ownership implicitly.
++- **Account-owned learning state**: Per-level, per-sense favorites and explicitly marked/unmarked studied status, plus self-reported mission completion and latest per-check results belonging to one verified owner. Studied, completion and correctness remain separate. Another account cannot access or change ownership implicitly.
+ - **Evaluation record**: An existing acceptance-case ID, exact tested revision and environment, expected/actual outcome, evidence and one truthful result status. It is not a new acceptance case or an application architecture.
+ 
+ ### Primary Acceptance Traceability and Intended Evidence
+@@ -191,12 +208,12 @@ An approved Master/Constitution obligation may require additional observations,
+ | F03 | FR-003 | US2.3 | Edge on Windows under D01: record actual Swedish voice/audio availability, request authentic Swedish speech where supported and verify meaningful unsupported/unavailable fallback without claiming audio success from metadata alone. | NOT TESTED |
+ | F04 | FR-004, FR-005 | US3.1–US3.4 | Controlled valid/invalid/reveal inputs for both check types; observe truthful feedback and zero wrong/reveal credit. | NOT TESTED |
+ | F05 | FR-006, FR-017 | US1.1–US1.3 | Full source/collection and browser inspection: retrieve 456 senses per level, search supplied spellings and inspect available/missing fields. | NOT TESTED |
+-| F06 | FR-007 | US1.4 | Browser and permitted saved-state context: select/favorite the two `sticka` senses independently and compare their meaning/examples/state. | NOT TESTED |
+-| F07 | FR-008 | US1.5–US1.6 | Browser with source-linked counterparts and a permitted no-counterpart fixture: verify semantic preservation, an explanation and cleared active target-level selection when no match exists. | NOT TESTED |
+-| F08 | FR-009, FR-018 | US4.1–US4.3 | Same-browser Guest journey: refresh retains only level/selection/favorites/studied; completion/results reset, browser data clearing removes Guest records and sign-in performs no import. | NOT TESTED |
++| F06 | FR-007; supplementary FR-021 | US1.4; supplementary US1.8 | Browser and permitted saved-state context: select/favorite the two `sticka` senses independently and compare their meaning/examples/state. | NOT TESTED |
++| F07 | FR-008; supplementary FR-021 | US1.5–US1.6; supplementary US1.8 | Browser with source-linked counterparts and a permitted no-counterpart fixture: verify semantic preservation, an explanation and cleared active target-level selection when no match exists. | NOT TESTED |
++| F08 | FR-009, FR-018; supplementary FR-020/FR-021 | US4.1–US4.3; supplementary US1.7–US1.8 | Same-browser Guest journey: refresh retains only level/selection/favorites/studied; completion/results reset, browser data clearing removes Guest records and sign-in performs no import. | NOT TESTED |
+ | F09 | FR-010, FR-018 | US5.1, US5.3 | Authorized independent email test environment D02: real registration, invalid credentials, sign-in/out and session/failure feedback. | NOT TESTED |
+ | F10 | FR-011 | US5.2 | Authorized hosted origin/provider D02: complete Google sign-in, verify hosted return and actual valid session rather than redirect alone. | NOT TESTED |
+-| F11 | FR-012 | US5.4 | Authorized owner D02: save favorites and explicitly self-reported mission completion, then refresh/sign out/in; separately verify studied/latest practice results required by the Master and record device limitations. | NOT TESTED |
++| F11 | FR-012; supplementary FR-020/FR-021 | US5.4; supplementary US1.7–US1.8 | Authorized owner D02: save favorites and explicitly self-reported mission completion, then refresh/sign out/in; separately verify studied/latest practice results required by the Master and record device limitations. | NOT TESTED |
+ | F12 | FR-013, FR-018 | US5.5 | Two legitimate users with minimal synthetic records in D02: verify own access and denial of cross-owner read/create/change/delete, independently of UI hiding. | NOT TESTED |
+ | F13 | FR-014 | US6.1–US6.2 | Edge on Windows at 1280×800 and 360×800 CSS-pixel viewports: perform essential study/navigation/login with keyboard, inspect focus/labels/feedback and record actual versions and viewport conditions. | NOT TESTED |
+ | F14 | FR-005, FR-015, FR-018 | US3.4, US5.3, US6.3–US6.4 | Later source/artifact review plus permitted browser failure cases: inspect secret exclusion, safe ownership behavior and actionable non-disclosing errors. | NOT TESTED |
+@@ -212,11 +229,11 @@ Each outcome below is a requirement for later observation, not a measurement cla
+ 
+ - **SC-001 — F01/F02:** All four selectable levels expose distinct source-linked representative missions, and their Swedish/English assistance remains faithful when shown or hidden.
+ - **SC-002 — F05:** The learner can retrieve 456 senses at each of four levels, 1,824 level-specific sense records in total, while each level's 455 written spellings and missing fields are represented honestly.
+-- **SC-003 — F06/F07:** The two `sticka` meanings are independently selectable and favoriteable; every tested legitimate level counterpart preserves meaning, and every tested missing counterpart produces an explanation and cleared active target-level selection without unrelated substitution.
++- **SC-003 — F06/F07:** The two `sticka` meanings are independently selectable and favoriteable; every tested legitimate level counterpart preserves meaning, and every tested missing counterpart produces an explanation and cleared active target-level selection without unrelated substitution. Supplementary FR-021/US1.8 checks verify that Favorites/Studied restore independently for each level-specific record; they do not expand the original F06/F07 primary pass conditions.
+ - **SC-004 — F04:** For each supported check type, observed incorrect/revealed responses earn zero correctness credit, correct responses are identified accurately, and missing-source cases create no fabricated answer or credit.
+-- **SC-005 — F08:** A Guest can perform the supported basic learning path without sign-in. Refresh retains level/selected sense, favorites and studied state; Guest mission completion and practice results are not retained. Browser application-data clearing removes Guest records, and sign-in causes zero Guest-to-account imports or automatic merges.
++- **SC-005 — F08:** A Guest can perform the supported basic learning path without sign-in. Refresh retains level/selected sense and the independent Favorites/explicit Studied choices for each level-specific sense; Guest mission completion and practice results are not retained. Browser application-data clearing removes Guest records, and sign-in causes zero Guest-to-account imports or automatic merges.
+ - **SC-006 — F09/F10:** In authorized functioning provider conditions, all specified email flows and the Google hosted-return flow produce their truthful session outcomes; tested unavailable/expired/cancelled conditions do not create false success and retain Guest access.
+-- **SC-007 — F11/F12:** Both legitimate test users can restore their own favorites, studied status, self-reported mission completion and latest per-check results after refresh/sign-out/in; completion is separate from correctness and mastery. Cross-owner read/create/change/delete attempts are denied for every supported category. Actual verification requires authorized D02.
++- **SC-007 — F11/F12:** Both legitimate test users can restore their own per-level, per-sense favorites and explicitly marked/unmarked studied status, self-reported mission completion and latest per-check results after refresh/sign-out/in; completion is separate from correctness and mastery. Cross-owner read/create/change/delete attempts are denied for every supported category. Actual verification requires authorized D02.
+ - **SC-008 — F13:** All essential study/navigation/login flows are usable with keyboard alone in Edge on Windows at both 1280×800 and 360×800 CSS-pixel viewports, with visible focus and understandable controls/feedback. Evidence identifies actual browser/OS versions and viewport conditions. No physical-phone or broader accessibility certification is inferred.
+ - **SC-009 — F14:** The reviewed later browser-delivered/source/evidence artifacts contain zero privileged secrets, and permitted failure cases expose neither another user's records nor false operation success.
+ - **SC-010 — F15:** Every reported primary case has exact tested revision, environment, expected/observed outcome and supporting or missing evidence; the four result-status counts sum to 15 without using unit-test totals as acceptance passes. Declared setup/type-check/test/build procedures and exact dependencies are reproducible or explicitly reported unavailable.

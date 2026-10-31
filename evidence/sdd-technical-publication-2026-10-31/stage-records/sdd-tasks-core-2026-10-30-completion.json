@@ -1,0 +1,22 @@
+{
+  "stage": "Official installed Spec Kit 0.12.11 Tasks",
+  "version": "0.1.0",
+  "date": "2026-10-30",
+  "recorded_at_utc": "2026-10-30T20:06:00.897133+00:00",
+  "branch": "condition/spec-driven",
+  "starting_head": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+  "final_head": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+  "plan_revision": "0.1.1",
+  "task_count": 82,
+  "parallel_task_count": 26,
+  "official_setup_invocations": 1,
+  "official_setup_exit_code": 0,
+  "pre_post_hooks_file_present": false,
+  "hooks_executed": false,
+  "implemented_task_count": 0,
+  "documentary_items_checked": 35,
+  "documentary_items_total": 35,
+  "execution_status": "GENERATION COMPLETE — Tasks output awaiting human review; no task implemented",
+  "publicationQualification": "Selected technical fields from the historical completion record. Original generation/review labels remain historical; later approval bindings and implementation evidence govern subsequent authority.",
+  "originalRecordSha256": "671b05de42aa717b2efda9122fb70f2b60abb9ef24898c1eecc263bddd62cc62"
+}

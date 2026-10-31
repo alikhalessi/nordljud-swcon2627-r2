@@ -1,0 +1,163 @@
+{
+  "stage": "Checklist",
+  "version": "0.1.0",
+  "human_review": "PENDING",
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approval-and-request-as-received.txt",
+      "sha256": "22B2328E5141410A9F9562D2A4288E5D5766D066487EC0950F5DC4CAA29F6EDC",
+      "bytes": 731
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approval-context-source-records.jsonl",
+      "sha256": "B746822BE7153F15C054966A0150F777FE41B6DF7136B31C36126B2E8FFA5F03",
+      "bytes": 5469
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/auth.md",
+      "sha256": "9235AC74A92C409877D76E059B13EBB845BF34130358F5EDE37218A3EB3999AD",
+      "bytes": 4831
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/core-http.md",
+      "sha256": "F0B441CF3D1FEB842C4331C9B925323E886309F943D411FE47C412480223E50E",
+      "bytes": 6428
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/ui-behavior.md",
+      "sha256": "7A12915F3B7F2B4D9026E30AC4A14772704BC6F890C00CA907DDBFCEF09D7AE2",
+      "bytes": 3923
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/data-model.md",
+      "sha256": "58E93FAA1361E22AFF803EFACF91E3226F8032A8F144827BD8FF3E70FE57F212",
+      "bytes": 9011
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/plan.md",
+      "sha256": "16FD261A04E2A15DBA6A81563ECF9A3527DC589D16BC647BC5F82BFB62A90FE7",
+      "bytes": 12254
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/quickstart.md",
+      "sha256": "4930AF614AE10716E80DAE2AB7C8DCD0494D9C4E90471F050BE11A459763AA88",
+      "bytes": 12976
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/research.md",
+      "sha256": "596E3B64B75647EBFD9F8C0DDFB662EFB5F767EA85B33E054D0A0E0504A17857",
+      "bytes": 17971
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-review-export-binding.json",
+      "sha256": "86728C12E4176E06AF7E7C7FF3F3E76F5E5F70FF4863D77A9507B4E95EDB4EF0",
+      "bytes": 2107
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/assessment.md",
+      "sha256": "67EF2734A3BE401D157AB03C0330C81980767DA7263AB3B9F2485C9102DAA840",
+      "bytes": 8247
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/authoring-attempt-01-qualification.json",
+      "sha256": "E16F4F69B10024A31E7463B61230F96BD8D8D0E0BC33F0A71CBB16926292ECD8",
+      "bytes": 1064
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/authoring-attempt-01-script.py.txt",
+      "sha256": "1B7BC45BDFC47320EC1C50AF96C627E4183670AB84E9605D0DD662E3972D406A",
+      "bytes": 11567
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/authoring-attempt-01-source-record.jsonl",
+      "sha256": "92640FDFFB4771E2701DCEDB1DDB4AE0447692BA9F929BF56E2CAC8943ADC796",
+      "bytes": 1072
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/checklist-items-and-author-assessment.json",
+      "sha256": "119C63CF8F978CFF1D1AF72C22148728D7F223D04399151E1D2EF89C85350C0C",
+      "bytes": 19456
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/checklist-review.diff",
+      "sha256": "C4BE84BBF6748555489C15619448582DF1960D0704CA2ED52B7C1BA1E1D99D50",
+      "bytes": 11451
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/completion.json",
+      "sha256": "6E05A5D5C7945991D91D4C14F276CB0F7E6A9BEB86ED0091852D8B1830815E42",
+      "bytes": 5098
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/final-commands.json",
+      "sha256": "379E1A5117B3E0BABDD0F60E7434620487601FEB3316ABF99D523DCAAD8444BF",
+      "bytes": 11292
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/findings.json",
+      "sha256": "69A97F64F5A6E19EADCC9F619410B7E9827731F627DBDC2E11F419B43ED572D3",
+      "bytes": 2296
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/generation-commands.json",
+      "sha256": "8D632ECC96180114BFECECB08D09A37028E534D08E4024FD14A56679AFE697D5",
+      "bytes": 14121
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/generation-validation.json",
+      "sha256": "12DC59E54F4456E2DF1898AE58B1C715E1B4A64BBD2AD6F67812AC2B8B0DBF5B",
+      "bytes": 829
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/intent.json",
+      "sha256": "51EA8AD8580F8F1A12895EFC7BAF6341A26E71CF359A6E8B9582F1D2C74547C0",
+      "bytes": 1113
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/plan-approval-receipt.json",
+      "sha256": "C0B134EDD9DF145493264EDFADE01DFEB91645EC6EDFB393B8DF0D377614B1DE",
+      "bytes": 2519
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/post-hooks-check.json",
+      "sha256": "401E7A3B33A6F92AE763E7EFA2A773514E1E165165D68C362A682E68EA20DC7A",
+      "bytes": 120
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/preflight-commands.json",
+      "sha256": "57DF8552A04221CE7BF205550DFA74F9FF3A54BEA6D0C0E5111248A47D2E0EC4",
+      "bytes": 22540
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/preflight.json",
+      "sha256": "170D84195721DE6E199A44A6E659C102564D347637B64F947D2AC71183B3AF57",
+      "bytes": 36990
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/README.md",
+      "sha256": "6ADDE208AE264FF6392BC7C65356061A4F9106CA17627B3375D1EA76E63858A4",
+      "bytes": 5596
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/review-export-map.json",
+      "sha256": "EB7A5EBA6D5497FC18E6DE812B7B13B8521CA84CF6D7CEF8AE95C0F4CDADCB75",
+      "bytes": 1092
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/session-visible-records.jsonl",
+      "sha256": "360D95A4DA18718D2BC5948B4E5627E4D02EE10BD1842E49588E6F18743E93F2",
+      "bytes": 128035
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/transcript-export.json",
+      "sha256": "71F3154F45BBAC262D2B2CF4B7586A31290968FEFA376B54D674A5C29AAF09FE",
+      "bytes": 549
+    },
+    {
+      "path": "specs/001-nordljud-core/checklists/core-readiness.md",
+      "sha256": "FA419BC354944FE5A420B4E8E8F8ED83FBF36A3DFBBE961B86C9F8DF74120844",
+      "bytes": 11112
+    }
+  ]
+}

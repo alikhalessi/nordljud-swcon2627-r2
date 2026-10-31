@@ -1,0 +1,58 @@
+[
+  {
+    "file": "accessibility.spec.ts",
+    "originalSha256": "9b6ee9d8416ae11cf07f3e53635b92d05f202c130ffe677aa6b451c0027ee9b8",
+    "copiedSha256": "9b6ee9d8416ae11cf07f3e53635b92d05f202c130ffe677aa6b451c0027ee9b8",
+    "onlyTransformation": "Relocate explicit screenshot output prefix outside Git",
+    "replacements": 0
+  },
+  {
+    "file": "account-availability.spec.ts",
+    "originalSha256": "b4866504e134943f699d87cf5ecd9168f6b744144373df6c774c8e756f6f8d7f",
+    "copiedSha256": "b4866504e134943f699d87cf5ecd9168f6b744144373df6c774c8e756f6f8d7f",
+    "onlyTransformation": "Relocate explicit screenshot output prefix outside Git",
+    "replacements": 0
+  },
+  {
+    "file": "fixtures.ts",
+    "originalSha256": "11b48d61f8c59a0c2759b9281a746afc9b556427d08303bd95990fdbc0c5b46f",
+    "copiedSha256": "11b48d61f8c59a0c2759b9281a746afc9b556427d08303bd95990fdbc0c5b46f",
+    "onlyTransformation": "Relocate explicit screenshot output prefix outside Git",
+    "replacements": 0
+  },
+  {
+    "file": "guest-retention.spec.ts",
+    "originalSha256": "118bc393d1ee04794229d62865c301e9ad8b021146b0d36cdd749471f898788d",
+    "copiedSha256": "118bc393d1ee04794229d62865c301e9ad8b021146b0d36cdd749471f898788d",
+    "onlyTransformation": "Relocate explicit screenshot output prefix outside Git",
+    "replacements": 0
+  },
+  {
+    "file": "guest-transactions.spec.ts",
+    "originalSha256": "27405dd6e7d3b620dc7a983f5252a07322af245a12ac1bcc6a2f3f73e63b2c39",
+    "copiedSha256": "27405dd6e7d3b620dc7a983f5252a07322af245a12ac1bcc6a2f3f73e63b2c39",
+    "onlyTransformation": "Relocate explicit screenshot output prefix outside Git",
+    "replacements": 0
+  },
+  {
+    "file": "lexicon.spec.ts",
+    "originalSha256": "ddefec436cfcf91a6407690e48a944ccff364b3958991aef84b270f4573658be",
+    "copiedSha256": "082ae119b9242b868b30fe76ffe8c56e05b2cdc2247d923385f85c26f0ef53b9",
+    "onlyTransformation": "Relocate explicit screenshot output prefix outside Git",
+    "replacements": 1
+  },
+  {
+    "file": "missions.spec.ts",
+    "originalSha256": "e9bce67028e6cb41352fd4966397d339ef370deb868219e2cb925e933a70c087",
+    "copiedSha256": "df0a3f82ccfe77d34c91fa50b17d65fffa08ced6e9ea6d342d6c482efb82b205",
+    "onlyTransformation": "Relocate explicit screenshot output prefix outside Git",
+    "replacements": 1
+  },
+  {
+    "file": "practice.spec.ts",
+    "originalSha256": "44fb83223eead67aa07ada5d8f81fbd2b42bfffff5f87eaace38f78f9da2d49d",
+    "copiedSha256": "44fb83223eead67aa07ada5d8f81fbd2b42bfffff5f87eaace38f78f9da2d49d",
+    "onlyTransformation": "Relocate explicit screenshot output prefix outside Git",
+    "replacements": 0
+  }
+]

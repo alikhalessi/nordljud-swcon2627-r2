@@ -1,0 +1,43 @@
+{
+  "recordedAtUtc": "2026-10-30T23:13:03.164780+00:00",
+  "testedCommit": "9d2f273d55a83b15863604b75174c689bb7a0c05",
+  "dirtyStateDigest": "8207d28704f3b6f3ba6549f6cd8240ad1946614f10b0c5e3d9894e7f3d4272d0",
+  "runtimeArtifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+  "allStartingFileBytesUnchanged": true,
+  "tests": {
+    "offline": 86,
+    "edge": 56,
+    "typecheck": "PASS",
+    "build": "PASS"
+  },
+  "newProductDefects": 0,
+  "applicationFixes": 0,
+  "setupFailure": "First Edge attempt stopped because the known previous preview occupied port 3100; its own exec session was stopped, then all checks passed. Not a product RED or case FAIL.",
+  "environment": {
+    "node": "24.22.2",
+    "npm": "11.19.1",
+    "edge": "156.0.4314.50",
+    "os": "Windows NT 10.0 build 26300",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 800
+      },
+      {
+        "width": 360,
+        "height": 800
+      }
+    ]
+  },
+  "newBrowserHarness": "Eight copied existing browser files; only two screenshot output prefixes relocated. Five verification-only boundary checks were added outside Git. Both profiles used the actual source/build/native IndexedDB/speech engine; response fixtures are explicitly labelled.",
+  "primaryCounts": {
+    "PASS": 8,
+    "FAIL": 0,
+    "BLOCKED": 3,
+    "NOT TESTED": 4
+  },
+  "caseStatusCorrection": "F08 full mapped case is conservatively NOT TESTED while account transition/no-import proof is missing; previous bounded Guest PASS remains historical.",
+  "liveTests": "NOT RUN: independent target/origin, D_SCHEMA/D_TEST operation authorization, schema/policies and legitimate scoped test identities were not supplied; private progress remains unimplemented.",
+  "privacy": "No question, prompt, conversation or session transcript was copied into the repository. All new verification evidence is outside Git.",
+  "next": "Run the installed official Converge skill once, permitting only its append-only task change."
+}

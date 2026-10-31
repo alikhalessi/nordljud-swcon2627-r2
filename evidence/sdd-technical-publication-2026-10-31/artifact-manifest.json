@@ -1,0 +1,435 @@
+{
+  "recordedAtUtc": "2026-10-31T01:04:57.059904+00:00",
+  "scope": "Explicit technical publication subset; manifest excludes itself",
+  "startingCommit": "9d2f273d55a83b15863604b75174c689bb7a0c05",
+  "applicationTestsRerun": false,
+  "primaryDenominator": 15,
+  "primaryCounts": {
+    "PASS": 8,
+    "FAIL": 0,
+    "BLOCKED": 3,
+    "NOT TESTED": 4
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 3761,
+      "rawSha256": "68c57227cc4a0c8afb6b8893dfe1ada70d0529bbc89b62712229569d249bbe94",
+      "gitBlobSha1WithoutFilters": "19a1a2d7a6892dd67e64d565900113d97c547bcd"
+    },
+    {
+      "path": "docs/evaluation-limitations.md",
+      "bytes": 1777,
+      "rawSha256": "76d41c68e7faf23eee69e92da757fe4809f04d395377ba77e57e0301a9f593b7",
+      "gitBlobSha1WithoutFilters": "2754747fdcc656b2cb36a61be2a2905741e3d5b2"
+    },
+    {
+      "path": "docs/final-core-review.md",
+      "bytes": 1748,
+      "rawSha256": "12beafc2df123ddc61c43fdbabb7c94c10daec1c0ec244665f29026467149bb2",
+      "gitBlobSha1WithoutFilters": "80a7298ba1d9818b642baba183f4cba6c5d9df59"
+    },
+    {
+      "path": "evaluation/sdd-core-results.json",
+      "bytes": 16045,
+      "rawSha256": "9f65824785688c441502c3faf331cfe5317df4d05335daa8d10e5e8959d4309e",
+      "gitBlobSha1WithoutFilters": "f66be80fb04a01e4ba14aaa73bc26ad32e93a65a"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/auth.md",
+      "bytes": 4831,
+      "rawSha256": "9235ac74a92c409877d76e059b13ebb845bf34130358f5ede37218a3eb3999ad",
+      "gitBlobSha1WithoutFilters": "fc5d78b8eda3f9fe3b431f30099f10f605c49f5c"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/core-http.md",
+      "bytes": 6428,
+      "rawSha256": "f0b441cf3d1feb842c4331c9b925323e886309f943d411fe47c412480223e50e",
+      "gitBlobSha1WithoutFilters": "03bb7975ef41a2d152a7c03f03f4acea09a80b6e"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/contracts/ui-behavior.md",
+      "bytes": 3923,
+      "rawSha256": "7a12915f3b7f2b4d9026e30ac4a14772704bc6f890c00ca907ddbfcef09d7ae2",
+      "gitBlobSha1WithoutFilters": "6b9f078626198c4d671e9ab629a1e379a7f2e42f"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/data-model.md",
+      "bytes": 9011,
+      "rawSha256": "58e93faa1361e22aff803efacf91e3226f8032a8f144827bd8ff3e70fe57f212",
+      "gitBlobSha1WithoutFilters": "bfcab3475f9eb6edf353e78663b105a13be1df68"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/plan.md",
+      "bytes": 12254,
+      "rawSha256": "16fd261a04e2a15dba6a81563ecf9a3527dc589d16bc647bc5f82bfb62a90fe7",
+      "gitBlobSha1WithoutFilters": "c8a288505de8081c4874ce8c407f506b37a51441"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/quickstart.md",
+      "bytes": 12976,
+      "rawSha256": "4930af614ae10716e80dae2ab7c8dcd0494d9c4e90471f050be11a459763aa88",
+      "gitBlobSha1WithoutFilters": "d246a8507366e185fbdde3cd95b0880883e5782a"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/approved-plan-v0.1.0/research.md",
+      "bytes": 17971,
+      "rawSha256": "596e3b64b75647ebfd9f8c0ddfb662efb5f767ea85b33e054d0a0e0504a17857",
+      "gitBlobSha1WithoutFilters": "efb73f477b3ea38082000ccffc6cb4b9d1bce636"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/artifact-manifest.json",
+      "bytes": 6378,
+      "rawSha256": "fcff7f530b634b00ee2848257c51025590a7ac5ab8cb432d06dcf035284b0e16",
+      "gitBlobSha1WithoutFilters": "2ad587341247b45aad535d8e53613a63b8cc39f5"
+    },
+    {
+      "path": "evidence/sdd-checklist-core-2026-10-30/assessment.md",
+      "bytes": 8247,
+      "rawSha256": "67ef2734a3be401d157ab03c0330c81980767da7263ab3b9f2485c9102daa840",
+      "gitBlobSha1WithoutFilters": "9f0f516bcae0c107a4892326e2f2de16495bac42"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/after-answer-01/revision.diff",
+      "bytes": 17556,
+      "rawSha256": "617e694edfeb3c27cff158d478c811296e0440a3d63643931a63eaa1052e48a6",
+      "gitBlobSha1WithoutFilters": "d074b62b77bbd39e6dbb34b2c9dc5506566f37cb"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/after-answer-01/spec.md",
+      "bytes": 40969,
+      "rawSha256": "925660277ac773ec00f4294e464b08efc62410db608e329375d514398d73d2d7",
+      "gitBlobSha1WithoutFilters": "ccd12672d819f99f6d2cfb8e33f2d6ccc0d5145c"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/after-answer-02/revision.diff",
+      "bytes": 21862,
+      "rawSha256": "6d346d5ed49020258e8469629309afe7094dda14c8c9c4faeff3dabafbbaa11a",
+      "gitBlobSha1WithoutFilters": "2452c4f3a9f019c902f72ed0dd3d4aa79020c120"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/after-answer-02/spec.md",
+      "bytes": 43137,
+      "rawSha256": "7ac546793d8ef63da8563ab4b3cff081374eb3ed4cfb98de052dc0944275b2a1",
+      "gitBlobSha1WithoutFilters": "fa6cd1f49d7bca1b6cae57d7a20e2ac9e42cd1d4"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/approved-v0.3.1/requirements.md",
+      "bytes": 4725,
+      "rawSha256": "18e7cb20cfe0dbed9719ecab0c91b0631a9d8aef36f0b4740a9c5388c37117cf",
+      "gitBlobSha1WithoutFilters": "81a7cfe37220a30c8dbd367ae0f137a9c534dc9a"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/approved-v0.3.1/spec.md",
+      "bytes": 39088,
+      "rawSha256": "a72604b80878a924486ffb632fbf50748b3ad5777dfd874ff7a78ebb8c69ec60",
+      "gitBlobSha1WithoutFilters": "a4f6c97c568604d5a83a708dbc4d31f4b2ba0560"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/artifact-manifest.json",
+      "bytes": 9189,
+      "rawSha256": "2784218882dda7b2ff442ac76361bbdcd1cc524233cfeb9f219eaf4dea3c0ead",
+      "gitBlobSha1WithoutFilters": "92fd548ce3dea82aa4565e6de4ae658df794ce9d"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/final-v0.4.0/requirements.md",
+      "bytes": 4725,
+      "rawSha256": "18e7cb20cfe0dbed9719ecab0c91b0631a9d8aef36f0b4740a9c5388c37117cf",
+      "gitBlobSha1WithoutFilters": "81a7cfe37220a30c8dbd367ae0f137a9c534dc9a"
+    },
+    {
+      "path": "evidence/sdd-clarify-core-2026-10-30/final-v0.4.0/spec.md",
+      "bytes": 43137,
+      "rawSha256": "7ac546793d8ef63da8563ab4b3cff081374eb3ed4cfb98de052dc0944275b2a1",
+      "gitBlobSha1WithoutFilters": "fa6cd1f49d7bca1b6cae57d7a20e2ac9e42cd1d4"
+    },
+    {
+      "path": "evidence/sdd-core-task-clarifications-2026-10-30/before/quickstart.md",
+      "bytes": 13941,
+      "rawSha256": "781b6cdd3421c5456cf7ec193cc172f089d64caf8f42fd1626f346e8eb28df2b",
+      "gitBlobSha1WithoutFilters": "14d703a6b534fae94b12060da58d5f653eaa11ec"
+    },
+    {
+      "path": "evidence/sdd-core-task-clarifications-2026-10-30/before/tasks.md",
+      "bytes": 57404,
+      "rawSha256": "c0fc9d897c95e9385c744e11b3f985b5ecebf71ae76a6e2b70f614d0798c0412",
+      "gitBlobSha1WithoutFilters": "e9c00ca05137fe566bb262cdcb85b19abc4b45ad"
+    },
+    {
+      "path": "evidence/sdd-core-task-clarifications-2026-10-30/revision.json",
+      "bytes": 2764,
+      "rawSha256": "d6ea314c73385d99b2663ec8d09e6fcf8b631ee0f671976654dcdadc7931e6ca",
+      "gitBlobSha1WithoutFilters": "ae2d68d51a0c9fc04d3fbde5d61337016505e40a"
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/approved-v0.4.0/requirements.md",
+      "bytes": 4725,
+      "rawSha256": "18e7cb20cfe0dbed9719ecab0c91b0631a9d8aef36f0b4740a9c5388c37117cf",
+      "gitBlobSha1WithoutFilters": "81a7cfe37220a30c8dbd367ae0f137a9c534dc9a"
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/approved-v0.4.0/spec.md",
+      "bytes": 43137,
+      "rawSha256": "7ac546793d8ef63da8563ab4b3cff081374eb3ed4cfb98de052dc0944275b2a1",
+      "gitBlobSha1WithoutFilters": "fa6cd1f49d7bca1b6cae57d7a20e2ac9e42cd1d4"
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/artifact-manifest.json",
+      "bytes": 7583,
+      "rawSha256": "7fd1bde1edc3059a8cd5d65041c07cf37c2f7db52e1097313f4b4639cd76b303",
+      "gitBlobSha1WithoutFilters": "dc44444125e2e4d09e60a7a4bb417cd851bcd544"
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/artifact-manifest.json",
+      "bytes": 8910,
+      "rawSha256": "e13468c1e56095f9dab4efc6bac32b34c31c9a421cbd2fde01bec2b91b617538",
+      "gitBlobSha1WithoutFilters": "513ee94b7db0e6c16bdc9e68f1d42ad4a0dc67bc"
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/checklists/core-readiness.md",
+      "bytes": 11112,
+      "rawSha256": "fa419bc354944fe5a420b4e8e8f8ed83fbf36a3dfbbe961b86c9f8df74120844",
+      "gitBlobSha1WithoutFilters": "ab254b552a207c97575462a2e29bcd67bb21e721"
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/contracts/core-http.md",
+      "bytes": 6428,
+      "rawSha256": "f0b441cf3d1feb842c4331c9b925323e886309f943d411fe47c412480223e50e",
+      "gitBlobSha1WithoutFilters": "03bb7975ef41a2d152a7c03f03f4acea09a80b6e"
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/contracts/ui-behavior.md",
+      "bytes": 3923,
+      "rawSha256": "7a12915f3b7f2b4d9026e30ac4a14772704bc6f890c00ca907ddbfcef09d7ae2",
+      "gitBlobSha1WithoutFilters": "6b9f078626198c4d671e9ab629a1e379a7f2e42f"
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/plan.md",
+      "bytes": 12254,
+      "rawSha256": "16fd261a04e2a15dba6a81563ecf9a3527dc589d16bc647bc5f82bfb62a90fe7",
+      "gitBlobSha1WithoutFilters": "c8a288505de8081c4874ce8c407f506b37a51441"
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/quickstart.md",
+      "bytes": 12976,
+      "rawSha256": "4930af614ae10716e80dae2ab7c8dcd0494d9c4e90471f050be11a459763aa88",
+      "gitBlobSha1WithoutFilters": "d246a8507366e185fbdde3cd95b0880883e5782a"
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/checklist-review-results.md",
+      "bytes": 1595,
+      "rawSha256": "bdf549e3950cfbb2664063e1a2224d1ae65ddcd84fa804b443611c22b6e96bdf",
+      "gitBlobSha1WithoutFilters": "80c549898b068c6f252b2490f0ab07ca791f338b"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/README.md",
+      "bytes": 3942,
+      "rawSha256": "ede06717a37243816edd9410fb1b6676942eb761eb2628f6ee6ef65cadc2a2eb",
+      "gitBlobSha1WithoutFilters": "6d7240e7ae7fc8114c5a55ad657d5c99c35d4555"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/deployment-exclusion-review.json",
+      "bytes": 1084,
+      "rawSha256": "139d926470f68dca920d59410e2fb5e15d29caec69fbfd2ffd9a109c4633febe",
+      "gitBlobSha1WithoutFilters": "527e1f60f8580d08dadf2992cd370e290a5e9e5e"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/historical/README.md",
+      "bytes": 2672,
+      "rawSha256": "0d15b8987ba3e6273363a689e3e81fb9d84b02edd2e8bf3608a1ada959ca6960",
+      "gitBlobSha1WithoutFilters": "0658ff28534f3fb47f8c82900e60e92e5df1a5b7"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/historical/docs/evaluation-limitations.md",
+      "bytes": 1349,
+      "rawSha256": "4ee606bed103a8d5a17482cd0f4c4362c9915b6392f5c99d6f06d93310885d85",
+      "gitBlobSha1WithoutFilters": "8d9d8d9247503b60b2f2b66423dcc01130767297"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/historical/docs/final-core-review.md",
+      "bytes": 1028,
+      "rawSha256": "31873801aa4667d03abea7226c30eeb226b3cf550c2315176b068fe124942c12",
+      "gitBlobSha1WithoutFilters": "e5b84a84ea69a3927c09b710e49331f29c29445d"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/historical/evaluation/sdd-core-results.json",
+      "bytes": 15304,
+      "rawSha256": "4d652535228b83337abdc34dc9a0e49f4e9e9de462c57b7544df01ccab0435f7",
+      "gitBlobSha1WithoutFilters": "b85d12a8830d3660ce710356396dc79aa28a5472"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/privacy-review.json",
+      "bytes": 2085,
+      "rawSha256": "f5ade528af055a5a55e98f525364fd1adcdae301dde9d3d06ee930e53754e08e",
+      "gitBlobSha1WithoutFilters": "d35fe4d8f6bacf3cc063ed64449de293ed77bbde"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/stage-records/plan-approval.json",
+      "bytes": 2408,
+      "rawSha256": "0973534c276ebe539e767d3c183e9fc7b5367c46f9e76111529ad6a265af344e",
+      "gitBlobSha1WithoutFilters": "9bd18d03f559654f523a6bf4dc19751e346800c0"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/stage-records/policy-checklist-approval.json",
+      "bytes": 1030,
+      "rawSha256": "c5904728f24e276838fd276e238a39a2b2345b120415f3d0a9b11faaa8a84d8d",
+      "gitBlobSha1WithoutFilters": "0421391256adbe1d0eb69238f05fc4c10e9d9cf3"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/stage-records/sdd-checklist-core-2026-10-30-completion.json",
+      "bytes": 628,
+      "rawSha256": "c67af0aa6c22c38ecfe0b67943024d749450382a60f03c248da9d98a502d0bbb",
+      "gitBlobSha1WithoutFilters": "4d956eb557e38e4d5691f153ad8bc18d7c938666"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/stage-records/sdd-clarify-core-2026-10-30-completion.json",
+      "bytes": 647,
+      "rawSha256": "743ce9fd5e87b7b17d985f33af805732f818e9c0c4e3831ec32823ce8245f174",
+      "gitBlobSha1WithoutFilters": "dcd48f170af29b4f6f174a491ea9bb98d7f1d74e"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/stage-records/sdd-plan-core-2026-10-30-completion.json",
+      "bytes": 610,
+      "rawSha256": "fd9dd1180153acb89dfbedb96b1d91c1652ac542fbf38e9cf21a66938ce7c42b",
+      "gitBlobSha1WithoutFilters": "4164816dcba148de8c2e5626d36c78bb222cf019"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/stage-records/sdd-tasks-core-2026-10-30-completion.json",
+      "bytes": 1064,
+      "rawSha256": "89eb197f38450c4977558bc6c690c0f297fdd13252f2825d244dd5cd038a7acb",
+      "gitBlobSha1WithoutFilters": "a49aff29530b202e7941dbc7c47ccfd13ec3974f"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/stage-records/specification-approval.json",
+      "bytes": 843,
+      "rawSha256": "b65a21eb010adafcf384cbac01322f8921ffe102210bc2ccce85ec4f6e266820",
+      "gitBlobSha1WithoutFilters": "ec8486fc9b987e2ead788e2d2b36d2a8362564c6"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/actual-browser-observations.json",
+      "bytes": 4474,
+      "rawSha256": "0f5c84eea09842ccfbe3b05a82e576e4019ff4231493df2b2212b6c886bfdc4a",
+      "gitBlobSha1WithoutFilters": "80668bd574a6b79ba399ef57279a66fbb2e5b2d5"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/commands.jsonl",
+      "bytes": 26904,
+      "rawSha256": "5c0d7f3cbf66fe525b19e454892c91550058588a8b334f4deaf029f9e94f167f",
+      "gitBlobSha1WithoutFilters": "34ca307e2c60b3017e754c1693427adc5b9d6ec3"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/convergence-handoff.json",
+      "bytes": 3214,
+      "rawSha256": "335fcb8607879fb1e7cd29540cfd855dca81b8a7d0d23dfa1f24da83c22c2df6",
+      "gitBlobSha1WithoutFilters": "637327ac00b156c5773979e0f23f08d1d817a0f8"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/screenshots/lexicon-1280x800.png",
+      "bytes": 102123,
+      "rawSha256": "0c0916a318fe3a9d8c6e824711cdf7c3a870cb8f3d8c479b7f0ea1ac772a7868",
+      "gitBlobSha1WithoutFilters": "31033554271494869dc52a98c905f937b1793155"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/screenshots/lexicon-360x800.png",
+      "bytes": 86238,
+      "rawSha256": "a2ff99776c5afb997065e947aecea3dd86b2b9fab0861f8ba2227a29b19c3a56",
+      "gitBlobSha1WithoutFilters": "3ac1c9c86f767f33549719bd6ccb9bc1dcd8add5"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/screenshots/mission-1280x800.png",
+      "bytes": 251574,
+      "rawSha256": "7b6f9e700df8bb9b0a340acc4b82053ffdeb15620692190ed890b4ece9654b5b",
+      "gitBlobSha1WithoutFilters": "519dde88209c9dd2c1d76200874bd734155afd02"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/screenshots/mission-360x800.png",
+      "bytes": 224003,
+      "rawSha256": "08d37d74b3cc87809b933187ffe16bf42492d4e975baba66004a96ec1c465043",
+      "gitBlobSha1WithoutFilters": "58b800d3f207d206bc2cbcee5ea1989a92d41dca"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/test-harness-copy-manifest.json",
+      "bytes": 2687,
+      "rawSha256": "bc88e87b6c3219b8a8ba0ee73d6ea224fdfd49f728dfc8c2f945866af02c19ab",
+      "gitBlobSha1WithoutFilters": "ea588fc59b5d8685fc37b3eb69b1574216724d9b"
+    },
+    {
+      "path": "evidence/sdd-technical-publication-2026-10-31/verification/verification-receipt.json",
+      "bytes": 2046,
+      "rawSha256": "ac7cc8e75af0e715e25d11aa23cc2a5f46a37c64ccff85b57d4c76a90d81176c",
+      "gitBlobSha1WithoutFilters": "b31a13f34d2248dd3e98be959e30039e39a73527"
+    },
+    {
+      "path": "specs/001-nordljud-core/checklists/core-readiness.md",
+      "bytes": 12172,
+      "rawSha256": "9011ef691bf6bf6f39b5b0a4d69db26202867d53a87b2dac08fea45065e4f5b4",
+      "gitBlobSha1WithoutFilters": "f1ed26e62231c699e6b69d993c8bbdb4dfa92970"
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/auth.md",
+      "bytes": 4831,
+      "rawSha256": "9235ac74a92c409877d76e059b13ebb845bf34130358f5ede37218a3eb3999ad",
+      "gitBlobSha1WithoutFilters": "fc5d78b8eda3f9fe3b431f30099f10f605c49f5c"
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/core-http.md",
+      "bytes": 7038,
+      "rawSha256": "2936c5d1764ddb06e63ab4751a8362ddf9a5876b6922e92c74c992c11e75e4df",
+      "gitBlobSha1WithoutFilters": "21b0c5fbeaa86c442c7a82c63d95d264a020c14d"
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/operation-recovery.md",
+      "bytes": 4251,
+      "rawSha256": "b6701c521af0691d18c906eb6a0e1e2a1f59a25102fce0ae38ee45cabac9141e",
+      "gitBlobSha1WithoutFilters": "5fed64c1a9a89d73eab4343f9044737b67f692ff"
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/ui-behavior.md",
+      "bytes": 4503,
+      "rawSha256": "aa1c4830127bcbdfbd03515bf02d07401d1cce77bca9b6c6340516b30d11238c",
+      "gitBlobSha1WithoutFilters": "ec3cecaa350eb3e62d35be68ac8d127f35601905"
+    },
+    {
+      "path": "specs/001-nordljud-core/data-model.md",
+      "bytes": 9011,
+      "rawSha256": "58e93faa1361e22aff803efacf91e3226f8032a8f144827bd8ff3e70fe57f212",
+      "gitBlobSha1WithoutFilters": "bfcab3475f9eb6edf353e78663b105a13be1df68"
+    },
+    {
+      "path": "specs/001-nordljud-core/plan.md",
+      "bytes": 14091,
+      "rawSha256": "62ec77bc6ea9cb3f82a4d72a21ed211d67de8f53882aeb2e4edc8f4b2d930140",
+      "gitBlobSha1WithoutFilters": "5c315d64375a43362339832aea6a832625fa8279"
+    },
+    {
+      "path": "specs/001-nordljud-core/quickstart.md",
+      "bytes": 17301,
+      "rawSha256": "f406b4d1943c751654d8aaf6bab9011fc0f7919404855d49ff71f2bd9a4fabc9",
+      "gitBlobSha1WithoutFilters": "d7c40b59dc22ae5f577b307dba1fde92dc201f6c"
+    },
+    {
+      "path": "specs/001-nordljud-core/research.md",
+      "bytes": 17971,
+      "rawSha256": "596e3b64b75647ebfd9f8c0ddfb662efb5f767ea85b33e054d0a0e0504a17857",
+      "gitBlobSha1WithoutFilters": "efb73f477b3ea38082000ccffc6cb4b9d1bce636"
+    },
+    {
+      "path": "specs/001-nordljud-core/spec.md",
+      "bytes": 43137,
+      "rawSha256": "7ac546793d8ef63da8563ab4b3cff081374eb3ed4cfb98de052dc0944275b2a1",
+      "gitBlobSha1WithoutFilters": "fa6cd1f49d7bca1b6cae57d7a20e2ac9e42cd1d4"
+    },
+    {
+      "path": "specs/001-nordljud-core/tasks.md",
+      "bytes": 70131,
+      "rawSha256": "14acc19cf9d2b8fc808c58d95f16f762c259f570adcd2a4ca388572dca590b7e",
+      "gitBlobSha1WithoutFilters": "73d57e2f0f1229bf636dd1aa1a059725fa077ad8"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 143,
+      "rawSha256": "f203aa50ca5055303db4027342223f8f7e5c071397fac9056e2f1c1759ce860c",
+      "gitBlobSha1WithoutFilters": "35e64f4220cdef1c091e5d1917e6360eace01cbe"
+    }
+  ]
+}

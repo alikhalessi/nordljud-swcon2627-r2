@@ -1,0 +1,203 @@
+{
+  "stage": "Plan",
+  "version": "0.1.0 draft",
+  "human_review": "PENDING",
+  "excludes": "This manifest itself",
+  "artifacts": [
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/approval-and-request-as-received.txt",
+      "sha256": "0617E7DCA1956A8863586CE40B80660E2FE908B7304897B0A47211F95DA65F8F",
+      "bytes": 496
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/approval-context-source-records.jsonl",
+      "sha256": "C930051D8770DF304CE0AFF6DDC3AF6A5DE4646C36862C200061CA5AF3D248A3",
+      "bytes": 5428
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/approval-receipt.json",
+      "sha256": "E339F01EAC296A3FCD76F853B711C5023FD4B507D9B007B72A7A13B94100E720",
+      "bytes": 1111
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/approved-v0.4.0/requirements.md",
+      "sha256": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+      "bytes": 4725
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/approved-v0.4.0/spec.md",
+      "sha256": "7AC546793D8EF63DA8563AB4B3CFF081374EB3ED4CFB98DE052DC0944275B2A1",
+      "bytes": 43137
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/completion.json",
+      "sha256": "8637565B3864A9C0F92538F5DCC20BF8F45F40C710864BEFAA9049B0EF0CE242",
+      "bytes": 5995
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/constitution-gates-after-design.json",
+      "sha256": "22DDF59716B38751B41E7BB01C6A830863E3A55D25B29FAC87ECA92CBBD1683B",
+      "bytes": 2302
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/constitution-gates-before-research.json",
+      "sha256": "F1BC0F331035D48B8FB52F821856B4B3C51B5423536F0F453701CACD59C2B8CD",
+      "bytes": 1921
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/design-review.diff",
+      "sha256": "EAD8EC9B3610BB74E0CDE4B892DD4C4B66E1C4FE914668B7BBF47CF06AB64A0C",
+      "bytes": 69529
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/final-commands.json",
+      "sha256": "413B6A878ECCB49988CC625A9399D8F8C1B87F2DB2A4E0AF1F60038A45FD9135",
+      "bytes": 9006
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/initial-plan-template.md",
+      "sha256": "00BA48C5859CE18165C9F314E76032780B0C45087B0474740F37E9707A6BA0F6",
+      "bytes": 5762
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/interruption-and-resume.json",
+      "sha256": "41AD315B20A3EFE9003C875E95870F666575318762D07DEEC2F7C3D0FBF26DAA",
+      "bytes": 1477
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/interruption-source-record.jsonl",
+      "sha256": "C969FED5561E38B5108C3CBBCE30EC18F3580C1D8D420A467CD2ACE76F24D997",
+      "bytes": 1118
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/observed-environment.json",
+      "sha256": "8492F2E080B1B702B68532417700D8457557839F195D17A376B7072296498C7A",
+      "bytes": 641
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/phase-0-completion.json",
+      "sha256": "581C2B27FEE0F2FA5F1A96EA88880E399FD841AB64ED7EA1DC96CD7BEFA64C6C",
+      "bytes": 700
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/phase-0-plan-seed.md",
+      "sha256": "940A57851BB0518F5550CE2ACFA89C6BA7B44C1EF00AA94C58B93D342A7B871E",
+      "bytes": 6606
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/phase-0-research.md",
+      "sha256": "596E3B64B75647EBFD9F8C0DDFB662EFB5F767EA85B33E054D0A0E0504A17857",
+      "bytes": 17971
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/phase-1-commands.json",
+      "sha256": "00B35D0F0D5F22F3816C13F1378A1A97E5FD5F1DE188C94C3F8341216ACE45F9",
+      "bytes": 77061
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/phase-1-design-validation.json",
+      "sha256": "E507CEEFC686F7F245C38539FE7278012B46AA00A0D5EF5C59442815AC900E99",
+      "bytes": 2814
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/post-hooks-check.json",
+      "sha256": "52E39075E668B69A482B1B844D7DD03D37436BD74B52DDF9F320795204A8428F",
+      "bytes": 125
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/preflight.json",
+      "sha256": "61C1FD5F8857AF4420C9E371F9A97EA1D1F989EC36AD35310CC5D9FEE1AB179E",
+      "bytes": 32227
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/README.md",
+      "sha256": "964F9DB1E1CBFF2B49EC474569C446148406E40CBA5A99C1E52AC441D8FD4768",
+      "bytes": 7699
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/research-agent-results.json",
+      "sha256": "AD6FAE734B5D02FB22563161497520CDFC7E62A30E4133F53EB8B3C6A3F43803",
+      "bytes": 2101
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/resume-request-as-received.txt",
+      "sha256": "F30B5D9B1D6C6BEEABFB391AAB52EBCA296F8D0CBF06816B9EA16F8BE88D98DA",
+      "bytes": 550
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/resume-request-source-record.jsonl",
+      "sha256": "17C0BB5F24FAAB91BA2669FBAB658A1F6666E50A90A36EF11851D65A45F9A537",
+      "bytes": 2631
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/review-export-map.json",
+      "sha256": "73920A8C6405E060D74AA24EDAC4C4763362E19615DBF69CB5DCF5E34E7544CA",
+      "bytes": 7399
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/session-visible-records.jsonl",
+      "sha256": "AD34B992D5D6C62BA8C97F7F753A2AB97FB1ED914ED6A57A6E30BA027DE68D66",
+      "bytes": 276978
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/setup-commands.json",
+      "sha256": "87ADEA1322200FABF6E1B13B9D37DC76DF7FDBE15303071E4F848628491401CF",
+      "bytes": 20026
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/signout-answer-as-received.txt",
+      "sha256": "2099E42F44005578FA163A16908018FAEE59BB704F7FF5F26F36D4ECBB5BBB1C",
+      "bytes": 529
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/signout-answer-source-record.jsonl",
+      "sha256": "410ACDBC5917DB3721A5F3DB6C3E5CF5988A60265DD38594EC16473A7FD728B6",
+      "bytes": 2622
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/signout-clarification.json",
+      "sha256": "CAAEC6EC34D36BFD3562C92602E05AD6CA83085A5485F8A1D86EA8A080668539",
+      "bytes": 884
+    },
+    {
+      "path": "evidence/sdd-plan-core-2026-10-30/transcript-export.json",
+      "sha256": "EF6B4C196CF0507B9C8DFA3E7B1CD41270F587FFBBC5BDEF33C2F40B927FD263",
+      "bytes": 720
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/auth.md",
+      "sha256": "9235AC74A92C409877D76E059B13EBB845BF34130358F5EDE37218A3EB3999AD",
+      "bytes": 4831
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/core-http.md",
+      "sha256": "F0B441CF3D1FEB842C4331C9B925323E886309F943D411FE47C412480223E50E",
+      "bytes": 6428
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/ui-behavior.md",
+      "sha256": "7A12915F3B7F2B4D9026E30AC4A14772704BC6F890C00CA907DDBFCEF09D7AE2",
+      "bytes": 3923
+    },
+    {
+      "path": "specs/001-nordljud-core/data-model.md",
+      "sha256": "58E93FAA1361E22AFF803EFACF91E3226F8032A8F144827BD8FF3E70FE57F212",
+      "bytes": 9011
+    },
+    {
+      "path": "specs/001-nordljud-core/plan.md",
+      "sha256": "16FD261A04E2A15DBA6A81563ECF9A3527DC589D16BC647BC5F82BFB62A90FE7",
+      "bytes": 12254
+    },
+    {
+      "path": "specs/001-nordljud-core/quickstart.md",
+      "sha256": "4930AF614AE10716E80DAE2AB7C8DCD0494D9C4E90471F050BE11A459763AA88",
+      "bytes": 12976
+    },
+    {
+      "path": "specs/001-nordljud-core/research.md",
+      "sha256": "596E3B64B75647EBFD9F8C0DDFB662EFB5F767EA85B33E054D0A0E0504A17857",
+      "bytes": 17971
+    }
+  ]
+}

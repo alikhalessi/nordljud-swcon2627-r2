@@ -1,0 +1,38 @@
+{
+  "reviewedAtUtc": "2026-10-31T01:04:57.059904+00:00",
+  "unpublishedCommit": "9d2f273d55a83b15863604b75174c689bb7a0c05",
+  "unpublishedCommitPathsReviewed": 198,
+  "methods": [
+    "Whole outbound text content scan for credential and conversation indicators",
+    "Explicit path review; test fixture and audit-field false-positive resolution",
+    "Visual review of the four existing implementation screenshots",
+    "Curated technical snapshots and allowlisted completion/approval fields; no blanket directory staging"
+  ],
+  "resolvedFindings": [
+    "sb_secret_synthetic-do-not-use is an explicitly synthetic negative-test value, not a credential.",
+    "T055 privateTranscriptPaths fields are empty audit results.",
+    "starting-artifacts.json contains technical filenames and hashes, not conversation contents."
+  ],
+  "credentialsOrPrivateConversationDetectedInExistingUnpublishedCommit": false,
+  "mixedOriginalsModified": false,
+  "reportFilesSelected": false,
+  "conversationBearingOriginalsSelected": false,
+  "qualification": "Historical manifests list both published technical artifacts and omitted local-only records. They are preserved unchanged and do not imply that omitted records are published. Technical summaries are projections, not complete transcripts or replacements for originals.",
+  "preCommitArtifactChecks": {
+    "explicitStagedPaths": 71,
+    "allStagedBlobsEqualWorkingBytes": true,
+    "currentArtifactWhitespaceCheckExitCode": 0,
+    "generalWhitespaceCheckExitCode": 2,
+    "historicalWhitespaceWarnings": {
+      "paths": [
+        "evidence/sdd-clarify-core-2026-10-30/after-answer-01/revision.diff",
+        "evidence/sdd-clarify-core-2026-10-30/after-answer-02/revision.diff"
+      ],
+      "reason": "Preserved unified-diff snapshots contain literal space-only context lines; their exact historical bytes are retained."
+    },
+    "allOtherStartingFileBytesPreserved": true,
+    "onlyFourCurrentReportingFilesRevised": true,
+    "applicationCodeChanged": false,
+    "applicationTestsRerun": false
+  }
+}

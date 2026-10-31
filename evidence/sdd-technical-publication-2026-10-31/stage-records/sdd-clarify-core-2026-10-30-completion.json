@@ -1,0 +1,13 @@
+{
+  "stage": "Clarify",
+  "revision": "0.4.0 draft",
+  "date": "2026-10-30",
+  "recorded_at_utc": "2026-10-30T11:00:14.276949+00:00",
+  "branch": "condition/spec-driven",
+  "hooks_executed": false,
+  "checklist_before": "16/16",
+  "checklist_after": "16/16",
+  "execution_status": "COMPLETED — awaiting human review",
+  "publicationQualification": "Selected technical fields from the historical completion record. Original generation/review labels remain historical; later approval bindings and implementation evidence govern subsequent authority.",
+  "originalRecordSha256": "07cedbd626aca4e1d7124b9c8764f9708c0d1e981c1b98d349f2ae00ad34a735"
+}

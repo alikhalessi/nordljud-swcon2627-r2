@@ -1,0 +1,21 @@
+{
+  "reviewedAtUtc": "2026-10-31T01:04:57.059904+00:00",
+  "branch": "condition/spec-driven",
+  "configurationPath": "vercel.json",
+  "setting": {
+    "deploymentEnabled": {
+      "condition/spec-driven": false
+    }
+  },
+  "officialDocumentation": "https://vercel.com/docs/project-configuration/git-configuration#git.deploymentenabled",
+  "documentedBehavior": "A false exact-branch entry prevents a deployment upon commits; unspecified branches default to true.",
+  "configurationReview": "Exactly one branch entry; no true/wildcard override; no root vercel.ts or vercel.toml; no application build/runtime keys added.",
+  "providerWideSettingsChanged": false,
+  "deploymentInvoked": false,
+  "knownWorkflowReview": {
+    "path": ".github/workflows/sdd-spec-kit-bootstrap.yml",
+    "trigger": "push to condition/spec-driven only when this workflow path changes",
+    "workflowChangedInOutgoingRange": false
+  },
+  "verificationLimit": "Pre-push documentary/configuration verification; post-push provider/check status is a separate observation, not an intentional deployment test."
+}

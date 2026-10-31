@@ -1,0 +1,174 @@
+{
+  "nativeSpeech": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "calls": [
+        {
+          "text": "Jag vill arbeta på ett sjukhus.",
+          "language": "sv-SE",
+          "voiceLanguage": "sv-SE",
+          "localService": true
+        }
+      ],
+      "nativeDelegation": true,
+      "audioHeard": "NOT OBSERVED"
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "calls": [
+        {
+          "text": "Jag vill arbeta på ett sjukhus.",
+          "language": "sv-SE",
+          "voiceLanguage": "sv-SE",
+          "localService": true
+        }
+      ],
+      "nativeDelegation": true,
+      "audioHeard": "NOT OBSERVED"
+    }
+  ],
+  "missingField": [
+    {
+      "level": "B1",
+      "senseId": "B1:0083",
+      "form": "Pret",
+      "expected": {
+        "word": false,
+        "sv": true,
+        "en": true
+      },
+      "observed": "Unavailable form label and unchanged usable sv/en visible"
+    },
+    {
+      "level": "B1",
+      "senseId": "B1:0083",
+      "form": "Pret",
+      "expected": {
+        "word": false,
+        "sv": true,
+        "en": true
+      },
+      "observed": "Unavailable form label and unchanged usable sv/en visible"
+    }
+  ],
+  "performance": [
+    {
+      "kind": "supplementary-observation-no-threshold",
+      "browser": "156.0.4314.50",
+      "platform": "win32",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "method": "PerformanceResourceTiming for source requests; search/render samples include Playwright command and assertion overhead, not pure component latency",
+      "counts": {
+        "A2": 1,
+        "B1": 1,
+        "B2": 1,
+        "C1": 1
+      },
+      "sourceRequests": [
+        {
+          "url": "/api/lexicon?level=A2",
+          "durationMs": 8
+        },
+        {
+          "url": "/api/lexicon?level=B1",
+          "durationMs": 11.299999997019768
+        },
+        {
+          "url": "/api/lexicon?level=B2",
+          "durationMs": 27.5
+        },
+        {
+          "url": "/api/lexicon?level=C1",
+          "durationMs": 33.29999999701977
+        }
+      ],
+      "observations": [
+        {
+          "level": "A2",
+          "searchObservedMs": 47.29999999701977,
+          "clearAndRenderObservedMs": 92.20000000298023
+        },
+        {
+          "level": "B1",
+          "searchObservedMs": 45.29999999701977,
+          "clearAndRenderObservedMs": 87.70000000298023
+        },
+        {
+          "level": "B2",
+          "searchObservedMs": 85.70000000298023,
+          "clearAndRenderObservedMs": 89.69999998807907
+        },
+        {
+          "level": "C1",
+          "searchObservedMs": 79.19999998807907,
+          "clearAndRenderObservedMs": 85.90000000596046
+        }
+      ]
+    },
+    {
+      "kind": "supplementary-observation-no-threshold",
+      "browser": "156.0.4314.50",
+      "platform": "win32",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "method": "PerformanceResourceTiming for source requests; search/render samples include Playwright command and assertion overhead, not pure component latency",
+      "counts": {
+        "A2": 1,
+        "B1": 1,
+        "B2": 1,
+        "C1": 1
+      },
+      "sourceRequests": [
+        {
+          "url": "/api/lexicon?level=A2",
+          "durationMs": 9.299999997019768
+        },
+        {
+          "url": "/api/lexicon?level=B1",
+          "durationMs": 9
+        },
+        {
+          "url": "/api/lexicon?level=B2",
+          "durationMs": 9
+        },
+        {
+          "url": "/api/lexicon?level=C1",
+          "durationMs": 10.099999994039536
+        }
+      ],
+      "observations": [
+        {
+          "level": "A2",
+          "searchObservedMs": 45.5,
+          "clearAndRenderObservedMs": 93.59999999403954
+        },
+        {
+          "level": "B1",
+          "searchObservedMs": 35.79999999701977,
+          "clearAndRenderObservedMs": 90.3999999910593
+        },
+        {
+          "level": "B2",
+          "searchObservedMs": 51.70000000298023,
+          "clearAndRenderObservedMs": 82
+        },
+        {
+          "level": "C1",
+          "searchObservedMs": 36.70000000298023,
+          "clearAndRenderObservedMs": 85.90000000596046
+        }
+      ]
+    }
+  ]
+}

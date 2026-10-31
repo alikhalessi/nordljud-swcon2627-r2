@@ -1,0 +1,60 @@
+{
+  "artifact": "CORE task/verification documentation clarification",
+  "recorded_at_utc": "2026-10-30T20:41:15.039360+00:00",
+  "base_head": "d140bc9898ef134efff7dc14ef95b2f2158ebc5f",
+  "branch": "condition/spec-driven",
+  "tasks_revision": {
+    "from": "0.1.0",
+    "to": "0.1.1",
+    "human_review": "PENDING"
+  },
+  "quickstart_documentation_revision": "0.1.2",
+  "finding_ids": [
+    "A1",
+    "A2",
+    "E1",
+    "I1"
+  ],
+  "technical_changes": {
+    "A1": "Mission metadata before practice RED; generated practice definitions after RED.",
+    "A2": "Offline-safe default discovery and separately configured, explicitly enabled/authorized live suites.",
+    "E1": "Collection reuse/request-count checks and supplementary actual latency observations.",
+    "I1": "Scoped Guest reproduction/15-case reporting and applicable final checks independent of US5/D02."
+  },
+  "files": [
+    {
+      "path": "specs/001-nordljud-core/tasks.md",
+      "before_snapshot": "evidence/sdd-core-task-clarifications-2026-10-30/before/tasks.md",
+      "before_sha256": "C0FC9D897C95E9385C744E11B3F985B5ECEBF71AE76A6E2B70F614D0798C0412",
+      "after_sha256": "297709244F4FB72E5C65C24FBD2FEB52EEDA6908873003D84EDCF4F24DC8831A"
+    },
+    {
+      "path": "specs/001-nordljud-core/quickstart.md",
+      "before_snapshot": "evidence/sdd-core-task-clarifications-2026-10-30/before/quickstart.md",
+      "before_sha256": "781B6CDD3421C5456CF7EC193CC172F089D64CAF8F42FD1626F346E8EB28DF2B",
+      "after_sha256": "F406B4D1943C751654D8AAF6BAB9011FC0F7919404855D49FF71F2BD9A4FABC9"
+    }
+  ],
+  "historical_tasks_manifest_resolution": [
+    {
+      "original_active_path": "specs/001-nordljud-core/quickstart.md",
+      "verification_snapshot": "evidence/sdd-core-task-clarifications-2026-10-30/before/quickstart.md",
+      "sha256": "781B6CDD3421C5456CF7EC193CC172F089D64CAF8F42FD1626F346E8EB28DF2B"
+    },
+    {
+      "original_active_path": "specs/001-nordljud-core/tasks.md",
+      "verification_snapshot": "evidence/sdd-core-task-clarifications-2026-10-30/before/tasks.md",
+      "sha256": "C0FC9D897C95E9385C744E11B3F985B5ECEBF71AE76A6E2B70F614D0798C0412"
+    }
+  ],
+  "task_count": 82,
+  "unchecked_task_count": 82,
+  "parallel_markers": 26,
+  "task_ids_labels_acceptance_gates_and_evidence_paths_unchanged": true,
+  "validation_scope": "Document format and byte/ref preservation before the separate read-only Analyze.",
+  "previous_evidence_and_manifests_modified": false,
+  "project_policies_architecture_or_primary_cases_changed": false,
+  "implementation_or_runtime_test_claimed": false,
+  "analysis_report_persisted": false,
+  "content_scope": "Technical artifact revision information and document-only snapshots; no questions/prompts/conversation/session transcripts."
+}

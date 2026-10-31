@@ -1,0 +1,228 @@
+{
+  "stage": "Tasks",
+  "version": "0.1.0",
+  "human_review_of_new_tasks": "PENDING",
+  "excludes": "This manifest itself; review exports are bound through the export-map/binding files.",
+  "artifacts": [
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/additional-export-bindings.json",
+      "sha256": "8948A49F47F078AF52F13FC3C5D405667A60C443965566CA8E3387F373488487",
+      "bytes": 1237
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/approval-and-request-as-received.txt",
+      "sha256": "CF12FCB143516961E1810286B05A07778FECBD37067CDEDE59A627599FBE7113",
+      "bytes": 1169
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/approval-receipt.json",
+      "sha256": "1C6FB77D693CBD941300CA4814EF97FCEA701C79A2C97981A4EFD724733A1522",
+      "bytes": 1592
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/authoring-scripts/apply_core_gap_resolutions.py.txt",
+      "sha256": "3A7507A56D370ED566D04852016FAE89FE311825561DBA74F94E80053ACF5BC3",
+      "bytes": 17281
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/authoring-scripts/clarify_current_review_status.py.txt",
+      "sha256": "875422886DEAD4B19772AAAA4507475FB62DA09F46D95C3291DFD7F6E788665D",
+      "bytes": 4448
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/authoring-scripts/finish_core_tasks.py.txt",
+      "sha256": "C352AE72DBF278265B5E9F09E4E26D8831038435D9F75E5124CDC7AD68357067",
+      "bytes": 28674
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/authoring-scripts/generate_core_tasks.py.txt",
+      "sha256": "6568A16300799C00F4A32AFE901E3CBF2D5410322BA51CEEFC3DBE289A2C3585",
+      "bytes": 52091
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/authoring-scripts/operation-recovery-authoring-input.md.txt",
+      "sha256": "B6701C521AF0691D18C906EB6A0E1E2A1F59A25102FCE0AE38EE45CABAC9141E",
+      "bytes": 4251
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/authoring-scripts/run_core_tasks_setup.py.txt",
+      "sha256": "66F5D1AD3EAA4A5AA58A302B1A041737C70BCC2B9599AD2DB681A72DCC7CCAA2",
+      "bytes": 2037
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/checklists/core-readiness.md",
+      "sha256": "FA419BC354944FE5A420B4E8E8F8ED83FBF36A3DFBBE961B86C9F8DF74120844",
+      "bytes": 11112
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/contracts/core-http.md",
+      "sha256": "F0B441CF3D1FEB842C4331C9B925323E886309F943D411FE47C412480223E50E",
+      "bytes": 6428
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/contracts/ui-behavior.md",
+      "sha256": "7A12915F3B7F2B4D9026E30AC4A14772704BC6F890C00CA907DDBFCEF09D7AE2",
+      "bytes": 3923
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/plan.md",
+      "sha256": "16FD261A04E2A15DBA6A81563ECF9A3527DC589D16BC647BC5F82BFB62A90FE7",
+      "bytes": 12254
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/before-clarifications/quickstart.md",
+      "sha256": "4930AF614AE10716E80DAE2AB7C8DCD0494D9C4E90471F050BE11A459763AA88",
+      "bytes": 12976
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/changed-paths.json",
+      "sha256": "50D0696CD780BF773BFC3E9B3F3FA9D3BDC26805ED6DFB5FD8A538A3D5B80B52",
+      "bytes": 3772
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/checklist-review-results.md",
+      "sha256": "BDF549E3950CFBB2664063E1A2224D1AE65DDCD84FA804B443611C22B6E96BDF",
+      "bytes": 1595
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/clarification-commands.json",
+      "sha256": "1C5A0773AA3979E448B82678BABCB33CCF809A81DD00D1DC44E44D8D3F3BCA95",
+      "bytes": 22436
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/completion.json",
+      "sha256": "671B05DE42AA717B2EFDA9122FB70F2B60ABB9EF24898C1EECC263BDDD62CC62",
+      "bytes": 4021
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/current-status-reference-clarifications.json",
+      "sha256": "4B54FD39A547127AEE13D270CDD62057C92F4935245E948AD774033786070B3E",
+      "bytes": 335
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/diff-scope.json",
+      "sha256": "9012228523F87721D91E61E418105F95C115476593DC4B5100AFF9C2935C37C6",
+      "bytes": 812
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/documentation-and-tasks.diff",
+      "sha256": "42E5CEC861A6AE435440AC7056B31AB4F6E4B2772CD30FDD57788F7C149D5353",
+      "bytes": 94093
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/final-commands.json",
+      "sha256": "C108E986FC86D25D2B2EDCE5C35E49C3BB105CE5D59F019A52381051465790FD",
+      "bytes": 38852
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/gap-resolution-review.json",
+      "sha256": "29463C64F76C2DFC60F786890E3E049324AC46D4D7633C0796D4A11A9FBFAAC0",
+      "bytes": 1065
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/historical-artifact-resolution.json",
+      "sha256": "B980EF6409098725823CB0A326E29020C4B36337BA9E0A11A41BB1110B54B05E",
+      "bytes": 41609
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/official-setup-command.json",
+      "sha256": "E246B30126A6CC7180DA661430E06B9ADFDD92C3AEB6FAED0D979696094824A3",
+      "bytes": 775
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/policy-and-approval-source-records.jsonl",
+      "sha256": "D376BDEAA8F1C27A0A41DA3731B05DA2843F197701076978E83A96032D5CE612",
+      "bytes": 6374
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/post-hooks-check.json",
+      "sha256": "8771D7FCED3C5681F9ADE0A8ED862FF7B65C59F540513FC441E7040FFEEFA056",
+      "bytes": 139
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/pre-existing-clarify-tracked.diff",
+      "sha256": "6D346D5ED49020258E8469629309AFE7094DDA14C8C9C4FAEFF3DABAFBBAA11A",
+      "bytes": 21862
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/preflight.json",
+      "sha256": "D175E37117DC2DAF631C05770177D9CAF79B80367C21940F7D44208161DF1555",
+      "bytes": 41855
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/preservation-results.json",
+      "sha256": "1CAE16D9B122A323CD0A69687C8C0F8D07D4C1993B6363169FEAE16AF1803308",
+      "bytes": 102484
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/README.md",
+      "sha256": "26F89A15E3D2DA22B1E0DA7B79DC2B64A955988D1D1712BF1B116BDE42811524",
+      "bytes": 7563
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/resolved-paths.json",
+      "sha256": "26B9D28A41F561E21D0BD9C6B6A2470FC2905DA5C3088E84F46210326BF6107F",
+      "bytes": 574
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/review-export-map.json",
+      "sha256": "C58A563ED449CAE3F85E4C6DB8C63DF633B96D09A9D5C5CCEFC39A894A3EE128",
+      "bytes": 4063
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/session-visible-records.jsonl",
+      "sha256": "A09B710024B422C6433C5FE3EDB5BBA47B0DD53BD3AFBBADCDBEAD2DB74B3894",
+      "bytes": 338498
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/task-index.json",
+      "sha256": "FE00C51B03CFBF64859F0933107B520A8375E7D06DAB89D44572A51DAC8BE8A2",
+      "bytes": 52889
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/tasks-generation-validation.json",
+      "sha256": "59B1A272F6947F2EC73C8ACC5FA89403D3E7ED947E304E3E365949670AAE2AEC",
+      "bytes": 4521
+    },
+    {
+      "path": "evidence/sdd-tasks-core-2026-10-30/transcript-export.json",
+      "sha256": "2D0404B3E2D20B2CBB1826FBBF55679E045F4517EB6928BD3E70C8AF574B4666",
+      "bytes": 524
+    },
+    {
+      "path": "specs/001-nordljud-core/checklists/core-readiness.md",
+      "sha256": "9011EF691BF6BF6F39B5B0A4D69DB26202867D53A87B2DAC08FEA45065E4F5B4",
+      "bytes": 12172
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/core-http.md",
+      "sha256": "2936C5D1764DDB06E63AB4751A8362DDF9A5876B6922E92C74C992C11E75E4DF",
+      "bytes": 7038
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/operation-recovery.md",
+      "sha256": "B6701C521AF0691D18C906EB6A0E1E2A1F59A25102FCE0AE38EE45CABAC9141E",
+      "bytes": 4251
+    },
+    {
+      "path": "specs/001-nordljud-core/contracts/ui-behavior.md",
+      "sha256": "AA1C4830127BCBDFBD03515BF02D07401D1CCE77BCA9B6C6340516B30D11238C",
+      "bytes": 4503
+    },
+    {
+      "path": "specs/001-nordljud-core/plan.md",
+      "sha256": "62EC77BC6EA9CB3F82A4D72A21ED211D67DE8F53882AEB2E4EDC8F4B2D930140",
+      "bytes": 14091
+    },
+    {
+      "path": "specs/001-nordljud-core/quickstart.md",
+      "sha256": "781B6CDD3421C5456CF7EC193CC172F089D64CAF8F42FD1626F346E8EB28DF2B",
+      "bytes": 13941
+    },
+    {
+      "path": "specs/001-nordljud-core/tasks.md",
+      "sha256": "C0FC9D897C95E9385C744E11B3F985B5ECEBF71AE76A6E2B70F614D0798C0412",
+      "bytes": 57404
+    }
+  ]
+}

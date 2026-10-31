@@ -1,0 +1,13 @@
+{
+  "approved_revision": "0.4.0",
+  "status": "APPROVED BY STUDENT",
+  "approval_date": "2026-10-30",
+  "timezone": "Europe/Helsinki",
+  "approval_timestamp_utc": "2026-10-30T11:03:27.909Z",
+  "approved_spec_sha256": "7AC546793D8EF63DA8563AB4B3CFF081374EB3ED4CFB98DE052DC0944275B2A1",
+  "reviewed_checklist_sha256": "18E7CB20CFE0DBED9719ECAB0C91B0631A9D8AEF36F0B4740A9C5388C37117CF",
+  "authorized_next_stage": "Official installed Spec Kit 0.12.11 Plan only, through Phase 1 design",
+  "earlier_pending_labels": "Historical pre-approval state, preserved unchanged.",
+  "originalReceiptSha256": "e339f01eac296a3fcd76f853b711c5023fd4b507d9b007b72a7a13b94100e720",
+  "publicationQualification": "Technical approval binding only. Exact mixed receipt and conversation-bearing records remain unchanged locally; no approval message is reproduced."
+}

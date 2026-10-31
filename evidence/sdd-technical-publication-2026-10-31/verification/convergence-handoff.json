@@ -1,0 +1,72 @@
+{
+  "recordedAtUtc": "2026-10-30T23:20:59.829762+00:00",
+  "stage": "official installed Spec Kit 0.12.11 Converge",
+  "executions": 1,
+  "outcome": "tasks_appended",
+  "converged": false,
+  "inventoryChecked": {
+    "functionalRequirements": 21,
+    "successCriteria": 10,
+    "acceptanceScenarios": 29,
+    "planDecisions": 13,
+    "constitutionPrinciples": 8,
+    "existingTasks": 82
+  },
+  "findingCounts": {
+    "missing": 5,
+    "partial": 6,
+    "contradicts": 1,
+    "unrequested": 0,
+    "CRITICAL": 1,
+    "HIGH": 10,
+    "LOW": 1
+  },
+  "tasks": {
+    "phase": 11,
+    "first": "T083",
+    "last": "T094",
+    "appended": 12,
+    "phaseLine": 404,
+    "originalBytes": 63298,
+    "originalPrefixPreserved": true,
+    "originalCheckboxesUnchanged": true,
+    "afterSha256": "14acc19cf9d2b8fc808c58d95f16f762c259f570adcd2a4ca388572dca590b7e"
+  },
+  "onlyRepositoryChangedPath": [
+    "specs/001-nordljud-core/tasks.md"
+  ],
+  "applicationCodeChanges": 0,
+  "testedCommit": "9d2f273d55a83b15863604b75174c689bb7a0c05",
+  "testedDirtyStateDigest": "8207d28704f3b6f3ba6549f6cd8240ad1946614f10b0c5e3d9894e7f3d4272d0",
+  "runtimeArtifactDigest": "78aaeaaa341140524ddbe20cc50f8a40386cd03949a244331f1cf86b3b0495e7",
+  "postConvergeDirtyStateDigest": "1f281b31c8632abeddb383c3f8158e0e1fa66c3fefb7a45f2d752b8e704ddcdf",
+  "finalGitStatus": "## condition/spec-driven...origin/condition/spec-driven [ahead 1]\n M specs/001-nordljud-core/spec.md\n M specs/001-nordljud-core/tasks.md\n?? evidence/sdd-checklist-core-2026-10-30/\n?? evidence/sdd-clarify-core-2026-10-30/\n?? evidence/sdd-core-task-clarifications-2026-10-30/\n?? evidence/sdd-plan-core-2026-10-30/\n?? evidence/sdd-tasks-core-2026-10-30/\n?? specs/001-nordljud-core/checklists/core-readiness.md\n?? specs/001-nordljud-core/contracts/\n?? specs/001-nordljud-core/data-model.md\n?? specs/001-nordljud-core/plan.md\n?? specs/001-nordljud-core/quickstart.md\n?? specs/001-nordljud-core/research.md",
+  "protectedStartingFilesUnchangedExceptTaskAppend": true,
+  "protectedRefsUnchanged": true,
+  "hooksPresent": false,
+  "implementationLoopStarted": false,
+  "commitAttempted": false,
+  "pushAttempted": false,
+  "providerOperationsAttempted": false,
+  "primaryCounts": {
+    "PASS": 8,
+    "FAIL": 0,
+    "BLOCKED": 3,
+    "NOT TESTED": 4
+  },
+  "tests": {
+    "offline": 86,
+    "edge": 56,
+    "typecheck": "PASS",
+    "build": "PASS"
+  },
+  "limitations": [
+    "Full mapped F08 sign-in/no-import observation remains unverified; prior historical PASS is preserved and a reconciliation task was appended.",
+    "Private progress/schema/RLS and real email/hosted Google tests require missing implementation and exact independent D_SCHEMA/D_TEST authorization.",
+    "Full login accessibility and account-specific failure/security coverage is incomplete.",
+    "Native speech request/text/language were observed; audible output/quality was not.",
+    "Historical T016 ordering cannot be repaired by backdating."
+  ],
+  "publicationQualification": "Technical copy of the historical Converge handoff; operational budget fields omitted. No new Converge execution.",
+  "originalHandoffSha256": "71445353f45eff8fa0e3be9e394b1528c078904a4decc5e78a6c662b224b30a1"
+}
